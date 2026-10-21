@@ -2,6 +2,9 @@
 
 B2B office-supplies e-commerce for kansler.uz. This is a new UI/UX on the same backend, logic, fonts and colours.
 Research, Mobbin references and the build plan are in [docs/REDESIGN.md](docs/REDESIGN.md).
+**What changed, screen by screen (for the client):** [docs/CHANGES.md](docs/CHANGES.md).
+
+> Design phase: `VITE_DESIGN_MODE=true` opens login-protected pages without an account, and data comes from `src/mocks`. Turn design mode off before wiring the real API.
 
 ## Stack
 

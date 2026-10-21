@@ -1,6 +1,5 @@
-import { Badge, Box, IconButton, Stack, Text } from '@chakra-ui/react'
-import { Heart } from 'lucide-react'
-import { useState, type ReactNode } from 'react'
+import { Badge, Box, Stack, Text } from '@chakra-ui/react'
+import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink } from 'react-router'
 import { paths } from '@/app/router/paths'
@@ -8,21 +7,19 @@ import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
 import { Price } from '@/shared/ui/Price'
 import type { Product, Variation } from '../types'
+import { FavouriteButton } from './FavouriteButton'
 import { ProductGallery } from './ProductGallery'
 
 interface ProductCardProps {
   product: Product
   /** Slot for the cart control (features/add-to-cart), rendered on the photo's bottom-right corner. */
   action?: (variation: Variation, name: string) => ReactNode
-  /** Design phase: local state. Wiring swaps this for useToggleFavourite. */
-  onToggleFavourite?: (productId: string) => void
 }
 
-export const ProductCard = ({ product, action, onToggleFavourite }: ProductCardProps) => {
+export const ProductCard = ({ product, action }: ProductCardProps) => {
   const { t } = useTranslation()
   const lang = useLang()
   const variation = product.variations[0]
-  const [favourite, setFavourite] = useState(product.favorite)
 
   if (!variation) return null
 
@@ -55,24 +52,7 @@ export const ProductCard = ({ product, action, onToggleFavourite }: ProductCardP
           </Badge>
         )}
 
-        <IconButton
-          aria-label={t('favourites.title')}
-          pos="absolute"
-          top="2"
-          right="2"
-          size="sm"
-          borderRadius="full"
-          bg="bg.surface"
-          color={favourite ? 'primary.main' : 'fg.muted'}
-          boxShadow="0 1px 3px rgba(16, 24, 40, 0.1)"
-          _hover={{ bg: 'bg.surface', color: 'primary.main' }}
-          onClick={() => {
-            setFavourite((f) => !f)
-            onToggleFavourite?.(product.guid)
-          }}
-        >
-          <Heart size={16} fill={favourite ? 'currentColor' : 'none'} />
-        </IconButton>
+        <FavouriteButton product={product} pos="absolute" top="2" right="2" />
 
         <Box pos="absolute" right="2" bottom="2">
           {inStock ? (

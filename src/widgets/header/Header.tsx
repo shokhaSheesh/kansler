@@ -8,12 +8,12 @@ import logo from '@/shared/assets/logo.png'
 import { Container } from '@/shared/ui/Container'
 import { paths } from '@/app/router/paths'
 import { authStore } from '@/stores/auth.store'
-import { useFavouritesCount } from '@/entities/product/queries'
 import { CatalogMenu } from './CatalogMenu'
 import { CountBadge, HeaderAction } from './HeaderAction'
 import { SearchBox } from '@/features/search/SearchBox'
 import { MobileSearch } from '@/features/search/MobileSearch'
 import { mockCart } from '@/mocks/cart.store'
+import { mockFavourites } from '@/mocks/favourites.store'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { categories } from '@/mocks'
 import { useLang } from '@/shared/hooks/useLang'
@@ -47,7 +47,6 @@ export const Header = observer(() => {
   }
   // Design phase: shared mock cart. Wiring: useCartCount()
   const cartCount = mockCart.count
-  const { data: fav } = useFavouritesCount()
 
   const lang = useLang()
   const shortcuts = [
@@ -111,7 +110,7 @@ export const Header = observer(() => {
 
           <HStack gap="1" hideBelow="md">
             <HeaderAction to={paths.orders} icon={<Package size={22} />} label={t('nav.orders_label')} />
-            <HeaderAction to={paths.favourites} icon={<Heart size={22} />} label={t('nav.favorites_label')} count={fav?.data?.count} />
+            <HeaderAction to={paths.favourites} icon={<Heart size={22} />} label={t('nav.favorites_label')} count={mockFavourites.count} />
             <HeaderAction to={paths.cart} icon={<ShoppingCart size={22} />} label={t('nav.cart_label')} count={cartCount} />
             <HeaderAction
               to={authStore.isAuthorized ? paths.profile.root : paths.auth.login}

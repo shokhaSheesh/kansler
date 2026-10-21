@@ -1,11 +1,10 @@
-import { Badge, Box, Flex, IconButton, Image, Stack, Text } from '@chakra-ui/react'
-import { Heart } from 'lucide-react'
-import { useState } from 'react'
+import { Badge, Box, Flex, Image, Stack, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink } from 'react-router'
 import { paths } from '@/app/router/paths'
 import { AddToCartControl } from '@/features/add-to-cart/AddToCartControl'
 import type { Product } from '@/entities/product/types'
+import { FavouriteButton } from '@/entities/product/ui/FavouriteButton'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
 import { Price } from '@/shared/ui/Price'
@@ -15,7 +14,6 @@ export const ProductListItem = ({ product }: { product: Product }) => {
   const { t } = useTranslation()
   const lang = useLang()
   const v = product.variations[0]
-  const [favourite, setFavourite] = useState(product.favorite)
   if (!v) return null
   const name = localized(v, 'name', lang) || localized(product, 'name', lang)
   const discount = v.discount_percent ?? 0
@@ -81,17 +79,7 @@ export const ProductListItem = ({ product }: { product: Product }) => {
             {t('product_detail.out_of_stock')}
           </Text>
         )}
-        <IconButton
-          aria-label={t('favourites.title')}
-          size="sm"
-          variant="ghost"
-          borderRadius="full"
-          color={favourite ? 'primary.main' : 'fg.subtle'}
-          onClick={() => setFavourite((f) => !f)}
-          hideBelow="md"
-        >
-          <Heart size={16} fill={favourite ? 'currentColor' : 'none'} />
-        </IconButton>
+        <FavouriteButton product={product} variant="plain" hideBelow="md" />
       </Stack>
     </Flex>
   )

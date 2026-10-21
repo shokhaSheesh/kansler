@@ -1,0 +1,2816 @@
+[
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-08-29T09:01:41.491788Z",
+  "favorite": false,
+  "guid": "c3e4f423-f033-453f-8b60-eb9d463d2b50",
+  "is_active": true,
+  "name_ru": "Шредер",
+  "name_uz": "Шредер",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T05:33:45.345149Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 6935760,
+    "guid": "cabb9fc5-d954-4b86-b0f3-dd8580b9e84f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/ea57008a-385a-491f-b6f2-8e53f88adfd9_Frame2087330153(5).jpg",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/f8395cde-7e87-4e5d-9e7a-51317a662d0d_Frame2087330153(6).jpg"
+    ],
+    "in_stock": 999,
+    "is_active": true,
+    "name_ru": "Шредер Fellowes® Powershred®",
+    "name_uz": "Шредер Fellowes® Powershred®",
+    "price": 10670400,
+    "product_group_id": "c3e4f423-f033-453f-8b60-eb9d463d2b50",
+    "sku_code": null,
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-08-29T08:54:22.994274Z",
+  "favorite": false,
+  "guid": "9cf4c8bd-947b-4463-a120-6fcdd98cd251",
+  "is_active": true,
+  "name_ru": "Настольный набор \"Bestar\" ",
+  "name_uz": "Настольный набор \"Bestar\"",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-08-29T09:56:42.961188Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 1477060,
+    "guid": "de42216e-d828-4361-935c-99517187f5f6",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/10226c37-ff89-4115-88e8-ec5a9405461c_IMG_0043.png"
+    ],
+    "in_stock": 999,
+    "is_active": true,
+    "name_ru": "Настольный набор \"Bestar\" (11 предм./цв.орех)",
+    "name_uz": "Настольный набор \"Bestar\" (11 предм./цв.орех)",
+    "price": 2272400,
+    "product_group_id": "9cf4c8bd-947b-4463-a120-6fcdd98cd251",
+    "sku_code": null,
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-08-28T06:04:00.862437Z",
+  "favorite": false,
+  "guid": "7a99259a-697e-5eed-b249-444ed089405f",
+  "is_active": true,
+  "name_ru": "Кресло офисное Samurai",
+  "name_uz": "Кресло офисное Samurai",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T06:08:11.36872Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 35,
+    "discount_price": 3843112,
+    "guid": "8f5ce849-01a6-5171-bfce-206cf5a5ca78",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e406509d-d7a3-43be-b010-5f1c714e011e_Frame2087330153(1).jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Кресло офисное Samurai",
+    "name_uz": "Кресло офисное Samurai",
+    "price": 5912480,
+    "product_group_id": "7a99259a-697e-5eed-b249-444ed089405f",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-08-28T06:04:00.862437Z",
+  "favorite": false,
+  "guid": "0c47686b-d8b5-572c-96b2-4149c60121db",
+  "is_active": true,
+  "name_ru": "Офисный стул no name",
+  "name_uz": "Офисный стул no name",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:22:28.7954Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 457300,
+    "guid": "65dc4d5e-89bb-5859-b679-d0f2b8956dc9",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/263704d0-eb7f-4be0-963a-616fd195f48a_Frame2087330153(2).jpg"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Офисный стул no name",
+    "name_uz": "Офисный стул no name",
+    "price": 703623,
+    "product_group_id": "0c47686b-d8b5-572c-96b2-4149c60121db",
+    "sku_code": "УЛ 221.04.01",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 489500,
+    "guid": "d06b3652-29ca-531b-a8b8-ae1babcb0af9",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/fa27458f-2486-4ed8-a375-07747b9b1dea_Gemini_Generated_Image_hcmkv5hcmkv5hcmk.jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Офисный стул no name",
+    "name_uz": "Офисный стул no name",
+    "price": 753200,
+    "product_group_id": "0c47686b-d8b5-572c-96b2-4149c60121db",
+    "sku_code": "Samba V-14",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-08-28T06:04:00.862437Z",
+  "favorite": false,
+  "guid": "71a82509-9931-57fb-89fe-20144057cdc8",
+  "is_active": true,
+  "name_ru": "Офисное кресло",
+  "name_uz": "Офисное кресло",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T06:07:55.832997Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 1266000,
+    "guid": "9f56b93f-90ef-5aa8-9604-446cb991ebc5",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/415df64a-6a57-46b3-a039-a3ab9d2f7ca1_Frame2087330153(3).jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Офисное кресло",
+    "name_uz": "Офисное кресло",
+    "price": 1947736,
+    "product_group_id": "71a82509-9931-57fb-89fe-20144057cdc8",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-04-17T04:59:31.791085Z",
+  "favorite": false,
+  "guid": "e7cd323a-95f5-5cf1-845a-47a98840ebc9",
+  "is_active": true,
+  "name_ru": "Светодиотная лампа Lumiled",
+  "name_uz": "Светодиотная лампа Lumiled",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:56:48.567622Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 23781.36,
+    "guid": "a5e55c8d-b3cc-5cc6-b1ba-ccd9cb455f79",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d50ae136-2afc-42d4-929c-939720a86c5f_IMG_0308.jpeg"
+    ],
+    "in_stock": 149,
+    "is_active": true,
+    "name_ru": "Светодиотная лампа Lumiled",
+    "name_uz": "Светодиотная лампа Lumiled",
+    "price": 36587,
+    "product_group_id": "e7cd323a-95f5-5cf1-845a-47a98840ebc9",
+    "sku_code": "Lumiled20w",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "1eecb858-6c4f-54ce-b904-97894536876b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5fd51552-e610-4ea7-90b8-fc1b3746eee7_Frame2087330124(1).jpg",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0d7d1738-6e62-46e8-893c-b8a5fa2935ad_Frame2087330122(17).jpg"
+    ],
+    "in_stock": 18,
+    "is_active": true,
+    "name_ru": "Светодиотная лампа Lumiled",
+    "name_uz": "Светодиотная лампа Lumiled",
+    "price": 21000,
+    "product_group_id": "e7cd323a-95f5-5cf1-845a-47a98840ebc9",
+    "sku_code": "т8",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "32dcadd8-d58d-54ea-9cdc-6bd0649f3beb",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/424edcc3-99a4-4597-a0f0-b6f20e5d6d2f_IMG_4745.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b4d2d61d-a31b-471e-a184-a9a4ab8b9b40_IMG_4746.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c01f73f4-0a56-459f-a63e-00237e3e05b2_IMG_4747.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9686c709-3721-4b0c-b432-8dc598c8da2a_IMG_4748.webp"
+    ],
+    "in_stock": 7,
+    "is_active": true,
+    "name_ru": "Светодиотная лампа Lumiled",
+    "name_uz": "Светодиотная лампа Lumiled",
+    "price": 26006,
+    "product_group_id": "e7cd323a-95f5-5cf1-845a-47a98840ebc9",
+    "sku_code": "MR16-6WT-1",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "e2b92fa1-36b1-4954-a3c1-17f14adf5887",
+  "created_at": "2026-03-28T09:36:27.492817Z",
+  "favorite": false,
+  "guid": "062b29a8-360a-540d-ba21-cfc052732f49",
+  "is_active": true,
+  "name_ru": "Ручка Шариковая Luxor Focus",
+  "name_uz": "Ручка Шариковая Luxor Focus",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T05:34:48.509002Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Разноцветный",
+     "name_uz": "Разноцветный"
+    },
+    "discount_percent": 35,
+    "discount_price": 1764.97,
+    "guid": "181161d9-361b-555a-9f00-f95332b21c7c",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d778a9e8-5576-4495-a957-e042543e871f_Frame2087330105(3).jpg",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e24d572e-6079-47fe-bea8-54894c019434_Unknown.jpg",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c43ba831-4b15-4f19-989e-3f6f2b8aa923_Unknown.webp"
+    ],
+    "in_stock": 966,
+    "is_active": true,
+    "name_ru": "Ручка Шариковая Luxor Focus",
+    "name_uz": "Ручка Шариковая Luxor Focus",
+    "price": 2715,
+    "product_group_id": "062b29a8-360a-540d-ba21-cfc052732f49",
+    "sku_code": "1771-1773",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "6bab35b6-1592-5df6-8da2-60c70320673a",
+  "is_active": true,
+  "name_ru": "Перманентный маркер Deli",
+  "name_uz": "Перманентный маркер Deli",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:18:36.630225Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 35,
+    "discount_price": 4896.53,
+    "guid": "f401c376-d9dc-56d9-8ea5-230757798721",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0dd57cbc-40ac-4228-ab16-6f33da15946b_Frame2087330124-2026-05-15T104243.245.jpg"
+    ],
+    "in_stock": 173,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 7533,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "EU72-BLUE",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "e21127a5-44f5-5bac-89f3-dd92ca0a3b49",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/053b69df-42ff-4534-9797-852030c504d8_Frame2087330124-2026-05-15T103442.238.jpg"
+    ],
+    "in_stock": 8,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4010,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U216-Black",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "8d75f3e0-29ac-5601-bd33-6af872dd1b02",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/25c91f29-561c-429d-bb7b-6ebf08d41852_Frame2087330124-2026-05-15T102831.081.jpg"
+    ],
+    "in_stock": 20,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4010,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U217-BK",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Красный",
+     "name_uz": "Красный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "95ea4a4c-c97f-5277-b5d4-63b8b06db0e8",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/da01bd24-bf83-472d-ab32-57014f34d982_Frame2087330124-2026-05-15T102947.312.jpg"
+    ],
+    "in_stock": 191,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4010,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "EU10040 Red",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "a5740052-2d7b-5de3-a69d-7c890f1e37ec",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/7e445baa-efe5-4e74-8cc4-8db514b86cc6_Frame2087330124-2026-05-15T102659.602.jpg"
+    ],
+    "in_stock": 1119,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4010,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "EU10030 Blue",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "5fe7368d-37a9-5691-98aa-9dd3a7d49055",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/f439e391-af74-4138-bb74-041f246aaf80_IMG_0334.png"
+    ],
+    "in_stock": 300,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4110,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U217-BL",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "05609796-6238-5bb8-9850-45c3cf75ef51",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/96a99423-78f2-41ee-be97-8c5b9ced009a_Frame2087330122(25).jpg"
+    ],
+    "in_stock": 2329,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 4368,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "EU10020 Black",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "480989cb-c370-556c-9730-a8f39e4ef33c",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9542acf6-db5f-4b64-b0c1-d2f28349ddb1_Frame2087330124-2026-05-15T102739.219.jpg"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 5006,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U10230 Blue",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "7891255e-bd3f-5b6a-a8d0-955ed87d62ac",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e2bed477-5295-46c9-a03d-ebe5983fa76b_Frame2087330124-2026-05-15T103057.901.jpg"
+    ],
+    "in_stock": 288,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 5208,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U10420 Black",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "022de652-2706-5d45-a280-80a91670a7ac",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/617bebd1-e157-4123-ba6f-e1c4e3977788_Frame2087330124-2026-05-15T103253.786.jpg"
+    ],
+    "in_stock": 50,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 5208,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U10430 Blue",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "3a3684a6-a06f-598c-b876-834de54a755e",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/4bd2d2af-8c19-4a4d-b639-b886b1f60adc_IMG_0270.webp"
+    ],
+    "in_stock": 236,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 5208,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U10220 Black",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Красный",
+     "name_uz": "Красный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "863a32fb-5201-5e98-b8c1-17f05b211f12",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/1dc020d0-36df-4b48-94c4-2b87e1ae9bed_Frame2087330124-2026-05-15T102103.370.jpg"
+    ],
+    "in_stock": 13,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 5410,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U10440 RED",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Белый",
+     "name_uz": "Белый"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "99b60ed9-6be3-5343-9fb8-3fcb240f27fd",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/00a8d3f2-8f91-4ad3-88ea-661680ec2035_IMG_0363.jpeg"
+    ],
+    "in_stock": 15,
+    "is_active": true,
+    "name_ru": "Перманентный маркер Deli",
+    "name_uz": "Перманентный маркер Deli",
+    "price": 9520,
+    "product_group_id": "6bab35b6-1592-5df6-8da2-60c70320673a",
+    "sku_code": "U500-WH",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "25741a89-5473-5507-9a7b-e06a6c605f67",
+  "is_active": true,
+  "name_ru": "Монитор Lenovo",
+  "name_uz": "Монитор Lenovo",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:10:13.701411Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 1600000,
+    "guid": "ea4ebc0d-e6f8-547d-89f8-2f507589155a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/ae9d0b43-43c0-418a-b28a-87aeec7da820_Frame2087330125(33).jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Монитор Lenovo",
+    "name_uz": "Монитор Lenovo ",
+    "price": 2461538,
+    "product_group_id": "25741a89-5473-5507-9a7b-e06a6c605f67",
+    "sku_code": "p/n 67BEKAC1EU",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "bdc95252-35be-5c31-9ca7-e1f2a248cd1a",
+  "is_active": true,
+  "name_ru": "Игровая консоль XBOX Series S ",
+  "name_uz": "Игровая консоль XBOX Series S ",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:19:59.342431Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Белый",
+     "name_uz": "Белый"
+    },
+    "discount_percent": 35,
+    "discount_price": 3827200,
+    "guid": "9ff437bc-570d-5c46-aff2-54933c5d5c3f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/a3b93214-d8c1-4b5d-9175-7228960a6daf_Frame2087330122(63).jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Игровая консоль XBOX Series S ",
+    "name_uz": "Игровая консоль XBOX Series S ",
+    "price": 5888000,
+    "product_group_id": "bdc95252-35be-5c31-9ca7-e1f2a248cd1a",
+    "sku_code": "RRS-00010",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "790b2fd8-c3ab-583a-b783-7b4d56b4fdc5",
+  "is_active": true,
+  "name_ru": "Моноблок Avtech Комплект",
+  "name_uz": "Моноблок Avtech Комплект",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:16:18.638535Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 5922700,
+    "guid": "5b3eb062-0c8e-5638-8652-ccc21405d370",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/fa9bd473-3e43-444a-a71a-73d57c5cb0c6_monoblok-avtech-x5-h410-i3-10100-120gb-ssd-1000gb-hdd-8gb-ddr-39093-0.jpeg"
+    ],
+    "in_stock": 7,
+    "is_active": true,
+    "name_ru": "Моноблок Avtech Комплект",
+    "name_uz": "Моноблок Avtech Комплект",
+    "price": 9111846,
+    "product_group_id": "790b2fd8-c3ab-583a-b783-7b4d56b4fdc5",
+    "sku_code": "AvtechMonoblok",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "4e03964d-88a7-577f-ac67-1e469b52faaa",
+  "is_active": true,
+  "name_ru": "Настольный набор для руководителя Bestar",
+  "name_uz": "Настольный набор для руководителя Bestar",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:16:29.338149Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 3476525,
+    "guid": "063d4240-6745-5203-88a0-52dbe4a79706",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/4aeae851-bee5-4edc-a225-81fdd6fabe53_IMG_1264.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/864111c0-89ee-46eb-9c89-95d1ad9f1915_IMG_1268.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/374a3157-e97e-4431-902e-3f740ea5e8f5_IMG_1269.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e92053ef-7a9e-44a8-9b2b-3ad847a47fc1_IMG_1270.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/05433c76-097c-4ad0-a59b-b02015e962b2_IMG_1271.JPG"
+    ],
+    "in_stock": 11,
+    "is_active": true,
+    "name_ru": "Настольный набор для руководителя Bestar",
+    "name_uz": "Настольный набор для руководителя Bestar",
+    "price": 5348500,
+    "product_group_id": "4e03964d-88a7-577f-ac67-1e469b52faaa",
+    "sku_code": "EI - 1",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "aea5dd0f-cc45-5941-8bfd-02613ba0241c",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9887a390-4a7e-4ce7-9341-84f289971345_IMG_1256.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/a715a8a5-48ce-4d77-b87e-2b05ce6025a8_IMG_1257.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/a288c034-6dcc-43d7-9437-1011fe6e1c87_IMG_1258.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/34fe600e-53ea-4702-877e-a222d064b2f8_IMG_1259.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0d11fd28-9834-4b52-abfd-65b30a7b3d5b_IMG_1262.JPG"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Настольный набор для руководителя Bestar",
+    "name_uz": "Настольный набор для руководителя Bestar",
+    "price": 4836910,
+    "product_group_id": "4e03964d-88a7-577f-ac67-1e469b52faaa",
+    "sku_code": "EI - 3",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "f2576269-6313-54fa-bf53-36cfcfc10b6e",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e54e0aca-1f0f-4891-9800-2e732c0df2c4_Frame2087330125(61).jpg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Настольный набор для руководителя Bestar",
+    "name_uz": "Настольный набор для руководителя Bestar",
+    "price": 4836910,
+    "product_group_id": "4e03964d-88a7-577f-ac67-1e469b52faaa",
+    "sku_code": "EI-2",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "1ef2f086-b8aa-4501-9c4a-4e2d1c4af23d",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+  "is_active": true,
+  "name_ru": "Конверт",
+  "name_uz": "Конверт",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T06:22:14.931682Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 1659.84,
+    "guid": "08bff719-b204-5e9d-bcea-7f619aafc0c5",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/794aaec2-6d25-4d2f-a69d-64e59419d0e2_Frame2087330124(61).jpg"
+    ],
+    "in_stock": 143,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 2554,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "357707",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "1e20811a-d1ca-55f1-87f4-03f00d1f9581",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0d0f7811-3ffe-4fbd-a4ef-144eb3fa8ad5_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 1886,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 1064,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "70201",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "506cb5fb-bf89-52e7-9f7b-5202217cacbc",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e06d0952-4e78-4797-aede-4d410debf801_konvert-euro-114229-belyy-80gm2-s-otryvnoy-lentoy-s-oknom-alta-42472-0.jpeg"
+    ],
+    "in_stock": 5418,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 1109,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "70203",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "9783b5f2-d149-5a55-ba44-dd5112f17f1b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/4ae79cbb-a1c3-409e-9777-4f696f3efb35_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 21113,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 1176,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "163162",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "8c84313a-4ba5-513f-9ca4-93c51de26858",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/6562d9fc-38f8-44f6-842e-367d4da4d157_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 7146,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 2408,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "124090",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "abb96167-bcdb-5db8-b460-2e8cbfab658b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0772ac3c-543a-4801-9ee4-18e143f34e48_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 19474,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 2800,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "124105",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "80ff0bb2-02b8-5591-9080-cf28989929aa",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d22628d5-1f15-428f-b930-5a7d60981521_Frame2087330124(61).jpg"
+    ],
+    "in_stock": 1222,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 2800,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "161150",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "8582dfb2-012d-5787-9c7d-158fefa73cf4",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/72efadb7-1b4b-4b06-a71e-f93d8456261a_Frame2087330124(61).jpg"
+    ],
+    "in_stock": 2415,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 4906,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "161152",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "7c5cfaef-83c3-5913-bca3-e3495d994741",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/07245381-10a5-44ca-9e76-688faaa112a3_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 2381,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 7000,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "413017",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "a6bd6642-5877-55f3-b61d-9e11bc36505e",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/fde5df3f-6ac2-4f72-8604-0bb26beaa192_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 750,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 7101,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "313017",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "b8970927-1430-5358-b6da-aae077dbd4f9",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d291ac64-6673-4834-affb-7f91e1c2015b_IMG_3683.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/6516bc9d-6ceb-4e4a-b09c-eabcf22da5c5_IMG_3684.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/bf21e589-e72a-44dc-8e81-0651161189f5_IMG_3685.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b67e1d79-868b-466e-b8a2-f67b00104ff8_IMG_3686.webp"
+    ],
+    "in_stock": 24,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 9307,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "209A.5",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "21c3bd9f-b8e0-5a05-9885-c17aa3914268",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9a16922e-ce29-4612-b8ee-113152f8f51c_Frame2087330124(60).jpg"
+    ],
+    "in_stock": 24,
+    "is_active": true,
+    "name_ru": "Конверт",
+    "name_uz": "Конверт",
+    "price": 9408,
+    "product_group_id": "c8a32424-3417-5b6d-aa6d-803915db8e62",
+    "sku_code": "204A",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+  "is_active": true,
+  "name_ru": "Перфофайл Deli ",
+  "name_uz": "Перфофайл Deli ",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T05:33:51.075665Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 20890,
+    "guid": "e352d429-3d0d-59bc-8401-45cab5d54952",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/38fe9856-eb65-4014-8110-9cbc8d883f59_Frame2087330153(3).webp"
+    ],
+    "in_stock": 545,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 32138,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "F20402-T",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "e4247e14-af84-59f2-a7bb-374e2962e6e5",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/3b2cb88a-b06a-4f3c-8d4e-ad20592784a4_Frame2087330122(31).jpg"
+    ],
+    "in_stock": 23,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 9901,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "5710",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "79865d7c-ba9f-5bb5-aa04-65562a4b4860",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b7e56d7e-3c2e-4c8a-9328-9c7e381b4607_Frame2087330126(8).jpg"
+    ],
+    "in_stock": 1567,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 52203,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "E5712",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "5e1679be-08b9-5666-bfd4-7ad05c57492b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/14d92141-9f2b-4f1a-b857-e4a967b9ccd7_IMG_0613.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 71232,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "20102",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "8e2d09d1-e586-5d7b-91a6-fdd32154b6ba",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5d5d2d3d-d115-4627-a2bf-34732aca5371_Frame2087330126(9).jpg"
+    ],
+    "in_stock": 23,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 110006,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "EF20202",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "9d3dd084-be3c-5f00-b9eb-855ea1ffe2df",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d226dfbb-7261-4b58-8d9d-315c1ae4fa4a_Frame2087330125(5).jpg"
+    ],
+    "in_stock": 13,
+    "is_active": true,
+    "name_ru": "Перфофайл Deli ",
+    "name_uz": "Перфофайл Deli ",
+    "price": 123502,
+    "product_group_id": "0fd14d0b-5efc-5f80-b8cd-f944143f8e3a",
+    "sku_code": "EF20302",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "3af77a4d-2798-58ba-a157-9c8dcd1d454d",
+  "is_active": true,
+  "name_ru": "Отпариватель напольный Tefal",
+  "name_uz": "Отпариватель напольный Tefal",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:19:45.332259Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Черный",
+     "name_uz": "Черный"
+    },
+    "discount_percent": 35,
+    "discount_price": 2104487,
+    "guid": "fc35cb01-cf2b-56bf-8b77-710b5e5ae0ae",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b26c3342-6e0d-4daa-aa44-7b69965cd55b_be3f1033-6b94-46af-b091-dd040d957009_Artboard-1.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Отпариватель напольный Tefal",
+    "name_uz": "Отпариватель напольный Tefal",
+    "price": 3237672,
+    "product_group_id": "3af77a4d-2798-58ba-a157-9c8dcd1d454d",
+    "sku_code": "IT3480E1",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "bc76b591-b4c3-5693-aa62-36c91dcc05f5",
+  "is_active": true,
+  "name_ru": "Монитор Dell",
+  "name_uz": "Монитор Dell",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:15:59.761822Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 3700000,
+    "guid": "187216ab-8d01-595d-a017-82929eefd2e0",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/8e0f439f-f146-4e00-a995-dc84d3aa51a4_Frame2087330125(32).jpg"
+    ],
+    "in_stock": 13,
+    "is_active": true,
+    "name_ru": "Монитор Dell",
+    "name_uz": "Монитор Dell ",
+    "price": 5692307,
+    "product_group_id": "bc76b591-b4c3-5693-aa62-36c91dcc05f5",
+    "sku_code": "SE2422H",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "dc7ec8b0-26c4-5094-9bb1-9edd745c7124",
+  "is_active": true,
+  "name_ru": "Офисный стул Deli",
+  "name_uz": "Офисный стул Deli",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:18:47.337519Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 575960,
+    "guid": "9e377447-f263-5b1d-a818-9b641cbd1831",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/662570c5-4d7b-4cfb-b014-607cc8ac5123_p28414-lg(1).webp"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Офисный стул Deli",
+    "name_uz": "Офисный стул Deli",
+    "price": 886000,
+    "product_group_id": "dc7ec8b0-26c4-5094-9bb1-9edd745c7124",
+    "sku_code": "4501",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "254eb48f-6c0e-4657-a3ef-4430411f27d1",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "792e954b-edcc-55b2-b5b1-6912b7174305",
+  "is_active": true,
+  "name_ru": "Кофе растворимый Jacobs Monarch",
+  "name_uz": "Кофе растворимый Jacobs Monarch",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:24:11.323625Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 5.1,
+    "discount_price": 58700,
+    "guid": "a5aa190e-c2ac-5a83-b99c-4a9370267ac1",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/bb54598b-7b98-4057-a5c3-6b7693affaab_IMG_2616.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/f47830b0-71e6-411c-8f6e-720e0327de78_IMG_2617.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9d646a81-7861-4abf-981f-578cff5e0e8c_IMG_2618.JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d79ff6c3-bbff-4c51-9361-01857e123f94_IMG_2619.JPG"
+    ],
+    "in_stock": 185,
+    "is_active": true,
+    "name_ru": "Кофе растворимый Jacobs Monarch",
+    "name_uz": "Кофе растворимый Jacobs Monarch",
+    "price": 61824,
+    "product_group_id": "792e954b-edcc-55b2-b5b1-6912b7174305",
+    "sku_code": "95jacobsbanka",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "65f0dcd8-9e08-589b-aec1-847e36419b61",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9e0f96a3-784c-4aad-bd78-96c1627c450c_Frame2087330095(20).JPG",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/6c1a3cff-4fe5-4341-8e19-79545af5b355_Frame2087330102(1).JPG"
+    ],
+    "in_stock": 137,
+    "is_active": true,
+    "name_ru": "Кофе растворимый Jacobs Monarch",
+    "name_uz": "Кофе растворимый Jacobs Monarch",
+    "price": 59000,
+    "product_group_id": "792e954b-edcc-55b2-b5b1-6912b7174305",
+    "sku_code": "75jacobspaket",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "a1d806b2-e1ed-5501-b5f6-4299413cb834",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/db6a5ed7-dbfa-43d5-ab59-e4d71b7922b4_IMG_0864.jpeg"
+    ],
+    "in_stock": 19,
+    "is_active": true,
+    "name_ru": "Кофе растворимый Jacobs Monarch",
+    "name_uz": "Кофе растворимый Jacobs Monarch",
+    "price": 168000,
+    "product_group_id": "792e954b-edcc-55b2-b5b1-6912b7174305",
+    "sku_code": "jacobs230gr",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "b4670019-1511-5f62-9cb2-9f3c1c403b2f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/becaf85a-137c-4e25-801e-fba6121059de_IMG_2707.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/6b7a17c6-22d4-496d-9f61-77677e76fb99_IMG_2708.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/59415d64-199e-4c8f-b2fb-502f4cb39875_IMG_2709.webp"
+    ],
+    "in_stock": 89,
+    "is_active": true,
+    "name_ru": "Кофе растворимый Jacobs Monarch",
+    "name_uz": "Кофе растворимый Jacobs Monarch",
+    "price": 281064,
+    "product_group_id": "792e954b-edcc-55b2-b5b1-6912b7174305",
+    "sku_code": "500jacobspaket",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "d4869176-0d9d-575d-8695-0134fc1851e5",
+  "is_active": true,
+  "name_ru": "Игровой монитор MI ",
+  "name_uz": "Игровой монитор MI ",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T05:33:57.577756Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 4381500,
+    "guid": "af23da03-cd94-512d-aabe-fe64c148272f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5022c4e9-5282-413f-86a6-a934143b0446_Frame2087330122(64).jpg"
+    ],
+    "in_stock": 8,
+    "is_active": true,
+    "name_ru": "Игровой монитор MI ",
+    "name_uz": "Игровой монитор MI ",
+    "price": 6740768,
+    "product_group_id": "d4869176-0d9d-575d-8695-0134fc1851e5",
+    "sku_code": "MI34",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "e9f23991-1591-500a-8e11-fddc9713e55a",
+  "is_active": true,
+  "name_ru": "Папка с двумя прижимами Muller",
+  "name_uz": "Папка с двумя прижимами Muller",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:15:25.318306Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Красный",
+     "name_uz": "Красный"
+    },
+    "discount_percent": 35,
+    "discount_price": 8075.87,
+    "guid": "800bc070-2f1a-5373-ae7c-155000b3088f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e2ade61b-7c33-4fa7-a4eb-f16b314f8a32_Frame2087330124-2026-05-14T161115.796.jpg"
+    ],
+    "in_stock": 355,
+    "is_active": true,
+    "name_ru": "Папка с двумя прижимами Muller",
+    "name_uz": "Папка с двумя прижимами Muller",
+    "price": 12424,
+    "product_group_id": "e9f23991-1591-500a-8e11-fddc9713e55a",
+    "sku_code": "E31203-03",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "1b141cd1-a96c-4ec6-952a-1aaa4b9cc6ed",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "98e2683e-2dcc-57ad-8046-6a8069cf4a0e",
+  "is_active": true,
+  "name_ru": "Ручка шариковая Schneider",
+  "name_uz": "Ручка шариковая Schneider",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T05:35:05.974315Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Зеленый",
+     "name_uz": "Зеленый"
+    },
+    "discount_percent": 35,
+    "discount_price": 4085.96,
+    "guid": "db800499-131e-5a6d-a2d8-14afbd3557ad",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/aca66934-102d-4d42-b77e-a9565bf4c576_IMG_1741.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/2207673b-d6b3-4a88-b922-c206d0ab890b_IMG_1739.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/e4c3ae88-67d5-4eaa-8634-7d6ef2a530aa_IMG_1740.webp"
+    ],
+    "in_stock": 226,
+    "is_active": true,
+    "name_ru": "Ручка шариковая Schneider",
+    "name_uz": "Ручка шариковая Schneider",
+    "price": 6286,
+    "product_group_id": "98e2683e-2dcc-57ad-8046-6a8069cf4a0e",
+    "sku_code": "150604",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Красный",
+     "name_uz": "Красный"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "65e7e2c5-e7cc-5aa1-845e-85ec3ccd0b78",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/da5f8c19-8f37-4ccb-aa07-2e5f6e189656_IMG_2017.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c5c9cd1f-7239-4c66-a4eb-2633862dd5e0_IMG_2018.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5cf46620-3bc8-4c35-a66e-936ff3ff8c45_IMG_2019.webp"
+    ],
+    "in_stock": 108,
+    "is_active": true,
+    "name_ru": "Ручка шариковая Schneider",
+    "name_uz": "Ручка шариковая Schneider",
+    "price": 5600,
+    "product_group_id": "98e2683e-2dcc-57ad-8046-6a8069cf4a0e",
+    "sku_code": "150602",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "503f3cc6-4dc8-5764-85e6-f6e346a9d55f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/53d53fdd-7985-4e88-bce9-f2087e327db6_Frame2087330122(26).jpg"
+    ],
+    "in_stock": 12,
+    "is_active": true,
+    "name_ru": "Ручка шариковая Schneider",
+    "name_uz": "Ручка шариковая Schneider",
+    "price": 6384,
+    "product_group_id": "98e2683e-2dcc-57ad-8046-6a8069cf4a0e",
+    "sku_code": "150603",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "95434159-dbd1-49c3-8e1d-d1a2a0e92b54",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "1b50e58e-e028-5450-9f13-22311200b50e",
+  "is_active": true,
+  "name_ru": "Уничтожитель бумаг Deli",
+  "name_uz": "Уничтожитель бумаг Deli",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-20T06:21:05.971656Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Белый",
+     "name_uz": "Белый"
+    },
+    "discount_percent": 35,
+    "discount_price": 1784575,
+    "guid": "fc6a1f5f-4fb4-5f0e-bac4-a04c7e24de29",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b92948cb-1b7b-4730-ad02-0899d6cf0a08_Frame2087330125(17).jpg"
+    ],
+    "in_stock": 99,
+    "is_active": true,
+    "name_ru": "Уничтожитель бумаг Deli",
+    "name_uz": "Уничтожитель бумаг Deli",
+    "price": 2745500,
+    "product_group_id": "1b50e58e-e028-5450-9f13-22311200b50e",
+    "sku_code": "ET051",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cc9afdc8-c31f-4e64-acd2-3420dbc4009a",
+  "created_at": "2026-03-16T07:56:42.962241Z",
+  "favorite": false,
+  "guid": "902db1de-2b4e-5820-ae4a-4349487224ca",
+  "is_active": true,
+  "name_ru": "Кресло Ben Visitor",
+  "name_uz": "Кресло Ben Visitor",
+  "sold_count": 0,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-13T07:18:17.248125Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 35,
+    "discount_price": 902250,
+    "guid": "cab5ee12-090e-5157-ae2a-194ca1790e5e",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/6a8072fa-d631-4276-bc11-4f23f9c7730a_Frame2087330122-2026-05-08T131446.227.jpg"
+    ],
+    "in_stock": 6,
+    "is_active": true,
+    "name_ru": "Кресло Ben Visitor",
+    "name_uz": "Кресло Ben Visitor",
+    "price": 1388846,
+    "product_group_id": "902db1de-2b4e-5820-ae4a-4349487224ca",
+    "sku_code": "Ben Visitor",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "c2250f56-1d27-47e7-9be3-c87133edb0cf",
+  "created_at": "2026-10-19T05:46:20.333092Z",
+  "favorite": false,
+  "guid": "4fe64519-c2d1-57bb-b5b1-01d760e0a35b",
+  "is_active": true,
+  "name_ru": "Ножницы BergHOFF Forest",
+  "name_uz": "Ножницы BergHOFF Forest",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:44:33.589449Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Зеленый",
+     "name_uz": "Зеленый"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "c3ef4c9e-7fca-5050-b1ed-b9f3b0d95d03",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/f72cdf6e-9535-4123-8806-aa6e670b0690_2927AB0A-393E-4EEF-8A16-FE3A3A9BBAB4.png"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Ножницы BergHOFF Forest",
+    "name_uz": "Ножницы BergHOFF Forest",
+    "price": 257600,
+    "product_group_id": "4fe64519-c2d1-57bb-b5b1-01d760e0a35b",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "63e9f815-1bad-4f4d-affc-9799ecb752b3",
+  "created_at": "2026-10-19T05:46:20.12493Z",
+  "favorite": false,
+  "guid": "0ec630d5-9f49-5ecf-bdb1-a53f943f84da",
+  "is_active": true,
+  "name_ru": "Чайник заварочный ",
+  "name_uz": "Чайник заварочный ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:44:24.310245Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Золотой",
+     "name_uz": "Золотой"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "e63bcbdf-0c51-5cc3-b52c-55c9f1f0ba5d",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/7ec4df0a-59ba-4ccb-83ed-d76db32fda52_4B8D953B-8DF1-420D-9A10-588F4A09D509.png"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Чайник заварочный ",
+    "name_uz": "Чайник заварочный ",
+    "price": 190400,
+    "product_group_id": "0ec630d5-9f49-5ecf-bdb1-a53f943f84da",
+    "sku_code": "DB-94-99",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "5254d8c9-625e-43d5-beee-ee7e2c2482b6",
+  "created_at": "2026-10-19T05:46:20.12493Z",
+  "favorite": false,
+  "guid": "e17029ad-f59e-5308-ba96-5ba8245d58c3",
+  "is_active": true,
+  "name_ru": "Доска пробковая DELI",
+  "name_uz": "Доска пробковая DELI",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:44:16.980658Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "c9f0003b-1b0a-5745-9722-7640315e71df",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/776af828-52f2-4529-bf46-88827208e741_IMG_0942.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Доска пробковая DELI",
+    "name_uz": "Доска пробковая DELI",
+    "price": 162400,
+    "product_group_id": "e17029ad-f59e-5308-ba96-5ba8245d58c3",
+    "sku_code": "E39052",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "0e4c72c7-8462-4591-a644-b788a03727f5",
+  "created_at": "2026-10-19T05:46:20.12493Z",
+  "favorite": false,
+  "guid": "a5eb3523-4e8b-5b11-9d06-028171b21b4e",
+  "is_active": true,
+  "name_ru": "Измерительная рулетка Deli",
+  "name_uz": "Измерительная рулетка Deli",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:44:04.867646Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Белый",
+     "name_uz": "Белый"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "56dbf610-eb6c-5105-b073-e4282cb68e0e",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5afc1445-c861-492a-aa72-5d7673da1c72_IMG_0946.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Измерительная рулетка Deli",
+    "name_uz": "Измерительная рулетка Deli",
+    "price": 54880,
+    "product_group_id": "a5eb3523-4e8b-5b11-9d06-028171b21b4e",
+    "sku_code": "ENS092-WH",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab62bae1-f86d-4d49-926c-9cf16f3e1798",
+  "created_at": "2026-10-19T05:41:37.064432Z",
+  "favorite": false,
+  "guid": "f01fff20-335e-5d16-9ea2-76e08911ac6f",
+  "is_active": true,
+  "name_ru": "Щетка для снятия паутины ",
+  "name_uz": "Щетка для снятия паутины ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:43:49.985348Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "ab60a632-2530-5ad0-a25f-1d21b80519f5",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/7fa7bce3-d9d9-4e0a-b29d-439a4974e7d8_IMG_0941.png"
+    ],
+    "in_stock": 8,
+    "is_active": true,
+    "name_ru": "Щетка для снятия паутины ",
+    "name_uz": "Щетка для снятия паутины ",
+    "price": 60001,
+    "product_group_id": "f01fff20-335e-5d16-9ea2-76e08911ac6f",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "cd06f29c-4d93-416b-84fc-954a28ec4232",
+  "created_at": "2026-10-19T05:41:36.622235Z",
+  "favorite": false,
+  "guid": "3b4d1c41-23d2-598b-9c37-62eb08fadad3",
+  "is_active": true,
+  "name_ru": "Скотч Deli",
+  "name_uz": "Скотч Deli",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-19T06:43:05.690989Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "0f86f43b-5886-50b0-84cd-13472f99b1d5",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/20b7e815-e2cc-489e-b491-753d2e32a08a_86B78B77-8052-481E-AC3D-69FA565074F0.png"
+    ],
+    "in_stock": 4,
+    "is_active": true,
+    "name_ru": "Скотч Deli",
+    "name_uz": "Скотч Deli",
+    "price": 30576,
+    "product_group_id": "3b4d1c41-23d2-598b-9c37-62eb08fadad3",
+    "sku_code": "30183",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "a6048e75-2652-4c16-aa98-558e8cc28b1c",
+  "created_at": "2026-10-15T11:35:47.283541Z",
+  "favorite": false,
+  "guid": "cccee3b9-277c-509b-acf9-43ec329b0b85",
+  "is_active": true,
+  "name_ru": "Кабель USB-C зарядка",
+  "name_uz": "Кабель USB-C зарядка",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T11:51:32.260495Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "cbe34d1f-40a7-5a0e-baa8-eddd05dc4cec",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c9819c38-d2db-4be2-884e-24d88352a0e6_IMG_0923.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Кабель USB-C зарядка",
+    "name_uz": "Кабель USB-C зарядка",
+    "price": 196000,
+    "product_group_id": "cccee3b9-277c-509b-acf9-43ec329b0b85",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "d18e5780-0a49-44ee-8eaa-041923f414f3",
+  "created_at": "2026-10-15T11:30:47.842149Z",
+  "favorite": false,
+  "guid": "d7920abe-1403-5411-8997-5517e4b199f6",
+  "is_active": true,
+  "name_ru": "Пятновыводитель VANISH",
+  "name_uz": "Пятновыводитель VANISH",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T11:51:22.021424Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "620763fb-2c82-5e38-9dfa-ef6fef23165a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d153b472-f2df-405d-8bce-f367d1bd70f5_IMG_0919.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Пятновыводитель VANISH",
+    "name_uz": "Пятновыводитель VANISH",
+    "price": 184800,
+    "product_group_id": "d7920abe-1403-5411-8997-5517e4b199f6",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "7a670b0e-7abc-42cd-9d46-ba9f9424b78d",
+  "created_at": "2026-10-15T11:30:47.398529Z",
+  "favorite": false,
+  "guid": "0188b0c2-b839-5daa-b5b2-86d6a14b3edc",
+  "is_active": true,
+  "name_ru": "Белый диспенсер для Z салфеток",
+  "name_uz": "Белый диспенсер для Z салфеток",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T11:51:09.668819Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "c8c1cf7f-f2f9-55c9-81a6-d4a3479e6575",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/456b1c27-50c7-4377-adc1-13b4eb9ad96a_IMG_0913.png"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Белый диспенсер для Z салфеток",
+    "name_uz": "Белый диспенсер для Z салфеток",
+    "price": 105000,
+    "product_group_id": "0188b0c2-b839-5daa-b5b2-86d6a14b3edc",
+    "sku_code": "706",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "c2250f56-1d27-47e7-9be3-c87133edb0cf",
+  "created_at": "2026-10-15T07:20:45.582021Z",
+  "favorite": false,
+  "guid": "eb85a5cd-7014-5689-808d-8e0de62284ca",
+  "is_active": true,
+  "name_ru": "Ножницы ",
+  "name_uz": "Ножницы ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:25:46.741888Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "0400268d-720e-575b-bb04-55fd3c59e4f7",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/847a2444-09a3-410c-bb96-c891aaa65087_IMG_0904.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Ножницы ",
+    "name_uz": "Ножницы ",
+    "price": 7101,
+    "product_group_id": "eb85a5cd-7014-5689-808d-8e0de62284ca",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab62bae1-f86d-4d49-926c-9cf16f3e1798",
+  "created_at": "2026-10-15T06:50:48.23793Z",
+  "favorite": false,
+  "guid": "50830407-8e9c-5a0f-81e5-fd2add216c4a",
+  "is_active": true,
+  "name_ru": "Швабра для пола Желтая",
+  "name_uz": "Швабра для пола Желтая",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:18:12.06064Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "525d96a4-d9e9-57c0-9e75-fa75d903b7bb",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/7f5b2d5f-6d6e-4a84-be07-b48bc137679b_IMG_0902.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Швабра для пола Желтая",
+    "name_uz": "Швабра для пола Желтая",
+    "price": 160001,
+    "product_group_id": "50830407-8e9c-5a0f-81e5-fd2add216c4a",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "63e9f815-1bad-4f4d-affc-9799ecb752b3",
+  "created_at": "2026-10-15T06:50:48.23793Z",
+  "favorite": false,
+  "guid": "9d1b439a-cb4c-5e20-b2c3-486f47617f4e",
+  "is_active": true,
+  "name_ru": "Бокал ТУЛИП",
+  "name_uz": "Бокал ТУЛИП",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:18:25.822059Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "f3c69bcf-bb89-59a1-8fe0-64e07c6def35",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/9e81f64a-2a45-4e9d-b6f0-f950836e0116_IMG_0899.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Бокал ТУЛИП",
+    "name_uz": "Бокал ТУЛИП",
+    "price": 99210,
+    "product_group_id": "9d1b439a-cb4c-5e20-b2c3-486f47617f4e",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab62bae1-f86d-4d49-926c-9cf16f3e1798",
+  "created_at": "2026-10-15T06:50:48.23793Z",
+  "favorite": false,
+  "guid": "1a2e3cac-ed2d-502b-874a-e59eba4a65d7",
+  "is_active": true,
+  "name_ru": "Веник",
+  "name_uz": "Веник",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:18:30.383095Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "47aaa3a0-73a7-5e5c-aedd-3437338a9c33",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/b3bd36b1-9337-427d-9f0d-e32f4be03a7c_IMG_0901.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Веник",
+    "name_uz": "Веник",
+    "price": 46704,
+    "product_group_id": "1a2e3cac-ed2d-502b-874a-e59eba4a65d7",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "664d7faa-511b-4176-9f8d-601604bf7d37",
+  "created_at": "2026-10-15T06:50:47.778264Z",
+  "favorite": false,
+  "guid": "2bfecded-dd76-5bdb-882b-0ff62d0da80c",
+  "is_active": true,
+  "name_ru": "Точилка механическая, Deli",
+  "name_uz": "Точилка механическая, Deli",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:18:07.87526Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "21971dd7-f036-5110-ab62-1b68fb6ea5cb",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/611f775a-f703-4ea0-8c75-45eb9556210a_IMG_0896.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Точилка механическая, Deli",
+    "name_uz": "Точилка механическая, Deli",
+    "price": 80500,
+    "product_group_id": "2bfecded-dd76-5bdb-882b-0ff62d0da80c",
+    "sku_code": "0616B",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "e69fdf57-1226-5e2e-aab9-9f32434c401d",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/5959f4a5-07be-4044-b815-83532f385561_IMG_0944.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Точилка механическая, Deli",
+    "name_uz": "Точилка механическая, Deli",
+    "price": 123553,
+    "product_group_id": "2bfecded-dd76-5bdb-882b-0ff62d0da80c",
+    "sku_code": "E0620",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ee2ebd96-e594-4405-8a56-e89ba165bba4",
+  "created_at": "2026-10-15T06:45:45.630772Z",
+  "favorite": false,
+  "guid": "d06870c0-06f5-5530-8c37-bbbd3338eb07",
+  "is_active": true,
+  "name_ru": "Нить ",
+  "name_uz": "Нить ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:18:02.988848Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Белый",
+     "name_uz": "Белый"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "338d075c-4380-5a61-a56e-b8fc1d1a7f94",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/8b283b5a-0b9e-465d-b3d7-b69efde88e8a_IMG_0895.webp"
+    ],
+    "in_stock": 4,
+    "is_active": true,
+    "name_ru": "Нить ",
+    "name_uz": "Нить Verda",
+    "price": 43000,
+    "product_group_id": "d06870c0-06f5-5530-8c37-bbbd3338eb07",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "f5bce967-2d7e-472b-bf68-29f5bf5d6672",
+  "created_at": "2026-10-15T06:45:45.410704Z",
+  "favorite": false,
+  "guid": "a9ac4262-8b75-5593-a849-e431523c5933",
+  "is_active": true,
+  "name_ru": "Зеленый чай BS",
+  "name_uz": "Зеленый чай BS",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:17:40.999443Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "0a3a091d-b3ab-5bae-99cb-7df16169db97",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/774ceba7-630c-4683-a353-911559f5913e_IMG_0894.webp"
+    ],
+    "in_stock": 152,
+    "is_active": true,
+    "name_ru": "Зеленый чай BS",
+    "name_uz": "Зеленый чай BS",
+    "price": 14560,
+    "product_group_id": "a9ac4262-8b75-5593-a849-e431523c5933",
+    "sku_code": "TR02156A",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "fb5d35d1-a3ee-4968-8aaf-2ef71c9f84ec",
+  "created_at": "2026-10-15T06:45:45.161383Z",
+  "favorite": false,
+  "guid": "56a33b96-ec17-5cb5-9251-80e7b6a86abc",
+  "is_active": true,
+  "name_ru": "Грифель для механического карандаша Maped",
+  "name_uz": "Грифель для механического карандаша Maped",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T07:17:35.92433Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "b6e1f476-b0ce-5e90-b25d-0e66bb25e926",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/05e7026b-f7ae-4343-bb4a-6875c516a697_IMG_0885.jpeg"
+    ],
+    "in_stock": 3,
+    "is_active": true,
+    "name_ru": "Грифель для механического карандаша Maped",
+    "name_uz": "Грифель для механического карандаша Maped",
+    "price": 7403,
+    "product_group_id": "56a33b96-ec17-5cb5-9251-80e7b6a86abc",
+    "sku_code": "897523 (пачка)",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "dad2b6db-0aa6-474a-a1ab-d66856ee2cff",
+  "created_at": "2026-10-15T05:20:44.842202Z",
+  "favorite": false,
+  "guid": "6fef0904-699e-5308-b672-d78781137e73",
+  "is_active": true,
+  "name_ru": "Ножницы хозяйственные большие",
+  "name_uz": "Ножницы хозяйственные большие",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T06:40:08.341391Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "2d4c854e-33c0-5898-b230-891dbae9b60a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/654fa46b-46e6-415f-a85e-b86ec0211e94_2BFE4F65-75A9-463D-B409-D346C4B133C5.png"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Ножницы хозяйственные большие",
+    "name_uz": "Ножницы хозяйственные большие",
+    "price": 22008,
+    "product_group_id": "6fef0904-699e-5308-b672-d78781137e73",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "f5bce967-2d7e-472b-bf68-29f5bf5d6672",
+  "created_at": "2026-10-15T05:20:44.617821Z",
+  "favorite": false,
+  "guid": "c5b97a0a-d4a7-5e3d-a104-0460bee00c04",
+  "is_active": true,
+  "name_ru": "Антибактериальное жидкое мыло Protex",
+  "name_uz": "Антибактериальное жидкое мыло Protex",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T06:39:57.635906Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "131c7af4-e623-5281-9469-ac98d9f9c19a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c606b501-baf9-47db-9c95-af05ede55e01_IMG_0882.jpeg"
+    ],
+    "in_stock": 24,
+    "is_active": true,
+    "name_ru": "Антибактериальное жидкое мыло Protex",
+    "name_uz": "Антибактериальное жидкое мыло Protex",
+    "price": 52640,
+    "product_group_id": "c5b97a0a-d4a7-5e3d-a104-0460bee00c04",
+    "sku_code": "TR02005A",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "14e53a32-68a0-4e3d-8f74-bf44656d80ae",
+  "created_at": "2026-10-15T05:20:44.617821Z",
+  "favorite": false,
+  "guid": "0f7c4116-5ac9-553b-a920-d65ec85a9011",
+  "is_active": true,
+  "name_ru": "Kлейкие подушечки Deli",
+  "name_uz": "Kлейкие подушечки Deli",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-15T06:39:50.772672Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "12bc62ff-bc3b-5b17-9792-72410ed26d97",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/4ee76d43-8381-4987-8ff1-44dfc6a64d96_IMG_0878.webp"
+    ],
+    "in_stock": 4,
+    "is_active": true,
+    "name_ru": "Kлейкие подушечки Deli",
+    "name_uz": "Kлейкие подушечки Deli",
+    "price": 36602,
+    "product_group_id": "0f7c4116-5ac9-553b-a920-d65ec85a9011",
+    "sku_code": "EA21710",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "f5bce967-2d7e-472b-bf68-29f5bf5d6672",
+  "created_at": "2026-10-14T05:49:25.27074Z",
+  "favorite": false,
+  "guid": "a42fea96-a6c2-5562-9d85-55568268510f",
+  "is_active": true,
+  "name_ru": "Автоматический сенсорный дозатор мыла Mi",
+  "name_uz": "Автоматический сенсорный дозатор мыла Mi",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:16:27.978746Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "ff4bf53b-8fc1-5e65-b865-1accdb4a761f",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/94203cbc-f051-4922-b33d-e53c3ea5adfc_IMG_0860.webp",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0ba3ef1d-871c-4081-b3c9-4124f32e9f55_IMG_0861.webp"
+    ],
+    "in_stock": 4,
+    "is_active": true,
+    "name_ru": "Автоматический сенсорный дозатор мыла Mi",
+    "name_uz": "Автоматический сенсорный дозатор мыла Mi",
+    "price": 495040,
+    "product_group_id": "a42fea96-a6c2-5562-9d85-55568268510f",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "c4c998c6-7af7-428a-8beb-e36e77b2e617",
+  "created_at": "2026-10-14T05:49:25.27074Z",
+  "favorite": false,
+  "guid": "538b9797-26cb-5cdd-b88d-d44a20b334fe",
+  "is_active": true,
+  "name_ru": "Coca Cola",
+  "name_uz": "Coca Cola",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:16:09.126971Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "36b5c413-26ff-5c45-a130-e63c2ea73119",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/89004d84-2e7e-418b-b410-a10944c635cf_IMG_0859.jpeg"
+    ],
+    "in_stock": 6,
+    "is_active": true,
+    "name_ru": "Coca Cola",
+    "name_uz": "Coca Cola",
+    "price": 100800,
+    "product_group_id": "538b9797-26cb-5cdd-b88d-d44a20b334fe",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "0e4c72c7-8462-4591-a644-b788a03727f5",
+  "created_at": "2026-10-14T05:49:25.27074Z",
+  "favorite": false,
+  "guid": "47c7cac0-98f2-58c7-a839-145fa579c51a",
+  "is_active": true,
+  "name_ru": "Рулонные шторы Ролло",
+  "name_uz": "Рулонные шторы Ролло",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:16:15.6325Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "32d5cf97-66f4-52b2-b0d2-6b16ee44fabb",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/453a399d-e1d6-4e47-b6c6-d24720f3c9eb_IMG_0867.webp"
+    ],
+    "in_stock": 11,
+    "is_active": true,
+    "name_ru": "Рулонные шторы Ролло",
+    "name_uz": "Рулонные шторы Ролло",
+    "price": 4150000,
+    "product_group_id": "47c7cac0-98f2-58c7-a839-145fa579c51a",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "dad2b6db-0aa6-474a-a1ab-d66856ee2cff",
+  "created_at": "2026-10-14T05:49:25.27074Z",
+  "favorite": false,
+  "guid": "5c4512ec-ac5d-52a6-b427-553f2d0744b3",
+  "is_active": true,
+  "name_ru": "Газовая зажигалка",
+  "name_uz": "Газовая зажигалка",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:16:51.975015Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "fe005561-1a6b-5038-926e-5243bb642f36",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/10369d73-40ee-4a4f-80d1-60b2e53db5d7_IMG_0863.jpeg",
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/bf24e0e8-5739-4b99-a18d-5d1733eec0a8_IMG_0862.jpeg"
+    ],
+    "in_stock": 5,
+    "is_active": true,
+    "name_ru": "Газовая зажигалка",
+    "name_uz": "Газовая зажигалка",
+    "price": 43680,
+    "product_group_id": "5c4512ec-ac5d-52a6-b427-553f2d0744b3",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "488a4e3f-e143-49be-b133-ed5b82b17e1c",
+  "created_at": "2026-10-14T05:49:25.27074Z",
+  "favorite": false,
+  "guid": "637825c4-7c76-5e7e-a577-cca5c48c5795",
+  "is_active": true,
+  "name_ru": "Моющее средство для помещений Floor wash",
+  "name_uz": "Моющее средство для помещений Floor wash",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:21:10.561918Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "9ba8a1a7-e52e-5ff1-ad68-87f7deb6aced",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/61611b98-7380-460f-8b8b-969d99654701_IMG_0948.jpeg"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Моющее средство для помещений Floor wash",
+    "name_uz": "Моющее средство для помещений Floor wash",
+    "price": 313600,
+    "product_group_id": "637825c4-7c76-5e7e-a577-cca5c48c5795",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab0fa493-d89b-4de2-b033-a964b705d02e",
+  "created_at": "2026-10-14T05:49:25.064528Z",
+  "favorite": false,
+  "guid": "e539744b-3df4-58b4-9a84-76a55978ef27",
+  "is_active": true,
+  "name_ru": "Беспроводная клавиатура и мышка Meetion",
+  "name_uz": "Беспроводная клавиатура и мышка Meetion",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:16:03.53777Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "88178ec7-b5a5-54d2-b248-3d19b5355c4b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/0e1f1b01-ce5a-4600-84d7-b5ed6ab7036d_IMG_0866.png"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Беспроводная клавиатура и мышка Meetion",
+    "name_uz": "Беспроводная клавиатура и мышка Meetion",
+    "price": 220000,
+    "product_group_id": "e539744b-3df4-58b4-9a84-76a55978ef27",
+    "sku_code": "CW235",
+    "unit": "шт."
+   },
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "f9c612d1-3ee2-54f2-b97b-a62929894f76",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/1d4458c1-cfe5-4649-a327-0edb1b7d787b_IMG_0855.webp"
+    ],
+    "in_stock": 5,
+    "is_active": true,
+    "name_ru": "Беспроводная клавиатура и мышка Meetion",
+    "name_uz": "Беспроводная клавиатура и мышка Meetion",
+    "price": 266560,
+    "product_group_id": "e539744b-3df4-58b4-9a84-76a55978ef27",
+    "sku_code": "CW295",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab0fa493-d89b-4de2-b033-a964b705d02e",
+  "created_at": "2026-10-14T05:49:25.064528Z",
+  "favorite": false,
+  "guid": "2e8a302c-c2e9-59b8-bc4e-a5eff4964330",
+  "is_active": true,
+  "name_ru": "Проводная клавиатура и мышка Avtech",
+  "name_uz": "Проводная клавиатура и мышка Avtech",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:15:58.472013Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "6256e729-ed6e-54c9-8ce2-e136383800be",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/f4580dfc-29f7-4a3a-9193-43f75278f69b_IMG_0858.jpeg"
+    ],
+    "in_stock": 5,
+    "is_active": true,
+    "name_ru": "Проводная клавиатура и мышка Avtech",
+    "name_uz": "Проводная клавиатура и мышка Avtech",
+    "price": 115360,
+    "product_group_id": "2e8a302c-c2e9-59b8-bc4e-a5eff4964330",
+    "sku_code": "PRO C306 Black",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab0fa493-d89b-4de2-b033-a964b705d02e",
+  "created_at": "2026-10-14T05:49:25.064528Z",
+  "favorite": false,
+  "guid": "ce063bbf-c045-5f64-bca3-3fee77703b73",
+  "is_active": true,
+  "name_ru": "Проводная клавиатура и мышка Meetion",
+  "name_uz": "Проводная клавиатура и мышка Meetion",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:15:52.61613Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "9f1d799e-10c3-54ae-9318-6b96e7c6b35c",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c6a3f563-73a7-42b5-9062-cff6e2661e46_IMG_0856.webp"
+    ],
+    "in_stock": 5,
+    "is_active": true,
+    "name_ru": "Проводная клавиатура и мышка Meetion",
+    "name_uz": "Проводная клавиатура и мышка Meetion",
+    "price": 142408,
+    "product_group_id": "ce063bbf-c045-5f64-bca3-3fee77703b73",
+    "sku_code": "C235",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "67f524ad-11a5-4769-a164-004e3575838a",
+  "created_at": "2026-10-14T05:49:24.827612Z",
+  "favorite": false,
+  "guid": "d485c8e9-cab3-57c1-b2ad-944ca216191f",
+  "is_active": true,
+  "name_ru": "Подарочный набор Deli",
+  "name_uz": "Подарочный набор Deli",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:15:42.394916Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "f19e94e8-f250-5aa8-8d30-01e736f1957a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/59c31e5f-64da-4724-a65f-822042679dfa_IMG_0852.jpeg"
+    ],
+    "in_stock": 4,
+    "is_active": true,
+    "name_ru": "Подарочный набор Deli",
+    "name_uz": "Подарочный набор Deli",
+    "price": 310966,
+    "product_group_id": "d485c8e9-cab3-57c1-b2ad-944ca216191f",
+    "sku_code": "22296-BLACK",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "30f7ce44-1859-4850-8f7b-dc2f64e6e0f9",
+  "created_at": "2026-10-13T05:08:07.225616Z",
+  "favorite": false,
+  "guid": "40394c8d-4701-5f26-804a-88834c617e00",
+  "is_active": true,
+  "name_ru": "Озу для компьютера DDR4",
+  "name_uz": "Озу для компьютера DDR4",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-14T06:15:14.987233Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "99ebd8fc-f9c4-5495-bd29-830407babc5a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/03c3f18f-3c23-4604-9397-98199333f742_IMG_0842.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Озу для компьютера DDR4",
+    "name_uz": "Озу для компьютера DDR4",
+    "price": 666700,
+    "product_group_id": "40394c8d-4701-5f26-804a-88834c617e00",
+    "sku_code": "DDR4 8gb",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "afd538a6-4633-42cf-a4fa-55aea2c98c00",
+  "created_at": "2026-10-07T10:06:45.4625Z",
+  "favorite": false,
+  "guid": "6ace3639-62f8-58b0-8414-2943dc2eb8f9",
+  "is_active": true,
+  "name_ru": "Магнит Глобус ",
+  "name_uz": "Магнит Глобус ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:57:31.470257Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Стальной металик",
+     "name_uz": "Стальной металик"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "311e44ff-81f6-517f-86a7-c4c4c675140b",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/db5d4372-3977-4883-b6bc-1ae8976964a2_IMG_0696.jpeg"
+    ],
+    "in_stock": 3,
+    "is_active": true,
+    "name_ru": "Магнит Глобус ",
+    "name_uz": "Магнит Глобус ",
+    "price": 21706,
+    "product_group_id": "6ace3639-62f8-58b0-8414-2943dc2eb8f9",
+    "sku_code": "МЧ30",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "2b43e502-d293-4c0b-951d-c235121bc01c",
+  "created_at": "2026-10-07T10:01:47.148182Z",
+  "favorite": false,
+  "guid": "bd617b0c-993e-5d56-b3ed-e81c38605567",
+  "is_active": true,
+  "name_ru": "Степлер, Deli ",
+  "name_uz": "Степлер, Deli ",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:57:24.504911Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "b2a6ec71-79d9-5805-ace4-a5b0de48fb3a",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/ea7c3497-0bc8-4344-8fbd-b447ee454225_IMG_0697.webp"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Степлер, Deli ",
+    "name_uz": "Степлер, Deli ",
+    "price": 21401,
+    "product_group_id": "bd617b0c-993e-5d56-b3ed-e81c38605567",
+    "sku_code": "E0238",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "e76b1eca-3309-44e6-9c63-d7bd23a75879",
+  "created_at": "2026-10-07T10:01:46.896562Z",
+  "favorite": false,
+  "guid": "0549a19f-c31d-58bc-8203-dd554ad88180",
+  "is_active": true,
+  "name_ru": "Подушка штемпельная",
+  "name_uz": "Подушка штемпельная",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:57:19.577437Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": {
+     "name_ru": "Синий",
+     "name_uz": "Синий"
+    },
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "917db7f9-0d32-59b2-aa46-6fd533b22a95",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/ae4dbb04-44b6-4f8f-bf99-5ff19c0095fb_IMG_0698.webp"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Подушка штемпельная",
+    "name_uz": "Подушка штемпельная",
+    "price": 52976,
+    "product_group_id": "0549a19f-c31d-58bc-8203-dd554ad88180",
+    "sku_code": "107393",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "62597202-7dd4-43d1-8e25-3ae774617763",
+  "created_at": "2026-10-07T06:56:44.520547Z",
+  "favorite": false,
+  "guid": "34701e58-f688-5443-9a66-0e098d5a3066",
+  "is_active": true,
+  "name_ru": "Дистанционный звонок",
+  "name_uz": "Дистанционный звонок",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:57:09.398928Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "393f09f5-4e16-5a6e-98bb-f457db1305fe",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/52c20352-fe82-4d14-9c74-8c1abcfac42d_IMG_0701.jpeg"
+    ],
+    "in_stock": 5,
+    "is_active": true,
+    "name_ru": "Дистанционный звонок",
+    "name_uz": "Дистанционный звонок",
+    "price": 79027,
+    "product_group_id": "34701e58-f688-5443-9a66-0e098d5a3066",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "ab62bae1-f86d-4d49-926c-9cf16f3e1798",
+  "created_at": "2026-10-07T06:56:44.520547Z",
+  "favorite": false,
+  "guid": "dcff09a8-1ab2-5da6-9998-fb16c9b0ec48",
+  "is_active": true,
+  "name_ru": "Фартук",
+  "name_uz": "Фартук",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:56:14.567789Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "81d63ed7-10d2-5f7d-a16b-92e26e175d70",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/c65a3729-af04-424d-bcf5-be2ca86594c0_IMG_0700.jpeg"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Фартук",
+    "name_uz": "Фартук",
+    "price": 50000,
+    "product_group_id": "dcff09a8-1ab2-5da6-9998-fb16c9b0ec48",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "0e4c72c7-8462-4591-a644-b788a03727f5",
+  "created_at": "2026-10-07T06:56:44.520547Z",
+  "favorite": false,
+  "guid": "8363d504-9e4d-51d4-b56a-9dc6316e3e86",
+  "is_active": true,
+  "name_ru": "Перфорированный короб для кабелей 2*3(метр)",
+  "name_uz": "Перфорированный короб для кабелей 2*3(метр)",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:56:20.228812Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "240f39fb-2d49-5844-b539-f699ddb956d7",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/d4fa3bf2-db0f-4f5b-b10f-ff402e2e1897_IMG_0703.jpeg"
+    ],
+    "in_stock": 2,
+    "is_active": true,
+    "name_ru": "Перфорированный короб для кабелей 2*3(метр)",
+    "name_uz": "Перфорированный короб для кабелей 2*3(метр)",
+    "price": 27462,
+    "product_group_id": "8363d504-9e4d-51d4-b56a-9dc6316e3e86",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ },
+ {
+  "category_id": "1aa3425a-bd5a-46ea-ba04-15d55c9a5752",
+  "created_at": "2026-10-07T06:56:44.520547Z",
+  "favorite": false,
+  "guid": "a5f75b4c-f6cb-54e3-809b-cc58df5b462b",
+  "is_active": true,
+  "name_ru": "Освежитель воздуха Loreva",
+  "name_uz": "Освежитель воздуха Loreva",
+  "sold_count": null,
+  "total_cart_quantity": 0,
+  "updated_at": "2026-10-08T11:56:25.295617Z",
+  "variations": [
+   {
+    "cart_quantity": 0,
+    "color": null,
+    "discount_percent": 0,
+    "discount_price": 0,
+    "guid": "d6b5bf5d-4133-5d37-8d35-8213927db335",
+    "image": [
+     "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/media/72c373a6-c36c-45bf-8388-3ed71f4554af_IMG_0699.webp"
+    ],
+    "in_stock": 1,
+    "is_active": true,
+    "name_ru": "Освежитель воздуха Loreva",
+    "name_uz": "Освежитель воздуха Loreva",
+    "price": 87920,
+    "product_group_id": "a5f75b4c-f6cb-54e3-809b-cc58df5b462b",
+    "sku_code": "false",
+    "unit": "шт."
+   }
+  ],
+  "vip_category": false
+ }
+]

@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useNavigate } from 'react-router'
-import { Heart, LayoutGrid, Package, Phone, Search, ShoppingCart, User } from 'lucide-react'
+import { BadgePercent, FileText, FolderOpen, Heart, LayoutGrid, Package, PackageOpen, Phone, Search, ShoppingCart, User } from 'lucide-react'
 import logo from '@/shared/assets/logo.png'
 import { Container } from '@/shared/ui/Container'
 import { paths } from '@/app/router/paths'
@@ -12,6 +12,9 @@ import { useCartCount } from '@/entities/cart/queries'
 import { useFavouritesCount } from '@/entities/product/queries'
 import { HeaderAction } from './HeaderAction'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { categories } from '@/mocks'
+import { useLang } from '@/shared/hooks/useLang'
+import { localized } from '@/shared/lib/format'
 
 export const Header = observer(() => {
   const { t } = useTranslation()
@@ -19,6 +22,16 @@ export const Header = observer(() => {
   const [query, setQuery] = useState('')
   const { data: cart } = useCartCount()
   const { data: fav } = useFavouritesCount()
+
+  const lang = useLang()
+  const shortcuts = [
+    ...categories.slice(0, 3).map((c, i) => ({
+      to: paths.category(c.guid),
+      icon: [FileText, PackageOpen, FolderOpen][i],
+      label: localized(c, 'name', lang),
+    })),
+    { to: paths.products, icon: BadgePercent, label: t('footer.promotions') },
+  ]
 
   const onSearch = (e: FormEvent) => {
     e.preventDefault()
@@ -75,8 +88,16 @@ export const Header = observer(() => {
         </Flex>
 
         <Flex hideBelow="md" h="40px" align="center" justify="space-between" fontSize="sm" color="fg.body">
-          {/* TODO(redesign): top categories from useCategories(), mega-menu on hover */}
-          <HStack gap="6" />
+          {/* Same 4 shortcuts as the live header. TODO(step 1): mega-menu from the Каталог button */}
+          <HStack gap="6">
+            {shortcuts.map(({ to, icon: Icon, label }) => (
+              <Link key={label} asChild color="fg.body" gap="2" _hover={{ color: 'fg.default' }}>
+                <RouterLink to={to}>
+                  <Icon size={16} /> {label}
+                </RouterLink>
+              </Link>
+            ))}
+          </HStack>
           <HStack gap="6">
             <Link href="tel:+998781484444" color="fg.body" gap="2">
               <Phone size={14} /> +998 78 148 44 44

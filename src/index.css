@@ -1,7 +1,17 @@
 /* Global styles live in the Chakra system (src/shared/theme/system.ts).
    Keep this file for third-party overrides only (Swiper, map widgets...). */
-.swiper-pagination-bullet-active {
-  background: #101828;
+:root {
+  --swiper-theme-color: #101828; /* navy.900 */
+}
+.hero-banners .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+.hero-banners .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 20px;
+  border-radius: 4px;
+  transition: width 0.2s;
 }
 
 html {

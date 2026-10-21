@@ -1,0 +1,87 @@
+[
+ {
+  "display_order": 1,
+  "guid": "318e3a3e-dc1d-4fd2-859e-2020ef5d0714",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/c27913c6-3912-4828-83e1-b1b782f0b164_hamkorbank.PHOTO"
+ },
+ {
+  "display_order": 2,
+  "guid": "56ed7d93-b0b6-476e-9a74-5d81ea446fbf",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/bf961a8d-61de-4382-870f-ab8d121ea4c3_kbank.PHOTO"
+ },
+ {
+  "display_order": 3,
+  "guid": "6e2fdce5-3a83-4d28-96f9-4d65d7dcbc70",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/7a854d94-8c8d-4cc3-9665-350894688d9e_ofb.PHOTO"
+ },
+ {
+  "display_order": 5,
+  "guid": "d383c121-4a0e-4fc0-908a-d6445da51502",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/75b68eba-eb74-4ecc-9d66-1c5a96c85dc2_befit(1).jpg"
+ },
+ {
+  "display_order": 5,
+  "guid": "0c883972-4e7f-4597-ae29-97304436f601",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/64a2f8f4-9c41-413a-811f-1256dff45247_lcwaikiki.PHOTO"
+ },
+ {
+  "display_order": 6,
+  "guid": "2d4204da-764f-43fb-a598-285e4b656a5a",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/b6ee4e66-9455-4883-9706-c9761f2bac1d_blanc.png"
+ },
+ {
+  "display_order": 6,
+  "guid": "68dd5531-f9fd-47b5-9550-f61b94bb014c",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/853287fa-b50f-4b7e-b6a3-6d9ddd903fe8_henkel.PHOTO"
+ },
+ {
+  "display_order": 6,
+  "guid": "60074ec7-bcce-437d-b4a3-df7155f93730",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/dfe94eb8-b550-4618-86b4-41382b2c8910_burger.png"
+ },
+ {
+  "display_order": 7,
+  "guid": "a5bf2b05-2ee4-425d-835e-86e346bc8f77",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/400a178a-a09a-449d-92c7-20cfc9280590_epam.PHOTO"
+ },
+ {
+  "display_order": 8,
+  "guid": "d46577f1-be80-46df-8523-1729b9fe95f2",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/6e459610-4e2c-413d-bf2b-7d998ffc8699_ey.PHOTO"
+ },
+ {
+  "display_order": 9,
+  "guid": "869220a5-ec1f-4914-ad6e-5ee590516d78",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/6642bd07-5dc0-45d3-8426-01cd38c039d8_mcosm.PHOTO"
+ },
+ {
+  "display_order": 10,
+  "guid": "5e97a2ea-434d-441c-a291-3c4bea3bbd52",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/1bad49a9-0b26-4e8d-9421-dc93611273f8_caff(1).png"
+ },
+ {
+  "display_order": 10,
+  "guid": "5d774a1c-4518-4d54-b7ed-ffedb40d1fd4",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/0ad46b7a-bdd0-49af-9ff5-8fea75fa1d2f_texnomart1.PHOTO"
+ },
+ {
+  "display_order": 11,
+  "guid": "1a806642-305b-4272-920b-eb134da76beb",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/cba14cde-003a-4d9a-956e-7194e535ca00_dodo.PHOTO"
+ },
+ {
+  "display_order": 12,
+  "guid": "a3ec98bb-3ed2-49f9-824d-89f1baa09cd1",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/69278882-858b-4ea5-be21-b0f0badb4148_kfc.PHOTO"
+ },
+ {
+  "display_order": 14,
+  "guid": "3d361f13-b14a-41ea-8448-5adafb895b4b",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/45d51426-6c36-4e82-860f-175106924951_gorilla.png"
+ },
+ {
+  "display_order": 15,
+  "guid": "67751c7b-7b26-4d78-87aa-08a102efddad",
+  "image": "https://cdn.u-code.io/384464ec-9193-44e3-ac23-ec6035932583/Media/7e76169b-97fa-4f10-9f7f-8403e200f55b_air.png"
+ }
+]

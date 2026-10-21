@@ -10,6 +10,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  optimizeDeps: {
+    // Pre-bundle up front: late discovery re-optimizes mid-session and leaves two React copies.
+    include: ['swiper/react', 'swiper/modules', 'lucide-react'],
+  },
   build: {
     rolldownOptions: {
       output: {

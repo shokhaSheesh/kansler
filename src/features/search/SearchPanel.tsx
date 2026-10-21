@@ -118,7 +118,7 @@ const ProductRow = ({ p, q, mobile }: { p: Product; q: string[]; mobile: boolean
       </Stack>
       <Box flexShrink="0" onMouseDown={(e) => e.preventDefault()} onClick={(e) => e.stopPropagation()}>
         {v.in_stock > 0 ? (
-          <AddToCartControl variation={v} name={name} size="sm" />
+          <AddToCartControl product={p} size="sm" />
         ) : (
           <Text fontSize="xs" color="fg.subtle">
             {t('product_detail.out_of_stock')}

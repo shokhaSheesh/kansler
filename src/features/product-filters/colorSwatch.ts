@@ -11,7 +11,7 @@ const MAP: Array<[RegExp, string]> = [
   [/зел|green/i, '#2E9D4F'],
   [/ж[её]л|желт|yellow|жетл/i, '#F5C518'],
   [/оранж|orange/i, '#F57C00'],
-  [/роз|pink/i, '#F06292'],
+  [/(^|[\s-])роз|pink/i, '#F06292'], // word start: 'прозрачная' contains 'роз'
   [/фиол|сирен|purple|violet/i, '#7E57C2'],
   [/коричн|brown/i, '#795548'],
   [/сер(ый|ая|ое|ые)|grey|gray/i, '#9E9E9E'],

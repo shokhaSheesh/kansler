@@ -8,7 +8,7 @@ import faqsJson from './fixtures/faqs.json'
 import { products } from './index'
 
 let details: Promise<Record<string, ProductDetails>> | null = null
-const loadDetails = () =>
+export const loadDetails = () =>
   (details ??= import('./fixtures/product-details.json').then((m) => m.default as unknown as Record<string, ProductDetails>))
 
 /** Live values from /content/product/single */

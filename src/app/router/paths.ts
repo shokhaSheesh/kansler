@@ -15,15 +15,17 @@ export const paths = {
   favourites: '/favourites',
   cart: '/cart',
   checkout: '/checkout',
-  orders: '/orders',
-  order: (id = ':id') => `/orders/${id}`,
-  notifications: '/notifications',
+  /** Live URLs: orders, notifications and the address map live under /profile */
+  orders: '/profile/orders',
+  order: (id = ':id') => `/profile/orders/${id}`,
+  notifications: '/profile/notifications',
   helpCenter: '/help-center',
-  map: '/map',
+  map: '/profile/map',
 
   profile: {
     root: '/profile',
     user: '/profile/user',
+    details: '/profile/details',
     info: '/profile/info',
     address: '/profile/address',
     addressForm: '/profile/address-form',

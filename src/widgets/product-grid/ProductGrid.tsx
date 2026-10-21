@@ -1,4 +1,5 @@
 import { Box, Grid, Skeleton, Stack } from '@chakra-ui/react'
+import type { ReactNode } from 'react'
 import { AddToCartControl } from '@/features/add-to-cart/AddToCartControl'
 import { ProductCard } from '@/entities/product/ui/ProductCard'
 import type { Product } from '@/entities/product/types'
@@ -11,11 +12,22 @@ const COLS = {
 type Density = keyof typeof COLS
 
 /** Product grid used by search results, product list and favourites. */
-export const ProductGrid = ({ products, loading, density = 'wide' }: { products: Product[]; loading?: boolean; density?: Density }) => (
+export const ProductGrid = ({
+  products,
+  loading,
+  density = 'wide',
+  renderItem,
+}: {
+  products: Product[]
+  loading?: boolean
+  density?: Density
+  renderItem?: (card: ReactNode, productId: string) => ReactNode
+}) => (
   <Grid templateColumns={COLS[density]} gap={{ base: 2, md: 4 }} opacity={loading ? 0.6 : 1} transition="opacity .15s">
-    {products.map((p) => (
-      <ProductCard key={p.guid} product={p} action={(v, name) => <AddToCartControl variation={v} name={name} />} />
-    ))}
+    {products.map((p) => {
+      const card = <ProductCard product={p} action={() => <AddToCartControl product={p} />} />
+      return <Box key={p.guid}>{renderItem ? renderItem(card, p.guid) : card}</Box>
+    })}
   </Grid>
 )
 

@@ -12,15 +12,16 @@ export const unitPrice = (v: Variation) => (v.discount_percent && v.discount_pri
 /**
  * One cart line: quantity + change(), with the "added" toast on the first add.
  * Used by the card "+" control and the product-page buy box so they behave identically.
+ * `silent`: no toast (the variant picker shows the cart state itself).
  * Call inside an observer component. Wiring: useAddToCart / useRemoveFromCart.
  */
-export const useCartLine = (variation: Variation, name: string) => {
+export const useCartLine = (variation: Variation, name: string, opts: { silent?: boolean } = {}) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const qty = mockCart.qty(variation.guid)
 
   const change = (n: number) => {
-    if (qty === 0 && n > 0) {
+    if (qty === 0 && n > 0 && !opts.silent) {
       // One cart toast at a time: rapid adds replace it instead of stacking
       const toast = {
         type: 'success' as const,

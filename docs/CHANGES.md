@@ -5,13 +5,18 @@ This document lists every change in the new Kansler web design, screen by screen
 **What stays the same**
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed below.
-- Business logic, backend and API: unchanged. Nothing was added that the backend doesn't support.
-- Page addresses (URLs): unchanged. Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 11](#11-new-texts).
+- Business logic, backend and API: unchanged.
+- Page addresses (URLs): unchanged.
+  - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
+  - Orders and notifications stay under `/profile/…`.
 
-**What changes:** layout, visual design, interaction and mobile experience.
+**How each screen is described**
+- **Same as now:** the content and features that already exist on the current site. They are kept.
+- **Changed:** layout, visual design and interaction only. No new data, no new features.
+- **Needs your approval:** small additions that use existing data, but that the current site doesn't show. We can keep them or take them out.
 
-> Status: design phase. Pages show real Kansler products, prices, banners and categories, from a snapshot of the public site. They are not yet connected to the live API (login, cart, favourites and orders are simulated). Pages that normally need a login (favourites, orders, profile) can be opened without one in this phase, so they can be reviewed.
+> Status: design phase. Pages show real Kansler products, prices, banners and categories, from a snapshot of the public site. They are not yet connected to the live API (login, cart, favourites and orders are simulated). Pages that normally need a login can be opened without one in this phase, so they can be reviewed.
 
 ---
 
@@ -24,13 +29,13 @@ This document lists every change in the new Kansler web design, screen by screen
 5. [Home page](#5-home-page)
 6. [Product card](#6-product-card)
 7. [Adding to cart](#7-adding-to-cart)
-8. [Catalog and product list](#8-catalog-and-product-list)
+8. [Catalog, search results and filters](#8-catalog-search-results-and-filters)
 9. [Product page](#9-product-page)
 10. [Favourites](#10-favourites)
 11. [New texts](#11-new-texts)
 12. [Not included, and why](#12-not-included-and-why)
-13. [Issues found in the current data](#13-issues-found-in-the-current-data)
-14. [Still to do](#14-still-to-do)
+13. [Questions for the client, and data issues](#13-questions-for-the-client-and-data-issues)
+14. [Status](#14-status)
 
 ---
 
@@ -39,218 +44,208 @@ This document lists every change in the new Kansler web design, screen by screen
 | Before | After |
 |---|---|
 | Separate pages for phones (`/mobile`, `/mobile-filter`, `/categories-mobile`, `/otp-mobile`) | One site that adapts to any screen. On phones a bottom tab bar holds Главная · Каталог · Корзина · Избранное · Профиль. |
-| Sections stay blank while data loads; a splash screen can show for up to 10 seconds | Grey placeholder shapes show where content will appear, so the page never looks empty or broken |
-| The whole site downloads up front (1.6 MB of code) | Each page loads only what it needs, and the main code is split up |
+| Sections stay blank while data loads; a splash screen can show for up to 10 seconds | Grey placeholder shapes show where content will appear |
+| The whole site downloads up front (1.6 MB of code) | Each page loads only what it needs |
 | Footer: light grey block | Footer: navy block with the same links and address |
 
 ## 2. Header and navigation
 
-| Before | After |
-|---|---|
-| Language selector with a dropdown (🇷🇺 РУ ⌄) | A one-tap **UZ / RU** toggle |
-| Cart and favourites icons without live feedback | Counters on Корзина / Избранное that **bump** each time an item is added |
-| — | The header stays at the top while scrolling |
-| Phone: search field and icons in the header | Phone: logo, a search field that opens full-screen search, and the cart with its counter. Everything else is in the bottom tab bar. |
+**Same as now:** logo, Каталог, search, Заказы · Избранное · Корзина · Профиль with counters, the 4 shortcuts (Бумажная продукция, Готовые наборы, Папки и файлы, Акции → discounted products), phone number, language.
 
-The 4 shortcuts under the search field (Бумажная продукция, Готовые наборы, Папки и файлы, Акции) are kept. **"Акции" now opens discounted products directly.**
+**Changed**
+- **Language:** a one-tap **UZ / RU** toggle instead of a dropdown.
+- **Counters:** they **bump** when an item is added.
+- **Sticky:** the header stays at the top while scrolling.
+- **Phone:** logo, a search field that opens full-screen search, and the cart. Everything else is in the bottom tab bar.
 
 ## 3. Catalog menu
 
-**After:** the **Каталог** button opens a large menu over the page:
-- Left: all 12 main categories, with their pictures.
-- Right: when you point at a category, its subcategories appear as columns, with the next level listed under each one.
-- Closes with Esc, a click outside, or when you open a page.
-- The button changes to ✕ while the menu is open.
+**Same as now:** the Каталог button opens the category menu.
 
-**On phones:** the **Каталог** tab opens a list of categories. Tap one to see its subcategories.
+**Changed**
+- **Computer:** a large menu over the page. The 12 main categories with their pictures are on the left; pointing at one shows its subcategories as columns on the right, with the next level listed under each.
+- **Closing:** Esc, a click outside, or opening a page.
+- **Phone:** the Каталог tab opens a category list. Tap a category to see its subcategories.
 
 ## 4. Search
 
-The client told us that about 90% of buyers find products through search, so this got the most attention.
+**Same as now** (the search dropdown)
+- **Suggestions** while typing (product names).
+- **Недавно искали:** each search removable, or clear all.
+- **Популярные запросы.**
 
-**Before you type:**
-- **Недавно искали:** your last searches. You can remove each one or clear them all.
-- **Популярные запросы:** the most popular queries, from the existing data.
-- **Категории:** quick links to all main categories.
+**Changed**
+- **Results update instantly** while typing, and the typed part is bold.
+- **Phone:** search opens full screen with the keyboard up.
 
-**While you type** (results update instantly):
-- **Suggestions,** with the typed part in bold. The ↖ arrow puts a suggestion into the field so you can refine it.
-- **Matching categories,** with where they sit in the catalog (e.g. Ручки — Товары для письма › Основные принадлежности).
-- **5 matching products,** each with its picture, price and a **"+" button to add it to the cart without leaving search.** Buyers who know what they need can type, add, type, add.
-- **The total number of results,** and a button to see them all.
-- If nothing is found: a clear message plus popular queries to try.
+**Needs your approval.** The current dropdown doesn't have these:
+- **5 matching products** with picture, price and a **"+" to add to the cart without leaving search**. Uses the existing product search.
+- **Matching categories** (e.g. Ручки — Товары для письма › Основные принадлежности), and **category shortcuts** before typing.
+- **The number of results,** with a "see all" button.
+- **Keyboard:**
+  - `/` or Ctrl/⌘+K jumps into search.
+  - ↑ ↓ move through the results; Enter opens one; Esc closes.
+  - The ↖ arrow puts a suggestion into the field so you can refine it.
 
-**Keyboard** (desktop):
-- `/` or Ctrl/⌘+K jumps into search from anywhere.
-- ↑ ↓ move through the results.
-- Enter opens the highlighted result.
-- Esc closes the search.
-
-**On phones:** search opens full screen, with a large field and the keyboard already up.
-
-**Results page:**
-- Shows the query and the number of products found.
-- **Category chips built from the results** (e.g. "Ручки 34"); tap one to narrow down.
-- The same 3 sort options as before: popular, cheapest first, most expensive first.
-- Pages of results; the "nothing found" state suggests popular queries.
-- The results page address keeps your choices, so the back button and shared links work.
+**Search results page:** same as now (the same filters as the catalog; see section 8).
 
 ## 5. Home page
 
-Same sections as before: banners, categories, Новая коллекция, Рекомендуем, Выгодная выгода, Нам доверяют, and the Telegram button.
+**Same as now:** banners, category icons, Новая коллекция, Рекомендуем, Выгодная выгода, Нам доверяют, the Telegram button.
 
 | Before | After |
 |---|---|
-| The banner carousel shows the next banner peeking in, which cuts off its text | One full banner at a time, with the right image for computer, tablet or phone. It changes by itself every 5 seconds and pauses while the mouse is over it. |
-| A single row of small category icons | One row of larger category tiles you can swipe (trackpad, mouse drag or finger) |
-| Product rows | Rows you **swipe** like a phone list, with no arrow buttons. **"Все"** links are kept, and "Выгодная выгода → Все" opens all discounted products. |
-| Partner logos | Logos in grey that turn to colour on hover; a 2-row swipeable strip on phones |
-| Telegram button | Same button, restyled, with the same greeting text |
+| The banner carousel shows the next banner peeking in, which cuts off its text | One full banner at a time, with the right image for computer, tablet or phone. It changes every 5 seconds and pauses while the mouse is over it. |
+| A row of small category icons | One row of larger category tiles you can swipe (trackpad, mouse drag, finger) |
+| Product rows | Rows you **swipe** like a phone list, with no arrow buttons; "Все" links are kept |
+| Partner logos | Grey logos that turn to colour on hover; a 2-row swipeable strip on phones |
 
 ## 6. Product card
 
-Used everywhere products are listed.
+**Same as now:** photo with dots for several photos, discount badge, price and old price, name, ♡, add to cart, out of stock.
 
-- **Photos:** when a product has several photos, you can browse them from the card without opening the product:
-  - computer: move the mouse across the photo;
+**Changed**
+- **Photos:**
+  - computer: move the mouse across the photo to flip through the photos;
   - phone: swipe the photo.
+- **Add to cart:** a round **"+"** in the photo corner instead of a full-width button (see section 7).
 
-  Small bars at the top show which photo you're on.
-- **Discount:** a red **−35%** badge, the new price in red, and the old price crossed out.
-- **Favourite:** the ♡ button in the corner.
-- **Add to cart:** a round **"+"** in the photo corner instead of a full-width button, which makes cards more compact (see section 7).
-- **Out of stock:** the photo is faded and a "Нет в наличии" label is shown.
+**Added on request**
+- **Brand,** e.g. DELI, LUXOR, BESTAR.
+- **The start of the description,** 2 lines, ending in "…".
+- **Number of variants** ("3 варианта"), shown when a product has 2 or more.
+
+> ⚠️ Backend needed for brand and description. The product list the site uses (`/content/product/list`) doesn't return brand or description; they only come with the full product. For cards, the backend should add `brand` and a short description to the list response. Loading every product separately would make lists slow.
+
+How variants work in the data: the **product** is a group (name, category). What you actually buy is a **variant**, which has its own price, photos and stock; the cart stores variants.
+- 451 products have exactly 1 variant: the product *is* that one item, and nothing to choose.
+- 149 products have 2–7 variants.
+- 220 products in the data have no variants, meaning no price; they can't be bought and aren't shown.
 
 ## 7. Adding to cart
 
 | Before | After |
 |---|---|
 | Full-width "Добавить в корзину" button under every card | A round **"+"** on the photo corner |
-| — | After the first tap it becomes a small **"− 1 +"** control. At 1, the minus becomes a 🗑 bin, so it's clear the next tap removes the item. You can still type a quantity; it can't go above the stock. |
-| — | A **confirmation bar** at the top of the screen, in dark navy so it stands out: product photo, "Товар добавлен в корзину", the product name and a **"Перейти в корзину"** button. Adding several products quickly updates the same bar instead of stacking several. |
-| — | The cart counter in the header bumps |
+| — | **One variant:** the "+" becomes a small **"− 1 +"** control. At 1 the minus becomes a 🗑 bin. You can still type a quantity; it can't go above the stock. |
+| — | **Several variants** (added on request): the "+" opens a **"which variant?" window** listing every variant with its photo, price and its own quantity control, so several variants can be added at once. The card then shows **✓ and the number in the cart**; tapping it reopens the window. |
+| — | **Confirmation bar** at the top of the screen, in dark navy: product photo, "Товар добавлен в корзину", the name, and **"Перейти в корзину"**. Quick repeated adds update one bar instead of stacking. |
 
-## 8. Catalog and product list
+**How do you add more after adding?** Use the same **"− n +"** control on the card, in the variant window, or on the product page. It changes the quantity in the cart directly. The cart page itself is the next step (7), and will list everything added.
 
-Applies to category pages (`/categories/…`) and the all-products page (`/products`).
+## 8. Catalog, search results and filters
 
-**Page layout**
-- **Breadcrumbs:** Главная › Товары для письма › Основные принадлежности › Ручки.
-- **Title** with the number of products.
-- **Subcategory chips** to go deeper. On the last level they show neighbouring categories (Ручки, Маркеры, Карандаши…) so you can switch quickly.
-- **Grid or list view** (the existing "Сетка / Список" option). The list view shows compact rows with unit, colour and number of variants. The site remembers the choice on each device.
-- **Sort:** the same 3 options.
-- **Pages** of results.
+The current site shows the **same filter sidebar** on category pages, search results and favourites. The new design keeps that.
 
-**Filters** (the same filters as before, redesigned)
-- **Категории:** with a search box (all-products page only).
-- **Тип товара:** Все, Супер скидки, Самые продаваемые, Хит продаж.
-- **Цена, сум:** "от / до" fields plus a slider. Prices on the site range from 101 to over 14 million сум, so the slider is scaled to make cheap items easy to pick out.
-- **Цвет:** a colour dot next to each colour name, plus "Ещё N" to show more.
+**Same as now**
+- **Breadcrumbs,** title and product count.
+- **Subcategory chips** under the title.
+- **The sidebar:**
+  - **Категории:** Все категории › current category › its subcategories (on search and favourites: pick one category).
+  - **Фильтры:** **Цена, сум** (range slider) and **Цвет** (list with "Ещё N / Скрыть").
+- **The price toggle** (cheapest first) and pages of results.
 
-**New behaviour**
-- **Each option shows how many products it would give,** taking your other choices into account. Options that would give no products are greyed out, so you can't end up on an empty page by accident.
-- **Applied filters show as chips** above the products; tap ✕ to remove one, or **"Сбросить все"** to clear everything.
-- When you filter by colour, cards show **the variant in that colour.**
-- The page address keeps your filters, so a filtered page can be shared or bookmarked.
-
-**On phones:**
-- A **"Фильтры"** button (showing how many filters are on), sort and view stay pinned under the header.
-- Filters open in a panel from the bottom: make your choices, then **"Сохранить"** applies them and **"Отмена"** discards them, the same buttons as the current mobile filter.
+**Changed**
+- **Sidebar:** it stays visible while scrolling.
+- **Price slider:** it shows the chosen amounts and is scaled so that cheap items are easy to pick out. Prices range from 101 to over 14 million сум.
+- **Colours:** a colour dot next to each colour name.
+- **Applied filters** show as chips above the products; tap ✕ to remove one.
+- **Matching variant:** filtering by colour shows the variant in that colour on the card.
+- **The page address keeps the filters,** so a filtered page can be shared or bookmarked.
+- **At the deepest category level,** the chips show neighbouring categories (Ручки, Маркеры, Карандаши…).
+- **Phone:** "Фильтры" and the price toggle stay pinned under the header. Filters open in a panel from the bottom and apply immediately, like the current mobile filter page.
 
 ## 9. Product page
 
-**Same content as the current product page:**
+**Same as now**
 - Photos and variant thumbnails.
-- Name, price, "Добавить в корзину" and ♡; "Поделиться"; "Задать вопрос" (opens the @Kansler_CustomerCare_bot Telegram bot).
-- **Часто задаваемые вопросы,** with the links "Условия доставки" and "Условия оплаты" to the info page.
-- The **Доставка** card ("Курьером — Бесплатно"), and the **Бренд** card when the product has a brand.
-- **О товаре** (characteristics), **Описание товара** with show more / less, and the **Рекомендуем** row below.
+- Name, price, "Добавить в корзину" and ♡, "Поделиться", "Задать вопрос" (Telegram bot @Kansler_CustomerCare_bot).
+- **Часто задаваемые вопросы** with the links "Условия доставки" and "Условия оплаты".
+- The **Доставка** card ("Курьером — Бесплатно") and the **Бренд** card.
+- **О товаре**, **Описание товара** (show more / less), and **Рекомендуем** below.
 
-Nothing was added to the content. What changed is the layout and interaction:
+**Changed**
 
 | Before | After |
 |---|---|
-| Photos, details and the price block side by side in three columns | Photos on the left; the **price block stays visible on the right** while you scroll the details. On phones: photos, price block, details. |
+| Photos, details and the price block side by side | Photos on the left; the **price block stays visible** while you scroll the details. On phones: photos, price block, details. |
 | On phones the add button scrolls away | A **price + "Добавить в корзину" bar stays pinned** above the bottom tab bar |
-| Small variant thumbnails | Larger variant tiles with **each variant's price**. The chosen variant is kept in the page address, so a shared link opens that exact variant. |
-| One add button | **Choose the quantity first** (business buyers often order 10–50 at once), then add. After adding: the quantity control plus **"В корзине"**, which opens the cart. |
-| Characteristics repeated per value ("Грамаж 240 / Грамаж 280 / …") | Repeated characteristics merged into one row: "Грамаж: 240, 280, 380 г/кв.м" |
-| "купили" shown even when there is no number | Shown only when the product has a sales number |
-| — | Breadcrumbs show the product's category (Главная › Хоз товары › Газовая зажигалка) |
-| "Поделиться" | On phones it opens the phone's share menu; on computers it copies the link ("Адрес товара сохранен успешно") |
-
-To confirm with the client:
-- The product data includes a **delivery cost of 25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the current product page always shows "Курьером — Бесплатно". We kept the current behaviour. If the 25 000 / 500 000 rule is real, the page could show it, with a progress bar to free delivery.
-- When a buyer is logged in, the current Доставка card also shows their selected delivery address. That will be designed together with addresses (step 11).
+| Small variant thumbnails | Larger variant tiles with **each variant's price**. The chosen variant is kept in the page address, so a shared link opens it. |
+| One add button | **Choose the quantity first,** then add. After adding: the quantity control plus **"В корзине"**, which opens the cart. |
+| Characteristics repeated per value | Repeated characteristics merged: "Грамаж: 240, 280, 380 г/кв.м" |
+| "купили" shown even without a number | Shown only when there is a number |
+| Breadcrumbs: home › product | Breadcrumbs include the category (Главная › Хоз товары › Газовая зажигалка) |
 
 ## 10. Favourites
 
-Same content as before: the 4 tabs (Все товары, Товары со скидкой, Рекомендуемые товары, Новые товары), the number of products, and the "Здесь пусто" message.
+**Same as now:** title, count, the filter sidebar and price toggle (as in section 8), the products, the "Здесь пусто" message with "Начать покупку", and **Рекомендуем** below.
 
-| Before | After |
-|---|---|
-| — | **One ♡ everywhere.** Liking a product on any card, list row or search result updates the Избранное counter in the header (with a small bump) and the Favourites page. |
-| — | **Tabs show their counts** ("Товары со скидкой 4"). A tab with nothing in it is greyed out. |
-| — | **Removing is forgiving.** If you un-like a product on the Favourites page, its card fades instead of disappearing, so a mis-tap is one tap to undo. It's gone the next time you open the page. |
-| Empty page with a message | The same message and "Начать покупку" button, plus the **"Рекомендуем" row** underneath, so an empty page still leads somewhere |
-| — | Breadcrumbs: Главная › Избранное |
-
-To confirm with the backend: how "Рекомендуемые товары" is decided for favourites. The design currently shows a sample set.
+**Changed**
+- **One ♡ everywhere:** liking a product on any card updates the header counter (with a bump) and this page.
+- **Forgiving removal:** un-liking a product here fades its card instead of removing it, so a mis-tap is one tap to undo. It's gone on the next visit.
 
 ## 11. New texts
 
-All other texts are reused from the current site. These are the only additions, in both languages:
+Everything else reuses the current site's texts.
 
 | Where | Russian | Uzbek |
 |---|---|---|
 | Bar after adding to cart | Товар добавлен в корзину | Mahsulot savatga qo'shildi |
-| Button in that bar | Перейти в корзину | Savatga o'tish |
-| Clear all filters | Сбросить все | Hammasini tozalash |
+| Button in that bar and in the variant window | Перейти в корзину | Savatga o'tish |
+| Number of variants (card, variant window) | 1 вариант · 2 варианта · 5 вариантов | 1 ta variant |
 
 ## 12. Not included, and why
 
-These texts exist in the current site's files, but the backend has no data or functions behind them. We did not design them so that no feature is promised that can't work:
+These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
-- Bonus points, points exchange, balance and transaction history.
-- Uploading or cropping a profile photo.
-- Deleting the account.
-- Push / SMS notification settings.
-- "Мастер" user type, and an "Azia Stroy" welcome screen (left over from another project).
+- **Product list:** "Тип товара" (Супер скидки / Самые продаваемые / Хит продаж), the sort menu (Популярные / Сначала дорогие / Сначала дешёвые), and the "Сетка / Список" view switch. The current site only has the price toggle.
+- **Favourites:** tabs (Все товары / Товары со скидкой / Рекомендуемые / Новые).
+- **Product page:** the warehouse address ("Со склада Kansler, пр Амира Темура 129Б").
+- **Account:**
+  - Bonus points, balance and transactions.
+  - Profile photo upload.
+  - Deleting the account.
+  - Push / SMS settings.
+  - The "Мастер" user type.
+  - An "Azia Stroy" welcome screen (left over from another project).
 
-To confirm with a logged-in account before we design them:
+To check with a logged-in account before designing them:
 - Pickup from a branch.
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 13. Issues found in the current data
+## 13. Questions for the client, and data issues
 
-For the Kansler content team. These affect any design, old or new.
+**Questions**
+- **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
+- **Logged-in delivery address.** When a buyer is logged in, the current header and Доставка card show their selected delivery address. This will be designed with addresses (step 11).
+- **Brand and description on cards** need the backend change described in section 6.
 
-- **Promo items filed as categories.** For example, a Deli marker sits under *Офисная мебель › Мебель › 35 %*, and a Luxor pen under *Готовые наборы › Базовый*. They then appear in unrelated categories.
-- **"Самые продаваемые" / "Хит продаж" can't work yet.** Sales numbers are 0 for every product.
-- **Some discount prices have kopecks** (e.g. 1 764,97 сум). The new design rounds them, but the data should be whole sums.
-- **Colours are free text.** Values like "5 цветов" or "Plastic World" can't show a colour dot. A short fixed list of colours would make the colour filter cleaner.
-- **Variants of a product can't be told apart by name.** All variants share one name, and characteristics like size or density are listed for the whole product, not linked to a variant. For example, a canvas has "Грамаж: 240 / 280 / 380 г/кв.м", but nothing says which of its 3 variants is which. The new design tells variants apart by photo and price. Linking characteristics to each variant would let the picker say "380 г/кв.м" directly.
-- **The "Категория" characteristic sometimes holds promo labels** like "35 %" instead of a real category. It's shown as is, like on the current site.
-- **Many Uzbek descriptions are empty.** The Russian description is shown instead.
+**Data issues** (for the Kansler content team; these affect any design)
+- **Promo items filed as categories.** For example, a Deli marker sits under *Офисная мебель › Мебель › 35 %*, and a Luxor pen under *Готовые наборы › Базовый*.
+- **Variants can't be told apart by name.** All variants share one name. Characteristics like size or density are listed for the whole product, not linked to a variant, so the design tells variants apart by photo and price.
+- **The "Категория" characteristic sometimes holds promo labels** like "35 %".
+- **Sales numbers are 0 for every product.**
+- **Some discount prices have kopecks** (e.g. 1 764,97 сум). The design rounds them.
+- **Colours are free text** ("5 цветов", "Plastic World") and can't show a colour dot. A fixed list of colours would help.
+- **Many Uzbek descriptions are empty;** the Russian text is shown instead.
 - **Some names are all capitals or end with extra spaces** ("УТЕНОК", "Ручка Deli ").
 
-Ideas for the backend team: these would be new backend work and are **not** part of this redesign.
+**Ideas for the backend team** (new backend work, not part of this redesign)
 - **Typo tolerance** in search ("ручкп" → "ручка").
-- **Wrong keyboard layout fix** ("hexrf" → "ручка"). This is very common with Russian and Uzbek keyboards.
+- **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 14. Still to do
+## 14. Status
 
 | Step | Screen | Status |
 |---|---|---|
 | 0 | Shared components | ✅ Done |
 | 1 | Header, catalog menu, footer | ✅ Done |
-| 2 | Search | ✅ Done |
+| 2 | Search | ✅ Done (additions awaiting approval) |
 | 3 | Home | ✅ Done |
-| 4 | Catalog and product list | ✅ Done |
-| 5 | Product page | ✅ Done |
-| 6 | Favourites | ✅ Done |
+| 4 | Catalog and product list | ✅ Done (checked against the current site) |
+| 5 | Product page | ✅ Done (checked against the current site) |
+| 6 | Favourites | ✅ Done (checked against the current site) |
 | 7 | Cart | ⏳ Next |
 | 8 | Checkout and payment | ⏳ |
 | 9 | Orders list | ⏳ |

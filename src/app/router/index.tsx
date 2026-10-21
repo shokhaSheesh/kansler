@@ -77,9 +77,8 @@ const routes: RouteObject[] = [
         children: [
           { path: paths.favourites, element: page(P.Favourites) },
           { path: paths.checkout, element: page(P.Checkout) },
-          { path: paths.orders, element: page(P.Orders) },
+          // Order details and the map are full pages under /profile (outside the profile side nav), like live
           { path: paths.order(), element: page(P.Order) },
-          { path: paths.notifications, element: page(P.Notifications) },
           { path: paths.map, element: page(P.Map) },
           {
             path: paths.profile.root,
@@ -89,6 +88,8 @@ const routes: RouteObject[] = [
               const r = paths.profile
               return [
                 { index: true, element: <Navigate to={r.user} replace /> },
+                { path: strip(paths.orders, b), element: page(P.Orders) },
+                { path: strip(paths.notifications, b), element: page(P.Notifications) },
                 { path: strip(r.user, b), element: page(P.ProfileUser) },
                 { path: strip(r.info, b), element: page(P.ProfileInfo) },
                 { path: strip(r.address, b), element: page(P.Address) },

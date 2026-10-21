@@ -835,8 +835,7 @@
       "popular": "Популярные",
       "price_desc": "Сначала дорогие",
       "price_asc": "Сначала дешёвые"
-    },
-    "clear_all": "Сбросить все"
+    }
   },
   "cart": {
     "title": "Корзина",
@@ -1196,5 +1195,11 @@
     "brand": "Бренд",
     "currency": "сум",
     "add_cart_mobile": "В корзине"
+  },
+  "product_card": {
+    "variants_one": "{{count}} вариант",
+    "variants_few": "{{count}} варианта",
+    "variants_many": "{{count}} вариантов",
+    "variants_other": "{{count}} варианта"
   }
 }

@@ -830,8 +830,7 @@
       "popular": "Ommabop",
       "price_desc": "Avval qimmat",
       "price_asc": "Avval arzon"
-    },
-    "clear_all": "Hammasini tozalash"
+    }
   },
   "cart": {
     "title": "Savat",
@@ -1193,5 +1192,9 @@
     "brand": "Brend",
     "currency": "so'm",
     "add_cart_mobile": "Savatda"
+  },
+  "product_card": {
+    "variants_one": "{{count}} ta variant",
+    "variants_other": "{{count}} ta variant"
   }
 }

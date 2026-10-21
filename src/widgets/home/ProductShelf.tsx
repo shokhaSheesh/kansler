@@ -18,7 +18,7 @@ export const ProductShelf = ({ title, to, products }: ProductShelfProps) => {
       <SectionHeader title={title} to={to} />
       <ScrollRow>
         {products.map((p) => (
-          <ProductCard key={p.guid} product={p} action={(v, name) => <AddToCartControl variation={v} name={name} />} />
+          <ProductCard key={p.guid} product={p} action={() => <AddToCartControl product={p} />} />
         ))}
       </ScrollRow>
     </Box>

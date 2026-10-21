@@ -18,7 +18,7 @@ interface ProductListViewProps {
   subheader?: ReactNode
   categories: CategoryMode
   /** What to list: a category, a search text, or given products (favourites). */
-  base: Pick<ProductListParams, 'categoryId' | 'q' | 'source'>
+  base: Pick<ProductListParams, 'categoryId' | 'q' | 'source' | 'filterType'>
   empty: ReactNode
   /** Wrap each card (favourites: fade removed items). */
   renderItem?: (card: ReactNode, productId: string) => ReactNode

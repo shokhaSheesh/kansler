@@ -102,7 +102,8 @@ const CartPage = observer(() => {
         </Grid>
       )}
 
-      <ProductShelf title={t('recommended_products')} products={shelves.recommended} />
+      {/* Live: "Рекомендуем" (5) under the cart, empty or not */}
+      <ProductShelf title={t('recommended_products')} to={paths.search('recommended')} products={shelves.recommended.slice(0, 5)} />
 
       {/* Phone: total + checkout always in reach (above the tab bar) */}
       {lines.length > 0 && (

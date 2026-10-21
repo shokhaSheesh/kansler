@@ -5,8 +5,8 @@ import { mockProfile } from '@/mocks/profile.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatDate } from '@/shared/lib/format'
 import { panel } from '@/shared/ui/surface'
-import { toaster } from '@/shared/ui/toaster'
 import { ProfileHeader } from '@/widgets/profile/ProfileUi'
+import { copyText } from '@/shared/lib/copy'
 
 // Numbers people copy into documents
 const COPYABLE = new Set(['inn', 'pinfl', 'bank_account', 'bank_code', 'oked'])
@@ -85,8 +85,7 @@ export default function ProfileCompanyPage() {
                   _groupHover={{ opacity: 1 }}
                   _focusVisible={{ opacity: 1 }}
                   onClick={() => {
-                    void navigator.clipboard?.writeText(String(value).replace(/\s/g, ''))
-                    toaster.create({ type: 'success', title: t('copied_to_clipboard'), duration: 2000 })
+                    copyText(String(value).replace(/\s/g, ''), t('copied_to_clipboard'))
                   }}
                 >
                   <Copy size={14} />

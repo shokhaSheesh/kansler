@@ -11,11 +11,11 @@ import { formatDate, formatPrice, localized } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
 import { panel, tintedPanel } from '@/shared/ui/surface'
 import { SummaryRow } from '@/shared/ui/SummaryRow'
-import { toaster } from '@/shared/ui/toaster'
 import { SUPPORT_BOT } from '@/widgets/cart/CartSummary'
 import { OrderProgress } from '@/widgets/order-detail/OrderProgress'
 import { hasProgress } from '@/widgets/order-detail/progress'
 import { OrderStatusBadge } from '@/widgets/orders/OrderStatusBadge'
+import { copyText } from '@/shared/lib/copy'
 
 const Block = ({ title, children }: { title: string; children: ReactNode }) => (
   <Stack {...panel} gap="3" p={{ base: 4, md: 5 }}>
@@ -94,8 +94,7 @@ const OrderPage = observer(() => {
   const sum = (v: number) => formatPrice(v, lang)
 
   const copyId = () => {
-    void navigator.clipboard?.writeText(order.order_id)
-    toaster.create({ type: 'success', title: t('copied_to_clipboard'), duration: 2000 })
+    copyText(order.order_id, t('copied_to_clipboard'))
   }
 
   return (

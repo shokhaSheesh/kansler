@@ -10,8 +10,8 @@ import { isPlaced, type Order } from '@/mocks/orders.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatDate, formatPrice, localized } from '@/shared/lib/format'
 import { panel } from '@/shared/ui/surface'
-import { toaster } from '@/shared/ui/toaster'
 import { OrderStatusBadge } from './OrderStatusBadge'
+import { copyText } from '@/shared/lib/copy'
 
 const THUMBS = 5
 const stop = (e: MouseEvent) => e.stopPropagation()
@@ -60,8 +60,7 @@ export const OrderCard = ({ order }: { order: Order }) => {
   }
 
   const copyId = () => {
-    void navigator.clipboard?.writeText(order.order_id)
-    toaster.create({ type: 'success', title: t('copied_to_clipboard'), duration: 2000 })
+    copyText(order.order_id, t('copied_to_clipboard'))
   }
 
   return (

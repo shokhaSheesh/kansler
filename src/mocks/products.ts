@@ -16,6 +16,8 @@ export interface ProductListParams {
   filterCategoryId?: string | null
   /** Search results page. */
   q?: string
+  /** Live /search/discounted | new | recommended (product list `filter_type`). */
+  filterType?: FilterType | null
   /** Favourites page: the favourite products themselves. */
   source?: Product[]
   priceMin?: number | null
@@ -26,6 +28,12 @@ export interface ProductListParams {
   page?: number
   limit?: number
 }
+
+export type FilterType = 'discounted' | 'new' | 'recommended'
+/** Reserved /search/<word> values that switch the list to a product type, like live. */
+export const FILTER_TYPES: FilterType[] = ['discounted', 'new', 'recommended']
+
+const hasDiscount = (p: Product) => Boolean(p.variations[0]?.discount_percent && p.variations[0]?.discount_price)
 
 export interface ProductListResult {
   items: Product[]
@@ -66,6 +74,7 @@ export const mockProductList = async ({
   categoryId,
   filterCategoryId,
   q,
+  filterType,
   source,
   priceMin,
   priceMax,
@@ -77,6 +86,10 @@ export const mockProductList = async ({
   const catalog = await loadCatalog()
   let items = source ?? catalog
 
+  // Design phase: discounted = has a discount; new = newest first; recommended = the rest (the backend decides live)
+  if (filterType === 'discounted') items = items.filter(hasDiscount)
+  if (filterType === 'new') items = [...items].sort((a, b) => b.created_at.localeCompare(a.created_at))
+  if (filterType === 'recommended') items = items.filter((p) => !hasDiscount(p))
   if (categoryId) {
     const s = subtree(categoryId)
     items = items.filter((p) => s.has(p.category_id))

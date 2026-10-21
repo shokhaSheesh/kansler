@@ -17,9 +17,9 @@ export default function HomePage() {
         <HeroBanners banners={banners} />
         <CategoryRail categories={categories} />
       </Stack>
-      <ProductShelf title={t('new_collection')} to={paths.products} products={shelves.newCollection} />
-      <ProductShelf title={t('recommended_products')} to={paths.products} products={shelves.recommended} />
-      <ProductShelf title={t('discounted')} to={`${paths.products}?type=super_discount`} products={shelves.discounted} tinted />
+      <ProductShelf title={t('new_collection')} to={paths.search('new')} products={shelves.newCollection} />
+      <ProductShelf title={t('recommended_products')} to={paths.search('recommended')} products={shelves.recommended} />
+      <ProductShelf title={t('discounted')} to={paths.search('discounted')} products={shelves.discounted} tinted />
       <PartnersStrip partners={partners} />
       <TelegramButton href={contacts.telegram} />
     </Stack>

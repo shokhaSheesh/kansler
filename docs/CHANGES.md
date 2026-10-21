@@ -60,9 +60,19 @@ This document lists every change in the new Kansler web design, screen by screen
 
 ## 2. Header and navigation
 
-**Same as now:** logo, Каталог, search, Заказы · Избранное · Корзина · Профиль with counters, the 4 shortcuts (Бумажная продукция, Готовые наборы, Папки и файлы, Акции → discounted products), phone number, language.
+**Same as now:**
+- Logo, Каталог, search, and Заказы · Избранное · Корзина · Профиль with counters.
+- **"Профиль" shows the buyer's first name** when signed in ("Азиз").
+- **The 4 shortcuts:** Бумажная продукция, Готовые наборы, Папки и файлы, and **Акции**, which opens the discounted products at `/search/discounted`.
+- **The signed-in buyer's delivery address** (first 30 characters).
+- **The phone number:** clicking it copies it, with "Номер телефона скопирован".
+- Language.
 
 **Changed**
+- **Shortcuts row:** each shortcut is a rounded pill with a soft hover.
+  - **The page you're on is highlighted** in navy (e.g. on Бумажная продукция).
+  - **Акции is red**, the site's discount colour, so promotions stand out; it turns solid red on the promotions page.
+  - The address and phone are matching pills.
 - **Language:** a one-tap **UZ / RU** toggle instead of a dropdown.
 - **Counters:** they **bump** when an item is added.
 - **Sticky:** the header stays at the top while scrolling.
@@ -107,7 +117,7 @@ This document lists every change in the new Kansler web design, screen by screen
 |---|---|
 | The banner carousel shows the next banner peeking in, which cuts off its text | One full banner at a time, with the right image for computer, tablet or phone. It changes every 5 seconds and pauses while the mouse is over it. **The whole banner is always visible:** it keeps the exact size the artwork is made in (computer 2760×760, tablet and phone 1648×760), so nothing is cut off. |
 | A row of small category icons that **scrolls by itself every 3 seconds**, in a loop (so a screenshot can start at any category) | One row of larger category tiles you can swipe (trackpad, mouse drag, finger). Same 12 categories in the same order, starting with Бумажная продукция. It doesn't move on its own, so nobody misses a tap. |
-| Product rows | Rows you **swipe** like a phone list, with no arrow buttons; "Все" links are kept |
+| Product rows | Rows you **swipe** like a phone list, with no arrow buttons. "Все" links are kept and open the same lists as now: `/search/new` (Новые товары), `/search/recommended` (Рекомендуемые товары), `/search/discounted` (Товары со скидкой) |
 | Partner logos | Grey logos that turn to colour on hover; a 2-row swipeable strip on phones |
 
 ## 6. Product card
@@ -172,7 +182,7 @@ The current site shows the **same filter sidebar** on category pages, search res
 - Photos and variant thumbnails.
 - Name, price, "Добавить в корзину" and ♡, "Поделиться", "Задать вопрос" (Telegram bot @Kansler_CustomerCare_bot).
 - **Часто задаваемые вопросы** with the links "Условия доставки" and "Условия оплаты".
-- The **Доставка** card ("Курьером — Бесплатно") and the **Бренд** card.
+- The **Доставка** card: the signed-in buyer's delivery address (first 30 characters, with the courier comment), then "Курьером — Бесплатно". And the **Бренд** card.
 - **О товаре**, **Описание товара** (show more / less), and **Рекомендуем** below.
 
 **Changed**
@@ -537,7 +547,6 @@ To check with a logged-in account before designing them:
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
-- **Logged-in delivery address.** When a buyer is logged in, the current header and Доставка card show their selected delivery address. This will be designed with addresses (step 11).
 - **Brand and description on cards** need the backend change described in section 6.
 
 **Data issues** (for the Kansler content team; these affect any design)

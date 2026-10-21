@@ -115,8 +115,8 @@ const ProductPage = observer(() => {
         </Box>
       </Grid>
 
-      {/* Live shows "Рекомендуем" under the product (wiring: useRecommendations) */}
-      <ProductShelf title={t('recommended_products')} products={shelves.recommended} to={paths.products} />
+      {/* Live: "Рекомендуем" (10 products) under the product. Wiring: useRecommendations */}
+      <ProductShelf title={t('recommended_products')} to={paths.search('recommended')} products={shelves.recommended.filter((p) => p.guid !== product.guid).slice(0, 10)} />
 
       {/* Phone: price + add, always in reach (sits above the tab bar) */}
       <Flex

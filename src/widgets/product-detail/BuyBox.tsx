@@ -1,5 +1,5 @@
 import { Badge, Box, Button, Flex, Grid, HStack, IconButton, Image, Link, Stack, Text } from '@chakra-ui/react'
-import { Check, ChevronRight, MessageCircle, Package, Share2, ShoppingCart, Tag, Truck } from 'lucide-react'
+import { Check, ChevronRight, MapPin, MessageCircle, Package, Share2, ShoppingCart, Tag, Truck } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -15,6 +15,9 @@ import { Price } from '@/shared/ui/Price'
 import { QuantityStepper } from '@/shared/ui/QuantityStepper'
 import { toaster } from '@/shared/ui/toaster'
 import { panel } from '@/shared/ui/surface'
+import { authStore } from '@/stores/auth.store'
+import { env } from '@/shared/config/env'
+import { mockProfile } from '@/mocks/profile.store'
 
 const ASK_URL = 'https://t.me/Kansler_CustomerCare_bot'
 
@@ -68,6 +71,9 @@ export const CartActions = observer(({ variation, name, compact }: { variation: 
 
 export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps) => {
   const { t } = useTranslation()
+  // Design phase shows the signed-in look. Wiring: authStore.isAuthorized + the active delivery address
+  const signedIn = env.designMode || authStore.isAuthorized
+  const address = mockProfile.addresses.find((x) => x.is_default)
   const lang = useLang()
   const name = localized(variation, 'name', lang) || localized(product, 'name', lang)
   const discount = variation.discount_percent ?? 0
@@ -191,11 +197,18 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
         ))}
       </Stack>
 
-      {/* Live "Доставка" card: courier, free. (The live page also shows the buyer's selected address when logged in.) */}
+      {/* Live "Доставка" card: the signed-in buyer's delivery address (first 30 characters + comment), then courier, free */}
       <Stack {...card} gap="3">
         <Text fontWeight="600" fontSize="sm">
           {t('product_detail.delivery')}
         </Text>
+        {signedIn && address && (
+          <InfoRow
+            icon={<MapPin size={18} />}
+            title={address.address.length > 30 ? `${address.address.slice(0, 30)}…` : address.address}
+            sub={address.comment}
+          />
+        )}
         <InfoRow
           icon={<Truck size={18} />}
           title={

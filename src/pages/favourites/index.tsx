@@ -68,7 +68,7 @@ const FavouritesPage = observer(() => {
           renderItem={(card, id) => <FadeIfUnliked id={id}>{card}</FadeIfUnliked>}
         />
       )}
-      <ProductShelf title={t('recommended_products')} products={shelves.recommended} />
+      <ProductShelf title={t('recommended_products')} to={paths.search('recommended')} products={shelves.recommended.slice(0, 5)} />
     </Stack>
   )
 })

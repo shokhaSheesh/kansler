@@ -4,6 +4,7 @@ import { NavLink, Outlet } from 'react-router'
 import { Building2, CreditCard, Landmark, LogOut, MapPin, MessageSquare, Settings, Ticket, User, Users } from 'lucide-react'
 import { paths } from '@/app/router/paths'
 import { authStore } from '@/stores/auth.store'
+import { tintedPanel } from '@/shared/ui/surface'
 
 /** Account area: sticky side nav on desktop, horizontal scroll tabs on mobile. Ref: Contra / Mercury settings. */
 export const ProfileLayout = () => {
@@ -25,8 +26,7 @@ export const ProfileLayout = () => {
     <Grid templateColumns={{ base: '1fr', lg: '260px 1fr' }} gap={{ base: 4, lg: 6 }} alignItems="start">
       <Box
         as="nav"
-        bg="bg.surface"
-        borderRadius="card"
+        {...tintedPanel}
         p="2"
         pos={{ lg: 'sticky' }}
         top={{ lg: '128px' }}
@@ -46,9 +46,10 @@ export const ProfileLayout = () => {
                   whiteSpace="nowrap"
                   fontSize="sm"
                   fontWeight={isActive ? '600' : '500'}
-                  bg={isActive ? 'bg.muted' : 'transparent'}
+                  bg={isActive ? 'bg.surface' : 'transparent'}
+                  boxShadow={isActive ? 'panel' : undefined}
                   color={isActive ? 'fg.default' : 'fg.muted'}
-                  _hover={{ bg: 'bg.muted' }}
+                  _hover={{ bg: 'bg.surface' }}
                 >
                   <Icon size={18} />
                   {label}

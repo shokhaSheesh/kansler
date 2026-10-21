@@ -14,10 +14,11 @@ import { InfoRow } from '@/shared/ui/InfoRow'
 import { Price } from '@/shared/ui/Price'
 import { QuantityStepper } from '@/shared/ui/QuantityStepper'
 import { toaster } from '@/shared/ui/toaster'
+import { panel } from '@/shared/ui/surface'
 
 const ASK_URL = 'https://t.me/Kansler_CustomerCare_bot'
 
-const card = { p: '4', bg: 'bg.surface', borderRadius: 'card', borderWidth: '1px', borderColor: 'border.subtle' } as const
+const card = { ...panel, p: '4' } as const
 
 interface BuyBoxProps {
   product: ProductDetails
@@ -152,7 +153,7 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
                   _hover={{ borderColor: on ? 'navy.900' : 'kgray.300' }}
                   onClick={() => onVariation(v.guid)}
                 >
-                  <Box h="60px" bg="kgray.50" borderRadius="8px" overflow="hidden">
+                  <Box h="60px" bg="bg.tile" borderRadius="8px" overflow="hidden">
                     <Image src={v.image[0]} alt="" w="full" h="full" fit="contain" p="1" mixBlendMode="multiply" />
                   </Box>
                   <Text fontSize="2xs" fontWeight="600" color={v.discount_percent ? 'fg.discount' : 'fg.default'} truncate>

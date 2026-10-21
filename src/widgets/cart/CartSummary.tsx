@@ -3,6 +3,7 @@ import { Truck } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
+import { tintedPanel } from '@/shared/ui/surface'
 
 export const SUPPORT_BOT = 'https://t.me/Kansler_CustomerCare_bot'
 
@@ -42,7 +43,7 @@ export const CartSummary = ({ count, total, freeFrom, onCheckout }: { count: num
   const { t } = useTranslation()
   const lang = useLang()
   return (
-    <Stack gap="5" bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" p={{ base: 5, md: 6 }}>
+    <Stack gap="5" {...tintedPanel} p={{ base: 5, md: 6 }}>
       <FreeDeliveryProgress total={total} freeFrom={freeFrom} />
       <Box>
         <Text fontSize="xl" fontWeight="700" color="fg.default" mb="3">

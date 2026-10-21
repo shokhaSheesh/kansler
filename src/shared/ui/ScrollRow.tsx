@@ -29,11 +29,11 @@ export const ScrollRow = ({ children, itemWidth, perView = { base: 2.15, sm: 3.2
         grabCursor
         style={{ overflow: 'visible' }}
         slidesPerView={fixed ? 'auto' : perView.base}
-        spaceBetween={8}
+        spaceBetween={12}
         breakpoints={{
-          640: { slidesPerView: fixed ? 'auto' : perView.sm, spaceBetween: 12 },
-          1024: { slidesPerView: fixed ? 'auto' : perView.lg, spaceBetween: 12 },
-          1280: { slidesPerView: fixed ? 'auto' : perView.xl, spaceBetween: 16 },
+          640: { slidesPerView: fixed ? 'auto' : perView.sm, spaceBetween: 16 },
+          1024: { slidesPerView: fixed ? 'auto' : perView.lg, spaceBetween: 16 },
+          1280: { slidesPerView: fixed ? 'auto' : perView.xl, spaceBetween: 20 },
         }}
       >
         {slides.map((child, i) => (

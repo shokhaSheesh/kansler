@@ -5,6 +5,7 @@ This document lists every change in the new Kansler web design, screen by screen
 **What stays the same**
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
+  - One exception, on your request: the page background is now **white** instead of light grey (see section 1).
 - All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 13](#13-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
@@ -49,6 +50,8 @@ This document lists every change in the new Kansler web design, screen by screen
 | Sections stay blank while data loads; a splash screen can show for up to 10 seconds | Grey placeholder shapes show where content will appear |
 | The whole site downloads up front (1.6 MB of code) | Each page loads only what it needs |
 | Footer: light grey block | Footer: navy block with the same links and address |
+| Light grey page background, white blocks on top (on request: looked plain and dated) | **White page background.** So products and sections still stand out:<br>• **Products:** photos sit on soft grey tiles, with no frame around the card<br>• **Category tiles and partner logos:** grey tiles<br>• **Order summaries, filters and the profile menu:** a light grey panel<br>• **Forms and lists:** white blocks with a thin border<br>• **Home page:** the "Скидки" row sits on a grey band, to break up the page<br>All greys are from the existing brand grey scale. |
+| No back button; only the browser's | **"Назад"** button on the product page, category pages, search results and checkout. On computers it sits before the breadcrumbs; on phones it replaces them. It returns to the previous page. If the page was opened from a link, it goes one level up (product → its category, category → parent category or Каталог, checkout → cart) instead of leaving the site. |
 | Empty pages use different icons | **One illustration for every empty state** (empty cart, favourites, no search results, nothing found, cart preview): an open box in the brand colours, with the page's existing title, text and button |
 
 ## 2. Header and navigation
@@ -108,6 +111,7 @@ This document lists every change in the new Kansler web design, screen by screen
 **Same as now:** photo with dots for several photos, discount badge, price and old price, name, ♡, add to cart, out of stock.
 
 **Changed**
+- **Look:** no frame around the card; the photo sits on a grey tile with rounded corners and lifts slightly on hover. More space between cards.
 - **Photos:**
   - computer: move the mouse across the photo to flip through the photos;
   - phone: swipe the photo.
@@ -229,7 +233,12 @@ The current site shows the **same filter sidebar** on category pages, search res
 - **Phone:** **"Итого · Оплатить"** pinned above the tab bar.
 - **Address and recipient pickers** are proper choice lists (computer: centred window; phone: panel from the bottom).
 - **Missing details:** paying without an address or recipient opens the right picker and points out what's missing, instead of only showing an error.
-- **Cards** are shown as card tiles (UZCARD / HUMO, last 4 digits), with the selected one in navy.
+- **Saved cards** look like bank cards:
+  - navy, in a different shade for UZCARD and HUMO;
+  - chip, masked number (•••• 4512) and the card type;
+  - the selected card has a green ✓ and an outline.
+
+  "Добавить карту" is a tile of the same size. Cards scroll sideways when there are many.
 - **SMS code:** 6 boxes, fills in automatically from the SMS on phones, confirms on the last digit, and resend becomes available after a countdown.
 - **"Скидка"** is hidden when there is no discount (currently it shows "−0 сум").
 
@@ -244,6 +253,7 @@ Everything else reuses the current site's texts.
 | Bar after adding to cart | Товар добавлен в корзину | Mahsulot savatga qo'shildi |
 | Button in that bar and in the variant window | Перейти в корзину | Savatga o'tish |
 | Number of variants (card, variant window) | 1 вариант · 2 варианта · 5 вариантов | 1 ta variant |
+| Back button | Назад | Orqaga |
 
 ## 14. Not included, and why
 

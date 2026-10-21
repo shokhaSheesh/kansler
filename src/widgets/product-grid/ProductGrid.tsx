@@ -23,7 +23,7 @@ export const ProductGrid = ({
   density?: Density
   renderItem?: (card: ReactNode, productId: string) => ReactNode
 }) => (
-  <Grid templateColumns={COLS[density]} gap={{ base: 2, md: 4 }} opacity={loading ? 0.6 : 1} transition="opacity .15s">
+  <Grid templateColumns={COLS[density]} columnGap={{ base: 3, md: 5 }} rowGap={{ base: 6, md: 8 }} opacity={loading ? 0.6 : 1} transition="opacity .15s">
     {products.map((p) => {
       const card = <ProductCard product={p} action={() => <AddToCartControl product={p} />} />
       return <Box key={p.guid}>{renderItem ? renderItem(card, p.guid) : card}</Box>
@@ -32,11 +32,11 @@ export const ProductGrid = ({
 )
 
 export const ProductGridSkeleton = ({ count = 10, density = 'wide' }: { count?: number; density?: Density }) => (
-  <Grid templateColumns={COLS[density]} gap={{ base: 2, md: 4 }}>
+  <Grid templateColumns={COLS[density]} columnGap={{ base: 3, md: 5 }} rowGap={{ base: 6, md: 8 }}>
     {Array.from({ length: count }, (_, i) => (
-      <Stack key={i} bg="bg.surface" borderRadius="card" p="2" gap="3">
-        <Skeleton aspectRatio="1" borderRadius="control" />
-        <Box px="1.5" pb="2">
+      <Stack key={i} gap="3">
+        <Skeleton aspectRatio="1" borderRadius="card" />
+        <Box px="0.5" pb="2">
           <Skeleton h="16px" w="50%" mb="2" />
           <Skeleton h="12px" w="90%" mb="1.5" />
           <Skeleton h="12px" w="60%" />

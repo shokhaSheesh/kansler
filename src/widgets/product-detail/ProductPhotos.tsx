@@ -36,10 +36,10 @@ export const ProductPhotos = ({ images, alt, overlay }: ProductPhotosProps) => {
               aria-label={`${alt} ${i + 1}`}
               boxSize="72px"
               flexShrink="0"
-              bg="bg.surface"
+              bg="bg.tile"
               borderRadius="primary"
               borderWidth="2px"
-              borderColor={i === index ? 'navy.900' : 'border.subtle'}
+              borderColor={i === index ? 'navy.900' : 'transparent'}
               overflow="hidden"
               onMouseEnter={() => go(i)}
               onClick={() => go(i)}
@@ -50,7 +50,7 @@ export const ProductPhotos = ({ images, alt, overlay }: ProductPhotosProps) => {
         </Stack>
       )}
 
-      <Box role="group" pos="relative" flex="1" minW="0" aspectRatio="1" bg="bg.surface" borderWidth="1px" borderColor="border.subtle" borderRadius={{ base: 'card', md: 'modal' }} overflow="hidden">
+      <Box role="group" pos="relative" flex="1" minW="0" aspectRatio="1" bg="bg.tile" borderRadius={{ base: 'card', md: 'modal' }} overflow="hidden">
         <Flex
           ref={track}
           h="full"

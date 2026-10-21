@@ -9,6 +9,7 @@ import { useProductList } from '@/features/product-filters/queries'
 import type { ProductListParams, ProductListResult } from '@/mocks/products'
 import { Pagination } from '@/shared/ui/Pagination'
 import { ProductGrid, ProductGridSkeleton } from '@/widgets/product-grid/ProductGrid'
+import { tintedPanel } from '@/shared/ui/surface'
 
 interface ProductListViewProps {
   /** Title block (breadcrumbs, heading, count). Receives the result for the count. */
@@ -53,10 +54,7 @@ export const ProductListView = ({ header, subheader, categories, base, empty, re
           top="128px"
           maxH="calc(100dvh - 144px)"
           overflowY="auto"
-          bg="bg.surface"
-          borderRadius="card"
-          borderWidth="1px"
-          borderColor="border.subtle"
+          {...tintedPanel}
           px="4"
           css={{ scrollbarWidth: 'thin' }}
         >

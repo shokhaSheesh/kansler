@@ -7,6 +7,7 @@ import { mockCheckout, SAMPLE_PROMOS } from '@/mocks/checkout.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
 import { SummaryRow } from '@/shared/ui/SummaryRow'
+import { tintedPanel } from '@/shared/ui/surface'
 
 /**
  * Live summary: "Ваша корзина" — Товары (N), Доставка (or Бесплатно), VIP скидка, Промокод (removable), Скидка,
@@ -35,7 +36,7 @@ export const CheckoutSummary = observer(({ onSubmit, busy }: { onSubmit: () => v
   }
 
   return (
-    <Stack gap="4" bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" p={{ base: 4, md: 6 }}>
+    <Stack gap="4" {...tintedPanel} p={{ base: 4, md: 6 }}>
       <Text fontSize="lg" fontWeight="700">
         {t('cart.your_cart')}
       </Text>

@@ -9,12 +9,24 @@ interface ProductShelfProps {
   title: string
   to?: string
   products: Product[]
+  /** Shelf sits on a tinted band (photo tiles turn white) to break up the white page. */
+  tinted?: boolean
 }
 
-export const ProductShelf = ({ title, to, products }: ProductShelfProps) => {
+// Inside a band the grey photo tiles would blend in, so they switch to white
+const band = {
+  bg: 'bg.panel',
+  borderRadius: { base: 0, md: 'modal' },
+  mx: { base: -4, md: 0 },
+  px: { base: 4, md: 6 },
+  py: { base: 5, md: 6 },
+  css: { '--chakra-colors-bg-tile': 'white' },
+} as const
+
+export const ProductShelf = ({ title, to, products, tinted }: ProductShelfProps) => {
   if (!products.length) return null
   return (
-    <Box as="section">
+    <Box as="section" {...(tinted ? band : {})}>
       <SectionHeader title={title} to={to} />
       <ScrollRow>
         {products.map((p) => (

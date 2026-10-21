@@ -33,20 +33,9 @@ export const ProductCard = ({ product, action }: ProductCardProps) => {
   const href = paths.product(product.guid)
 
   return (
-    <Box
-      role="group"
-      bg="bg.surface"
-      borderRadius="card"
-      borderWidth="1px"
-      borderColor="border.subtle"
-      p="2"
-      h="full"
-      display="flex"
-      flexDirection="column"
-      transition="box-shadow .2s, border-color .2s"
-      _hover={{ boxShadow: '0 8px 24px rgba(16, 24, 40, 0.08)', borderColor: 'transparent' }}
-    >
-      <Box pos="relative" aspectRatio="1" bg="kgray.50" borderRadius="control" overflow="hidden">
+    // No frame on the white page: the grey photo tile is what separates one product from the next
+    <Box role="group" h="full" display="flex" flexDirection="column">
+      <Box pos="relative" aspectRatio="1" bg="bg.tile" borderRadius="card" overflow="hidden" transition="box-shadow .2s" _groupHover={{ boxShadow: 'raised' }}>
         <ProductGallery images={variation.image} alt={name} href={href} dimmed={!inStock} />
 
         {discount > 0 && (
@@ -68,7 +57,7 @@ export const ProductCard = ({ product, action }: ProductCardProps) => {
         </Box>
       </Box>
 
-      <Stack gap="1" px="1.5" pt="2.5" pb="1.5" flex="1">
+      <Stack gap="1" px="0.5" pt="3" pb="1" flex="1">
         <Price value={finalPrice} oldValue={discount > 0 ? variation.price : null} size="sm" />
         {brand && (
           <Text fontSize="xs" fontWeight="600" color="fg.muted" textTransform="uppercase" letterSpacing="0.03em" truncate>

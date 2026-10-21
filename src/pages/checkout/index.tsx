@@ -16,8 +16,9 @@ import { AddCardDialog } from '@/widgets/checkout/AddCardDialog'
 import { CheckoutSummary } from '@/widgets/checkout/CheckoutSummary'
 import { PaymentTypeCard } from '@/widgets/checkout/PaymentTypeCard'
 import { PickerDialog } from '@/widgets/checkout/PickerDialog'
+import { panel } from '@/shared/ui/surface'
 
-const card = { bg: 'bg.surface', borderRadius: 'card', borderWidth: '1px', borderColor: 'border.subtle' } as const
+const card = panel
 
 const ChoiceRow = ({ icon, label, value, sub, missing, error, onClick }: { icon: ReactNode; label: string; value: string; sub?: string; missing?: boolean; error?: string; onClick: () => void }) => (
   <Flex as="button" w="full" textAlign="start" align="center" gap="3" py="3.5" onClick={onClick} _hover={{ '& .chev': { transform: 'translateX(2px)' } }}>
@@ -105,7 +106,7 @@ const CheckoutPage = observer(() => {
   return (
     <Stack gap={{ base: 5, md: 6 }} pb={{ base: '84px', md: 0 }}>
       <Stack gap="2">
-        <Breadcrumbs items={[{ label: t('favourites.breadcrumb.home'), to: paths.home }, { label: t('cart.title'), to: paths.cart }, { label: t('order.checkout.order_title') }]} />
+        <Breadcrumbs items={[{ label: t('favourites.breadcrumb.home'), to: paths.home }, { label: t('cart.title'), to: paths.cart }, { label: t('order.checkout.order_title') }]} back={paths.cart} />
         <Flex align="center" gap="3" wrap="wrap">
           <Heading as="h1" fontSize={{ base: '2xl', md: '3xl' }} fontWeight="700">
             {t('order.checkout.order_title')}
@@ -168,7 +169,7 @@ const CheckoutPage = observer(() => {
                     <Stack gap="0" separator={<Separator borderColor="border.subtle" />}>
                       {c.lines.map((l) => (
                         <Flex key={l.variation.guid} gap="3" py="3" align="center">
-                          <Box boxSize="56px" flexShrink="0" bg="kgray.50" borderRadius="primary" overflow="hidden">
+                          <Box boxSize="56px" flexShrink="0" bg="bg.tile" borderRadius="primary" overflow="hidden">
                             <Image src={l.variation.image[0]} alt="" w="full" h="full" fit="contain" p="1" mixBlendMode="multiply" />
                           </Box>
                           <Box flex="1" minW="0">

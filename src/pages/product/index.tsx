@@ -65,7 +65,7 @@ const ProductPage = observer(() => {
   const variation = product.variations.find((v) => v.guid === sp.get('v')) ?? product.variations[0]
   const name = localized(variation, 'name', lang) || localized(product, 'name', lang)
   const discount = variation.discount_percent ?? 0
-  const crumbs = [
+  const crumbs: Array<{ label: string; to?: string }> = [
     { label: t('favourites.breadcrumb.home'), to: paths.home },
     ...categoryPath(product.categories_id).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.slug) })),
     { label: localized(product, 'name', lang) },
@@ -88,7 +88,7 @@ const ProductPage = observer(() => {
         alignItems="start"
       >
         <Box gridArea="crumbs">
-          <Breadcrumbs items={crumbs} />
+          <Breadcrumbs items={crumbs} back={crumbs.at(-2)?.to ?? paths.home} />
         </Box>
 
         <Box gridArea="photos" minW="0">

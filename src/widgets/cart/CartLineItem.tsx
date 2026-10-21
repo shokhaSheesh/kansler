@@ -27,7 +27,7 @@ export const CartLineItem = observer(({ line, checked, onToggle }: { line: CartL
       </Checkbox.Root>
 
       <RouterLink to={href}>
-        <Box boxSize={{ base: '72px', md: '80px' }} flexShrink="0" bg="kgray.50" borderRadius="control" overflow="hidden">
+        <Box boxSize={{ base: '72px', md: '80px' }} flexShrink="0" bg="bg.tile" borderRadius="control" overflow="hidden">
           <Image src={v.image[0]} alt={line.name} w="full" h="full" fit="contain" p="1.5" mixBlendMode="multiply" />
         </Box>
       </RouterLink>

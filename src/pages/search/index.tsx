@@ -20,7 +20,7 @@ export default function SearchPage() {
       categories={{ kind: 'filter', options: topCategories }}
       header={(data) => (
         <Stack gap="2">
-          <Breadcrumbs items={[{ label: t('favourites.breadcrumb.home'), to: paths.home }, { label: t('search.title') }]} />
+          <Breadcrumbs items={[{ label: t('favourites.breadcrumb.home'), to: paths.home }, { label: t('search.title') }]} back={paths.home} />
           <Flex align="baseline" gap="3" wrap="wrap">
             <Heading as="h1" fontSize={{ base: '2xl', md: '3xl' }} fontWeight="700" color="fg.default" wordBreak="break-word">
               «{query}»

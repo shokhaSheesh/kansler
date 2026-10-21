@@ -17,14 +17,12 @@ export const CategoryRail = ({ categories }: { categories: Category[] }) => {
             role="group"
             pos="relative"
             h={{ base: '124px', md: '140px' }}
-            bg="bg.surface"
+            bg="bg.tile"
             borderRadius="card"
-            borderWidth="1px"
-            borderColor="border.subtle"
             p="3"
             overflow="hidden"
-            transition="border-color .2s, box-shadow .2s"
-            _hover={{ borderColor: 'navy.900', boxShadow: '0 4px 16px rgba(16, 24, 40, 0.06)' }}
+            transition="background .2s"
+            _hover={{ bg: 'kgray.150' }}
           >
             <Text fontSize="sm" fontWeight="600" color="fg.default" lineHeight="1.3" lineClamp="2" pos="relative" zIndex="1">
               {localized(c, 'name', lang)}
@@ -42,6 +40,7 @@ export const CategoryRail = ({ categories }: { categories: Category[] }) => {
                 w="auto"
                 maxW="75%"
                 fit="contain"
+                mixBlendMode="multiply"
                 transition="transform .25s"
                 _groupHover={{ transform: 'translateY(-3px)' }}
               />

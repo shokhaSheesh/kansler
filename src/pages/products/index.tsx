@@ -54,6 +54,7 @@ export default function ProductsPage() {
               ...path.slice(0, -1).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.slug) })),
               { label: title },
             ]}
+            back={path.length > 1 ? paths.category(path[path.length - 2].slug) : paths.catalog}
           />
           <Flex align="baseline" gap="3" wrap="wrap">
             <Heading as="h1" fontSize={{ base: '2xl', md: '3xl' }} fontWeight="700" color="fg.default">

@@ -3,6 +3,8 @@ import { ChevronRight, FileText, Plus } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
 import { mockCheckout, type PaymentType } from '@/mocks/checkout.store'
+import { panel } from '@/shared/ui/surface'
+import { BankCard, CARD_SIZE } from './BankCard'
 
 const DIDOX_URL = 'https://didox.uz'
 
@@ -16,7 +18,7 @@ export const PaymentTypeCard = observer(({ onAddCard }: { onAddCard: () => void 
   const tabs: PaymentType[] = ['corporate', 'transfer']
 
   return (
-    <Stack gap="4" bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" p={{ base: 4, md: 6 }}>
+    <Stack gap="4" {...panel} p={{ base: 4, md: 6 }}>
       <Text fontSize="lg" fontWeight="700">
         {t('order.checkout.title')}
       </Text>
@@ -44,54 +46,35 @@ export const PaymentTypeCard = observer(({ onAddCard }: { onAddCard: () => void 
       </Flex>
 
       {c.paymentType === 'corporate' ? (
-        <Flex gap="3" overflowX="auto" pb="1" css={{ scrollbarWidth: 'thin' }}>
-          {c.cards.map((card) => {
-            const on = card.guid === c.cardId
-            return (
-              <Stack
-                key={card.guid}
-                as="button"
-                gap="5"
-                textAlign="start"
-                minW="168px"
-                h="100px"
-                p="3.5"
-                borderRadius="control"
-                bg={on ? 'navy.900' : 'bg.surface'}
-                color={on ? 'white' : 'fg.default'}
-                borderWidth="2px"
-                borderColor={on ? 'navy.900' : 'border.subtle'}
-                justify="space-between"
-                onClick={() => c.setCard(card.guid)}
-              >
-                <Text fontSize="xs" fontWeight="700" letterSpacing="0.06em" opacity={on ? 0.8 : 0.6}>
-                  {card.type}
-                </Text>
-                <Text fontSize="md" fontWeight="600" letterSpacing="0.08em" fontVariantNumeric="tabular-nums">
-                  •••• {card.last4}
-                </Text>
-              </Stack>
-            )
-          })}
+        // p/m give the selection ring room inside the scroll area
+        <Flex gap="3" overflowX="auto" p="1" m="-1" scrollSnapType="x mandatory" css={{ scrollbarWidth: 'none' }}>
+          {c.cards.map((card) => (
+            <BankCard key={card.guid} card={card} selected={card.guid === c.cardId} onSelect={() => c.setCard(card.guid)} />
+          ))}
           <Flex
             as="button"
             direction="column"
             align="center"
             justify="center"
-            gap="1.5"
-            minW="140px"
-            h="100px"
-            borderRadius="control"
-            borderWidth="2px"
+            gap="2.5"
+            {...CARD_SIZE}
+            flexShrink="0"
+            scrollSnapAlign="start"
+            borderRadius="14px"
+            borderWidth="1.5px"
             borderStyle="dashed"
             borderColor="kgray.300"
+            bg="bg.panel"
             color="fg.muted"
             fontSize="sm"
-            fontWeight="500"
-            _hover={{ borderColor: 'navy.900', color: 'fg.default' }}
+            fontWeight="600"
+            transition="border-color .2s, color .2s"
+            _hover={{ borderColor: 'navy.900', color: 'fg.default', '& .plus': { transform: 'rotate(90deg)' } }}
             onClick={onAddCard}
           >
-            <Plus size={20} />
+            <Flex className="plus" boxSize="36px" align="center" justify="center" bg="bg.surface" borderRadius="full" boxShadow="panel" transition="transform .25s">
+              <Plus size={18} />
+            </Flex>
             {t('order.checkout.add_card')}
           </Flex>
         </Flex>

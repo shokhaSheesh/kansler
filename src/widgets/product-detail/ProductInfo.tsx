@@ -4,12 +4,10 @@ import { useTranslation } from 'react-i18next'
 import type { ProductDetails, VariationDetails } from '@/entities/product/types'
 import { useLang } from '@/shared/hooks/useLang'
 import { htmlToText, sanitizeHtml } from '@/shared/lib/sanitize'
+import { panel } from '@/shared/ui/surface'
 
 const card = {
-  bg: 'bg.surface',
-  borderRadius: 'card',
-  borderWidth: '1px',
-  borderColor: 'border.subtle',
+  ...panel,
   p: { base: 4, md: 6 },
 } as const
 

@@ -7,6 +7,7 @@ import type { Category } from '@/entities/category/types'
 import { categories } from '@/mocks'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
+import { panel } from '@/shared/ui/surface'
 
 const byOrder = (a: Category, b: Category) => a.display_order - b.display_order
 
@@ -76,7 +77,7 @@ export default function CatalogPage() {
       {/* Desktop: overview grid */}
       <Grid hideBelow="md" templateColumns={{ md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }} gap="4">
         {categories.map((c) => (
-          <Stack key={c.guid} bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" p="5" gap="4">
+          <Stack key={c.guid} {...panel} p="5" gap="4">
             <RouterLink to={paths.category(c.slug)}>
               <Flex align="center" gap="3">
                 <CategoryThumb src={c.image} size="56px" />

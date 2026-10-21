@@ -14,6 +14,7 @@ import { EmptyState } from '@/shared/ui/EmptyState'
 import { CartLineItem } from '@/widgets/cart/CartLineItem'
 import { CartSummary } from '@/widgets/cart/CartSummary'
 import { ProductShelf } from '@/widgets/home/ProductShelf'
+import { panel } from '@/shared/ui/surface'
 
 /**
  * /cart — same content as live: select all / delete selected, lines (checkbox, photo, name, price, quantity,
@@ -73,7 +74,7 @@ const CartPage = observer(() => {
         />
       ) : (
         <Grid templateColumns={{ base: 'minmax(0, 1fr)', lg: 'minmax(0, 1fr) 380px' }} gap="6" alignItems="start">
-          <Box bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" px={{ base: 4, md: 6 }} py="2">
+          <Box {...panel} px={{ base: 4, md: 6 }} py="2">
             <Flex align="center" gap="3" py="3">
               <Checkbox.Root checked={allOn ? true : selected.length ? 'indeterminate' : false} onCheckedChange={toggleAll} colorPalette="brand" cursor="pointer">
                 <Checkbox.HiddenInput />

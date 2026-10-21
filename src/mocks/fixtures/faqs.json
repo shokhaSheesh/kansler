@@ -1,0 +1,18 @@
+[
+ {
+  "answer_ru": "Сделать заказ в Kansler очень просто. Выберите товар, добавьте его в корзину и заполните свои данные.",
+  "answer_uz": "<p>Kansler’da buyurtma berish juda oson. Mahsulotni tanlang, uni savatga qo‘shing va ma’lumotlaringizni kiriting.</p>",
+  "display_order": 1,
+  "guid": "d24f1dd5-2ad7-4a4a-a942-139207a5f3fe",
+  "question_ru": "<p>Как сделать заказ?</p>",
+  "question_uz": "<p>Qanday buyurtma berish mumkin?</p>"
+ },
+ {
+  "answer_ru": "Для оплаты своих покупок на сайте kansler.uz Вы можете выбрать любой удобный для себя способ:  Оплата пластиковой картой. Оплата перечислением. При наличии дополнительных вопросов будем рады ответить на них по телефону 78 148 44 44",
+  "answer_uz": "<p>kansler.uz saytida xaridlaringiz uchun to'lovni amalga oshirish uchun siz istalgan qulay to'lov usulini tanlashingiz mumkin:&nbsp;Kredit karta orqali to'lov. Bank o'tkazmasi orqali to'lov. Agar sizda qo'shimcha savollar bo'lsa, biz ularga 78 148 44 44 raqami orqali javob berishdan mamnun bo'lamiz.</p>",
+  "display_order": 2,
+  "guid": "d7ae21bf-9197-4ffa-80be-b4a2aea17291",
+  "question_ru": "<p>Как оплатить?</p>",
+  "question_uz": "<p>Qanday to'lash kerak?</p>"
+ }
+]

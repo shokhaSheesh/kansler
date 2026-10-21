@@ -25,11 +25,12 @@ This document lists every change in the new Kansler web design, screen by screen
 6. [Product card](#6-product-card)
 7. [Adding to cart](#7-adding-to-cart)
 8. [Catalog and product list](#8-catalog-and-product-list)
-9. [Favourites](#9-favourites)
-10. [New texts](#10-new-texts)
-11. [Not included, and why](#11-not-included-and-why)
-12. [Issues found in the current data](#12-issues-found-in-the-current-data)
-13. [Still to do](#13-still-to-do)
+9. [Product page](#9-product-page)
+10. [Favourites](#10-favourites)
+11. [New texts](#11-new-texts)
+12. [Not included, and why](#12-not-included-and-why)
+13. [Issues found in the current data](#13-issues-found-in-the-current-data)
+14. [Still to do](#14-still-to-do)
 
 ---
 
@@ -126,7 +127,7 @@ Used everywhere products are listed.
 |---|---|
 | Full-width "Добавить в корзину" button under every card | A round **"+"** on the photo corner |
 | — | After the first tap it becomes a small **"− 1 +"** control. At 1, the minus becomes a 🗑 bin, so it's clear the next tap removes the item. You can still type a quantity; it can't go above the stock. |
-| — | A **confirmation bar** at the bottom of the screen: product photo, "Товар добавлен в корзину", the product name and a **"Перейти в корзину"** button. Adding several products quickly updates the same bar instead of stacking several. |
+| — | A **confirmation bar** at the top of the screen, in dark navy so it stands out: product photo, "Товар добавлен в корзину", the product name and a **"Перейти в корзину"** button. Adding several products quickly updates the same bar instead of stacking several. |
 | — | The cart counter in the header bumps |
 
 ## 8. Catalog and product list
@@ -157,7 +158,37 @@ Applies to category pages (`/categories/…`) and the all-products page (`/produ
 - A **"Фильтры"** button (showing how many filters are on), sort and view stay pinned under the header.
 - Filters open in a panel from the bottom: make your choices, then **"Сохранить"** applies them and **"Отмена"** discards them, the same buttons as the current mobile filter.
 
-## 9. Favourites
+## 9. Product page
+
+**Layout**
+- **Computer:** photos on the left; the **buy box stays visible on the right** while you scroll down through the details.
+- **Phone:** photos, then the buy box, then the details. A **price + "Добавить в корзину" bar stays pinned** above the bottom tab bar.
+
+**Photos**
+- **Computer:** a row of thumbnails, plus arrows when you hover over the photo.
+- **Phone:** swipe, with dots showing the position.
+- **Variants:** choosing a different variant shows that variant's photos.
+
+**Buy box**
+- **Name, share and favourite.** **Поделиться** opens the phone's share menu, or copies the link on a computer ("Адрес товара сохранен успешно").
+- **SKU code** when the product has one.
+- **Price,** with the old price crossed out and a −% badge; the unit ("/ шт."); and "N шт в коробке" when the product has a box quantity.
+- **Variant picker ("Вариант 2 / 3"):** each variant shows its photo and price. The chosen variant is kept in the page address, so a shared link opens exactly that variant.
+- **Choose the quantity first, then "Добавить в корзину".** Business buyers often order 10 or 50 at once. After adding, it shows the quantity control plus a **"В корзине"** button that opens the cart.
+- **"Задать вопрос":** opens the Kansler Telegram support chat.
+
+**Delivery and payment** (from the product data and the existing texts)
+- **Delivery by courier:** the fee is shown, plus a **progress bar to free delivery**, e.g. "120 000 сум до бесплатной доставки". It's worked out from what's already in the cart, and turns green with "Бесплатная доставка" once the order passes 500 000 сум.
+- Warehouse address, and the note that delivery cost can change with the address.
+- **Payment options:** Корпоративная карта, Перечисление.
+
+**Details below**
+- **О товаре:** a clean table of characteristics. Repeated values are merged, e.g. "Грамаж: 240, 280, 380 г/кв.м".
+- **Описание товара:** long descriptions are shortened, with "Читать подробное описание" to expand.
+- **Часто задаваемые вопросы:** the existing FAQ, as expandable questions.
+- **Похожие товары:** a swipeable row of products from the same category.
+
+## 10. Favourites
 
 Same content as before: the 4 tabs (Все товары, Товары со скидкой, Рекомендуемые товары, Новые товары), the number of products, and the "Здесь пусто" message.
 
@@ -171,7 +202,7 @@ Same content as before: the 4 tabs (Все товары, Товары со ск�
 
 To confirm with the backend: how "Рекомендуемые товары" is decided for favourites. The design currently shows a sample set.
 
-## 10. New texts
+## 11. New texts
 
 All other texts are reused from the current site. These are the only additions, in both languages:
 
@@ -181,7 +212,7 @@ All other texts are reused from the current site. These are the only additions, 
 | Button in that bar | Перейти в корзину | Savatga o'tish |
 | Clear all filters | Сбросить все | Hammasini tozalash |
 
-## 11. Not included, and why
+## 12. Not included, and why
 
 These texts exist in the current site's files, but the backend has no data or functions behind them. We did not design them so that no feature is promised that can't work:
 
@@ -196,7 +227,7 @@ To confirm with a logged-in account before we design them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 12. Issues found in the current data
+## 13. Issues found in the current data
 
 For the Kansler content team. These affect any design, old or new.
 
@@ -204,13 +235,16 @@ For the Kansler content team. These affect any design, old or new.
 - **"Самые продаваемые" / "Хит продаж" can't work yet.** Sales numbers are 0 for every product.
 - **Some discount prices have kopecks** (e.g. 1 764,97 сум). The new design rounds them, but the data should be whole sums.
 - **Colours are free text.** Values like "5 цветов" or "Plastic World" can't show a colour dot. A short fixed list of colours would make the colour filter cleaner.
+- **Variants of a product can't be told apart by name.** All variants share one name, and characteristics like size or density are listed for the whole product, not linked to a variant. For example, a canvas has "Грамаж: 240 / 280 / 380 г/кв.м", but nothing says which of its 3 variants is which. The new design tells variants apart by photo and price. Linking characteristics to each variant would let the picker say "380 г/кв.м" directly.
+- **The "Категория" characteristic holds promo labels** like "35 %". It's hidden on the product page, because the breadcrumbs already show the category.
+- **Many Uzbek descriptions are empty.** The Russian description is shown instead.
 - **Some names are all capitals or end with extra spaces** ("УТЕНОК", "Ручка Deli ").
 
 Ideas for the backend team: these would be new backend work and are **not** part of this redesign.
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка"). This is very common with Russian and Uzbek keyboards.
 
-## 13. Still to do
+## 14. Still to do
 
 | Step | Screen | Status |
 |---|---|---|
@@ -219,9 +253,9 @@ Ideas for the backend team: these would be new backend work and are **not** part
 | 2 | Search | ✅ Done |
 | 3 | Home | ✅ Done |
 | 4 | Catalog and product list | ✅ Done |
-| 5 | Product page | ⏳ Next (skipped ahead to step 6 on request) |
+| 5 | Product page | ✅ Done |
 | 6 | Favourites | ✅ Done |
-| 7 | Cart | ⏳ |
+| 7 | Cart | ⏳ Next |
 | 8 | Checkout and payment | ⏳ |
 | 9 | Orders list | ⏳ |
 | 10 | Order details | ⏳ |

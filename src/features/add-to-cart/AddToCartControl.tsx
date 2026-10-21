@@ -2,14 +2,9 @@ import { Box, IconButton } from '@chakra-ui/react'
 import { Plus } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router'
-import { paths } from '@/app/router/paths'
 import type { Variation } from '@/entities/product/types'
-import { mockCart } from '@/mocks/cart.store'
 import { QuantityStepper } from '@/shared/ui/QuantityStepper'
-import { toaster } from '@/shared/ui/toaster'
-
-const CART_TOAST = 'cart-added'
+import { useCartLine } from './useCartLine'
 
 interface AddToCartControlProps {
   variation: Variation
@@ -17,31 +12,10 @@ interface AddToCartControlProps {
   size?: 'sm' | 'md'
 }
 
-/**
- * Compact cart control: "+" circle -> "− n +" pill (trash at 1).
- * Design phase: shared mock cart. Wiring: useAddToCart / useRemoveFromCart (entities/cart/queries).
- */
+/** Compact cart control for cards: "+" circle -> "− n +" pill (trash at 1). */
 export const AddToCartControl = observer(({ variation, name, size = 'md' }: AddToCartControlProps) => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
-  const qty = mockCart.qty(variation.guid)
-
-  const change = (n: number) => {
-    if (qty === 0 && n > 0) {
-      // One cart toast at a time: rapid adds replace it instead of stacking over the products
-      const toast = {
-        type: 'success' as const,
-        title: t('cart.added'),
-        description: name,
-        duration: 3500,
-        meta: { image: variation.image[0] },
-        action: { label: t('cart.go_to_cart'), onClick: () => navigate(paths.cart) },
-      }
-      if (toaster.isVisible(CART_TOAST)) toaster.update(CART_TOAST, toast)
-      else toaster.create({ id: CART_TOAST, ...toast })
-    }
-    mockCart.set(variation.guid, n)
-  }
+  const { qty, change } = useCartLine(variation, name)
 
   if (qty === 0) {
     return (

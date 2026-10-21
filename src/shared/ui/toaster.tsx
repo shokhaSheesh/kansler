@@ -1,11 +1,11 @@
 import { Box, Toaster as ChakraToaster, Image, Portal, Spinner, Stack, Toast, createToaster } from '@chakra-ui/react'
 
-/** Bottom-centre: where the eye already is after tapping a card. 88px clears the mobile tab bar. */
+/** Top-centre, over the header: high-contrast navy so it's seen without covering the products being browsed. */
 export const toaster = createToaster({
-  placement: 'bottom',
+  placement: 'top',
   pauseOnPageIdle: true,
   max: 3,
-  offsets: { top: '16px', right: '16px', bottom: '88px', left: '16px' },
+  offsets: { top: '12px', right: '16px', bottom: '16px', left: '16px' },
 })
 
 const indicatorColor: Record<string, string> = {

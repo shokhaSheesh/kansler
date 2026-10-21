@@ -58,3 +58,28 @@ export interface Color extends Localized<'name'> {
   guid: string
   hex?: string
 }
+
+/** One row of /content/product/single `attributes`. The same name can repeat with different values. */
+export interface ProductAttribute extends Localized<'name'> {
+  value_ru: string
+  value_uz: string
+  display_order: number
+}
+
+export interface VariationDetails extends Variation {
+  /** HTML from the admin panel; sanitise before rendering. */
+  description_ru?: string | null
+  description_uz?: string | null
+  /** e.g. { quantity: 48 } -> "48 шт в коробке" */
+  packaging?: { name_ru: string; name_uz: string; quantity: number } | null
+}
+
+/** POST /content/product/single { id } */
+export interface ProductDetails extends Omit<Product, 'variations'> {
+  categories_id: string
+  category: Localized<'name'> & { guid: string }
+  attributes: ProductAttribute[]
+  delivery_cost: number
+  free_delivery_min_sum: number
+  variations: VariationDetails[]
+}

@@ -8,6 +8,7 @@ import logo from '@/shared/assets/logo.png'
 import { Container } from '@/shared/ui/Container'
 import { paths } from '@/app/router/paths'
 import { authStore } from '@/stores/auth.store'
+import { CartPreview } from './CartPreview'
 import { CatalogMenu } from './CatalogMenu'
 import { CountBadge, HeaderAction } from './HeaderAction'
 import { SearchBox } from '@/features/search/SearchBox'
@@ -111,7 +112,9 @@ export const Header = observer(() => {
           <HStack gap="1" hideBelow="md">
             <HeaderAction to={paths.orders} icon={<Package size={22} />} label={t('nav.orders_label')} />
             <HeaderAction to={paths.favourites} icon={<Heart size={22} />} label={t('nav.favorites_label')} count={mockFavourites.count} />
-            <HeaderAction to={paths.cart} icon={<ShoppingCart size={22} />} label={t('nav.cart_label')} count={cartCount} />
+            <CartPreview>
+              <HeaderAction to={paths.cart} icon={<ShoppingCart size={22} />} label={t('nav.cart_label')} count={cartCount} />
+            </CartPreview>
             <HeaderAction
               to={authStore.isAuthorized ? paths.profile.root : paths.auth.login}
               icon={<User size={22} />}

@@ -5,7 +5,7 @@ This document lists every change in the new Kansler web design, screen by screen
 **What stays the same**
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 11](#11-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 12](#12-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -32,10 +32,11 @@ This document lists every change in the new Kansler web design, screen by screen
 8. [Catalog, search results and filters](#8-catalog-search-results-and-filters)
 9. [Product page](#9-product-page)
 10. [Favourites](#10-favourites)
-11. [New texts](#11-new-texts)
-12. [Not included, and why](#12-not-included-and-why)
-13. [Questions for the client, and data issues](#13-questions-for-the-client-and-data-issues)
-14. [Status](#14-status)
+11. [Cart](#11-cart)
+12. [New texts](#12-new-texts)
+13. [Not included, and why](#13-not-included-and-why)
+14. [Questions for the client, and data issues](#14-questions-for-the-client-and-data-issues)
+15. [Status](#15-status)
 
 ---
 
@@ -131,7 +132,7 @@ How variants work in the data: the **product** is a group (name, category). What
 | — | **Several variants** (added on request): the "+" opens a **"which variant?" window** listing every variant with its photo, price and its own quantity control, so several variants can be added at once. The card then shows **✓ and the number in the cart**; tapping it reopens the window. |
 | — | **Confirmation bar** at the top of the screen, in dark navy: product photo, "Товар добавлен в корзину", the name, and **"Перейти в корзину"**. Quick repeated adds update one bar instead of stacking. |
 
-**How do you add more after adding?** Use the same **"− n +"** control on the card, in the variant window, or on the product page. It changes the quantity in the cart directly. The cart page itself is the next step (7), and will list everything added.
+**How do you add more after adding?** Use the same **"− n +"** control on the card, in the variant window, on the product page, or in the cart. They all change the same cart quantity.
 
 ## 8. Catalog, search results and filters
 
@@ -184,7 +185,27 @@ The current site shows the **same filter sidebar** on category pages, search res
 - **One ♡ everywhere:** liking a product on any card updates the header counter (with a bump) and this page.
 - **Forgiving removal:** un-liking a product here fades its card instead of removing it, so a mis-tap is one tap to undo. It's gone on the next visit.
 
-## 11. New texts
+## 11. Cart
+
+**Same as now**
+- **Selection:** "Выбрать все / Снять все", and "Удалить выбранное" once something is selected.
+- **Each line:** checkbox, photo, name (opens the product), price with the old price crossed out, quantity (can't go above the stock), delete.
+- **"Ваш заказ":**
+  - The free-delivery progress, "N сум до бесплатной доставки", or "Бесплатная доставка" once reached. The 500 000 limit comes from the cart's own delivery data.
+  - "Товары (N)" and "Итого". **Only selected lines count**, as now.
+  - "Перейти к оформлению", and the @Kansler_CustomerCare_bot link.
+- **Empty cart:** "Ваша корзина пуста" and "Начать покупки".
+- **"Рекомендуем"** below.
+- **Header preview ("Моя корзина")** when pointing at the cart icon: number of products, each line as "name (Nx)" with price, and "Итого".
+
+**Changed**
+- **The summary card stays visible** while scrolling a long cart.
+- **Each line shows its line total** (price × quantity). On phones it appears under the price when the quantity is more than 1.
+- **Everything starts selected,** including products added later, so a buyer can go straight to checkout. They un-tick what they don't want now.
+- **Phone:** a **"Итого (N) · Перейти к оформлению" bar stays pinned** above the bottom tab bar.
+- **Phone:** the header cart icon shows the counter.
+
+## 12. New texts
 
 Everything else reuses the current site's texts.
 
@@ -194,7 +215,7 @@ Everything else reuses the current site's texts.
 | Button in that bar and in the variant window | Перейти в корзину | Savatga o'tish |
 | Number of variants (card, variant window) | 1 вариант · 2 варианта · 5 вариантов | 1 ta variant |
 
-## 12. Not included, and why
+## 13. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -214,7 +235,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 13. Questions for the client, and data issues
+## 14. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -222,6 +243,7 @@ To check with a logged-in account before designing them:
 - **Brand and description on cards** need the backend change described in section 6.
 
 **Data issues** (for the Kansler content team; these affect any design)
+- **Wrong description on a product.** "Нить" (thread) has the description of a soap ("Туалетное мыло BS «Зелёный чай и огурец»…"). That's in the current data.
 - **Promo items filed as categories.** For example, a Deli marker sits under *Офисная мебель › Мебель › 35 %*, and a Luxor pen under *Готовые наборы › Базовый*.
 - **Variants can't be told apart by name.** All variants share one name. Characteristics like size or density are listed for the whole product, not linked to a variant, so the design tells variants apart by photo and price.
 - **The "Категория" characteristic sometimes holds promo labels** like "35 %".
@@ -235,7 +257,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 14. Status
+## 15. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -246,8 +268,8 @@ To check with a logged-in account before designing them:
 | 4 | Catalog and product list | ✅ Done (checked against the current site) |
 | 5 | Product page | ✅ Done (checked against the current site) |
 | 6 | Favourites | ✅ Done (checked against the current site) |
-| 7 | Cart | ⏳ Next |
-| 8 | Checkout and payment | ⏳ |
+| 7 | Cart | ✅ Done (checked against the current site) |
+| 8 | Checkout and payment | ⏳ Next |
 | 9 | Orders list | ⏳ |
 | 10 | Order details | ⏳ |
 | 11 | Profile and company account | ⏳ |

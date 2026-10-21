@@ -53,7 +53,7 @@ export const Toaster = () => (
             )}
             <Stack gap="0.5" flex="1" minW="0">
               {toast.title && (
-                <Toast.Title fontWeight="600" color="white">
+                <Toast.Title fontWeight="600" color="white" fontSize={{ base: 'sm', md: 'md' }} lineClamp="2">
                   {toast.title}
                 </Toast.Title>
               )}

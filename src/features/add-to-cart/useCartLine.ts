@@ -34,7 +34,7 @@ export const useCartLine = (variation: Variation, name: string, opts: { silent?:
       if (toaster.isVisible(CART_TOAST)) toaster.update(CART_TOAST, toast)
       else toaster.create({ id: CART_TOAST, ...toast })
     }
-    mockCart.set(variation.guid, n, unitPrice(variation))
+    mockCart.set(variation, n, unitPrice(variation), name)
   }
 
   return { qty, change }

@@ -36,7 +36,11 @@ const hasDiscount = (p: Product) => p.variations.some((v) => (v.discount_percent
 
 /** The three home shelves. The live endpoints need auth, so we fill them from real products. */
 export const shelves = {
-  newCollection: [...products].sort((a, b) => b.created_at.localeCompare(a.created_at)).slice(0, 12),
+  // Multi-photo products first so the card gallery is visible in design review
+  newCollection: [...products]
+    .sort((a, b) => b.created_at.localeCompare(a.created_at))
+    .sort((a, b) => Number(b.variations[0].image.length > 1) - Number(a.variations[0].image.length > 1))
+    .slice(0, 12),
   recommended: products.filter((p) => !hasDiscount(p)).slice(12, 24),
   discounted: products.filter(hasDiscount).slice(0, 12),
 }

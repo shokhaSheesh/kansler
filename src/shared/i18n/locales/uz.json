@@ -865,7 +865,9 @@
       "yes": "Ha",
       "no": "Yo'q"
     },
-    "not_enough": "{{name}} hozirda omborda {{exist}} ta mavjud siz {{count}} ta zakaz qilyapsiz"
+    "not_enough": "{{name}} hozirda omborda {{exist}} ta mavjud siz {{count}} ta zakaz qilyapsiz",
+    "added": "Mahsulot savatga qo'shildi",
+    "go_to_cart": "Savatga o'tish"
   },
   "footer": {
     "address": "Toshkent shahri, Mirobod tumani,  Avliy Ota ko'chasi, 7 uy",

@@ -1,15 +1,16 @@
 import { Box, Button, Flex, HStack, IconButton, Image, Input, InputGroup, Link } from '@chakra-ui/react'
 import { observer } from 'mobx-react-lite'
-import { useState, type FormEvent } from 'react'
+import { useCallback, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link as RouterLink, useNavigate } from 'react-router'
-import { BadgePercent, FileText, FolderOpen, Heart, LayoutGrid, Package, PackageOpen, Phone, Search, ShoppingCart, User } from 'lucide-react'
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router'
+import { BadgePercent, FileText, FolderOpen, Heart, LayoutGrid, Package, PackageOpen, Phone, Search, ShoppingCart, User, X } from 'lucide-react'
 import logo from '@/shared/assets/logo.png'
 import { Container } from '@/shared/ui/Container'
 import { paths } from '@/app/router/paths'
 import { authStore } from '@/stores/auth.store'
 import { useCartCount } from '@/entities/cart/queries'
 import { useFavouritesCount } from '@/entities/product/queries'
+import { CatalogMenu } from './CatalogMenu'
 import { HeaderAction } from './HeaderAction'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { categories } from '@/mocks'
@@ -20,6 +21,16 @@ export const Header = observer(() => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
+  const [catalogOpen, setCatalogOpen] = useState(false)
+  const closeCatalog = useCallback(() => setCatalogOpen(false), [])
+
+  // Close the menu whenever the route changes
+  const { pathname } = useLocation()
+  const [lastPath, setLastPath] = useState(pathname)
+  if (lastPath !== pathname) {
+    setLastPath(pathname)
+    setCatalogOpen(false)
+  }
   const { data: cart } = useCartCount()
   const { data: fav } = useFavouritesCount()
 
@@ -47,11 +58,18 @@ export const Header = observer(() => {
             <Image src={logo} alt="Kansler" h={{ base: '22px', md: '28px' }} />
           </RouterLink>
 
-          <Button asChild hideBelow="md" colorPalette="brand" borderRadius="control" h="44px" px="5" gap="2">
-            <RouterLink to={paths.catalog}>
-              <LayoutGrid size={18} />
-              {t('nav.catalog')}
-            </RouterLink>
+          <Button
+            hideBelow="md"
+            colorPalette="brand"
+            borderRadius="control"
+            h="44px"
+            px="5"
+            gap="2"
+            aria-expanded={catalogOpen}
+            onClick={() => setCatalogOpen((o) => !o)}
+          >
+            {catalogOpen ? <X size={18} /> : <LayoutGrid size={18} />}
+            {t('nav.catalog')}
           </Button>
 
           <Box as="form" onSubmit={onSearch} flex="1" minW="0">
@@ -88,7 +106,7 @@ export const Header = observer(() => {
         </Flex>
 
         <Flex hideBelow="md" h="40px" align="center" justify="space-between" fontSize="sm" color="fg.body">
-          {/* Same 4 shortcuts as the live header. TODO(step 1): mega-menu from the Каталог button */}
+          {/* Same 4 shortcuts as the live header */}
           <HStack gap="6">
             {shortcuts.map(({ to, icon: Icon, label }) => (
               <Link key={label} asChild color="fg.body" gap="2" _hover={{ color: 'fg.default' }}>
@@ -106,6 +124,12 @@ export const Header = observer(() => {
           </HStack>
         </Flex>
       </Container>
+
+      {catalogOpen && (
+        <Box hideBelow="md">
+          <CatalogMenu categories={categories} onClose={closeCatalog} />
+        </Box>
+      )}
     </Box>
   )
 })

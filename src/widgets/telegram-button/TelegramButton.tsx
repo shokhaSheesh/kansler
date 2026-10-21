@@ -10,7 +10,7 @@ export const TelegramButton = ({ href }: { href?: string }) => {
   if (!href) return null
 
   return (
-    <Box pos="fixed" right={{ base: 4, md: 6 }} bottom={{ base: '80px', md: 6 }} zIndex="overlay">
+    <Box pos="fixed" right={{ base: 4, md: 6 }} bottom={{ base: '80px', md: 6 }} zIndex="docked">
       {open && (
         <Stack
           pos="absolute"

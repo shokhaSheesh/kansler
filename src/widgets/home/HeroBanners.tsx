@@ -2,7 +2,7 @@ import { Box, IconButton, Image } from '@chakra-ui/react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { Link as RouterLink } from 'react-router'
-import { Autoplay, Pagination } from 'swiper/modules'
+import { Autoplay, Mousewheel, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css/pagination'
@@ -22,7 +22,8 @@ export const HeroBanners = ({ banners }: { banners: Banner[] }) => {
   return (
     <Box pos="relative" borderRadius={{ base: 'card', md: 'modal' }} overflow="hidden" className="hero-banners">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Mousewheel, Pagination]}
+        mousewheel={{ forceToAxis: true, thresholdDelta: 20 }}
         onSwiper={setSwiper}
         loop={banners.length > 1}
         autoplay={{ delay: 5000, pauseOnMouseEnter: true, disableOnInteraction: false }}

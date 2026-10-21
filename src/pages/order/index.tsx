@@ -278,7 +278,7 @@ const OrderPage = observer(() => {
 
           {order.status === 'delivered' && (
             <Block title={t(`${k}.reviews_title`)}>
-              <ActionRow icon={<Star size={20} />} label={t(`${k}.rate_products`)} to={paths.profile.comments} />
+              <ActionRow icon={<Star size={20} />} label={t(`${k}.rate_products`)} to={`${paths.profile.comments}?order=${order.order_id}`} />
             </Block>
           )}
 

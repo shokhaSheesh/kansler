@@ -103,8 +103,8 @@ This document lists every change in the new Kansler web design, screen by screen
 
 | Before | After |
 |---|---|
-| The banner carousel shows the next banner peeking in, which cuts off its text | One full banner at a time, with the right image for computer, tablet or phone. It changes every 5 seconds and pauses while the mouse is over it. |
-| A row of small category icons | One row of larger category tiles you can swipe (trackpad, mouse drag, finger) |
+| The banner carousel shows the next banner peeking in, which cuts off its text | One full banner at a time, with the right image for computer, tablet or phone. It changes every 5 seconds and pauses while the mouse is over it. **The whole banner is always visible:** it keeps the exact size the artwork is made in (computer 2760×760, tablet and phone 1648×760), so nothing is cut off. |
+| A row of small category icons that **scrolls by itself every 3 seconds**, in a loop (so a screenshot can start at any category) | One row of larger category tiles you can swipe (trackpad, mouse drag, finger). Same 12 categories in the same order, starting with Бумажная продукция. It doesn't move on its own, so nobody misses a tap. |
 | Product rows | Rows you **swipe** like a phone list, with no arrow buttons; "Все" links are kept |
 | Partner logos | Grey logos that turn to colour on hover; a 2-row swipeable strip on phones |
 
@@ -389,6 +389,35 @@ Pages under `/profile/…`, with the side menu on computers and a sideways-scrol
   - the account number is shown in groups of 4, so it's easy to check against bank papers;
   - the status is a coloured label.
 
+**Отзывы** (`/profile/comments`)
+- **Same as now:**
+  - delivered orders as cards: "Заказ ID …", the review date, and "N сум • N товаров";
+  - opening one shows **"Оцените заказ"**: "Ваш отзыв поможет нам стать лучше", then **Что думаете насчет доставки**, **Недостатки** and **Комментарий** (all required), and **"Отправить"**;
+  - **a sent review opens read only.**
+  - There are no star ratings, as now.
+- **Changed:**
+  - each card shows whether it's reviewed already (✓) or waiting for a review;
+  - "Оценить товары" on the order page opens that order's review directly;
+  - after sending, the order page shows "Спасибо за ваш отзыв".
+
+**Настройки** (`/profile/settings`)
+- **Same as now:** **Статус заказа** and **Рекламные предложения**, each with **Уведомления** (on) and **СМС** (off) switches.
+- **Changed:**
+  - the description sits on the left and the switches on the right;
+  - the switches are navy, the brand colour.
+
+**Уведомления** (`/profile/notifications`)
+- **Same as now:**
+  - **"У вас N новых уведомлений"**;
+  - each notification: the status icon, **"Заказ ID …"**, the message, the date and time, and **"Не прочитано"** until opened;
+  - opening one marks it read and opens the order;
+  - 10 per page;
+  - the **unread count on "Уведомления"** in the profile menu.
+- **Changed:**
+  - unread ones are white and raised, read ones are grey and quieter;
+  - delivered notifications are green, cancelled red and shipping blue.
+- **Design-phase note:** the messages are written by the backend. The samples use the site's own order texts ("Ваш заказ подтвержден и собирается." etc.), one for each status change of the sample orders.
+
 **Checkout:** "Добавить адрес" and "Добавить получателя" now open the same windows **on top of checkout**, and the new address or recipient is selected straight away. The current site leaves checkout for a profile page and comes back.
 
 **Design-phase note:** the user, company, addresses, recipients, cards and accounts are **samples**, the same ones checkout uses. Changes made on these pages show up in checkout.
@@ -416,7 +445,6 @@ These texts exist in the current site's files, but **no page of the current site
   - Bonus points, balance and transactions.
   - Profile photo upload.
   - Deleting the account.
-  - Push / SMS settings.
   - The "Мастер" user type.
   - An "Azia Stroy" welcome screen (left over from another project).
 
@@ -446,6 +474,9 @@ To check with a logged-in account before designing them:
   - **Delete confirmation wording.** "Вы действительно хотите сделать?" (recipients, cards) is unfinished Russian; "…хотите удалить?" was probably meant. It is kept as is for now.
   - **The courier-comment error text doesn't match the rule.** The rule is that no word is longer than 20 letters; the text says "В комментариях должно быть не менее 2 пробелов".
   - **Recipient names need 4+ letters** (first and last name). A short name like "Ли" can't be saved. Is that intended?
+  - **Настройки are not saved.** The current switches aren't sent to the backend, so they reset on reload. The backend needs a place to keep them before they can work.
+  - **Settings page title.** On computers the current settings page is titled "Уведомления", the same as the notifications page. The design uses "Настройки", like the menu.
+  - **"У вас 4 новых уведомлений"** has no Russian plural forms ("4 новых уведомления" would be correct).
   - **Addresses are deleted without asking** on the current site. The design asks first, with the same confirmation as recipients.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
@@ -483,9 +514,9 @@ To check with a logged-in account before designing them:
 | 9 | Orders list | ✅ Done (checked against the current site) |
 | 10 | Order details | ✅ Done (checked against the current site) |
 | 11 | Profile and company account | ✅ Done (checked against the current site) |
-| 11b | Profile: Отзывы (reviews) and Настройки (settings) | ⏳ |
-| 12 | Notifications | ⏳ Next |
-| 13 | Login and registration | ⏳ |
+| 11b | Profile: Отзывы (reviews) and Настройки (settings) | ✅ Done (checked against the current site) |
+| 12 | Notifications | ✅ Done (checked against the current site) |
+| 13 | Login and registration | ⏳ Next |
 | 14 | Help centre and info pages | ⏳ |
 
 Design references for each screen (Mobbin) are listed in [REDESIGN.md](REDESIGN.md).

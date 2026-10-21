@@ -42,6 +42,15 @@ export interface Order {
   ofd_url?: string
   /** The buyer already left a review: "Спасибо за ваш отзыв" banner. */
   has_review?: boolean
+  /** /order/review/list: the review left for this order (read only once sent). */
+  review_data?: Review | null
+}
+
+export interface Review {
+  advantages: string
+  disadvantages: string
+  comment: string
+  created_at: string
 }
 
 /** Live list page size (/order/list limit: 5). */
@@ -105,8 +114,15 @@ class MockOrdersStore {
     makeAutoObservable(this)
   }
 
-  async load() {
-    if (this.ready) return
+  private loading: Promise<void> | null = null
+
+  /** Builds the samples once, even when several screens ask at the same time. */
+  load() {
+    this.loading ??= this.build()
+    return this.loading
+  }
+
+  private async build() {
     const catalog = (await loadCatalog()).filter((p) => p.variations[0]?.image?.length)
     const sample = SAMPLE.map((s, k) => {
       const items = Array.from({ length: s.n }, (_, i) => itemFrom(catalog[(s.from + i * 7) % catalog.length], 1 + ((k + i) % 4) * 2))
@@ -121,6 +137,15 @@ class MockOrdersStore {
         address: ADDRESSES[k % 2],
         ofd_url: s.card && s.status !== 'cancelled' ? '#receipt' : undefined,
         has_review: k === 7,
+        review_data:
+          k === 7
+            ? {
+                advantages: 'Привезли вовремя, всё аккуратно упаковано.',
+                disadvantages: 'Курьер не позвонил заранее.',
+                comment: 'В целом всё отлично, будем заказывать ещё.',
+                created_at: new Date(date.getTime() + 2 * 86_400_000).toISOString(),
+              }
+            : null,
       })
     })
     runInAction(() => {
@@ -145,6 +170,16 @@ class MockOrdersStore {
     const p = o.prices
     const placed = { ...order, total_price: p.totalPrice, total_discount: p.total_discount, delivery_cost: p.delivery_cost, final_price: p.final_price }
     this.orders = [placed, ...this.orders.filter((x) => x.order_id !== orderId)]
+  }
+
+  /** Delivered orders can be reviewed (live: /order/review/list). */
+  get reviewable() {
+    return this.orders.filter((o) => o.status === 'delivered')
+  }
+
+  /** /order/review/create */
+  review(orderId: string, r: Omit<Review, 'created_at'>) {
+    this.orders = this.orders.map((o) => (o.order_id === orderId ? { ...o, has_review: true, review_data: { ...r, created_at: new Date().toISOString() } } : o))
   }
 
   byId(id: string) {

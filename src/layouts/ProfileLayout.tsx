@@ -1,5 +1,8 @@
 import { Box, Grid, Separator, Stack, Text } from '@chakra-ui/react'
-import { Fragment } from 'react'
+import { observer } from 'mobx-react-lite'
+import { Fragment, useEffect } from 'react'
+import { mockNotifications } from '@/mocks/notifications.store'
+import { mockOrders } from '@/mocks/orders.store'
 import { useTranslation } from 'react-i18next'
 import { NavLink, Outlet } from 'react-router'
 import { Bell, Building2, CircleHelp, CreditCard, Landmark, LogOut, MapPin, MessageSquare, Package, Settings, User, Users } from 'lucide-react'
@@ -8,7 +11,10 @@ import { authStore } from '@/stores/auth.store'
 import { tintedPanel } from '@/shared/ui/surface'
 
 /** Account area: sticky side nav on desktop, horizontal scroll tabs on mobile. Ref: Contra / Mercury settings. */
-export const ProfileLayout = () => {
+export const ProfileLayout = observer(() => {
+  useEffect(() => {
+    void mockOrders.load()
+  }, [])
   const { t } = useTranslation()
   const p = paths.profile
   // Same items and order as the live profile menu
@@ -25,7 +31,7 @@ export const ProfileLayout = () => {
       icon: Landmark,
       label: t('profile.business_account'),
     },
-    { to: paths.notifications, icon: Bell, label: t('profile.notifications') },
+    { to: paths.notifications, icon: Bell, label: t('profile.notifications'), badge: mockNotifications.unread },
     {
       to: p.settings,
       icon: Settings,
@@ -39,7 +45,7 @@ export const ProfileLayout = () => {
     <Grid templateColumns={{ base: '1fr', lg: '260px 1fr' }} gap={{ base: 4, lg: 6 }} alignItems="start">
       <Box as="nav" {...tintedPanel} p="2" pos={{ lg: 'sticky' }} top={{ lg: '128px' }} overflowX={{ base: 'auto', lg: 'visible' }}>
         <Stack direction={{ base: 'row', lg: 'column' }} gap="1">
-          {items.map(({ to, icon: Icon, label, divider }) => (
+          {items.map(({ to, icon: Icon, label, divider, badge }) => (
             <Fragment key={to}>
               {divider && <Separator borderColor="border.default" my="1" mx="3" hideBelow="lg" />}
               <NavLink to={to}>
@@ -61,6 +67,12 @@ export const ProfileLayout = () => {
                   >
                     <Icon size={18} />
                     {label}
+                    {/* Live: unread notifications count on the menu item */}
+                    {Boolean(badge) && (
+                      <Box ms="auto" minW="20px" h="20px" px="1.5" borderRadius="full" bg="primary.main" color="white" fontSize="xs" fontWeight="700" display="flex" alignItems="center" justifyContent="center">
+                        {badge}
+                      </Box>
+                    )}
                   </Box>
                 )}
               </NavLink>
@@ -90,4 +102,4 @@ export const ProfileLayout = () => {
       </Box>
     </Grid>
   )
-}
+})

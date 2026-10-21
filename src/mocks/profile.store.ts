@@ -73,6 +73,8 @@ const onlyDefault = <T extends { guid: string; is_default: boolean }>(list: T[],
 class MockProfileStore {
   user = { fullname: 'Азиз Каримов', phone: '+998 90 123 45 67', /** live: vip_categories not empty */ vip: true }
   company = SAMPLE_COMPANY
+  /** Live "Настройки" switches. The current site keeps them on the page only (no API call). */
+  settings = { orderPush: true, orderSms: false, promoPush: true, promoSms: false }
 
   addresses: Address[] = [
     { guid: 'a1', address: SAMPLE_MAP_ADDRESSES[0], apartment: '3', floor: '3', comment: 'БЦ OASIS, вход со двора', is_default: true },
@@ -95,6 +97,10 @@ class MockProfileStore {
 
   constructor() {
     makeAutoObservable(this)
+  }
+
+  toggleSetting(key: keyof MockProfileStore['settings']) {
+    this.settings[key] = !this.settings[key]
   }
 
   setFullname(v: string) {

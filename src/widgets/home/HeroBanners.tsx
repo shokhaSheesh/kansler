@@ -13,7 +13,7 @@ import type { Banner } from '@/entities/main-page/types'
 
 /**
  * Was: carousel with the next slide peeking in and cropping its headline.
- * Now: one full-width slide at a time, per-device artwork (web 3:1, tablet 2.4:1, mobile 2:1),
+ * Now: one full-width slide at a time, per-device artwork at its real size (web 2760×760, tablet/mobile 1648×760, never cropped),
  * autoplay that pauses on hover, arrows on desktop, dots everywhere.
  */
 export const HeroBanners = ({ banners }: { banners: Banner[] }) => {
@@ -40,7 +40,8 @@ export const HeroBanners = ({ banners }: { banners: Banner[] }) => {
                 alt=""
                 display="block"
                 w="full"
-                aspectRatio={{ base: '2 / 1', md: '751 / 312', lg: '3 / 1' }}
+                // Exact size of the artwork the admin uploads (web 2760×760, tablet/mobile 1648×760), so nothing is cropped
+                aspectRatio={{ base: '1648 / 760', lg: '2760 / 760' }}
                 fit="cover"
               />
             </picture>

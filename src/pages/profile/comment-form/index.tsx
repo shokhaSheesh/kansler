@@ -1,6 +1,7 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { Navigate } from 'react-router'
+import { paths } from '@/app/router/paths'
 
-/** TODO(redesign): Rate an order */
-export default function CommentFormPage() {
-  return <PagePlaceholder title="Оставить отзыв" note="Rate an order" />
+/** Live mobile review form page. In the redesign the form is a window on the reviews page. */
+export default function Redirect() {
+  return <Navigate to={paths.profile.comments} replace />
 }

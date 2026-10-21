@@ -79,7 +79,7 @@ const CheckoutPage = observer(() => {
     mockOrders.place(c.orderId!, c.lines, {
       card: c.paymentType === 'corporate' && c.card ? { type: c.card.type, last4: c.card.last4 } : undefined,
       address: c.address?.address ?? '',
-      total: p.final_price,
+      prices: p,
     })
     toaster.create({ type: 'success', title: t('order.success_message'), duration: 4000 })
     navigate(paths.orders)

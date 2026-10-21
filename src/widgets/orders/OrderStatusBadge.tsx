@@ -14,22 +14,23 @@ const TONE: Record<OrderStatus, string> = {
 }
 
 /** Status pill ("Собирается", "Доставлен"…), texts from profile.company.orders.status. */
-export const OrderStatusBadge = ({ status }: { status: OrderStatus }) => {
+/** `label` overrides the text (the order page uses its own badge texts). */
+export const OrderStatusBadge = ({ status, label: custom, size = 'sm' }: { status: OrderStatus; label?: string; size?: 'sm' | 'md' }) => {
   const { t } = useTranslation()
   const tone = TONE[status] ?? 'gray'
   // Russian has no status."in-progress" text (the live site shows the raw key); the tab name says the same thing
-  const label = status === 'in-progress' ? t('profile.company.orders.tabs.in_progress') : t(`profile.company.orders.status.${status}`)
+  const label = custom ?? (status === 'in-progress' ? t('profile.company.orders.tabs.in_progress') : t(`profile.company.orders.status.${status}`))
   return (
     <Flex
       display="inline-flex"
       align="center"
       gap="1.5"
-      px="2.5"
-      py="1"
+      px={size === 'md' ? 3 : 2.5}
+      py={size === 'md' ? 1.5 : 1}
       borderRadius="full"
       bg={`${tone}.50`}
       color={`${tone}.700`}
-      fontSize="xs"
+      fontSize={size === 'md' ? 'sm' : 'xs'}
       fontWeight="600"
       whiteSpace="nowrap"
     >

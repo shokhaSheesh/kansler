@@ -293,6 +293,36 @@ Our earlier draft had "Промокоды" there instead; the current menu doesn
 
 **Design-phase note:** the orders are **samples** built from real catalog products (one of every status). An order placed in checkout appears at the top of the list.
 
+### Order page
+
+Page `/profile/orders/<ID>`, opened with "Детали" or by clicking an order.
+
+**Same as now**
+- **Status block:** the status ("Заказ собирается"), the date, and a status badge.
+  - Orders in progress: the **3-step progress Собирается → В пути → Доставлен**.
+  - Cancelled orders: the total, the payment card and the number of products instead.
+- **"Скачать чек":** the receipt, shown once paid by card.
+- **"Спасибо за ваш отзыв":** a banner, once a review has been left.
+- **Products:** photo, name, price and old price, and quantity ("3x").
+- **"Ваш заказ":** ID заказа, Номер договора, Товары (N), Доставка, Скидка, **Итого**.
+- **"Оплачено с":** the card (e.g. "UZCARD **** 4512"), or "Способ оплаты: по счету-фактуре" for bank transfer.
+- **"Адрес доставки".**
+- **Delivered orders:** "Отзывы → Оценить товары", which opens the reviews page.
+- **Orders not finished yet:** "Хотите отменить заказ? → Отменить заказ", which opens the Kansler support bot in Telegram, as now.
+
+**Changed**
+- **Page title** "Заказ ID 686083", with "Назад" and breadcrumbs (Главная › Заказы › Заказ ID …). On computers the current page has no title.
+- **Two columns on computers:** status and products on the left. The summary, payment, address and actions are on the right and stay visible while scrolling.
+- **Progress:** the current site shows three pictures with a bar. Now it's a stepper with icons:
+  - a box for Собирается;
+  - a truck for В пути;
+  - a tick for Доставлен.
+
+  Completed steps are green, and the current step is highlighted.
+- **Products open their product page** (photo or name).
+- **The order ID can be copied.**
+- **Phones:** the same blocks in one column, in the current order.
+
 ## 14. New texts
 
 Everything else reuses the current site's texts.
@@ -337,6 +367,9 @@ To check with a logged-in account before designing them:
 - **Orders: texts and filters on the current site.**
   - **Missing status text:** there is no Russian text for the status "in-progress", so the current site would show the raw key. The new design uses "В процессе".
   - **The "В процессе" tab** asks the backend only for "Собирается" orders. The page's own code expects it to show all unfinished orders (waiting for payment, paid, assembling, shipping). The design shows all unfinished ones. **Please confirm which is intended.**
+  - **The date on the order page** reads "к 20 октября 2026" ("by…", like a delivery date), but the current site fills it with the date the order was *placed*. Should it be a delivery date (needs the backend to send one) or the order date (then "от 20 октября 2026" would read correctly)? The design keeps the current text and data for now.
+  - **Recipient:** the order data includes the recipient's name and phone, but the current order page doesn't show them. Should it? (Not added.)
+  - **"Повторить заказ"** exists in the texts but the current order page doesn't use it. It is available from the orders list. (Not added.)
   - **"Перевозки"** is the current name of the "shipping" tab. "Доставляются" may read more naturally; it's your call.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
@@ -372,8 +405,8 @@ To check with a logged-in account before designing them:
 | 7 | Cart | ✅ Done (checked against the current site) |
 | 8 | Checkout and payment | ✅ Done (checked against the current site) |
 | 9 | Orders list | ✅ Done (checked against the current site) |
-| 10 | Order details | ⏳ Next |
-| 11 | Profile and company account | ⏳ |
+| 10 | Order details | ✅ Done (checked against the current site) |
+| 11 | Profile and company account | ⏳ Next |
 | 12 | Notifications | ⏳ |
 | 13 | Login and registration | ⏳ |
 | 14 | Help centre and info pages | ⏳ |

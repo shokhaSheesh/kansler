@@ -34,6 +34,14 @@ export interface Order {
   address: string
   product_images: string[]
   items: OrderItem[]
+  /** /order/details: sum before discounts, delivery, discount. */
+  total_price: number
+  delivery_cost: number
+  total_discount: number
+  /** Fiscal receipt ("Скачать чек"), present once paid by card. */
+  ofd_url?: string
+  /** The buyer already left a review: "Спасибо за ваш отзыв" banner. */
+  has_review?: boolean
 }
 
 /** Live list page size (/order/list limit: 5). */
@@ -70,13 +78,24 @@ const itemFrom = (p: Product, quantity: number): OrderItem => {
   return { productId: p.guid, variation: v, name_ru: v.name_ru || p.name_ru, name_uz: v.name_uz || p.name_uz, quantity, price, oldPrice: price < v.price ? v.price : 0 }
 }
 
-const build = (items: OrderItem[], rest: Omit<Order, 'final_price' | 'items_count' | 'product_images' | 'items'>): Order => ({
-  ...rest,
-  items,
-  items_count: items.length,
-  product_images: items.map((i) => i.variation.image[0]).filter(Boolean),
-  final_price: items.reduce((s, i) => s + i.price * i.quantity, 0),
-})
+type Computed = 'final_price' | 'items_count' | 'product_images' | 'items' | 'total_price' | 'delivery_cost' | 'total_discount'
+
+// Same rule as checkout: delivery 25 000 сум, free from 500 000 сум
+const build = (items: OrderItem[], rest: Omit<Order, Computed>): Order => {
+  const total_price = items.reduce((s, i) => s + (i.oldPrice || i.price) * i.quantity, 0)
+  const afterDiscount = items.reduce((s, i) => s + i.price * i.quantity, 0)
+  const delivery_cost = afterDiscount >= 500_000 ? 0 : 25_000
+  return {
+    ...rest,
+    items,
+    items_count: items.length,
+    product_images: items.map((i) => i.variation.image[0]).filter(Boolean),
+    total_price,
+    total_discount: total_price - afterDiscount,
+    delivery_cost,
+    final_price: afterDiscount + delivery_cost,
+  }
+}
 
 class MockOrdersStore {
   orders: Order[] = []
@@ -100,6 +119,8 @@ class MockOrdersStore {
         payment_info: s.card ? { card_type: s.card[0], card_number: `**** ${s.card[1]}` } : { card_type: '', card_number: '' },
         agreement: s.contract ? { contract_number: `KS-${2026_0400 - k * 13}`, is_sent: Boolean(s.sent) } : null,
         address: ADDRESSES[k % 2],
+        ofd_url: s.card && s.status !== 'cancelled' ? '#receipt' : undefined,
+        has_review: k === 7,
       })
     })
     runInAction(() => {
@@ -110,7 +131,7 @@ class MockOrdersStore {
   }
 
   /** Checkout success: card payments are paid; transfers wait for payment under a sent contract. */
-  place(orderId: string, lines: CartLine[], o: { card?: { type: string; last4: string }; address: string; total: number }) {
+  place(orderId: string, lines: CartLine[], o: { card?: { type: string; last4: string }; address: string; prices: { totalPrice: number; total_discount: number; delivery_cost: number; final_price: number } }) {
     const items = lines.map((l) => ({ productId: l.variation.product_group_id, variation: l.variation, name_ru: l.name, name_uz: l.variation.name_uz || l.name, quantity: l.qty, price: l.price, oldPrice: l.price < l.variation.price ? l.variation.price : 0 }))
     const order = build(items, {
       order_id: orderId,
@@ -119,8 +140,11 @@ class MockOrdersStore {
       payment_info: o.card ? { card_type: o.card.type, card_number: `**** ${o.card.last4}` } : { card_type: '', card_number: '' },
       agreement: o.card ? null : { contract_number: `KS-${orderId}`, is_sent: true },
       address: o.address,
+      ofd_url: o.card ? '#receipt' : undefined,
     })
-    this.orders = [{ ...order, final_price: o.total }, ...this.orders.filter((x) => x.order_id !== orderId)]
+    const p = o.prices
+    const placed = { ...order, total_price: p.totalPrice, total_discount: p.total_discount, delivery_cost: p.delivery_cost, final_price: p.final_price }
+    this.orders = [placed, ...this.orders.filter((x) => x.order_id !== orderId)]
   }
 
   byId(id: string) {

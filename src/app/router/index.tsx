@@ -92,7 +92,9 @@ const routes: RouteObject[] = [
                 { path: strip(paths.orders, b), element: page(P.Orders) },
                 { path: strip(paths.notifications, b), element: page(P.Notifications) },
                 { path: strip(r.user, b), element: page(P.ProfileUser) },
-                { path: strip(r.info, b), element: page(P.ProfileInfo) },
+                // Live: /profile/details is the company data, /profile/info is the help centre
+                { path: strip(r.details, b), element: page(P.ProfileInfo) },
+                { path: strip(r.info, b), element: page(P.HelpCenter) },
                 { path: strip(r.address, b), element: page(P.Address) },
                 { path: strip(r.addressForm, b), element: page(P.AddressForm) },
                 { path: strip(r.businessAccount, b), element: page(P.BusinessAccount) },

@@ -6,7 +6,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
   - One exception, on your request: the page background is now **white** instead of light grey (see section 1).
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 13](#13-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 14](#14-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -35,10 +35,11 @@ This document lists every change in the new Kansler web design, screen by screen
 10. [Favourites](#10-favourites)
 11. [Cart](#11-cart)
 12. [Checkout](#12-checkout)
-13. [New texts](#13-new-texts)
-14. [Not included, and why](#14-not-included-and-why)
-15. [Questions for the client, and data issues](#15-questions-for-the-client-and-data-issues)
-16. [Status](#16-status)
+13. [Orders](#13-orders)
+14. [New texts](#14-new-texts)
+15. [Not included, and why](#15-not-included-and-why)
+16. [Questions for the client, and data issues](#16-questions-for-the-client-and-data-issues)
+17. [Status](#17-status)
 
 ---
 
@@ -244,7 +245,55 @@ The current site shows the **same filter sidebar** on category pages, search res
 
 **Design-phase note:** delivery addresses, recipients, saved cards and promo codes belong to the logged-in company account, so the design uses **sample entries**. Real ones come from the account after the API is connected.
 
-## 13. New texts
+## 13. Orders
+
+Page `/profile/orders`, also reached from "Заказы" in the header.
+
+**Same as now**
+- **Title and tabs:** "Заказы", with the tabs **Все · В процессе · Доставленные · Перевозки · Отмененные**.
+- **Each order shows:**
+  - its status, as a coloured label ("Собирается", "Доставлен"…) and a sentence ("Заказ собирается");
+  - the order date and **ID заказа**, with a copy button;
+  - the **total**, and the payment card (e.g. "UZCARD **** 4512");
+  - **Номер договора**, for bank-transfer orders;
+  - **Адрес** and **Кол-во товаров**;
+  - **product photos**.
+- **"N товаров"** opens the order's products: photo, name, price (and old price), and "Смотреть все характеристики", which opens the product.
+- **Buttons:**
+  - **"Детали"** opens the order;
+  - **"Продолжать"** goes back to checkout, for a bank-transfer order whose contract wasn't sent;
+  - **"Повторный заказ"** puts the order's products back in the cart and opens the cart.
+- **Paging:** 5 orders per page.
+- **No orders:** "У вас пока нет заказов" and "Начать покупки", shown with the common empty-page illustration.
+- Status colours are the same as now: green delivered/paid, yellow in progress, grey waiting for payment, blue shipping, red cancelled.
+
+**Changed**
+- **One layout for computer and phone.** The current site shows different information on each: the computer version has no address and no product list, the phone version has no photos and no buttons. Now both show everything.
+  - **Computer:** status and total on top, then photos and details in columns, then the buttons.
+  - **Phone:** details as label/value rows, full-width buttons, and tabs that stay under the header while scrolling.
+- **The whole card can be clicked** to open the order. The buttons are still there.
+- **Photos:** after 5, the last photo shows "+N".
+- **Tab and page are kept in the page address,** so Back and shared links return to the same view.
+- **Quantity** is shown next to each product in the expanded list ("× 3").
+
+**Profile menu**, now matching the current site's list and order:
+1. Личная Информация
+2. Данные компании
+3. **Заказы**
+4. Адрес
+5. Карта
+6. Получатель
+7. Отзывы
+8. Рассчетный счет
+9. **Уведомления**
+10. Настройки, after a divider
+11. **Справочный центр**
+
+Our earlier draft had "Промокоды" there instead; the current menu doesn't have it, so it was removed.
+
+**Design-phase note:** the orders are **samples** built from real catalog products (one of every status). An order placed in checkout appears at the top of the list.
+
+## 14. New texts
 
 Everything else reuses the current site's texts.
 
@@ -254,8 +303,9 @@ Everything else reuses the current site's texts.
 | Button in that bar and in the variant window | Перейти в корзину | Savatga o'tish |
 | Number of variants (card, variant window) | 1 вариант · 2 варианта · 5 вариантов | 1 ta variant |
 | Back button | Назад | Orqaga |
+| Products in an order: correct Russian endings (the current text always says "товаров", e.g. "1 товаров") | 1 товар · 3 товара · 5 товаров | (unchanged) |
 
-## 14. Not included, and why
+## 15. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -275,7 +325,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 15. Questions for the client, and data issues
+## 16. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -284,6 +334,10 @@ To check with a logged-in account before designing them:
 
 **Data issues** (for the Kansler content team; these affect any design)
 - **A text bug on the current checkout.** The recipient placeholder asks for a text that is actually a group of texts, so the current site likely shows a technical message ("…returned an object instead of string") instead of "Выберите получателя". The new design shows "Выберите получателя".
+- **Orders: texts and filters on the current site.**
+  - **Missing status text:** there is no Russian text for the status "in-progress", so the current site would show the raw key. The new design uses "В процессе".
+  - **The "В процессе" tab** asks the backend only for "Собирается" orders. The page's own code expects it to show all unfinished orders (waiting for payment, paid, assembling, shipping). The design shows all unfinished ones. **Please confirm which is intended.**
+  - **"Перевозки"** is the current name of the "shipping" tab. "Доставляются" may read more naturally; it's your call.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
   - pickup from a branch;
@@ -304,7 +358,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 16. Status
+## 17. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -317,8 +371,8 @@ To check with a logged-in account before designing them:
 | 6 | Favourites | ✅ Done (checked against the current site) |
 | 7 | Cart | ✅ Done (checked against the current site) |
 | 8 | Checkout and payment | ✅ Done (checked against the current site) |
-| 9 | Orders list | ⏳ Next |
-| 10 | Order details | ⏳ |
+| 9 | Orders list | ✅ Done (checked against the current site) |
+| 10 | Order details | ⏳ Next |
 | 11 | Profile and company account | ⏳ |
 | 12 | Notifications | ⏳ |
 | 13 | Login and registration | ⏳ |

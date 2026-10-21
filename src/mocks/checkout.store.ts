@@ -70,6 +70,13 @@ class MockCheckoutStore {
     return this.orderId
   }
 
+  /** Orders list "Продолжать": reopen checkout for an order that was not finished. */
+  resume(orderId: string, lines: CartLine[]) {
+    this.lines = lines
+    this.orderId = orderId
+    this.promo = null
+  }
+
   setAddress(id: string) {
     this.addressId = id
   }

@@ -8,6 +8,16 @@ export const formatPrice = (value: number | null | undefined, lang: Lang = 'ru')
 }
 
 /** "998781484444" -> "+998 78 148 44 44" */
+/** Live "dd MMMM yyyy": 21 октября 2026 / 21-oktabr 2026 */
+export const formatDate = (iso: string | null | undefined, lang: Lang = 'ru') => {
+  if (!iso) return ''
+  const d = new Date(iso)
+  if (Number.isNaN(d.getTime())) return ''
+  return new Intl.DateTimeFormat(lang === 'uz' ? 'uz-Latn' : 'ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
+    .format(d)
+    .replace(/\s?г\.$/, '')
+}
+
 export const formatPhone = (raw: string | null | undefined) => {
   const d = (raw ?? '').replace(/\D/g, '')
   const m = d.match(/^(998)(\d{2})(\d{3})(\d{2})(\d{2})$/)

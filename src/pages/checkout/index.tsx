@@ -7,6 +7,7 @@ import { Navigate, useNavigate, useParams } from 'react-router'
 import { paths } from '@/app/router/paths'
 import { mockCart } from '@/mocks/cart.store'
 import { mockCheckout } from '@/mocks/checkout.store'
+import { mockOrders } from '@/mocks/orders.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
@@ -75,6 +76,11 @@ const CheckoutPage = observer(() => {
   const p = c.prices
   const done = () => {
     mockCart.remove(c.lines.map((l) => l.variation.guid))
+    mockOrders.place(c.orderId!, c.lines, {
+      card: c.paymentType === 'corporate' && c.card ? { type: c.card.type, last4: c.card.last4 } : undefined,
+      address: c.address?.address ?? '',
+      total: p.final_price,
+    })
     toaster.create({ type: 'success', title: t('order.success_message'), duration: 4000 })
     navigate(paths.orders)
   }

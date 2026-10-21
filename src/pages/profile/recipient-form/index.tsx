@@ -1,6 +1,7 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { Navigate } from 'react-router'
+import { paths } from '@/app/router/paths'
 
-/** TODO(redesign): Add / edit recipient */
-export default function RecipientFormPage() {
-  return <PagePlaceholder title="Получатель" note="Add / edit recipient" />
+/** Live mobile form page. In the redesign the form is a window on the list page (all screen sizes). */
+export default function Redirect() {
+  return <Navigate to={`${paths.profile.recipient}?new=1`} replace />
 }

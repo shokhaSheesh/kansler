@@ -17,6 +17,8 @@ import { AddCardDialog } from '@/widgets/checkout/AddCardDialog'
 import { CheckoutSummary } from '@/widgets/checkout/CheckoutSummary'
 import { PaymentTypeCard } from '@/widgets/checkout/PaymentTypeCard'
 import { PickerDialog } from '@/widgets/checkout/PickerDialog'
+import { AddressDialog } from '@/widgets/profile/AddressDialog'
+import { RecipientDialog } from '@/widgets/profile/RecipientDialog'
 import { panel } from '@/shared/ui/surface'
 
 const card = panel
@@ -69,6 +71,8 @@ const CheckoutPage = observer(() => {
   const [pendingCard, setPendingCard] = useState('')
   const [receiverError, setReceiverError] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [newAddress, setNewAddress] = useState(false)
+  const [newReceiver, setNewReceiver] = useState(false)
 
   // Design phase: the order lives in memory; a reload (or a direct visit) goes back to the cart
   if (!c.orderId || c.orderId !== id) return <Navigate to={paths.cart} replace />
@@ -225,7 +229,10 @@ const CheckoutPage = observer(() => {
         selectedId={c.addressId}
         onSelect={(i) => c.setAddress(i)}
         addLabel={t('order.address_select.add_address')}
-        addHref={paths.map}
+        onAdd={() => {
+          setAddressOpen(false)
+          setNewAddress(true)
+        }}
       />
       <PickerDialog
         open={receiverOpen}
@@ -238,7 +245,20 @@ const CheckoutPage = observer(() => {
           setReceiverError(false)
         }}
         addLabel={t('order.checkout.select_user.add_user')}
-        addHref={paths.profile.recipientForm}
+        onAdd={() => {
+          setReceiverOpen(false)
+          setNewReceiver(true)
+        }}
+      />
+      {/* Live sends the buyer to the profile form and back; here the same form opens over checkout */}
+      <AddressDialog open={newAddress} onOpenChange={setNewAddress} onSaved={(guid) => c.setAddress(guid)} />
+      <RecipientDialog
+        open={newReceiver}
+        onOpenChange={setNewReceiver}
+        onSaved={(guid) => {
+          c.setReceiver(guid)
+          setReceiverError(false)
+        }}
       />
       <AddCardDialog
         open={addCardOpen}

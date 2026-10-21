@@ -40,7 +40,7 @@ const config = defineConfig({
           // Page background is white (client feedback: the grey looked plain). The live grey moved to
           // panels and photo tiles so cards and sections still stand out.
           app: { value: palette.white },
-          panel: { value: palette.appBackground },
+          tint: { value: palette.appBackground },
           tile: { value: palette.gray[100] },
           page: { value: palette.pageBackground },
           surface: { value: palette.white },

@@ -6,7 +6,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
   - One exception, on your request: the page background is now **white** instead of light grey (see section 1).
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 14](#14-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 15](#15-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -36,10 +36,11 @@ This document lists every change in the new Kansler web design, screen by screen
 11. [Cart](#11-cart)
 12. [Checkout](#12-checkout)
 13. [Orders](#13-orders)
-14. [New texts](#14-new-texts)
-15. [Not included, and why](#15-not-included-and-why)
-16. [Questions for the client, and data issues](#16-questions-for-the-client-and-data-issues)
-17. [Status](#17-status)
+14. [Profile and company account](#14-profile-and-company-account)
+15. [New texts](#15-new-texts)
+16. [Not included, and why](#16-not-included-and-why)
+17. [Questions for the client, and data issues](#17-questions-for-the-client-and-data-issues)
+18. [Status](#18-status)
 
 ---
 
@@ -323,7 +324,76 @@ Page `/profile/orders/<ID>`, opened with "Детали" or by clicking an order.
 - **The order ID can be copied.**
 - **Phones:** the same blocks in one column, in the current order.
 
-## 14. New texts
+## 14. Profile and company account
+
+Pages under `/profile/…`, with the side menu on computers and a sideways-scrolling menu on phones.
+
+**One pattern for every list** (addresses, recipients, bank accounts):
+- **The default item** has a navy outline and a ✓; tap any item to make it the default (the current site uses a radio button).
+- **Edit ✎ and delete 🗑** sit on the right of each item.
+- **"Добавить…"** is a dashed row at the end of the list.
+- **Deleting asks for confirmation** first, with the current texts.
+- **Forms open in a window:** centred on computers, a panel from the bottom on phones. The current phone site opens separate pages for them (`/profile/recipient/form`, `/profile/map`…). Those addresses still work and open the same window.
+
+**Личная Информация** (`/profile/user`)
+- **Same as now:**
+  - the green **"Вы являетесь VIP клиентом"** banner, for VIP clients;
+  - **ФИО** and **Номер телефона**, each with an edit button;
+  - name: the "Редактировать" window;
+  - phone: the new number, then the 6-digit SMS code sent to it.
+- **Changed:**
+  - layout;
+  - the phone field has a fixed +998 and spaces itself;
+  - the SMS code boxes are the same as in checkout.
+- **Not kept:** the current VIP banner has two decorative chips with fixed numbers ("−200 000 сум", "−20%") that aren't the client's real discount. Please confirm they can go.
+
+**Данные компании** (`/profile/details`)
+- **Same as now:** read only.
+  - **Company (signed up with INN):** Название, ИНН, Организационно-правовая форма, Адрес, Статус, ФИО Директора, Дата регистрации, Расчетный счет, bank code, ОКЭД, Плательщик НДС.
+  - **Sole trader (signed up with PINFL):** 6 of these.
+  - Empty fields are hidden.
+- **Changed:**
+  - two columns on computers;
+  - the numbers (ИНН, account, bank code, ОКЭД) have a copy button.
+
+**Адрес** (`/profile/address`)
+- **Same as now:** the list, with address, apartment/office, floor and the comment for the courier.
+- **The add/edit window "Куда привезти заказ?"** has:
+  - the map;
+  - Город, улица, дом;
+  - Квартира / Офис and Этаж (required);
+  - Комментарий для курьера (up to 220 characters, with a counter);
+  - **"Привезти сюда"**.
+
+  On computers the form is on the left and the map on the right, like now. On phones the map is on top.
+- **Empty list:** "У вас нету адреса доставки" and "Добавить новый адрес", with the common illustration.
+- **Design-phase note:** the map is a **drawn stand-in**. Tapping it fills in a sample Tashkent address, the way the real map fills the address. The real **Yandex map** (as now, limited to Tashkent) is connected when the site goes live.
+
+**Получатели** (`/profile/recipient`)
+- **Same as now:**
+  - the list, with name and phone;
+  - **the account owner's own number can't be edited or deleted**;
+  - the "Новый получатель" / "Редактировать получателя" window: Имя, Фамилия, phone, the "Отправим уведомление…" note, and "Сохранить";
+  - the "already have a recipient with this number" error.
+
+**Карта** (`/profile/cards`)
+- **Same as now:** saved corporate cards, with delete. "Добавить карту" opens card number + ММ/ГГ, then the SMS code.
+- **Changed:** cards look like bank cards, the same as in checkout.
+
+**Расчетные счета** (`/profile/business-account`)
+- **Same as now:**
+  - each account shows its name ("Главный" for the main one), the 20-digit account number and its status: **Проверен / В проверке / Отклонен**;
+  - the account from registration can't be edited or deleted;
+  - the add/edit window has Название (up to 50) and Расчетный счет (exactly 20 digits).
+- **Changed:**
+  - the account number is shown in groups of 4, so it's easy to check against bank papers;
+  - the status is a coloured label.
+
+**Checkout:** "Добавить адрес" and "Добавить получателя" now open the same windows **on top of checkout**, and the new address or recipient is selected straight away. The current site leaves checkout for a profile page and comes back.
+
+**Design-phase note:** the user, company, addresses, recipients, cards and accounts are **samples**, the same ones checkout uses. Changes made on these pages show up in checkout.
+
+## 15. New texts
 
 Everything else reuses the current site's texts.
 
@@ -335,7 +405,7 @@ Everything else reuses the current site's texts.
 | Back button | Назад | Orqaga |
 | Products in an order: correct Russian endings (the current text always says "товаров", e.g. "1 товаров") | 1 товар · 3 товара · 5 товаров | (unchanged) |
 
-## 15. Not included, and why
+## 16. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -355,7 +425,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 16. Questions for the client, and data issues
+## 17. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -371,6 +441,12 @@ To check with a logged-in account before designing them:
   - **Recipient:** the order data includes the recipient's name and phone, but the current order page doesn't show them. Should it? (Not added.)
   - **"Повторить заказ"** exists in the texts but the current order page doesn't use it. It is available from the orders list. (Not added.)
   - **"Перевозки"** is the current name of the "shipping" tab. "Доставляются" may read more naturally; it's your call.
+- **Profile: texts and rules on the current site.**
+  - **Bank code label.** On "Данные компании" it is labelled **"Название"** ("Name") instead of something like "МФО" / "Код банка". The design keeps the current text; please send the right label.
+  - **Delete confirmation wording.** "Вы действительно хотите сделать?" (recipients, cards) is unfinished Russian; "…хотите удалить?" was probably meant. It is kept as is for now.
+  - **The courier-comment error text doesn't match the rule.** The rule is that no word is longer than 20 letters; the text says "В комментариях должно быть не менее 2 пробелов".
+  - **Recipient names need 4+ letters** (first and last name). A short name like "Ли" can't be saved. Is that intended?
+  - **Addresses are deleted without asking** on the current site. The design asks first, with the same confirmation as recipients.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
   - pickup from a branch;
@@ -391,7 +467,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 17. Status
+## 18. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -406,8 +482,9 @@ To check with a logged-in account before designing them:
 | 8 | Checkout and payment | ✅ Done (checked against the current site) |
 | 9 | Orders list | ✅ Done (checked against the current site) |
 | 10 | Order details | ✅ Done (checked against the current site) |
-| 11 | Profile and company account | ⏳ Next |
-| 12 | Notifications | ⏳ |
+| 11 | Profile and company account | ✅ Done (checked against the current site) |
+| 11b | Profile: Отзывы (reviews) and Настройки (settings) | ⏳ |
+| 12 | Notifications | ⏳ Next |
 | 13 | Login and registration | ⏳ |
 | 14 | Help centre and info pages | ⏳ |
 

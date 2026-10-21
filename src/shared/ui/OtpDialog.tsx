@@ -9,6 +9,8 @@ interface OtpDialogProps {
   /** Resolve true when the code is accepted. */
   onConfirm: (code: string) => Promise<boolean>
   onResend?: () => void
+  /** Other flows use their own texts (e.g. profile.personal_info.otp.* when changing the phone). */
+  texts?: Partial<Record<'title' | 'description' | 'error' | 'resendQuestion' | 'resendAction', string>>
 }
 
 const RESEND_SECONDS = 60
@@ -17,7 +19,7 @@ const RESEND_SECONDS = 60
  * Live "Введите код / Мы отправили 6-значный код на номер" (order.otp.*), used for card payment and card binding.
  * 6 boxes, auto-submit on the last digit, resend after a countdown.
  */
-export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend }: OtpDialogProps) => {
+export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend, texts = {} }: OtpDialogProps) => {
   const { t } = useTranslation()
   const [code, setCode] = useState<string[]>([])
   const [error, setError] = useState(false)
@@ -65,10 +67,10 @@ export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend }: Ot
             <Stack gap="5" align="center" textAlign="center">
               <Stack gap="1.5">
                 <Dialog.Title fontSize="xl" fontWeight="700">
-                  {t('order.otp.title')}
+                  {texts.title ?? t('order.otp.title')}
                 </Dialog.Title>
                 <Text fontSize="sm" color="fg.muted">
-                  {t('order.otp.description')}
+                  {texts.description ?? t('order.otp.description')}
                   <br />
                   <Text as="b" color="fg.default" whiteSpace="nowrap">
                     {phone}
@@ -98,7 +100,7 @@ export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend }: Ot
 
               {error && (
                 <Text fontSize="sm" color="fg.error" mt="-2">
-                  {t('order.otp.error')}
+                  {texts.error ?? t('order.otp.error')}
                 </Text>
               )}
 
@@ -107,7 +109,7 @@ export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend }: Ot
               </Button>
 
               <Flex gap="1.5" fontSize="sm" color="fg.muted" justify="center" wrap="wrap">
-                {t('order.otp.resend_description')}
+                {texts.resendQuestion ?? t('order.otp.resend_description')}
                 {left > 0 ? (
                   <Text as="span" fontVariantNumeric="tabular-nums">
                     0:{String(left).padStart(2, '0')}
@@ -124,7 +126,7 @@ export const OtpDialog = ({ open, onOpenChange, phone, onConfirm, onResend }: Ot
                       onResend?.()
                     }}
                   >
-                    {t('order.otp.resend')}
+                    {texts.resendAction ?? t('order.otp.resend')}
                   </Button>
                 )}
               </Flex>

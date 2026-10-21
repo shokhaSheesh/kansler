@@ -1,7 +1,6 @@
 import { Box, Button, CloseButton, Dialog, Flex, Portal, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Check, Plus } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { Link as RouterLink } from 'react-router'
 
 interface PickerDialogProps {
   open: boolean
@@ -11,11 +10,12 @@ interface PickerDialogProps {
   selectedId: string | null
   onSelect: (id: string) => void
   addLabel: string
-  addHref: string
+  /** Opens the add form (address window, recipient window) on top of checkout. */
+  onAdd: () => void
 }
 
 /** Live "Ваши адреса" / "Получатели" pickers: tap one to choose; "Добавить…" opens the add form. */
-export const PickerDialog = ({ open, onOpenChange, title, items, selectedId, onSelect, addLabel, addHref }: PickerDialogProps) => {
+export const PickerDialog = ({ open, onOpenChange, title, items, selectedId, onSelect, addLabel, onAdd }: PickerDialogProps) => {
   const sheet = useBreakpointValue({ base: true, md: false })
   return (
     <Dialog.Root open={open} onOpenChange={(e) => onOpenChange(e.open)} placement={sheet ? 'bottom' : 'center'} motionPreset={sheet ? 'slide-in-bottom' : 'scale'} size={sheet ? 'full' : 'md'}>
@@ -72,11 +72,9 @@ export const PickerDialog = ({ open, onOpenChange, title, items, selectedId, onS
               </Stack>
             </Dialog.Body>
             <Dialog.Footer px="4" pb={sheet ? 'calc(16px + env(safe-area-inset-bottom))' : '4'}>
-              <Button asChild w="full" h="48px" variant="outline" borderRadius="control" borderStyle="dashed" gap="2">
-                <RouterLink to={addHref}>
-                  <Plus size={18} />
-                  {addLabel}
-                </RouterLink>
+              <Button w="full" h="48px" variant="outline" borderRadius="control" borderStyle="dashed" gap="2" onClick={onAdd}>
+                <Plus size={18} />
+                {addLabel}
               </Button>
             </Dialog.Footer>
           </Dialog.Content>

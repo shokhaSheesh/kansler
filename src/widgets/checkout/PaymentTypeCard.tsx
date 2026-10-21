@@ -64,7 +64,7 @@ export const PaymentTypeCard = observer(({ onAddCard }: { onAddCard: () => void 
             borderWidth="1.5px"
             borderStyle="dashed"
             borderColor="kgray.300"
-            bg="bg.panel"
+            bg="bg.tint"
             color="fg.muted"
             fontSize="sm"
             fontWeight="600"

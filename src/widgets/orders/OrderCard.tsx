@@ -168,7 +168,7 @@ export const OrderCard = ({ order }: { order: Order }) => {
           </Flex>
         </Flex>
         <Collapsible.Content onClick={stop} cursor="auto">
-          <Stack gap="0" mt="3" bg="bg.panel" borderRadius="control" px="3" separator={<Separator borderColor="border.subtle" />}>
+          <Stack gap="0" mt="3" bg="bg.tint" borderRadius="control" px="3" separator={<Separator borderColor="border.subtle" />}>
             {order.items.map((i) => (
               <Flex key={i.variation.guid} gap="3" py="3" align="center">
                 <Box boxSize="56px" flexShrink="0" bg="bg.surface" borderRadius="primary" overflow="hidden">

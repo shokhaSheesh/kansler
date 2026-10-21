@@ -23,7 +23,7 @@ export const PartnersStrip = ({ partners }: { partners: Array<{ guid: string; im
         {partners.map((p) => (
           <Box
             key={p.guid}
-            bg="bg.panel"
+            bg="bg.tint"
             borderRadius="card"
             h={{ base: '64px', md: '88px' }}
             display="flex"

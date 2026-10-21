@@ -15,7 +15,7 @@ interface ProductShelfProps {
 
 // Inside a band the grey photo tiles would blend in, so they switch to white
 const band = {
-  bg: 'bg.panel',
+  bg: 'bg.tint',
   borderRadius: { base: 0, md: 'modal' },
   mx: { base: -4, md: 0 },
   px: { base: 4, md: 6 },

@@ -11,6 +11,6 @@ export const panel = {
 
 /** Tinted block: order summaries, filters, side navigation. */
 export const tintedPanel = {
-  bg: 'bg.panel',
+  bg: 'bg.tint',
   borderRadius: 'card',
 } as const

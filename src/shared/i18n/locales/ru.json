@@ -1,0 +1,1197 @@
+{
+  "select_language": "Выберите язык",
+  "yes": "Да",
+  "no": "Нет",
+  "more": "более",
+  "main": "Главный",
+  "less": "меньше",
+  "add_new": "Добавить",
+  "download": "Скачать чек",
+  "url_copied": "Адрес товара сохранен успешно",
+  "phone_copied": "Номер телефона скопирован",
+  "telegram_widget": {
+    "greeting_title": "Здравствуйте!",
+    "greeting_subtitle": "Рады видеть вас в Kansler 💚",
+    "greeting_question": "Чем можем помочь?"
+  },
+  "pagination": {
+    "previous": "Предыдущая",
+    "next": "Следующая"
+  },
+  "select_address": "Выберите адрес",
+  "date": {
+    "months": {
+      "january": "января",
+      "february": "февраля",
+      "march": "марта",
+      "april": "апреля",
+      "may": "мая",
+      "june": "июня",
+      "july": "июля",
+      "august": "августа",
+      "september": "сентября",
+      "october": "октября",
+      "november": "ноября",
+      "december": "декабря"
+    },
+    "months_short": {
+      "jan": "янв",
+      "feb": "фев",
+      "mar": "мар",
+      "apr": "апр",
+      "may": "май",
+      "jun": "июн",
+      "jul": "июл",
+      "aug": "авг",
+      "sep": "сен",
+      "oct": "окт",
+      "nov": "ноя",
+      "dec": "дек"
+    },
+    "weekdays": {
+      "monday": "понедельник",
+      "tuesday": "вторник",
+      "wednesday": "среда",
+      "thursday": "четверг",
+      "friday": "пятница",
+      "saturday": "суббота",
+      "sunday": "воскресенье"
+    },
+    "weekdays_short": {
+      "mon": "пн",
+      "tue": "вт",
+      "wed": "ср",
+      "thu": "чт",
+      "fri": "пт",
+      "sat": "сб",
+      "sun": "вс"
+    },
+    "empty_value": "-"
+  },
+  "auth": {
+    "reset_password": {
+      "title": "Сброс пароля",
+      "phone_label": "Номер телефона",
+      "phone_placeholder": "Введите номер телефона",
+      "continue": "Подтвердить",
+      "user_not_found": "Пользователь не найден",
+      "error": "Такого пользователя не найдено."
+    },
+    "not_found": {
+      "message": "Ничего не нашлось(",
+      "manual_button": "Ввести в ручную"
+    },
+    "access": {
+      "register_prompt": "Чтобы выполнить больше действий, зарегистрируйтесь",
+      "login": "Bойти в аккаунт",
+      "no_account": "Нет учётной записи?",
+      "register": "Зарегистрироваться"
+    },
+    "required": {
+      "generic_message": "Для продолжения нужно войти или зарегистрироваться.",
+      "checkout_message": "Для оформления заказа нужно войти или зарегистрироваться.",
+      "profile_message": "Для доступа к профилю нужно войти или зарегистрироваться."
+    },
+    "exit": {
+      "title": "Выйти из аккаунта",
+      "confirm": "Вы действительно хотите выйти?",
+      "yes": "Да",
+      "no": "Нет"
+    },
+    "login": {
+      "title": "Войти в систему",
+      "phone_description": "Введите номер мобильного телефона, чтобы войти в свой аккаунт",
+      "phone_label": "Номер телефона",
+      "phone_placeholder": "Введите номер телефона",
+      "password_label": "Пароль",
+      "password_placeholder": "Введите пароль",
+      "forgot_password": "Забыли пароль?",
+      "register": "Регистрация",
+      "privacy_policy": "Нажав кнопку «Продолжить», вы подтверждаете",
+      "privacy_policy_link": "Политика конфеденциальности",
+      "continue": "Войти",
+      "success_message": "Вход в аккаунт прошел успешно",
+      "error_message": "Неверный пароль или номер телефона. Пожалуйста, попробуйте еще раз.",
+      "password_min_length_error": "Пароль должен быть не менее 4 символов"
+    },
+    "register": {
+      "title": "Создать аккаунт",
+      "not_empty": "Поле не может быть пустым.",
+      "full_name": {
+        "label": "ФИО",
+        "placeholder": "Введите ФИО",
+        "errors": {
+          "required": "ФИО не может быть пустым",
+          "max_length": "ФИО не должно превышать 150 символов",
+          "pattern": "ФИО может содержать только буквы, пробелы, дефисы и апострофы"
+        }
+      },
+      "phone": {
+        "label": "Номер телефона",
+        "placeholder": "Введите номер телефона",
+        "invalid_phone": "Неверный номер телефона"
+      },
+      "user_type": {
+        "label": "Тип пользователя",
+        "options": {
+          "user": "Клиент",
+          "master": "Мастер"
+        }
+      },
+      "department": {
+        "label": "Отдел",
+        "placeholder": "Ваша роль в компании",
+        "options": {
+          "purchasing_department": "Отдел закупа",
+          "accounting": "Бухгалтерия",
+          "owner": "Владелец",
+          "other": "Другое"
+        }
+      },
+      "continue": "Продолжить",
+      "errors": {
+        "user_already_exists": "Пользователь c таким номером телефона уже существует",
+        "company_data_missing": "Данные компании не найдены",
+        "required": "Это поле является обязательным",
+        "invalid_phone": "Неверный номер телефона"
+      },
+      "password": {
+        "title": "Создать пароль",
+        "reset_title": "Сброс пароля",
+        "set_title": "Установка пароля",
+        "description": "Создайте пароль из 6 символов для входа в приложение",
+        "reset_description": "Пароль должен содержать хотя бы один специальный символ (например, !@#)",
+        "new_password": {
+          "label": "Новый пароль",
+          "placeholder": "Введите пароль"
+        },
+        "confirm_password": {
+          "label": "Повторите пароль",
+          "placeholder": "Введите пароль"
+        },
+        "criteria": {
+          "title": "Пароль должен содержать:",
+          "length": "Минимум 6 символов",
+          "upper": "Минимум одна большая буква",
+          "lower": "Минимум одна маленькая буква",
+          "number": "Минимум одна цифра",
+          "special": "Минимум один специальный символ"
+        },
+        "errors": {
+          "min_length": "Пароль должен быть не менее 6 символов",
+          "not_match": "Пароли не совпадают",
+          "not_meet_requirements": "Пароль не соответствует требованиям",
+          "missing_special_char": "Пароль должен содержать хотя бы один специальный символ (например, !@#)"
+        }
+      },
+      "success": "Регистрация прошла успешно",
+      "otp": {
+        "title": "Код подтверждения",
+        "description": "Мы отпавили код подтверждения на номер",
+        "label": "СМС код",
+        "error": "Неправильный код или срок действия истек",
+        "resend": "Отправить код снова",
+        "continue": "Подтвердить",
+        "server_error": "Код неправильный, попробуйте еще раз",
+        "sent": "Код отправлен, проверьте"
+      },
+      "welcome": {
+        "title": "Добро пожаловать в Azia Stroy!",
+        "description": "Покупайте строительные материалы быстро и удобно через платформу",
+        "start": "Начать"
+      },
+      "company": {
+        "title": "Регистрация компании",
+        "company_name": {
+          "label": "Названия компании",
+          "placeholder": "Напишите названия компании"
+        },
+        "inn": {
+          "label": "ИНН",
+          "placeholder": "Напишите ИНН вашей компании"
+        },
+        "pnfl_form": {
+          "label": "ПИНФЛ",
+          "placeholder": "Напишите ваш ПИНФЛ",
+          "first_name_placeholder": "Напишите ФИО Директора",
+          "first_name": "ФИО",
+          "status": {
+            "active": "Активный",
+            "inactive": "Ликвидирована"
+          }
+        },
+        "status": {
+          "label": "Статус",
+          "placeholder": "Выберите"
+        },
+        "legal_form": {
+          "label": "Организационно правовая форма",
+          "placeholder": "Выберите",
+          "options": {
+            "ooo": "ООО",
+            "individual": "Индивидуальный предприниматель",
+            "ao": "АО",
+            "partnership": "Хозяйственные товарищества",
+            "cooperative": "Производственные кооперативы"
+          }
+        },
+        "address": {
+          "label": "Адрес компании",
+          "placeholder": "Напишите адрес",
+          "helper": "Пожалуйста, укажите адрес куда надо будет доставить ваши заказы"
+        },
+        "director": {
+          "label": "ФИО Директора",
+          "placeholder": "Напишите ФИО Директора",
+          "required": "ФИО Директора является обязательным"
+        },
+        "registration_date": {
+          "label": "Дата регистрации",
+          "required": "Дата регистрации является обязательной"
+        },
+        "okved": {
+          "label": "ОКЭД",
+          "placeholder": "ОКЭД",
+          "errors": {
+            "pattern": "ОКЭД должен содержать 5 цифр"
+          },
+          "required": "ОКЭД является обязательным"
+        },
+        "nds_code": {
+          "label": "Код НДС",
+          "placeholder": "Код НДС",
+          "errors": {
+            "pattern": "Код НДС должен состоять из 12 цифр."
+          },
+          "required": "Код НДС является обязательным"
+        },
+        "bank_account": {
+          "label": "Расчетный счет",
+          "placeholder": "Расчетный счет",
+          "errors": {
+            "pattern": "Расчетный счет должен содержать 20 цифр"
+          },
+          "required": "Расчетный счет является обязательным"
+        },
+        "bank_code": {
+          "label": "Код Банка",
+          "placeholder": "Код Банка",
+          "errors": {
+            "pattern": "Код банка должен содержать 5 цифр"
+          }
+        },
+        "is_vat_payer": "Является плательщиком НДС?",
+        "continue": "Продолжить"
+      },
+      "check": {
+        "title": "Поиск",
+        "inn_placeholder": "ИНН",
+        "pinfl_placeholder": "ПИНФЛ",
+        "company_type": {
+          "legal": "Юр Лицо",
+          "ip": "ИП"
+        },
+        "agree_text": "Регистрируясь, вы соглашаетесь с правилами",
+        "agree_link": "пользовательское соглашение",
+        "search": "Поиск",
+        "errors": {
+          "inn_pattern": "ИНН должен содержать 9 цифр",
+          "pinfl_pattern": "ПИНФЛ должен содержать 14 цифр",
+          "bank_code_pattern": "Код банка должен содержать 5 только чисел"
+        },
+        "manual": "Ввести вручную"
+      },
+      "check_result": {
+        "title": "Результат",
+        "company_name": "Наименования компании",
+        "inn": "ИНН",
+        "pinfl": "ПИНФЛ",
+        "fullname": "ФИО",
+        "registration_date": "Дата регистрации",
+        "address": "Адрес",
+        "opf": "ОПФ",
+        "oked": "ОКЭД",
+        "bank_code": "Код Банка",
+        "account": "Расчетный счет",
+        "vat_status": "Статус плательщика НДС",
+        "vat_status_active": "Активный",
+        "vat_status_inactive": "Неактивный",
+        "vat_code": "Код НДС",
+        "director": "ФИО Директора",
+        "status_code_labels": {
+          "vat_payer": "Плательщик НДС",
+          "vat_payer_cert_active": "Плательщик НДС+ (сертификат активный)",
+          "vat_payer_cert_inactive": "Плательщик НДС+ (сертификат неактивный)",
+          "vat_payer_cert_temp_inactive": "Плательщик НДС+ (сертификат временно неактивный)",
+          "turnover_tax_payer": "Плательщик налога с оборота",
+          "non_profit_entity": "Некоммерческое юридическое лицо",
+          "individual_entrepreneur": "Индивидуальный предприниматель",
+          "individual": "Физическое лицо"
+        },
+        "continue": "Продолжить"
+      },
+      "form": {
+        "title": "Регистрация",
+        "phone_placeholder": "Номер телефона",
+        "full_name_placeholder": "Напишите ваше ФИО",
+        "agree_text": "Регистрируясь, вы соглашаетесь с правилами",
+        "agree_link": "пользовательское соглашение",
+        "submit": "Регистрация"
+      }
+    }
+  },
+  "language": {
+    "title": "Выберите язык",
+    "languages": {
+      "uz": "O'zbekcha",
+      "ru": "Русский"
+    },
+    "cancel": "Отмена",
+    "save": "Сохранить"
+  },
+  "terms": {
+    "title": "Условия использования",
+    "description": "Ознакомьтесь с условиями и примите их, чтобы продолжить"
+  },
+  "contacts": {
+    "title": "Контакты филиалов",
+    "search": {
+      "placeholder": "Поиск филиала"
+    },
+    "branch": {
+      "address": "Адрес",
+      "working_hours": "Режим работы",
+      "view_on_map": "Посмотреть на карте"
+    },
+    "contact": {
+      "title": "Kонтакт",
+      "social": {
+        "instagram": "Instagram",
+        "telegram": "Telegram"
+      }
+    }
+  },
+  "favourites": {
+    "title": "Избранное",
+    "all": "Все товары",
+    "discounted": "Товары со скидкой",
+    "recommended": "Рекомендуемые товары",
+    "new": "Новые товары",
+    "products": "товаров",
+    "breadcrumb": {
+      "home": "Главная"
+    },
+    "empty": {
+      "title": "Здесь пусто",
+      "description": "Добавляйте в избранное нажимая на лайк",
+      "start_shopping": "Начать покупку"
+    }
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "empty": "Здесь пока ничего нет",
+    "error": {
+      "loading": "Ошибка загрузки уведомлений",
+      "unknown": "Неизвестная ошибка",
+      "retry": "Повторить"
+    }
+  },
+  "transactions": {
+    "title": "История транзакций",
+    "types": {
+      "debit": "Обмен баллов",
+      "credit": "Оплата за товар"
+    },
+    "points": {
+      "debit": "-{{amount}} баллов",
+      "credit": "+{{amount}} бонусы"
+    },
+    "amount": "{{amount}} сум",
+    "empty": "У вас пока нет транзакций",
+    "filter": {
+      "title": "Выберите период",
+      "start": "Начало",
+      "end": "Конец",
+      "today": "Сегодня",
+      "week": "Неделя",
+      "month": "Месяц"
+    }
+  },
+  "bonus": {
+    "title": "Бонус за баллы",
+    "tabs": {
+      "bonuses": "Бонусы",
+      "exchange_history": "История обменов"
+    },
+    "available_points": "Доступные баллы",
+    "history": "История",
+    "all_offers": "Все предложения",
+    "points": "баллов",
+    "no_bonuses": "Нет доступных бонусов",
+    "all_exchanges": "Все обмены",
+    "order_number": "№ {{number}}",
+    "pickup_location": "Вы можете забрать в {{filial_name}}",
+    "until": "{{date}} до",
+    "status": {
+      "taken": "Забрано",
+      "exchanged": "Обменено {{date}}"
+    },
+    "no_exchanges": "У вас пока нет обменов",
+    "detail": {
+      "points_exchange": "{{points}} баллов = {{title}}",
+      "exchange_description": "Эти баллы вы можете обменять на {{title}}",
+      "valid_until": "Предложение действительно до {{date}}",
+      "use": "Использовать",
+      "success_message": "Бонус успешно использован",
+      "errors": {
+        "not_enough_points": "Недостаточно баллов",
+        "general_error": "Ошибка при использовании бонуса"
+      }
+    }
+  },
+  "card": {
+    "mobile_title": "Новая карта"
+  },
+  "profile": {
+    "title": "Профиль",
+    "vip_client": {
+      "title": "Вы являетесь VIP клиентом",
+      "description": "Для вас доступны скидки в разных категориях наших товаров"
+    },
+    "personal_info_title": "Личная Информация",
+    "personal_info": {
+      "edit_title": "Редактировать",
+      "fullname_placeholder": "ФИО",
+      "save_button": "Сохранить",
+      "update_success": "Данные успешно обновлены",
+      "update_error": "Ошибка при обновлении данных",
+      "resend_success": "Код успешно отправлен",
+      "otp": {
+        "title": "Введите код",
+        "description": "Мы отпавили код подтверждения на номер",
+        "resend_question": "Не получили код?",
+        "resend_action": "Отправить ещё",
+        "error": "Неверный код"
+      }
+    },
+    "comments": {
+      "rate_order": "Оцените заказ",
+      "help_text": "Ваш отзыв поможет нам стать лучше",
+      "delivery_title": "Что думаете насчет доставки",
+      "delivery_placeholder": "Напишите достоинства заказа",
+      "issues_title": "Недостатки",
+      "issues_placeholder": "Напишите недостатки заказа",
+      "comment_title": "Комментарий",
+      "required": "Обязательное поле",
+      "comment_placeholder": "Напишите комментарии",
+      "send": "Отправить"
+    },
+    "company_data": "Данные компании",
+    "orders": "Заказы",
+    "address": "Адрес",
+    "reviews": "Отзывы",
+    "cards": "Карта",
+    "recipient": "Получатель",
+    "settings": "Настройки",
+    "help_center": "Справочный центр",
+    "business_account": "Рассчетный счет",
+    "favorites_count": "{{count}} избранное",
+    "orders_count": "{{count}} заказов",
+    "reviews_count": "{{count}} отзывов",
+    "email": "E-mail почта",
+    "company": {
+      "fields": {
+        "name": "Названия компании",
+        "inn": "ИНН",
+        "legal_form": "Организационно правовая форма",
+        "address": "Адрес компании",
+        "status": "Статус",
+        "director": "ФИО Директора",
+        "registration_date": "Дата регистрации",
+        "bank_code": {
+          "label": "Название",
+          "placeholder": "Название",
+          "errors": {
+            "pattern": "Название должен содержать 20 цифр"
+          }
+        },
+        "bank_account": {
+          "label": "Расчетный счет",
+          "placeholder": "Расчетный счет",
+          "errors": {
+            "pattern": "Расчетный счет должен содержать 20 цифр"
+          }
+        },
+        "pinfl": "ИНП",
+        "oked": "ОКЭД",
+        "vat": "Является плательщиком НДС?"
+      },
+      "orders": {
+        "title": "Заказы",
+        "empty_title": "У вас пока нет заказов",
+        "empty_description": "Изучите и оформите свой первый заказ прямо сейчас!",
+        "start_shopping": "Начать покупки",
+        "status": {
+          "delivered": "Доставлен",
+          "cancelled": "Отменен",
+          "waiting": "Ожидает оплаты",
+          "assembling": "Собирается",
+          "paid": "Оплачен",
+          "shipping": "Доставляется"
+        },
+        "tabs": {
+          "all": "Все",
+          "in_progress": "В процессе",
+          "delivered": "Доставленные",
+          "cancelled": "Отмененные",
+          "shipping": "Перевозки"
+        },
+        "status_label": {
+          "delivered": "Заказ доставлен",
+          "in_progress": "Заказ в процессе",
+          "cancelled": "Заказ отменен",
+          "waiting": "Заказ ожидает оплаты",
+          "assembling": "Заказ собирается",
+          "paid": "Заказ оплачен",
+          "shipping": "Заказ в пути"
+        },
+        "delivery_date": "в {{date}}",
+        "contract_label": "Номер договора",
+        "items_label": "Предметы",
+        "details_button": "Детали",
+        "continue_order": "Продолжать",
+        "repeat_order_button": "Повторный заказ",
+        "mobile_labels": {
+          "id": "ID заказа",
+          "status": "Статус",
+          "address": "Адрес",
+          "date": "Дата заказа",
+          "sum": "Сумма заказа",
+          "items": "Кол-во товаров",
+          "items_count": "{{count}} товаров"
+        },
+        "view_product_details": "Смотреть все характеристики"
+      },
+      "address": {
+        "title": "Адрес",
+        "empty_title": "У вас нету адреса доставки",
+        "empty_description": "Добавь свой адерс и начни покупку!",
+        "start_shopping": "Добавить новый адрес"
+      }
+    },
+    "notifications_page": {
+      "title": "Уведомления",
+      "un_read": "Не прочитано",
+      "new_count": "У вас {{count}} новых уведомлений",
+      "order_title": "Заказ ID {{id}}",
+      "items": {
+        "confirmed": "Ваш заказ подтвержден и собирается.",
+        "handed_to_courier": "Ваш заказ собран и передан курьеру.",
+        "delivered": "Ваш заказ успешно доставлен к вам.",
+        "cancelled": "Ваш заказ был отменен"
+      },
+      "times": {
+        "days_3": "3 дня назад",
+        "days_1": "1 день назад",
+        "hours_2": "2 часа назад",
+        "hour_1": "час назад"
+      }
+    },
+    "settings_page": {
+      "title": "Уведомления",
+      "order_status_title": "Статус заказа",
+      "order_status_desc": "Получайте уведомления о ходе выполнения ваших заказов.",
+      "promotions_title": "Рекламные предложения",
+      "promotions_desc": "Получайте уведомления об эксклюзивных предложениях и скидках.",
+      "push": "Уведомления",
+      "sms": "СМС"
+    },
+    "recipients_page": {
+      "title": "Получатели",
+      "already_has": "У вас уже есть получатель с таким номером телефона",
+      "add_button": "Добавить получателя",
+      "modal_new_title": "Новый получатель",
+      "modal_edit_title": "Редактировать получателя",
+      "first_name_placeholder": "Имя",
+      "first_name_error": "Имя должно содержать не менее 4 символов",
+      "last_name_placeholder": "Фамилия",
+      "last_name_error": "Фамилия должна содержать не менее 4 символов",
+      "phone_placeholder": "Номер телефона",
+      "helper_text": "Отправим уведомление о статусе заказа. Позвоним, если будут вопросы по доставке",
+      "save_button": "Сохранить",
+      "confirm_delete_title": "Вы действительно хотите сделать?",
+      "confirm_delete_description": "Это действие невозможно будет потом вернуть",
+      "confirm_delete_cancel": "Отменить",
+      "confirm_delete_confirm": "Да"
+    },
+    "business_account_page": {
+      "title": "Расчетные счета",
+      "account_label": "Счет {{index}}",
+      "add_button": "Добавить расчетный счет",
+      "modal_new_title": "Новый расчетный счет",
+      "modal_edit_title": "Редактировать расчетный счет",
+      "name_placeholder": "Название",
+      "name_required": "Название является обязательным",
+      "save_button": "Сохранить",
+      "status": {
+        "approved": "Проверен",
+        "pending": "В проверке",
+        "rejected": "Отклонен"
+      },
+      "confirm_delete_title": "Вы действительно хотите удалить счет?",
+      "confirm_delete_description": "Это действие невозможно будет потом вернуть",
+      "confirm_delete_cancel": "Отмена",
+      "confirm_delete_confirm": "Да",
+      "empty_title": "У вас нету расчетных счетов",
+      "empty_description": "Добавь свой расчетный счет и начни покупку!",
+      "start_shopping": "Добавить новый расчетный счет"
+    },
+    "cards_page": {
+      "title": "Карта",
+      "add_button": "Добавить карту",
+      "primary_label": "Первичный",
+      "secondary_label": "Вторичный",
+      "modal_title": "Введите номер карты",
+      "card_number_placeholder": "Номер карты",
+      "card_number_error": "Номер карты должен содержать 16 цифр",
+      "card_expiry_placeholder": "ММ/ГГ",
+      "card_expiry_error": "4 цифры",
+      "agreement_text": "Добавляя карту, вы соглашаетесь с",
+      "agreement_link": "Условиями",
+      "save_button": "Сохранить",
+      "confirm_delete_title": "Вы действительно хотите сделать?",
+      "confirm_delete_description": "Это действие невозможно будет потом вернуть",
+      "confirm_delete_cancel": "Отменить",
+      "confirm_delete_confirm": "Да"
+    },
+    "info": {
+      "main": "Главная",
+      "orders": "Мой заказ",
+      "exchange": "Возврат и отмена",
+      "delivery": "Доставка",
+      "payment": "Оплата",
+      "products": "Товары",
+      "quesanswers": "Вопросы – ответы",
+      "security": "Безопасность",
+      "contact": "Поддержка"
+    },
+    "balance": "Баланс",
+    "transactions": "Транзакции",
+    "notifications": "Уведомления",
+    "favorite_products": "Избранные товары",
+    "bonus_points": "Бонус за баллы",
+    "branch_contacts": "Контакты филиалов",
+    "faq": "FAQ",
+    "terms_of_use": "Условия использования",
+    "language": "Язык",
+    "logout": "Выйти из аккаунта",
+    "default_name": "Имя Фамилия",
+    "delete_account": "Удалить аккаунт",
+    "delete_account_title": "Удаление аккаунта",
+    "delete_account_description": "Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя будет отменить.",
+    "delete_account_confirm": "Да, удалить",
+    "detail": {
+      "title": "Личный кабинет",
+      "select_photo": "Выбрать фотографию",
+      "delete_image": {
+        "title": "Удалить фотографию",
+        "confirm": "Вы уверены, что хотите удалить фотографию профиля?",
+        "yes": "Да",
+        "no": "Нет"
+      },
+      "crop_photo": "Обрезать фото",
+      "save": "Сохранить",
+      "cancel": "Отмена",
+      "full_name": "ФИО",
+      "phone_number": "Номер телефона",
+      "password": "Пароль",
+      "change_password": "Изменить пароль",
+      "edit_phone": {
+        "title": "Изменить номер телефона",
+        "phone_label": "Номер телефона",
+        "phone_placeholder": "Введите номер телефона",
+        "continue": "Продолжить"
+      },
+      "edit_password": {
+        "title": "Изменить пароль",
+        "new_password": {
+          "label": "Новый пароль",
+          "placeholder": "Введите новый пароль"
+        },
+        "confirm_password": {
+          "label": "Подтвердить пароль",
+          "placeholder": "Введите новый пароль ещё раз"
+        },
+        "save": "Сохранить",
+        "errors": {
+          "not_meet_requirements": "Пароль не соответствует требованиям",
+          "not_match": "Пароли не совпадают"
+        }
+      }
+    }
+  },
+  "continue": "Продолжить",
+  "accumulated_points": "Накопленные баллы",
+  "points": "баллы",
+  "copied_to_clipboard": "Скопировано в буфер обмена",
+  "discounted": "Выгодная выгода",
+  "hit_sales": "Новая коллекция",
+  "new_collection": "Новая коллекция",
+  "recommended_products": "Рекомендуем",
+  "best_selling": "Самые продаваемые",
+  "super_discounts": "Супер скидки",
+  "view_all": "Все",
+  "discount_label": "Скидка",
+  "search_product": "Поиск товара",
+  "search_history": {
+    "title": "История поиска",
+    "clear": "Очистить"
+  },
+  "cancel": "Отмена",
+  "sum": "сум",
+  "add_to_cart": "Добавить в корзину",
+  "nav": {
+    "main": "Главная",
+    "category": "Категории",
+    "orders": "Мои заказы",
+    "cart": "Корзина",
+    "profile": "Профиль",
+    "favourites": "Избранное",
+    "catalog": "Каталог",
+    "search_placeholder": "Поиск товара",
+    "orders_label": "Заказы",
+    "favorites_label": "Избранное",
+    "cart_label": "Корзина",
+    "profile_label": "Профиль",
+    "recent": "Недавно искали",
+    "popular": "Популярные запросы",
+    "categories": {
+      "books": "Книги",
+      "paper_products": "Бумажная продукция",
+      "office_supplies": "Офисные принадлежности",
+      "promotions": "Акции"
+    },
+    "location": "пр. Амира Темура 129Б",
+    "language": {
+      "name": "РУ",
+      "russian": "Ру",
+      "uzbek": "Uz"
+    }
+  },
+  "categories": {
+    "title": "Категории",
+    "view": {
+      "grid": "Сетка",
+      "list": "Список"
+    },
+    "all": "Всевозможные товары"
+  },
+  "products": {
+    "title": "Продукты",
+    "search_results": "Результаты поиска",
+    "not_found": "Товары не найдены",
+    "similar": "Похожие товары",
+    "description": "Описание",
+    "product_cost": "Стоимость товара",
+    "proceed": "Перейти",
+    "count_products": "{{count}} шт в коробке"
+  },
+  "search": {
+    "title": "Поиск",
+    "all": "Найденные товары"
+  },
+  "filter": {
+    "title": "Фильтры",
+    "reset": "Отмена",
+    "apply": "Сохранить",
+    "all_categories": "Все категории",
+    "product_type": {
+      "title": "Тип товара",
+      "all": "Все",
+      "super_discount": "Супер скидки",
+      "best_selling": "Самые продаваемые",
+      "hit_product": "Хит продаж"
+    },
+    "categories": {
+      "title": "Категории",
+      "select": "Выберите категории",
+      "selected": "Выбрано: {{count}}",
+      "all": "Все",
+      "search": "Поиск категории"
+    },
+    "price": {
+      "title": "Цена, сум",
+      "from": "от",
+      "to": "до"
+    },
+    "color": {
+      "title": "Цвет",
+      "more": "Ещё {{count}}",
+      "less": "Скрыть"
+    },
+    "sort": {
+      "title": "Выберите тип сортировки",
+      "short": "Сортировка",
+      "popular": "Популярные",
+      "price_desc": "Сначала дорогие",
+      "price_asc": "Сначала дешёвые"
+    }
+  },
+  "cart": {
+    "title": "Корзина",
+    "your_cart": "Ваша корзина",
+    "cart_hover": {
+      "title": "Моя корзина"
+    },
+    "products": "товара",
+    "now_allow": "Заказ возможен только для сотрудников компании. Администратор свяжитесь с нами через Telegram по ссылке: ",
+    "telegram_link": "@Kansler_CustomerCare_bot",
+    "select_all": "Выбрать все",
+    "unselect_all": "Снять все",
+    "delete": "Удалить",
+    "delete_selected": "Удалить выбранное",
+    "order_title": "Ваш заказ",
+    "items_label": "Товары",
+    "free_delivery": "Бесплатная доставка",
+    "delivery": "Доставка",
+    "total": "Итого",
+    "to_free_delivery": "до бесплатной доставки",
+    "proceed_to_checkout": "Перейти к оформлению",
+    "all": "Все",
+    "empty": "Ваша корзина пуста. Добавьте товары, чтобы продолжить покупки.",
+    "empty_title": "Ваша корзина пуста",
+    "empty_description": "Наполните свою корзину товарами. Давайте делать покупки!",
+    "start_shopping": "Начать покупки",
+    "products_count": "продукта",
+    "checkout": "Оформить",
+    "select_region": "Выберите регион доставки",
+    "select_user": "Выберите получателя",
+    "delete_items": {
+      "title": "Удалить товары",
+      "confirm": "Вы уверены, что хотите удалить выбранные товары из корзины?",
+      "yes": "Да",
+      "no": "Нет"
+    },
+    "not_enough": "В наличии {{exist}} листа {{name}}, вы заказываете {{count}}"
+  },
+  "footer": {
+    "address": "г. Ташкент, Мирабадский район, ул. Авлиё Ота, д. 7",
+    "address_building": "(БЦ OASIS)",
+    "quick_links": "Быстрые ссылки",
+    "faqs": "FAQs",
+    "recipes": "Рецептура",
+    "help_support": "Помощь и поддержка",
+    "privacy_terms": "Условия конфиденциальности",
+    "privacy_policy": "Политика конфиденциальности",
+    "security": "Политика конфиденциальности ",
+    "copyright": "Все права защищены. © 2025 Kansler",
+    "about_company": "О нас",
+    "howcanorder": "Как сделать заказ",
+    "product": "Товар",
+    "directions": "Направления",
+    "news": "Новости",
+    "delivery_payment": "Условия оплаты и доставки",
+    "vacancies": "Вакансии",
+    "promotions": "Акции",
+    "contacts": "Контакты",
+    "events": "Мероприятия",
+    "brand_style": "Фирменный стиль"
+  },
+  "lang": "ru",
+  "order": {
+    "success_message": "Заказ успешно оформлен",
+    "otp": {
+      "title": "Введите код",
+      "description": "Мы отправили 6-значный код на номер",
+      "resend": "Отправить ещё",
+      "confirm": "Подтвердить",
+      "resend_description": "Не получили код?",
+      "error": "Неверный код или все карты уже добавлены",
+      "success": "Код успешно подтвержден",
+      "resend_success": "Код успешно отправлен"
+    },
+    "add_location": {
+      "add_title": "Ваши адреса",
+      "title": "Куда привезти заказ?",
+      "subtitle": "Выберите адрес доставки на карте",
+      "address": "Город, улица, дом",
+      "apartment": "Квартира / Офис",
+      "entrance": "Подъезд",
+      "select": "Выбранное местоположение",
+      "unfinished_border": "Граница не загружена:",
+      "only_allow": "Вы можете выбрать только в пределах города Ташкента.",
+      "floor": "Этаж",
+      "comment_error": "В комментариях должно быть не менее 2 пробелов.",
+      "phone": "Домофон",
+      "comment": "Комментарий для курьера",
+      "deliver": "Привезти сюда",
+      "address_warning": "Пока сюда не доставляем. Выберите другой адрес или пункт выдачи поблизости"
+    },
+    "making": {
+      "title": "Оформление заказа",
+      "your_cart": "Ваша корзина",
+      "items": "Товары",
+      "vip_discount": "VIP Скидка:",
+      "discount": "Скидка",
+      "min_price": "Минимальная сумма заказа 50 000 сум",
+      "not_available": "Нет в наличии",
+      "total": "Итого",
+      "promocode": "Промокод",
+      "delivery": "Доставка",
+      "promocode_min_price": "Минимальная сумма заказа {{price}} сум",
+      "apply_promocode": "Применить",
+      "delivery_note": "Доставка до вашей локации будет определена оператором*",
+      "total_cost": "Общая стоимость",
+      "delivery_type": "Тип доставки",
+      "delivery_options": {
+        "delivery": "Доставка",
+        "pickup": "Самовывоз"
+      },
+      "delivery_address": "Адрес доставки",
+      "enter_address": "Введите ваш адрес",
+      "branch_address": "Адрес филиала",
+      "select_branch": "Выберите филиал",
+      "payment_method": "Выберите способ оплаты",
+      "add_promocode": "Добавить промокод",
+      "order_comment": "Комментарий к заказу",
+      "promocode_placeholder": "Введите промокод",
+      "write": "Писать...",
+      "products_count": "продукта",
+      "checkout": "Оформить",
+      "delivery_cost_note": "*Стоимость доставки может изменяться в зависимости от адреса"
+    },
+    "detail": {
+      "retry_order": "Повторить заказ",
+      "delivery_cost": "Стоимость доставки",
+      "proceed_to_payment": "Перейти к оплате",
+      "delivery_process": "Процесс доставки",
+      "products": "Продукты",
+      "quantity": "Количество",
+      "address": "Адрес",
+      "branch_location": "Местоположение филиала",
+      "delivery_address": "Адрес доставки",
+      "order_amount": "Сумма заказа",
+      "thank_title": "Спасибо за ваш отзыв",
+      "thank_description": "Мы ценим, что вы находите время помогать нам совершенствоваться",
+      "items": "Товары",
+      "discount": "Скидка",
+      "promocode": "Промокод",
+      "total_cost": "Общая стоимость",
+      "free_delivery": "Бесплатная доставка",
+      "secure_connection": "Соединение защищено"
+    },
+    "detail_page": {
+      "review_banner_title": "Спасибо за ваш отзыв",
+      "review_banner_description": "Мы ценим, что вы находите время помогать нам совершенствоваться",
+      "status_title": "Статус",
+      "delivery_info": "Информация о доставке",
+      "items_title": "Товары в заказе",
+      "delivery_recipient": "Получатель",
+      "status": {
+        "in_progress": {
+          "label": "Заказ в процессе",
+          "badge": "В процессе"
+        },
+        "delivered": {
+          "label": "Заказ доставлен",
+          "badge": "Доставлен"
+        },
+        "cancelled": {
+          "label": "Заказ отменен",
+          "badge": "Отменен"
+        },
+        "waiting": {
+          "label": "Ожидает оплаты",
+          "badge": "Ожидание оплаты"
+        },
+        "assembling": {
+          "label": "Заказ собирается",
+          "badge": "Собирается"
+        },
+        "paid": {
+          "label": "Заказ оплачен",
+          "badge": "Оплачен"
+        },
+        "shipping": {
+          "label": "Заказ в пути",
+          "badge": "В пути"
+        }
+      },
+      "steps": {
+        "collecting": "Собирается",
+        "on_the_way": "В пути",
+        "delivered": "Доставлен"
+      },
+      "stage_labels": {
+        "collecting": "Заказ собирается",
+        "on_the_way": "Заказ в пути",
+        "delivered": "Заказ доставлен"
+      },
+      "delivery_date": "к {{date}}",
+      "items_label": "Предметы",
+      "order_title": "Ваш заказ",
+      "summary": {
+        "id": "ID заказа",
+        "contract": "Номер договора",
+        "items": "Товары ({{count}}):",
+        "delivery": "Доставка:",
+        "discount": "Скидка:",
+        "total": "Итого"
+      },
+      "paid_with": "Оплачено с",
+      "paid_with_didox": "Способ оплаты: по счету-фактуре",
+      "delivery_address": "Адрес доставки",
+      "reviews_title": "Отзывы",
+      "rate_products": "Оценить товары",
+      "cancel_question": "Хотите отменить заказ?",
+      "cancel_action": "Отменить заказ"
+    },
+    "payment_success": {
+      "title": "Оплата прошла успешно",
+      "thank_you": "Спасибо за покупку!",
+      "operator_contact": "С вами свяжется наш оператор чтобы подтвердить заказ",
+      "to_main": "На главную"
+    },
+    "list": {
+      "title": "Мои заказы",
+      "tabs": {
+        "active": "Активные",
+        "completed": "Завершенные"
+      },
+      "empty": "Здесь пока ничего нет",
+      "products_count": "товара"
+    },
+    "status": {
+      "pending": "В ожидании",
+      "cancelled": "Отменен",
+      "waiting_payment": "Ожидает оплаты",
+      "paid": "Оплачен",
+      "ready_for_delivery": "Готов к доставке",
+      "shipped": "В пути",
+      "pick_up": "Готов к самовывозу",
+      "delivered": "Доставлен",
+      "completed": "Завершен"
+    },
+    "address_map": {
+      "title": "Адрес доставки",
+      "save": "Сохранить",
+      "geolocation_error": "Ошибка получения геолокации",
+      "browser_not_supported": "Геолокация не поддерживается браузером"
+    },
+    "address_select": {
+      "title": "Адрес",
+      "add_address": "Добавить адрес",
+      "add_new_address": "Добавить новый адрес"
+    },
+    "branch_select": {
+      "title": "Выберите удобный филиал",
+      "location": "Расположение филиала магазина"
+    },
+    "promocode": {
+      "title": "Промокод",
+      "enter": "Введите промокод",
+      "use": "Использовать",
+      "success": "Промокод успешно активирован",
+      "errors": {
+        "invalid": "Недействительный промокод",
+        "not_started": "Промокод еще не начался",
+        "expired": "Промокод просрочен",
+        "min_amount": "Минимальная сумма заказа {{amount}} сум",
+        "used": "Промокод уже использован",
+        "activation": "Ошибка при активации промокода"
+      }
+    },
+    "checkout": {
+      "payment": {
+        "corporate": "Корпоративная карта",
+        "transfer": "Перечисление"
+      },
+      "download": "Скачать КП",
+      "get_contract": "Выставить в Didox",
+      "order_title": "Оформление заказа",
+      "title": "Тип оплаты",
+      "add_card_error": "Ошибка при добавлении карты",
+      "pay": "Оплатить {{price}} сум",
+      "add_card": "Добавить карту",
+      "orders_label": "Ваш заказ",
+      "delivery_info": "Информация о доставке",
+      "delivery_location": "Доставить в",
+      "delivery_owner": "Информация о получателе",
+      "delivery_to": "ФИО и номер телефона",
+      "product_discount": "Скидка на товары",
+      "create_order": "Оформить заказ",
+      "select_region": "Выберите регион доставки",
+      "select_user_error": "Выберите получателя",
+      "delivery_free": "Бесплатно",
+      "category_discount": "Скидка по категории",
+      "try_again": "Попробовать снова",
+      "select_user": {
+        "title": "Получатели",
+        "add_user": "Добавить получателя",
+        "choose": "Выбрать"
+      },
+      "card_title": "Введите номер карты",
+      "card_number": "Номер карты",
+      "card_expiration": "Действует до (ММ/ГГ)",
+      "card_rules": {
+        "one": "Добавляя карту, вы соглашаетесь с ",
+        "two": " ",
+        "three": " ",
+        "four": "Условиями"
+      },
+      "save": "Сохранить",
+      "cancel": "Отмена",
+      "didox_agreement": "Посмотреть договор",
+      "didox_link": "Перейти в Didox",
+      "acception_rules": {
+        "one": "Размещая заказ, вы соглашаетесь на обработку персональных данных в соответствии с",
+        "two": "Соглашение о конфиденциальности",
+        "three": "а так же принимаете",
+        "four": "Пользовательское соглашение",
+        "five": ""
+      },
+      "promocode_expired": "Промокод просрочен",
+      "promocode_invalid": "Промокод недействителен или не использован.",
+      "order_waiting": "Заказ доступен только для оплаты. Промокод можно использовать только в этом состоянии."
+    }
+  },
+  "errors": {
+    "user not exists": "Пользователь не найден",
+    "invalid credentials": "Неверный номер телефона или пароль",
+    "wrong otp or expired": "Неверный код или срок действия истек"
+  },
+  "success": "Успешно",
+  "error": "Ошибка",
+  "trusted_brands": "Нам доверяют",
+  "add_recipient": {
+    "title": "Добавить получателя"
+  },
+  "auth_phone_update_success": "Номер телефона успешно обновлен",
+  "auth_phone_update_error": "Ошибка при обновлении номера телефона",
+  "auth_password_update_success": "Пароль успешно изменен",
+  "auth_register_password_error": "Ошибка при обновлении пароля",
+  "product_detail": {
+    "description": "Описание товара",
+    "read_more": "Читать подробное описание",
+    "read_less": "Скрыть подробное описание",
+    "share": "Поделиться",
+    "ask_question": "Задать вопрос",
+    "variant": "Вариант",
+    "bought_count": "купили",
+    "about_product": "О товаре",
+    "out_of_stock_tooltip": "Товар закончился",
+    "add_to_cart": "Добавить в корзину",
+    "out_of_stock": "Нет в наличии",
+    "faq_title": "Часто задаваемые вопросы",
+    "delivery_terms": "Условия доставки",
+    "payment_terms": "Условия оплаты",
+    "delivery": "Доставка",
+    "warehouse_address": "пр Амира Темура 129Б",
+    "warehouse_subtitle": "Со склада Kansler, г. Ташкент",
+    "courier": "Курьером",
+    "free": "Бесплатно",
+    "brand": "Бренд",
+    "currency": "сум",
+    "add_cart_mobile": "В корзине"
+  }
+}

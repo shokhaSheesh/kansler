@@ -1,0 +1,43 @@
+{
+  "name": "kansler",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.37.0",
+    "@emotion/react": "^11.14.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@hookform/resolvers": "^5.9.2",
+    "@tanstack/react-query": "^5.104.5",
+    "axios": "^1.20.0",
+    "i18next": "^26.5.3",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "lucide-react": "^1.60.0",
+    "mobx": "^7.1.0",
+    "mobx-persist-store": "^1.1.8",
+    "mobx-react-lite": "^5.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.90.0",
+    "react-i18next": "^17.1.0",
+    "react-router": "^7.18.4",
+    "swiper": "^14.3.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.104.5",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.88.0",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  }
+}

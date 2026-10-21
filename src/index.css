@@ -1,0 +1,10 @@
+/* Global styles live in the Chakra system (src/shared/theme/system.ts).
+   Keep this file for third-party overrides only (Swiper, map widgets...). */
+.swiper-pagination-bullet-active {
+  background: #101828;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

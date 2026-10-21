@@ -1,0 +1,1194 @@
+{
+  "select_language": "Tilni tanlang",
+  "yes": "Ha",
+  "no": "Yo'q",
+  "more": "ko'roq",
+  "main": "Asosiy",
+  "add_new": "Qo'shish",
+  "download": "Chekni yuklab olish",
+  "less": "kamroq",
+  "url_copied": "Mahsulot manzili muvaffaqiyatli saqlandi",
+  "phone_copied": "Telefon raqami nusxalandi",
+  "telegram_widget": {
+    "greeting_title": "Assalomu alaykum!",
+    "greeting_subtitle": "Kansler qo'llab-quvvatlash xizmatiga xush kelibsiz! 💚",
+    "greeting_question": "Sizga qanday yordam bera olamiz?"
+  },
+  "pagination": {
+    "previous": "Oldingi",
+    "next": "Keyingi"
+  },
+  "select_address": "Manzilni tanlang",
+  "date": {
+    "months": {
+      "january": "yanvar",
+      "february": "fevral",
+      "march": "mart",
+      "april": "aprel",
+      "may": "may",
+      "june": "iyun",
+      "july": "iyul",
+      "august": "avgust",
+      "september": "sentabr",
+      "october": "oktabr",
+      "november": "noyabr",
+      "december": "dekabr"
+    },
+    "months_short": {
+      "jan": "yan",
+      "feb": "fev",
+      "mar": "mar",
+      "apr": "apr",
+      "may": "may",
+      "jun": "iyn",
+      "jul": "iyl",
+      "aug": "avg",
+      "sep": "sen",
+      "oct": "okt",
+      "nov": "noy",
+      "dec": "dek"
+    },
+    "weekdays": {
+      "monday": "dushanba",
+      "tuesday": "seshanba",
+      "wednesday": "chorshanba",
+      "thursday": "payshanba",
+      "friday": "juma",
+      "saturday": "shanba",
+      "sunday": "yakshanba"
+    },
+    "weekdays_short": {
+      "mon": "du",
+      "tue": "se",
+      "wed": "ch",
+      "thu": "pa",
+      "fri": "ju",
+      "sat": "sh",
+      "sun": "ya"
+    },
+    "empty_value": "-"
+  },
+  "auth": {
+    "reset_password": {
+      "title": "Parolni tiklash",
+      "phone_label": "Telefon raqami",
+      "phone_placeholder": "Telefon raqamini kiriting",
+      "continue": "Davom etish",
+      "user_not_found": "Foydalanuvchi topilmadi",
+      "error": "Bunday foydalanuvchi topilmadi."
+    },
+    "not_found": {
+      "message": "Hech narsa topilmadi(",
+      "manual_button": "Qo'lda kiriting"
+    },
+    "access": {
+      "register_prompt": "Ko'proq imkoniyatlarga ega bo'lish uchun ro'yxatdan o'ting",
+      "login": "Akkauntga kirish",
+      "no_account": "Akkauntingiz yo'qmi?",
+      "register": "Ro'yxatdan o'tish"
+    },
+    "required": {
+      "generic_message": "Davom etish uchun tizimga kiring yoki ro'yxatdan o'ting.",
+      "checkout_message": "Buyurtmani rasmiylashtirish uchun tizimga kiring yoki ro'yxatdan o'ting.",
+      "profile_message": "Profilga kirish uchun tizimga kiring yoki ro'yxatdan o'ting."
+    },
+    "exit": {
+      "title": "Akkauntdan chiqish",
+      "confirm": "Akkauntdan chiqishni xohlaysizmi?",
+      "yes": "Ha",
+      "no": "Yo'q"
+    },
+    "login": {
+      "title": "Tizimga kirish",
+      "phone_description": "Akkauntingizga kirish uchun telefon raqamingizni kiriting",
+      "phone_label": "Telefon raqami",
+      "phone_placeholder": "Telefon raqamini kiriting",
+      "password_label": "Parol",
+      "password_placeholder": "Parolni kiriting",
+      "forgot_password": "Parolni unutdingizmi?",
+      "register": "Ro'yxatdan o'tish",
+      "privacy_policy": "«Davom etish» tugmasini bosish orqali siz tasdiqlaysiz",
+      "privacy_policy_link": "Maxfiylik siyosati",
+      "continue": "Kirish",
+      "success_message": "Akkauntga muvaffaqiyatli kirdingiz",
+      "error_message": "Parol yoki telefon raqami noto'g'ri, iltimos, qaytadan urinib ko'ring",
+      "password_min_length_error": "Parol kamida 4 ta belgidan iborat bo'lishi kerak"
+    },
+    "register": {
+      "title": "Akkaunt yaratish",
+      "not_empty": "Bu maydon bo'sh bo'lishi mumkin emas",
+      "full_name": {
+        "label": "FISH",
+        "placeholder": "FISH ni kiriting",
+        "errors": {
+          "required": "FISH  bo'sh bo'lishi mumkin emas",
+          "max_length": "FISH  150 ta belgidan oshmasligi kerak",
+          "pattern": "FISH  faqat harflar, bo'sh joy, chiziqcha va apostrofdan iborat bo'lishi kerak"
+        }
+      },
+      "phone": {
+        "label": "Telefon raqami",
+        "placeholder": "Telefon raqamini kiriting"
+      },
+      "user_type": {
+        "label": "Foydalanuvchi turi",
+        "options": {
+          "user": "Mijoz",
+          "master": "Usta"
+        }
+      },
+      "department": {
+        "label": "Bo'lim",
+        "placeholder": "Bo'limni tanlang",
+        "options": {
+          "purchasing_department": "Xaridlar bo'limi",
+          "accounting": "Buxgalteriya",
+          "owner": "Egasi",
+          "other": "Boshqa"
+        }
+      },
+      "continue": "Davom etish",
+      "errors": {
+        "user_already_exists": "Bunday telefon raqamli foydalanuvchi allaqachon mavjud",
+        "company_data_missing": "Kompaniya ma'lumotlari topilmadi",
+        "required": "Bu maydon to'ldirilishi shart",
+        "invalid_phone": "Telefon raqami yaroqsiz"
+      },
+      "password": {
+        "title": "Parol yaratish",
+        "reset_title": "Parolni tiklash",
+        "set_title": "Parolni o'rnatish",
+        "description": "Ilovaga kirish uchun 6 ta belgidan iborat parol yarating",
+        "reset_description": "Parol kamida bitta maxsus belgi (masalan, !@#) bo'lishi kerak",
+        "new_password": {
+          "label": "Yangi parol",
+          "placeholder": "Parolni kiriting"
+        },
+        "confirm_password": {
+          "label": "Parolni takrorlang",
+          "placeholder": "Parolni kiriting"
+        },
+        "criteria": {
+          "title": "Parol quyidagilarni o'z ichiga olishi kerak:",
+          "length": "Kamida 6 ta belgi",
+          "upper": "Kamida bitta katta harf",
+          "lower": "Kamida bitta kichik harf",
+          "number": "Kamida bitta raqam",
+          "special": "Kamida bitta maxsus belgi"
+        },
+        "errors": {
+          "min_length": "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+          "not_match": "Parollar mos kelmayapti",
+          "not_meet_requirements": "Parol talablarga javob bermaydi",
+          "missing_special_char": "Parol kamida bitta maxsus belgi (masalan, !@#) bo'lishi kerak"
+        }
+      },
+      "success": "Ro'yxatdan o'tish muvaffaqiyatli yakunlandi",
+      "otp": {
+        "title": "Tasdiqlash kodi",
+        "description": "Biz raqamga tasdiqlash kodini yubordik",
+        "label": "SMS kod",
+        "error": "Noto'g'ri kod yoki muddati tugagan",
+        "resend": "Kodni qayta yuborish",
+        "continue": "Davom etish",
+        "server_error": "Kod noto'g'ri, qayta urinib ko'ring",
+        "sent": "Kod yuborildi, tekshirib ko'ring"
+      },
+      "welcome": {
+        "title": "Azia Stroy ga xush kelibsiz!",
+        "description": "Qurilish materiallarini platforma orqali tez va qulay xarid qiling",
+        "start": "Boshlash"
+      },
+      "company": {
+        "title": "Kompaniya ro'yxatdan o'tkazish",
+        "company_name": {
+          "label": "Kompaniya nomi",
+          "placeholder": "Kompaniya nomini yozing"
+        },
+        "inn": {
+          "label": "STIR",
+          "placeholder": "Kompaniyangizning STIR raqamini yozing"
+        },
+        "pnfl_form": {
+          "label": "JSHSHIR",
+          "placeholder": "Kompaniya JSHSHIR raqamini kiriting",
+          "first_name": "FISH",
+          "first_name_placeholder": "Tashkilot boshqaruvchisi FISH ni kiriting",
+          "status": {
+            "active": "Faol",
+            "inactive": "Faol emas"
+          }
+        },
+        "status": {
+          "label": "Holat",
+          "placeholder": "Tanlash"
+        },
+        "legal_form": {
+          "label": "Tashkilot-huquqiy shakli",
+          "placeholder": "Tanlang",
+          "options": {
+            "ooo": "OOO",
+            "individual": "Yakka tartibdagi tadbirkor",
+            "ao": "AO",
+            "partnership": "Xo'jalik sherikliklari",
+            "cooperative": "Ishlab chiqarish kooperativlari"
+          }
+        },
+        "address": {
+          "label": "Kompaniya manzili",
+          "placeholder": "Manzilni yozing",
+          "helper": "Iltimos, buyurtmalaringizni yetkazib berish kerak bo'lgan manzilni ko'rsating"
+        },
+        "director": {
+          "label": "FISH",
+          "placeholder": "Direktorning FISH sini kiriting",
+          "required": "Direktorning to'liq ismi majburiydir"
+        },
+        "registration_date": {
+          "label": "Ro'yxatdan o'tish sanasi",
+          "required": "Ro'yxatdan o'tish sanasi majburiydir"
+        },
+        "okved": {
+          "label": "IFUT",
+          "placeholder": "IFUT",
+          "errors": {
+            "pattern": "IFUT 5 ta raqamdan iborat bo'lishi kerak"
+          },
+          "required": "IFUT maydon to'ldirilishi shart"
+        },
+        "bank_account": {
+          "label": "Hisob raqami",
+          "placeholder": "Hisob raqami",
+          "errors": {
+            "pattern": "Joriy hisob 20 ta raqamdan iborat bo'lishi kerak."
+          },
+          "required": "Hisob raqami maydon to'ldirilishi shart"
+        },
+        "nds_code": {
+          "label": "QQS kodi",
+          "placeholder": "QQS kodi",
+          "errors": {
+            "pattern": "QQS kodi 12 ta raqamdan iborat bo'lishi kerak"
+          },
+          "required": "QQS kodi maydon to'ldirilishi shart"
+        },
+        "bank_code": {
+          "label": "Bank kodi",
+          "placeholder": "Bank kodi",
+          "errors": {
+            "pattern": "Bank kodi 5 ta raqamdan iborat bo'lishi kerak"
+          },
+          "required": "Bank kodi maydon to'ldirilishi shart"
+        },
+        "is_vat_payer": "QQS to'lovchisimi?",
+        "continue": "Davom etish"
+      },
+      "check": {
+        "title": "Qidiruv",
+        "inn_placeholder": "STIR",
+        "pinfl_placeholder": "JSHSHIR",
+        "company_type": {
+          "legal": "Yuridik shaxs",
+          "ip": "Yakka tartibdagi tadbirkor"
+        },
+        "agree_text": "Ro'yxatdan o'tish orqali, siz qoidalar bilan tanishasiz",
+        "agree_link": "foydalanuvchi shartnomasi",
+        "search": "Qidiruv",
+        "errors": {
+          "inn_pattern": "STIR 9 ta raqamdan iborat bo'lishi kerak",
+          "pinfl_pattern": "JSHSHIR 14 ta raqamdan iborat bo'lishi kerak",
+          "bank_code_pattern": "Bank kodi 5 ta raqamdan iborat bo'lishi kerak"
+        },
+        "manual": "Qo'lda kiriting"
+      },
+      "check_result": {
+        "title": "Natija",
+        "company_name": "Kompaniya nomi",
+        "inn": "STIR",
+        "pinfl": "PINFL",
+        "fullname": "FISH",
+        "registration_date": "Ro'yxatdan o'tgan sana",
+        "address": "Manzil",
+        "opf": "OPF",
+        "oked": "IFUT",
+        "bank_code": "Bank kodi",
+        "account": "Hisob raqami",
+        "vat_status": "QQS to'lovchi holati",
+        "vat_status_active": "Faol",
+        "vat_status_inactive": "Nofaol",
+        "vat_code": "QQS kodi",
+        "director": "Direktor FISH",
+        "status_code_labels": {
+          "vat_payer": "QQS to'lovchi",
+          "vat_payer_cert_active": "QQS to'lovchi+ (sertifikat faol)",
+          "vat_payer_cert_inactive": "QQS to'lovchi+ (sertifikat faol emas)",
+          "vat_payer_cert_temp_inactive": "QQS to'lovchi+ (sertifikat vaqtincha faol emas)",
+          "turnover_tax_payer": "Aylanmadan soliq to'lovchi",
+          "non_profit_entity": "Notijorat yuridik shaxs",
+          "individual_entrepreneur": "Yakka tartibdagi tadbirkor",
+          "individual": "Jismoniy shaxs"
+        },
+        "continue": "Davom etish"
+      },
+      "form": {
+        "title": "Ro'yxatdan o'tish",
+        "phone_placeholder": "Telefon raqami",
+        "full_name_placeholder": "FISH ni yozing",
+        "agree_text": "Ro'yxatdan o'tish orqali, siz qoidalar bilan tanishasiz",
+        "agree_link": "foydalanuvchi shartnomasi",
+        "submit": "Ro'yxatdan o'tish"
+      }
+    }
+  },
+  "language": {
+    "title": "Tilni tanlang",
+    "languages": {
+      "uz": "O'zbekcha",
+      "ru": "Русский"
+    },
+    "cancel": "Bekor qilish",
+    "save": "Saqlash"
+  },
+  "terms": {
+    "title": "Foydalanish shartlari",
+    "description": "Davom etish uchun shartlar bilan tanishing va qabul qiling"
+  },
+  "contacts": {
+    "title": "Filiallar kontaktlari",
+    "search": {
+      "placeholder": "Filial qidirish"
+    },
+    "branch": {
+      "address": "Manzil",
+      "working_hours": "Ish vaqti",
+      "view_on_map": "Xaritada ko'rish"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "social": {
+        "instagram": "Instagram",
+        "telegram": "Telegram"
+      }
+    }
+  },
+  "favourites": {
+    "title": "Sevimlilar",
+    "all": "Barchasi turdagi mahsulotlar",
+    "discounted": "Chegirmali mahsulotlar",
+    "recommended": "Tavsiyali etilgan mahsulotlar",
+    "new": "Yangi mahsulotlar",
+    "products": "ta mahsulot",
+    "breadcrumb": {
+      "home": "Bosh sahifa"
+    },
+    "empty": {
+      "title": "Sizda hech qanday sevimlilar yo'q",
+      "description": "Sizda hech qanday sevimlilar yo'q. Keling, sevimlilar qo'shaylik!",
+      "start_shopping": "Sevimlilar qo'shish"
+    }
+  },
+  "notifications": {
+    "title": "Bildirishnoma",
+    "empty": "Bu yerda hozircha hech narsa yo'q",
+    "error": {
+      "loading": "Bildirishnomalarni yuklashda xatolik yuz berdi",
+      "unknown": "Noma'lum xatolik",
+      "retry": "Qayta urinish"
+    }
+  },
+  "transactions": {
+    "title": "Tranzaksiyalar tarixi",
+    "types": {
+      "debit": "Ballarni almashtirish",
+      "credit": "Mahsulot uchun to'lov"
+    },
+    "points": {
+      "debit": "-{{amount}} ball",
+      "credit": "+{{amount}} bonus"
+    },
+    "amount": "{{amount}} so'm",
+    "empty": "Sizda hali tranzaksiyalar yo'q",
+    "filter": {
+      "title": "Davrni tanlang",
+      "start": "Boshlanish",
+      "end": "Tugash",
+      "today": "Bugun",
+      "week": "Hafta",
+      "month": "Oy"
+    }
+  },
+  "bonus": {
+    "title": "Bonus ballar",
+    "tabs": {
+      "bonuses": "Bonuslar",
+      "exchange_history": "Almashinuv tarixi"
+    },
+    "available_points": "Mavjud ballar",
+    "history": "Tarix",
+    "all_offers": "Barcha takliflar",
+    "points": "ball",
+    "no_bonuses": "Mavjud bonuslar yo'q",
+    "all_exchanges": "Barcha almashinuvlar",
+    "order_number": "№ {{number}}",
+    "pickup_location": "Siz {{filial_name}} dan olishingiz mumkin",
+    "until": "{{date}} gacha",
+    "status": {
+      "taken": "Olingan",
+      "exchanged": "Almashtirilgan {{date}}"
+    },
+    "no_exchanges": "Sizda hali almashinuvlar yo'q",
+    "detail": {
+      "points_exchange": "{{points}} ball = {{title}}",
+      "exchange_description": "Bu ballarni {{title}} ga almashtira olasiz",
+      "valid_until": "Taklif {{date}} gacha amal qiladi",
+      "use": "Foydalanish",
+      "success_message": "Bonus muvaffaqiyatli ishlatildi",
+      "errors": {
+        "not_enough_points": "Ballar yetarli emas",
+        "general_error": "Bonusdan foydalanishda xatolik yuz berdi"
+      }
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "vip_client": {
+      "title": "Siz VIP mijozsiz",
+      "description": "Siz mahsulotlarimizning turli toifalarida chegirmalarga ega bo'lishingiz mumkin."
+    },
+    "personal_info_title": "Shaxsiy ma'lumotlar",
+    "personal_info": {
+      "edit_title": "Tahrirlash",
+      "fullname_placeholder": "FISH ",
+      "save_button": "Saqlash",
+      "update_success": "Ma'lumotlar muvaffaqiyatli yangilandi",
+      "update_error": "Ma'lumotlarni yangilashda xatolik yuz berdi",
+      "resend_success": "Kod qayta yuborildi",
+      "otp": {
+        "title": "Kodni kiriting",
+        "description": "Biz raqamga tasdiqlash kodini yubordik",
+        "resend_question": "Kod kelmadimi?",
+        "resend_action": "Qayta yuborish",
+        "error": "Noto'g'ri kod"
+      }
+    },
+    "company_data": "Kompaniya ma'lumotlari",
+    "orders": "Buyurtmalar",
+    "address": "Manzil",
+    "cards": "Karta",
+    "reviews": "Sharhlar",
+    "business_account": "Hisob raqami",
+    "settings": "Sozlamalar",
+    "recipient": "Oluvchi",
+    "comments": {
+      "rate_order": "Buyurtmani baholash",
+      "help_text": "Sizning sharhingiz biz uchun muhim",
+      "delivery_title": "Yetkazib berish haqida nima deb o'ylaysiz?",
+      "delivery_placeholder": "Buyurtmaning afzalliklarini tasvirlab bering",
+      "issues_title": "Kamchiliklari",
+      "issues_placeholder": "Buyurtmaning kamchiliklarini tasvirlab bering",
+      "comment_title": "Izoh",
+      "required": "Majburiy maydon",
+      "comment_placeholder": "Izohlaringizni yozing",
+      "send": "Yuborish"
+    },
+    "help_center": "Yordam markazi",
+    "email": "E-mail",
+    "favorites_count": "{{count}} sevimlilar",
+    "orders_count": "{{count}} buyurtmalar",
+    "reviews_count": "{{count}} sharhlar",
+    "company": {
+      "fields": {
+        "name": "Kompaniya nomi",
+        "inn": "STIR",
+        "legal_form": "Tashkiliy-huquqiy shakl",
+        "address": "Kompaniya manzili",
+        "status": "Holat",
+        "director": "Direktor FISH si",
+        "registration_date": "Ro‘yxatdan o‘tgan sana",
+        "bank_code": {
+          "label": "Ism",
+          "placeholder": "Ism",
+          "errors": {
+            "pattern": "Ism 10 ta raqamgacha iborat bo'lishi kerak"
+          }
+        },
+        "bank_account": {
+          "label": "Hisob raqami",
+          "placeholder": "Hisob raqami",
+          "errors": {
+            "pattern": "Hisob raqami 20 ta raqamdan iborat bo'lishi kerak"
+          }
+        },
+        "pinfl": "INP",
+        "oked": "IFUT",
+        "vat": "QQS to‘lovchimi?"
+      },
+      "orders": {
+        "title": "Buyurtmalar",
+        "empty_title": "Sizda hozircha hech narsa yo'q",
+        "empty_description": "Buyurtmalaringizni yozing va ko'rishingiz mumkin",
+        "start_shopping": "Xarid qilishni boshlash",
+        "status": {
+          "delivered": "Yetkazildi",
+          "in-progress": "Jarayonda",
+          "cancelled": "Bekor qilindi",
+          "waiting": "Kutilmoqda",
+          "assembling": "Yig'ilmoqda",
+          "paid": "To'langan",
+          "shipping": "Yetkazilmoqda"
+        },
+        "tabs": {
+          "all": "Barchasi",
+          "in_progress": "Jarayonda",
+          "delivered": "Yetkazib berilgan",
+          "cancelled": "Bekor qilingan",
+          "shipping": "Yetkazilmoqda"
+        },
+        "status_label": {
+          "delivered": "Buyurtma yetkazildi",
+          "in_progress": "Buyurtma jarayonda",
+          "cancelled": "Buyurtma bekor qilindi",
+          "waiting": "Buyurtma to'lovni kutmoqda",
+          "assembling": "Buyurtma yig'ilmoqda",
+          "paid": "Buyurtma to'landi",
+          "shipping": "Buyurtma yo'lda"
+        },
+        "delivery_date": "{{date}} da",
+        "contract_label": "Shartnoma raqami",
+        "items_label": "Mahsulotlar",
+        "details_button": "Batafsil",
+        "continue_order": "Davom etish",
+        "repeat_order_button": "Qayta buyurtma",
+        "mobile_labels": {
+          "id": "Buyurtma ID",
+          "status": "Status",
+          "address": "Manzil",
+          "date": "Buyurtma sanasi",
+          "sum": "Buyurtma summasi",
+          "items": "Tovarlar soni",
+          "items_count": "{{count}} ta tovar"
+        },
+        "view_product_details": "Barcha xususiyatlarni ko'rish"
+      },
+      "address": {
+        "title": "Manzil",
+        "empty_title": "Sizda hozircha hech manzil yo'q",
+        "empty_description": "Manzilingizni qo'shing va xarid qilishni boshlang!",
+        "start_shopping": "Manzil qo'shish"
+      }
+    },
+    "notifications_page": {
+      "title": "Bildirishnomalar",
+      "un_read": "Ko'rib chiqilmagan",
+      "new_count": "Sizda {{count}} ta yangi habar bor",
+      "order_title": "Buyurtma ID {{id}}",
+      "items": {
+        "confirmed": "Buyurtmangiz tasdiqlandi va yig'ilmoqda.",
+        "handed_to_courier": "Buyurtmangiz yig'ildi va kuryerga topshirildi.",
+        "delivered": "Buyurtmangiz sizga muvaffaqiyatli yetkazildi.",
+        "cancelled": "Buyurtmangiz bekor qilindi"
+      },
+      "times": {
+        "days_3": "3 kun oldin",
+        "days_1": "1 kun oldin",
+        "hours_2": "2 soat oldin",
+        "hour_1": "1 soat oldin"
+      }
+    },
+    "settings_page": {
+      "title": "Bildirishnomalar",
+      "order_status_title": "Buyurtma holati",
+      "order_status_desc": "Buyurtmalaringiz bajarilish holati haqida bildirishnomalar oling.",
+      "promotions_title": "Reklama takliflari",
+      "promotions_desc": "Eksklyuziv takliflar va chegirmalar haqida bildirishnomalar oling.",
+      "push": "Bildirishnoma",
+      "sms": "SMS"
+    },
+    "recipients_page": {
+      "title": "Oluvchilar",
+      "add_button": "Oluvchi qo'shish",
+      "already_has": "Sizda allaqachon ushbu telefon raqamiga ega qabul qiluvchi bor.",
+      "modal_new_title": "Yangi oluvchi",
+      "modal_edit_title": "Oluvchini tahrirlash",
+      "first_name_placeholder": "Ism",
+      "last_name_placeholder": "Familiya",
+      "first_name_error": "Ism 4 ta belgidan kam bo'lishi mumkin",
+      "last_name_error": "Familiya 4 ta belgidan kam bo'lishi mumkin",
+      "phone_placeholder": "Telefon raqami",
+      "helper_text": "Buyurtma holati haqida xabar yuboramiz. Yetkazib berishda savollar bo'lsa, qo'ng'iroq qilamiz.",
+      "save_button": "Saqlash",
+      "confirm_delete_title": "Haqiqatan ham buni qilmoqchimisiz?",
+      "confirm_delete_description": "Bu amalni keyin qaytarib bo'lmaydi",
+      "confirm_delete_cancel": "Bekor qilish",
+      "confirm_delete_confirm": "Ha"
+    },
+    "business_account_page": {
+      "title": "Hisob raqamlari",
+      "account_label": "Hisob {{index}}",
+      "add_button": "Hisob raqami qo'shish",
+      "modal_new_title": "Yangi hisob raqami",
+      "modal_edit_title": "Hisob raqamini tahrirlash",
+      "name_placeholder": "Nomi",
+      "name_required": "Nomi to'ldirilishi shart",
+      "save_button": "Saqlash",
+      "status": {
+        "approved": "Tasdiqlangan",
+        "pending": "Tekshiruvda",
+        "rejected": "Rad etilgan"
+      },
+      "confirm_delete_title": "Hisob raqamini o'chirmoqchimisiz?",
+      "confirm_delete_description": "Bu amalni qaytarib bo'lmaydi",
+      "confirm_delete_cancel": "Bekor qilish",
+      "confirm_delete_confirm": "Ha"
+    },
+    "cards_page": {
+      "title": "Karta",
+      "add_button": "Karta qo'shish",
+      "primary_label": "Asosiy",
+      "secondary_label": "Ikkinchi",
+      "modal_title": "Karta raqamini kiriting",
+      "card_number_placeholder": "Karta raqami",
+      "card_number_error": "Karta raqami 16 ta raqam bo'lishi kerak",
+      "card_expiry_placeholder": "MM/YY",
+      "card_expiry_error": "4 ta raqam",
+      "agreement_text": "Karta qo'shish orqali siz",
+      "agreement_link": "Shartlarga rozilik bildirasiz",
+      "save_button": "Saqlash",
+      "confirm_delete_title": "Haqiqatan ham buni qilmoqchimisiz?",
+      "confirm_delete_description": "Bu amalni keyin qaytarib bo'lmaydi",
+      "confirm_delete_cancel": "Bekor qilish",
+      "confirm_delete_confirm": "Ha"
+    },
+    "info": {
+      "main": "Asosiy ma'lumotlar",
+      "orders": "Buyurtmalar",
+      "exchange": "Almashinuvlar",
+      "delivery": "Yetkazib berish",
+      "payment": "To'lov",
+      "products": "Mahsulotlar",
+      "quesanswers": "Savollar va javoblar",
+      "security": "Xavfsizlik",
+      "contact": "Qo'llab quvvatlash"
+    },
+    "balance": "Balans",
+    "transactions": "Tranzaksiyalar",
+    "notifications": "Bildirishnoma",
+    "copied_to_clipboard": "Xotiraga saqlandi",
+    "favorite_products": "Sevimli mahsulotlar",
+    "bonus_points": "Bonus ballar",
+    "branch_contacts": "Filial kontaktlari",
+    "faq": "FAQ",
+    "terms_of_use": "Foydalanish shartlari",
+    "language": "Til",
+    "logout": "Chiqish",
+    "default_name": "Ism Familiya",
+    "delete_account": "Akkauntni o'chirish",
+    "delete_account_title": "Akkauntni o'chirish",
+    "delete_account_description": "Akkauntingizni o'chirishni xohlaysizmi? Bu amalni qaytarib bo'lmaydi.",
+    "delete_account_confirm": "Ha, o'chirish",
+    "detail": {
+      "select_photo": "Rasm tanlash",
+      "title": "Shaxsiy ma'lumot",
+      "delete_image": {
+        "title": "Rasmni o'chirish",
+        "confirm": "Profil rasmini o'chirishni xohlaysizmi?",
+        "yes": "Ha",
+        "no": "Yo'q"
+      },
+      "crop_photo": "Rasmni kesish",
+      "save": "Saqlash",
+      "cancel": "Bekor qilish",
+      "full_name": "FISH ",
+      "phone_number": "Telefon raqami",
+      "password": "Parol",
+      "change_password": "Parolni o'zgartirish",
+      "edit_phone": {
+        "title": "Telefon raqamini o'zgartirish",
+        "phone_label": "Telefon raqami",
+        "phone_placeholder": "Telefon raqamini kiriting",
+        "continue": "Davom etish"
+      },
+      "edit_password": {
+        "title": "Parolni o'zgartirish",
+        "new_password": {
+          "label": "Yangi parol",
+          "placeholder": "Yangi parolni kiriting"
+        },
+        "confirm_password": {
+          "label": "Parolni tasdiqlang",
+          "placeholder": "Yangi parolni qayta kiriting"
+        },
+        "save": "Saqlash",
+        "errors": {
+          "not_meet_requirements": "Parol talablarga javob bermaydi",
+          "not_match": "Parollar mos kelmayapti"
+        }
+      }
+    }
+  },
+  "continue": "Davom etish",
+  "accumulated_points": "To'plangan ballar",
+  "points": "ballar",
+  "discounted": "Hamyonbop",
+  "hit_sales": "Eng ko'p sotilgan",
+  "new_collection": "Yangi to'plam",
+  "recommended_products": "Taklif etilgan",
+  "best_selling": "Eng mashhur",
+  "discount_label": "Chegirmalar",
+  "super_discounts": "Super chegirmalar",
+  "view_all": "Hammasi",
+  "search_product": "Mahsulot qidirish",
+  "search_history": {
+    "title": "Qidiruv tarixi",
+    "clear": "Tozalash"
+  },
+  "cancel": "Bekor qilish",
+  "sum": "so'm",
+  "add_to_cart": "Savatga qo'shish",
+  "nav": {
+    "main": "Asosiy",
+    "category": "Kategoriyalar",
+    "orders": "Buyurtmalarim",
+    "cart": "Savat",
+    "profile": "Profil",
+    "favourites": "Sevimlilar",
+    "catalog": "Katalog",
+    "search_placeholder": "Mahsulot qidirish",
+    "orders_label": "Buyurtmalar",
+    "favorites_label": "Sevimlilar",
+    "cart_label": "Savat",
+    "profile_label": "Profil",
+    "recent": "Yaqinda qidirilganlar",
+    "popular": "Ommabop qidiruvlar",
+    "categories": {
+      "books": "Kitoblar",
+      "paper_products": "Qog'oz mahsulotlari",
+      "office_supplies": "Ofis buyumlari",
+      "promotions": "Aksiyalar"
+    },
+    "location": "Amir Temur ko'chasi 129B",
+    "language": {
+      "name": "UZ",
+      "russian": "Ru",
+      "uzbek": "Uz"
+    }
+  },
+  "categories": {
+    "title": "Kategoriyalar",
+    "view": {
+      "grid": "To'r",
+      "list": "Ro'yxat"
+    },
+    "all": "Barcha turdasi mahsulotlar"
+  },
+  "products": {
+    "title": "Mahsulotlar",
+    "search_results": "Qidiruv natijalari",
+    "not_found": "Mahsulotlar topilmadi",
+    "similar": "O'xshash mahsulotlar",
+    "description": "Tavsif",
+    "product_cost": "Mahsulot narxi",
+    "proceed": "O'tish",
+    "count_products": "qutida {{count}} dona"
+  },
+  "search": {
+    "title": "Qidiruvlar",
+    "all_search": "Topilgan mahsulotlar"
+  },
+  "filter": {
+    "title": "Filtrlar",
+    "reset": "Bekor qilish",
+    "apply": "Saqlash",
+    "all_categories": "Barcha kategoriyalar",
+    "product_type": {
+      "title": "Mahsulot turi",
+      "all": "Hammasi",
+      "super_discount": "Super chegirmalar",
+      "best_selling": "Eng ko'p sotilgan",
+      "hit_product": "Yangi to'plam"
+    },
+    "categories": {
+      "title": "Kategoriyalar",
+      "select": "Kategoriyalarni tanlang",
+      "selected": "Tanlandi: {{count}}",
+      "all": "Hammasi",
+      "search": "Kategoriya qidirish"
+    },
+    "price": {
+      "title": "Narx, so'm",
+      "from": "dan",
+      "to": "gacha"
+    },
+    "color": {
+      "title": "Rang",
+      "more": "Yana {{count}}",
+      "less": "Yashirish"
+    },
+    "sort": {
+      "title": "Saralash turini tanlang",
+      "short": "Saralash",
+      "popular": "Ommabop",
+      "price_desc": "Avval qimmat",
+      "price_asc": "Avval arzon"
+    }
+  },
+  "cart": {
+    "title": "Savat",
+    "your_cart": "Savatingizda",
+    "cart_hover": {
+      "title": "Mening savatim"
+    },
+    "products": "mahsulot bor",
+    "select_all": "Hammasini tanlash",
+    "now_allow": "Faqat kompaniya ishchilari  zakaz qila oladi. Administrator bilan quyidagi telegram orqali bog'laning.",
+    "telegram_link": "@Kansler_CustomerCare_bot",
+    "unselect_all": "Hammasini yechish",
+    "delete": "O'chirish",
+    "delete_selected": "Tanlanganlarni o'chirish",
+    "order_title": "Buyurtmangiz",
+    "items_label": "Mahsulotlar",
+    "free_delivery": "Bepul yetkazib berish",
+    "total": "Jami",
+    "delivery": "Yetkazib berish",
+    "to_free_delivery": "bepul yetkazib berishgacha",
+    "proceed_to_checkout": "Rasmiylashtirishga o'tish",
+    "all": "Hammasi",
+    "empty": "Savatingiz bo'sh. Xarid qilishni davom ettirish uchun mahsulotlarni qo'shing.",
+    "empty_title": "Savatingiz bo'sh",
+    "empty_description": "Savatingizni mahsulotlar bilan to'ldiring. Keling, xarid qilaylik!",
+    "start_shopping": "Xarid qilishni boshlash",
+    "products_count": "mahsulot",
+    "checkout": "Rasmiylashtirish",
+    "delete_items": {
+      "title": "Mahsulotlarni o'chirish",
+      "confirm": "Tanlangan mahsulotlarni savatdan o'chirishni xohlaysizmi?",
+      "yes": "Ha",
+      "no": "Yo'q"
+    },
+    "not_enough": "{{name}} hozirda omborda {{exist}} ta mavjud siz {{count}} ta zakaz qilyapsiz"
+  },
+  "footer": {
+    "address": "Toshkent shahri, Mirobod tumani,  Avliy Ota ko'chasi, 7 uy",
+    "address_building": "(BC OASIS)",
+    "quick_links": "Tezkor havolalar",
+    "faqs": "Savollar",
+    "product": "Mahsulotlar",
+    "recipes": "Retseptura",
+    "help_support": "Yordam va qo'llab-quvvatlash",
+    "privacy_terms": "Maxfiylik shartlari",
+    "privacy_policy": "Maxfiylik siyosati",
+    "security": "Maxfiylik siyosati",
+    "copyright": "Barcha huquqlar himoyalangan. © 2025 Kansler",
+    "about_company": "Kompaniya haqida",
+    "howcanorder": "Buyurtmani qanday joylashtirish kerak",
+    "directions": "Yo‘nalishlar",
+    "news": "Yangiliklar",
+    "delivery_payment": "To'lov va yetkazib berish shartlari",
+    "vacancies": "Vakansiyalar",
+    "promotions": "Aksiyalar",
+    "contacts": "Aloqa",
+    "events": "Tadbirlar",
+    "brand_style": "Korporativ uslub"
+  },
+  "lang": "uz",
+  "order": {
+    "otp": {
+      "title": "Kodni kiriting",
+      "description": "6 xonali kodni telefoningizga yuborildi",
+      "resend": "Kodni qayta yuborish",
+      "confirm": "Tasdiqlash",
+      "resend_description": "Kodni olmadingizmi?",
+      "error": "Noto'g'ri kod yoki allaqachon qo'shilgan",
+      "success": "Kod muvaffaqiyatli tasdiqlandi",
+      "resend_success": "Kod muvaffaqiyatli yuborildi."
+    },
+    "add_location": {
+      "title": "Buyurtmani qayerga yetkazish kerak?",
+      "subtitle": "Xaritada yetkazib berish manzilini tanlang",
+      "address": "Shahar, ko'cha, uy",
+      "apartment": "Bino",
+      "entrance": "Kirish",
+      "select": "Selected location",
+      "unfinished_border": "Chegara yuklanmadi:",
+      "only_allow": "Faqat Toshkent shahri ichidan tanlash mumkin.",
+      "floor": "Qavat",
+      "comment_error": "Commentda kamida 2 ta space bo‘lishi kerak",
+      "phone": "Telefon",
+      "comment": "Buyurtmani qayerga yetkazish kerak?",
+      "deliver": "Bu yerga olib keling",
+      "address_warning": "Bu yerga hali yetkazib bermayapmiz. Iltimos, boshqa manzil yoki yaqin-atrofdagi olib ketish manzilini tanlang."
+    },
+    "making": {
+      "title": "Buyurtmani rasmiylashtirish",
+      "your_cart": "Sizning savatingiz",
+      "items": "Mahsulotlar",
+      "discount": "Chegirma",
+      "vip_discount": "VIP Chegirma:",
+      "not_available": "Mavjud emas",
+      "promocode": "Promokod",
+      "min_price": "Minimal buyurtma summasi 50 000 so'm",
+      "promocode_min_price": "Minimal buyurtma summasi {{price}} so'm bo'lishi kerak",
+      "delivery": "Yetkazib berish",
+      "delivery_note": "Yetkazib berish manzilga qarab operator tomonidan aniqlanadi*",
+      "total_cost": "Umumiy narx",
+      "delivery_type": "Yetkazib berish turi",
+      "delivery_options": {
+        "delivery": "Yetkazib berish",
+        "pickup": "O'zi olib ketish"
+      },
+      "delivery_address": "Yetkazib berish manzili",
+      "enter_address": "Manzilingizni kiriting",
+      "branch_address": "Filial manzili",
+      "select_branch": "Filialni tanlang",
+      "payment_method": "To'lov usulini tanlang",
+      "add_promocode": "Promokod qo'shish",
+      "promocode_placeholder": "Promokodni kiriting",
+      "apply_promocode": "Promokodni qo'llash",
+      "order_comment": "Buyurtmaga izoh",
+      "write": "Yozing...",
+      "total": "Jami",
+      "products_count": "mahsulot",
+      "checkout": "Rasmiylashtirish",
+      "delivery_cost_note": "*Yetkazib berish narxi manzilingizga qarab o'zgarishi mumkin"
+    },
+    "detail": {
+      "retry_order": "Buyurtmani takrorlash",
+      "delivery_cost": "Yetkazib berish narxi",
+      "proceed_to_payment": "To'lovga o'tish",
+      "delivery_process": "Yetkazib berish jarayoni",
+      "products": "Mahsulotlar",
+      "quantity": "Soni",
+      "address": "Manzil",
+      "branch_location": "Filial joylashuvi",
+      "delivery_address": "Yetkazib berish manzili",
+      "order_amount": "Buyurtma summasi",
+      "thank_title": "Fikr-mulohazangiz uchun rahmat",
+      "thank_description": "Bizga yaxshilanishga yordam berish uchun vaqt ajratganingizni qadrlaymiz",
+      "items": "Mahsulotlar",
+      "discount": "Chegirma",
+      "secure_connection": "Xavfsiz bog'lanish",
+      "promocode": "Promokod",
+      "total_cost": "Umumiy narx",
+      "free_delivery": "Bepul yetkazib berish"
+    },
+    "detail_page": {
+      "review_banner_title": "Fikr-mulohazangiz uchun rahmat",
+      "review_banner_description": "Bizga yaxshilanishga yordam berish uchun vaqt ajratganingizni qadrlaymiz",
+      "status_title": "Holat",
+      "delivery_info": "Yetkazib berish haqida ma'lumot",
+      "items_title": "Buyurtmadagi tovarlar",
+      "delivery_recipient": "Qabul qiluvchi",
+      "status": {
+        "in_progress": {
+          "label": "Buyurtma jarayonda",
+          "badge": "Jarayonda"
+        },
+        "delivered": {
+          "label": "Buyurtma yetkazildi",
+          "badge": "Yetkazildi"
+        },
+        "cancelled": {
+          "label": "Buyurtma bekor qilindi",
+          "badge": "Bekor qilindi"
+        },
+        "waiting": {
+          "label": "Buyurtma to'lovni kutmoqda",
+          "badge": "To'lov kutilmoqda"
+        },
+        "assembling": {
+          "label": "Buyurtma yig'ilmoqda",
+          "badge": "Yig'ilmoqda"
+        },
+        "paid": {
+          "label": "Buyurtma to'landi",
+          "badge": "To'landi"
+        },
+        "shipping": {
+          "label": "Buyurtma yo'lda",
+          "badge": "Yo'lda"
+        }
+      },
+      "steps": {
+        "collecting": "Yig'ilmoqda",
+        "on_the_way": "Yo'lda",
+        "delivered": "Yetkazildi"
+      },
+      "stage_labels": {
+        "collecting": "Buyurtma yig'ilmoqda",
+        "on_the_way": "Buyurtma yo'lda",
+        "delivered": "Buyurtma yetkazildi"
+      },
+      "delivery_date": "{{date}} gacha",
+      "items_label": "Mahsulotlar",
+      "order_title": "Buyurtmangiz",
+      "summary": {
+        "id": "Buyurtma ID",
+        "contract": "Shartnoma raqami",
+        "items": "Mahsulotlar ({{count}}):",
+        "delivery": "Yetkazib berish:",
+        "discount": "Chegirmalar:",
+        "total": "Jami"
+      },
+      "paid_with": "To'lov usuli",
+      "paid_with_didox": "Shartnoma orqali",
+      "delivery_address": "Yetkazib berish manzili",
+      "reviews_title": "Sharhlar",
+      "rate_products": "Mahsulotlarni baholash",
+      "cancel_question": "Buyurtmani bekor qilmoqchimisiz?",
+      "cancel_action": "Buyurtmani bekor qilish"
+    },
+    "payment_success": {
+      "title": "To'lov muvaffaqiyatli amalga oshirildi",
+      "thank_you": "Xarid uchun rahmat!",
+      "operator_contact": "Buyurtmani tasdiqlash uchun operatorimiz siz bilan bog'lanadi",
+      "to_main": "Bosh sahifaga"
+    },
+    "list": {
+      "title": "Mening buyurtmalarim",
+      "tabs": {
+        "active": "Faol",
+        "completed": "Yakunlangan"
+      },
+      "empty": "Bu yerda hozircha hech narsa yo'q",
+      "products_count": "mahsulot"
+    },
+    "status": {
+      "pending": "Kutilmoqda",
+      "cancelled": "Bekor qilingan",
+      "waiting_payment": "To'lov kutilmoqda",
+      "paid": "To'langan",
+      "ready_for_delivery": "Yetkazib berishga tayyor",
+      "shipped": "Yo'lda",
+      "pick_up": "O'zi olib ketishga tayyor",
+      "delivered": "Yetkazib berilgan",
+      "completed": "Yakunlangan"
+    },
+    "address_map": {
+      "title": "Yetkazib berish manzili",
+      "save": "Saqlash",
+      "geolocation_error": "Geolokatsiyani olishda xatolik yuz berdi",
+      "browser_not_supported": "Brauzer geolokatsiyani qo'llab-quvvatlamaydi"
+    },
+    "address_select": {
+      "title": "Yetkazib berish manzili",
+      "add_address": "Manzil qo'shish",
+      "add_new_address": "Yangi manzil qo'shish"
+    },
+    "branch_select": {
+      "title": "Qulay filialni tanlang",
+      "location": "Do'kon filialining joylashuvi"
+    },
+    "promocode": {
+      "title": "Promokod",
+      "enter": "Promokodni kiriting",
+      "use": "Foydalanish",
+      "success": "Promokod muvaffaqiyatli faollashtirildi",
+      "errors": {
+        "invalid": "Noto'g'ri promokod",
+        "not_started": "Promokod hali boshlanmagan",
+        "expired": "Promokod muddati tugagan",
+        "min_amount": "Minimal buyurtma summasi {{amount}} so'm",
+        "used": "Promokod allaqachon ishlatilgan",
+        "activation": "Promokodni faollashtirish xatosi"
+      }
+    },
+    "checkout": {
+      "payment": {
+        "corporate": "Tashkilot kartasi ",
+        "transfer": "O'tkazma orqali"
+      },
+      "pay": "To'lash {{price}} so'm",
+      "title": "To'lov turi",
+      "order_title": "Buyurtma berish",
+      "get_contract": "Didox shartnoma",
+      "otp_confirm": {
+        "title": "Kodni kiriting",
+        "description": "6 xonali kodni telefoningizga yuborildi",
+        "resend": "Kodni qayta yuborish",
+        "confirm": "Tasdiqlash",
+        "resend_description": "Kodni olmadingizmi?",
+        "error": "Noto'g'ri kod",
+        "success": "Kod muvaffaqiyatli tasdiqlandi"
+      },
+      "download": "Yuklab olish TT",
+      "add_card": "Karta qo'shish",
+      "select_region": "Yetkazib berish manzili tanlang",
+      "select_user_error": "Qabul qiluvchi tanlang",
+      "orders_label": "Buyurtmalar",
+      "delivery_info": "Yetkazib berish haqida ma'lumot",
+      "delivery_location": "Yetkazib berish manzili",
+      "delivery_owner": "Qabul qiluvchi haqida ma'lumot",
+      "try_again": "Qayta urinib ko'ring",
+      "delivery_to": "Qabul qiluvchi",
+      "create_order": "Buyurtma berish",
+      "didox_agreement": "Shartnoma ko'rish",
+      "delivery_free": "Bepul",
+      "category_discount": "Kategoriya chegirmasi",
+      "product_discount": "Mahsulotlar chegirmasi",
+      "add_card_error": "Karta qo'shishda xatolik yuz berdi",
+      "didox_link": "Didox ga o'tish",
+      "card_title": "Karta raqamini kiriting",
+      "card_number": "Karta raqami",
+      "select_user": {
+        "title": "Qabul qiluvchilar",
+        "add_user": "Qabul qiluvchi qo'shish",
+        "choose": "Tanlash"
+      },
+      "card_expiration": "Karta muddati (MM/YY)",
+      "card_rules": {
+        "one": "Karta qo'shish orqali siz ",
+        "two": "Shartlarga",
+        "three": "rozilik bildirasiz",
+        "four": " "
+      },
+      "save": "Saqlash",
+      "cancel": "Bekor qilish",
+      "acception_rules": {
+        "one": "Buyurtmani rasmiylashtirish orqali siz",
+        "two": "Maxfiylik to‘g‘risidagi kelishuviga",
+        "three": "a muvofiq shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz, shuningdek",
+        "four": "Foydalanuvchi kelishuvi",
+        "five": "ni qabul qilasiz."
+      },
+      "promocode_expired": "Promokod muddati tugagan",
+      "promocode_invalid": "Promocode yaroqsiz yoki kritilmagan",
+      "order_waiting": "Buyurtma faqat to'lovni kutuvchi holatda promocode qo'llash mumkin"
+    },
+    "success_message": "Buyurtma muvaffaqiyatli rasmiylashtirildi"
+  },
+  "errors": {
+    "user not exists": "Foydalanuvchi topilmadi",
+    "invalid credentials": "Noto'g'ri telefon raqami yoki parol",
+    "wrong otp or expired": "Noto'g'ri kod yoki muddati tugagan"
+  },
+  "success": "Muvaffaqiyatli",
+  "error": "Xatolik",
+  "trusted_brands": "Bizga ishonadigan brendlar",
+  "auth.phone_update.success": "Telefon raqami muvaffaqiyatli yangilandi",
+  "auth_phone_update_error": "Telefon raqamini yangilashda xatolik yuz berdi",
+  "auth_password_update_success": "Parol muvaffaqiyatli o'zgartirildi",
+  "product_detail": {
+    "description": "Mahsulot tavsifi",
+    "read_more": "Mahsulot tavsifini o'qish",
+    "read_less": "Mahsulot tavsifini yashirish",
+    "share": "Ulashish",
+    "ask_question": "Savol berish",
+    "variant": "Variant",
+    "bought_count": "sotilgan",
+    "about_product": "Mahsulot haqida",
+    "out_of_stock_tooltip": "Mahsulot hozircha tugadi",
+    "add_to_cart": "Savatga qo'shish",
+    "out_of_stock": "Mavjud emas",
+    "faq_title": "Ko'p so'raladigan savollar",
+    "delivery_terms": "Yetkazib berish shartlari",
+    "payment_terms": "To'lov shartlari",
+    "delivery": "Yetkazib berish",
+    "warehouse_address": "Amir Temur ko'chasi 129B",
+    "warehouse_subtitle": "Kansler omboridan, Toshkent sh.",
+    "courier": "Kuryer orqali",
+    "free": "Bepul",
+    "brand": "Brend",
+    "currency": "so'm",
+    "add_cart_mobile": "Savatda"
+  }
+}

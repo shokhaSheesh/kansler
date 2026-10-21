@@ -78,7 +78,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - **Results update instantly** while typing, and the typed part is bold.
 - **Phone:** search opens full screen with the keyboard up.
 
-**Needs your approval.** The current dropdown doesn't have these:
+**Approved additions.** The current dropdown doesn't have these; approved by the client team:
 - **5 matching products** with picture, price and a **"+" to add to the cart without leaving search**. Uses the existing product search.
 - **Matching categories** (e.g. Ручки — Товары для письма › Основные принадлежности), and **category shortcuts** before typing.
 - **The number of results,** with a "see all" button.
@@ -241,7 +241,7 @@ To check with a logged-in account before designing them:
 |---|---|---|
 | 0 | Shared components | ✅ Done |
 | 1 | Header, catalog menu, footer | ✅ Done |
-| 2 | Search | ✅ Done (additions awaiting approval) |
+| 2 | Search | ✅ Done (additions approved) |
 | 3 | Home | ✅ Done |
 | 4 | Catalog and product list | ✅ Done (checked against the current site) |
 | 5 | Product page | ✅ Done (checked against the current site) |

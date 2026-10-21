@@ -1,65 +1,88 @@
-import { Toaster as ChakraToaster, Portal, Spinner, Stack, Toast, createToaster } from '@chakra-ui/react'
+import { Box, Toaster as ChakraToaster, Image, Portal, Spinner, Stack, Toast, createToaster } from '@chakra-ui/react'
 
-export const toaster = createToaster({ placement: 'top-end', pauseOnPageIdle: true, max: 3 })
+/** Bottom-centre: where the eye already is after tapping a card. 88px clears the mobile tab bar. */
+export const toaster = createToaster({
+  placement: 'bottom',
+  pauseOnPageIdle: true,
+  max: 3,
+  offsets: { top: '16px', right: '16px', bottom: '88px', left: '16px' },
+})
 
 const indicatorColor: Record<string, string> = {
-  success: 'accent.success',
-  error: 'fg.error',
-  warning: 'orange.500',
+  success: 'accent.main',
+  error: 'red.300',
+  warning: 'orange.300',
   info: 'kblue.main',
 }
 
-/** Brand toast: white card, coloured status icon, navy text and action (instead of Chakra's solid fills). */
+/** Brand snackbar: navy card, product thumbnail (meta.image) or status icon, white action button. */
 export const Toaster = () => (
   <Portal>
     <ChakraToaster toaster={toaster} insetInline={{ mdDown: '4' }}>
-      {(toast) => (
-        <Toast.Root
-          width={{ md: 'sm' }}
-          bg="bg.surface"
-          color="fg.default"
-          borderRadius="control"
-          borderWidth="1px"
-          borderColor="border.subtle"
-          boxShadow="0 12px 32px rgba(16, 24, 40, 0.14)"
-          alignItems="center"
-        >
-          {toast.type === 'loading' ? (
-            <Spinner size="sm" color="navy.900" />
-          ) : (
-            <Toast.Indicator color={indicatorColor[toast.type ?? 'info'] ?? 'fg.muted'} />
-          )}
-          <Stack gap="0.5" flex="1" minW="0">
-            {toast.title && (
-              <Toast.Title fontWeight="600" color="fg.default">
-                {toast.title}
-              </Toast.Title>
+      {(toast) => {
+        const image = (toast.meta as { image?: string } | undefined)?.image
+        return (
+          <Toast.Root
+            width={{ base: 'full', md: '440px' }}
+            bg="navy.900"
+            color="white"
+            borderRadius="control"
+            boxShadow="0 16px 40px rgba(16, 24, 40, 0.32)"
+            alignItems="center"
+            gap="3"
+            py="3"
+            ps="3"
+          >
+            {toast.type === 'loading' ? (
+              <Spinner size="sm" color="white" />
+            ) : image ? (
+              <Box pos="relative" flexShrink="0">
+                <Image src={image} alt="" boxSize="44px" bg="white" borderRadius="primary" fit="contain" p="1" />
+                <Toast.Indicator
+                  pos="absolute"
+                  bottom="-1"
+                  right="-1"
+                  boxSize="18px"
+                  bg="navy.900"
+                  borderRadius="full"
+                  color={indicatorColor[toast.type ?? 'info']}
+                />
+              </Box>
+            ) : (
+              <Toast.Indicator color={indicatorColor[toast.type ?? 'info'] ?? 'white'} />
             )}
-            {toast.description && (
-              <Toast.Description color="fg.muted" fontSize="sm" lineClamp="1">
-                {toast.description}
-              </Toast.Description>
+            <Stack gap="0.5" flex="1" minW="0">
+              {toast.title && (
+                <Toast.Title fontWeight="600" color="white">
+                  {toast.title}
+                </Toast.Title>
+              )}
+              {toast.description && (
+                <Toast.Description color="whiteAlpha.700" fontSize="sm" lineClamp="1">
+                  {toast.description}
+                </Toast.Description>
+              )}
+            </Stack>
+            {toast.action && (
+              <Toast.ActionTrigger
+                bg="white"
+                color="navy.900"
+                borderWidth="0"
+                borderRadius="primary"
+                px="3"
+                h="34px"
+                fontSize="xs"
+                fontWeight="700"
+                whiteSpace="nowrap"
+                _hover={{ bg: 'kgray.100' }}
+              >
+                {toast.action.label}
+              </Toast.ActionTrigger>
             )}
-          </Stack>
-          {toast.action && (
-            <Toast.ActionTrigger
-              bg="brand.solid"
-              color="white"
-              borderWidth="0"
-              borderRadius="primary"
-              px="3"
-              h="32px"
-              fontSize="xs"
-              fontWeight="600"
-              whiteSpace="nowrap"
-              _hover={{ bg: 'navy.hover' }}
-            >
-              {toast.action.label}
-            </Toast.ActionTrigger>
-          )}
-          {toast.closable && <Toast.CloseTrigger />}
-        </Toast.Root>
-      )}
+            {toast.closable && <Toast.CloseTrigger color="whiteAlpha.700" />}
+          </Toast.Root>
+        )
+      }}
     </ChakraToaster>
   </Portal>
 )

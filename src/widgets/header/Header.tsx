@@ -1,17 +1,19 @@
-import { Box, Button, Flex, HStack, IconButton, Image, Input, InputGroup, Link } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, IconButton, Image, Link, Text } from '@chakra-ui/react'
 import { observer } from 'mobx-react-lite'
-import { useCallback, useState, type FormEvent } from 'react'
+import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link as RouterLink, useLocation, useNavigate } from 'react-router'
+import { Link as RouterLink, useLocation, useMatch } from 'react-router'
 import { BadgePercent, FileText, FolderOpen, Heart, LayoutGrid, Package, PackageOpen, Phone, Search, ShoppingCart, User, X } from 'lucide-react'
 import logo from '@/shared/assets/logo.png'
 import { Container } from '@/shared/ui/Container'
 import { paths } from '@/app/router/paths'
 import { authStore } from '@/stores/auth.store'
-import { useCartCount } from '@/entities/cart/queries'
 import { useFavouritesCount } from '@/entities/product/queries'
 import { CatalogMenu } from './CatalogMenu'
-import { HeaderAction } from './HeaderAction'
+import { CountBadge, HeaderAction } from './HeaderAction'
+import { SearchBox } from '@/features/search/SearchBox'
+import { MobileSearch } from '@/features/search/MobileSearch'
+import { mockCart } from '@/mocks/cart.store'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { categories } from '@/mocks'
 import { useLang } from '@/shared/hooks/useLang'
@@ -19,19 +21,32 @@ import { localized } from '@/shared/lib/format'
 
 export const Header = observer(() => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
-  const [query, setQuery] = useState('')
   const [catalogOpen, setCatalogOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
   const closeCatalog = useCallback(() => setCatalogOpen(false), [])
+  const closeMobileSearch = useCallback(() => setMobileSearchOpen(false), [])
+  const onSearchOpenChange = useCallback((open: boolean) => {
+    setSearchOpen(open)
+    if (open) setCatalogOpen(false)
+  }, [])
 
-  // Close the menu whenever the route changes
+  // On /search/:query the input shows the current query
+  const searchMatch = useMatch('/search/:query')
+  const routeQuery = searchMatch?.params.query ? decodeURIComponent(searchMatch.params.query) : ''
+  const [query, setQuery] = useState(routeQuery)
+
+  // Close menus and resync the input whenever the route changes
   const { pathname } = useLocation()
   const [lastPath, setLastPath] = useState(pathname)
   if (lastPath !== pathname) {
     setLastPath(pathname)
     setCatalogOpen(false)
+    setSearchOpen(false)
+    setQuery(routeQuery)
   }
-  const { data: cart } = useCartCount()
+  // Design phase: shared mock cart. Wiring: useCartCount()
+  const cartCount = mockCart.count
   const { data: fav } = useFavouritesCount()
 
   const lang = useLang()
@@ -43,12 +58,6 @@ export const Header = observer(() => {
     })),
     { to: paths.products, icon: BadgePercent, label: t('footer.promotions') },
   ]
-
-  const onSearch = (e: FormEvent) => {
-    e.preventDefault()
-    const q = query.trim()
-    if (q) navigate(paths.search(encodeURIComponent(q)))
-  }
 
   return (
     <Box as="header" bg="bg.surface" borderBottomWidth="1px" borderColor="border.subtle" pos="sticky" top="0" zIndex="sticky">
@@ -66,31 +75,44 @@ export const Header = observer(() => {
             px="5"
             gap="2"
             aria-expanded={catalogOpen}
-            onClick={() => setCatalogOpen((o) => !o)}
+            onClick={() => {
+              setCatalogOpen((o) => !o)
+              setSearchOpen(false)
+            }}
           >
             {catalogOpen ? <X size={18} /> : <LayoutGrid size={18} />}
             {t('nav.catalog')}
           </Button>
 
-          <Box as="form" onSubmit={onSearch} flex="1" minW="0">
-            <InputGroup startElement={<Search size={18} />}>
-              <Input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={t('nav.search_placeholder')}
-                h="44px"
-                bg="bg.muted"
-                borderColor="transparent"
-                borderRadius="control"
-                _focus={{ bg: 'bg.surface', borderColor: 'navy.900' }}
-              />
-            </InputGroup>
+          <Box hideBelow="md" flex="1" minW="0" display="flex">
+            <SearchBox query={query} onQueryChange={setQuery} open={searchOpen} onOpenChange={onSearchOpenChange} />
           </Box>
+
+          {/* Mobile: looks like an input, opens the full-screen search */}
+          <Flex
+            as="button"
+            hideFrom="md"
+            flex="1"
+            minW="0"
+            h="44px"
+            px="3"
+            gap="2"
+            align="center"
+            bg="bg.muted"
+            borderRadius="control"
+            color="fg.subtle"
+            onClick={() => setMobileSearchOpen(true)}
+          >
+            <Search size={18} />
+            <Text truncate fontSize="md" color={query ? 'fg.default' : 'fg.subtle'}>
+              {query || t('nav.search_placeholder')}
+            </Text>
+          </Flex>
 
           <HStack gap="1" hideBelow="md">
             <HeaderAction to={paths.orders} icon={<Package size={22} />} label={t('nav.orders_label')} />
             <HeaderAction to={paths.favourites} icon={<Heart size={22} />} label={t('nav.favorites_label')} count={fav?.data?.count} />
-            <HeaderAction to={paths.cart} icon={<ShoppingCart size={22} />} label={t('nav.cart_label')} count={cart?.data?.count} />
+            <HeaderAction to={paths.cart} icon={<ShoppingCart size={22} />} label={t('nav.cart_label')} count={cartCount} />
             <HeaderAction
               to={authStore.isAuthorized ? paths.profile.root : paths.auth.login}
               icon={<User size={22} />}
@@ -100,7 +122,10 @@ export const Header = observer(() => {
 
           <IconButton asChild hideFrom="md" variant="ghost" aria-label={t('nav.cart_label')}>
             <RouterLink to={paths.cart}>
-              <ShoppingCart size={22} />
+              <Box pos="relative">
+                <ShoppingCart size={22} />
+                <CountBadge count={cartCount} />
+              </Box>
             </RouterLink>
           </IconButton>
         </Flex>
@@ -124,6 +149,12 @@ export const Header = observer(() => {
           </HStack>
         </Flex>
       </Container>
+
+      {searchOpen && (
+        <Box hideBelow="md" pos="absolute" top="100%" left="0" right="0" h="100dvh" bg="blackAlpha.400" onClick={() => setSearchOpen(false)} />
+      )}
+
+      {mobileSearchOpen && <MobileSearch query={query} onQueryChange={setQuery} onClose={closeMobileSearch} />}
 
       {catalogOpen && (
         <Box hideBelow="md">

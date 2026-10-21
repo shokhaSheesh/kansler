@@ -44,14 +44,14 @@ export default function CatalogPage() {
             <Accordion.ItemContent>
               <Accordion.ItemBody px="3" pt="0" pb="3">
                 <Stack gap="0" pl="14">
-                  <RouterLink to={paths.category(c.guid)}>
+                  <RouterLink to={paths.category(c.slug)}>
                     <Flex py="2.5" fontSize="sm" fontWeight="600" color="fg.default" align="center" justify="space-between">
                       {t('view_all')}
                       <ChevronRight size={16} />
                     </Flex>
                   </RouterLink>
                   {[...c.categories_data].sort(byOrder).map((l2) => (
-                    <RouterLink key={l2.guid} to={paths.category(l2.guid)}>
+                    <RouterLink key={l2.guid} to={paths.category(l2.slug)}>
                       <Flex
                         py="2.5"
                         borderTopWidth="1px"
@@ -77,7 +77,7 @@ export default function CatalogPage() {
       <Grid hideBelow="md" templateColumns={{ md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }} gap="4">
         {categories.map((c) => (
           <Stack key={c.guid} bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" p="5" gap="4">
-            <RouterLink to={paths.category(c.guid)}>
+            <RouterLink to={paths.category(c.slug)}>
               <Flex align="center" gap="3">
                 <CategoryThumb src={c.image} size="56px" />
                 <Text flex="1" fontWeight="700" fontSize="lg" color="fg.default">
@@ -99,7 +99,7 @@ export default function CatalogPage() {
                   borderRadius="full"
                   _hover={{ bg: 'navy.900', color: 'white', textDecoration: 'none' }}
                 >
-                  <RouterLink to={paths.category(l2.guid)}>{localized(l2, 'name', lang)}</RouterLink>
+                  <RouterLink to={paths.category(l2.slug)}>{localized(l2, 'name', lang)}</RouterLink>
                 </Link>
               ))}
             </Flex>

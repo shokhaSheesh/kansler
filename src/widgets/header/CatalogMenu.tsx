@@ -68,7 +68,7 @@ export const CatalogMenu = ({ categories, onClose }: { categories: Category[]; o
                 return (
                   <RouterLink
                     key={c.guid}
-                    to={paths.category(c.guid)}
+                    to={paths.category(c.slug)}
                     onMouseEnter={() => preview(c.guid)}
                     onFocus={() => setActiveId(c.guid)}
                     onClick={onClose}
@@ -118,7 +118,7 @@ export const CatalogMenu = ({ categories, onClose }: { categories: Category[]; o
                   {localized(active, 'name', lang)}
                 </Heading>
                 <Link asChild fontSize="sm" fontWeight="600" color="fg.body" _hover={{ color: 'fg.default' }}>
-                  <RouterLink to={paths.category(active.guid)} onClick={onClose}>
+                  <RouterLink to={paths.category(active.slug)} onClick={onClose}>
                     {t('view_all')}
                     <ChevronRight size={16} />
                   </RouterLink>
@@ -129,7 +129,7 @@ export const CatalogMenu = ({ categories, onClose }: { categories: Category[]; o
                 {children.map((l2) => (
                   <Box key={l2.guid} mb="6" css={{ breakInside: 'avoid' }}>
                     <Link asChild fontWeight="600" fontSize="sm" color="fg.default" _hover={{ color: 'fg.link' }}>
-                      <RouterLink to={paths.category(l2.guid)} onClick={onClose}>
+                      <RouterLink to={paths.category(l2.slug)} onClick={onClose}>
                         {localized(l2, 'name', lang)}
                       </RouterLink>
                     </Link>
@@ -143,7 +143,7 @@ export const CatalogMenu = ({ categories, onClose }: { categories: Category[]; o
                             color="fg.muted"
                             _hover={{ color: 'fg.default', textDecoration: 'none' }}
                           >
-                            <RouterLink to={paths.category(l3.guid)} onClick={onClose}>
+                            <RouterLink to={paths.category(l3.slug)} onClick={onClose}>
                               {localized(l3, 'name', lang)}
                             </RouterLink>
                           </Link>

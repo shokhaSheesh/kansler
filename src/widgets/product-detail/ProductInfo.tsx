@@ -1,8 +1,7 @@
-import { Accordion, Box, Button, Grid, Heading, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Grid, Heading, Stack, Text } from '@chakra-ui/react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { ProductDetails, VariationDetails } from '@/entities/product/types'
-import { faqs } from '@/mocks/product-details'
 import { useLang } from '@/shared/hooks/useLang'
 import { htmlToText, sanitizeHtml } from '@/shared/lib/sanitize'
 
@@ -14,10 +13,7 @@ const card = {
   p: { base: 4, md: 6 },
 } as const
 
-/** "Категория" in the attributes holds promo labels like "35 %"; the breadcrumbs already show the real category. */
-const HIDDEN_ATTRS = /^категория$/i
-
-/** О товаре · Описание товара · Часто задаваемые вопросы */
+/** О товаре · Описание товара (same blocks as the live page). Repeated attribute names are merged into one row. */
 export const ProductInfo = ({ product, variation }: { product: ProductDetails; variation: VariationDetails }) => {
   const { t } = useTranslation()
   const lang = useLang()
@@ -27,7 +23,6 @@ export const ProductInfo = ({ product, variation }: { product: ProductDetails; v
   const specs = new Map<string, string[]>()
   ;[...product.attributes]
     .sort((a, b) => a.display_order - b.display_order)
-    .filter((a) => !HIDDEN_ATTRS.test(a.name_ru))
     .forEach((a) => {
       const k = (lang === 'uz' ? a.name_uz : a.name_ru) || a.name_ru
       const v = ((lang === 'uz' ? a.value_uz : a.value_ru) || a.value_ru).trim()
@@ -47,18 +42,26 @@ export const ProductInfo = ({ product, variation }: { product: ProductDetails; v
           <Heading as="h2" fontSize="lg" fontWeight="700" mb="4">
             {t('product_detail.about_product')}
           </Heading>
-          <Grid templateColumns={{ base: '1fr', sm: 'minmax(120px, 200px) 1fr' }} columnGap="6" rowGap={{ base: 1, sm: 0 }}>
-            {[...specs].map(([k, values]) => (
-              <Box key={k} display="contents">
-                <Text fontSize="sm" color="fg.muted" py={{ sm: 2.5 }} pt={{ base: 2 }} borderTopWidth={{ sm: '1px' }} borderColor="border.subtle">
+          <Stack gap="0">
+            {[...specs].map(([k, values], i) => (
+              <Grid
+                key={k}
+                templateColumns={{ base: '1fr', sm: 'minmax(120px, 200px) 1fr' }}
+                columnGap="6"
+                rowGap="0.5"
+                py="2.5"
+                borderTopWidth={i ? '1px' : 0}
+                borderColor="border.subtle"
+              >
+                <Text fontSize="sm" color="fg.muted">
                   {k}
                 </Text>
-                <Text fontSize="sm" color="fg.default" py={{ sm: 2.5 }} pb={{ base: 2 }} borderTopWidth={{ sm: '1px' }} borderBottomWidth={{ base: '1px', sm: 0 }} borderColor="border.subtle">
+                <Text fontSize="sm" color="fg.default">
                   {values.join(', ')}
                 </Text>
-              </Box>
+              </Grid>
             ))}
-          </Grid>
+          </Stack>
         </Box>
       )}
 
@@ -87,35 +90,6 @@ export const ProductInfo = ({ product, variation }: { product: ProductDetails; v
         </Box>
       )}
 
-      {faqs.length > 0 && (
-        <Box {...card}>
-          <Heading as="h2" fontSize="lg" fontWeight="700" mb="2">
-            {t('product_detail.faq_title')}
-          </Heading>
-          <Accordion.Root collapsible variant="plain">
-            {faqs.map((f, i) => (
-              <Accordion.Item key={f.guid} value={f.guid} borderTopWidth={i ? '1px' : 0} borderColor="border.subtle">
-                <Accordion.ItemTrigger py="3" cursor="pointer" fontWeight="500" fontSize="sm">
-                  <Text flex="1" textAlign="start">
-                    {htmlToText(lang === 'uz' ? f.question_uz : f.question_ru)}
-                  </Text>
-                  <Accordion.ItemIndicator />
-                </Accordion.ItemTrigger>
-                <Accordion.ItemContent>
-                  <Accordion.ItemBody
-                    pt="0"
-                    pb="4"
-                    fontSize="sm"
-                    color="fg.muted"
-                    lineHeight="1.7"
-                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(lang === 'uz' ? f.answer_uz : f.answer_ru) }}
-                  />
-                </Accordion.ItemContent>
-              </Accordion.Item>
-            ))}
-          </Accordion.Root>
-        </Box>
-      )}
     </Stack>
   )
 }

@@ -7,7 +7,8 @@ import { Link as RouterLink, useParams, useSearchParams } from 'react-router'
 import { paths } from '@/app/router/paths'
 import { unitPrice } from '@/features/add-to-cart/useCartLine'
 import { categoryPath } from '@/mocks/catalog'
-import { mockProductDetails, mockSimilar } from '@/mocks/product-details'
+import { shelves } from '@/mocks'
+import { mockProductDetails } from '@/mocks/product-details'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
@@ -18,7 +19,8 @@ import { ProductInfo } from '@/widgets/product-detail/ProductInfo'
 import { ProductPhotos } from '@/widgets/product-detail/ProductPhotos'
 
 /**
- * /products/:id — photos left, sticky buy box right, details below, similar products.
+ * /products/:id — same content as the live product page, re-laid out: photos left, sticky buy box right,
+ * details below, "Рекомендуем".
  * Phone: photos → buy box → details, plus a sticky price + "add" bar above the tab bar.
  * Selected variant is kept in ?v= so a link opens the exact variant.
  * Ref: Faire / Instacart product pages.
@@ -31,11 +33,6 @@ const ProductPage = observer(() => {
 
   // Design phase: mock. Wiring: useProduct(id) -> productApi.single({ id })
   const { data: product, isPending } = useQuery({ queryKey: ['PRODUCT_DETAILS', id], queryFn: () => mockProductDetails(id) })
-  const { data: similar = [] } = useQuery({
-    queryKey: ['PRODUCT_SIMILAR', id],
-    queryFn: () => mockSimilar(product!),
-    enabled: Boolean(product),
-  })
 
   if (isPending) {
     return (
@@ -69,7 +66,7 @@ const ProductPage = observer(() => {
   const discount = variation.discount_percent ?? 0
   const crumbs = [
     { label: t('favourites.breadcrumb.home'), to: paths.home },
-    ...categoryPath(product.categories_id).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.guid) })),
+    ...categoryPath(product.categories_id).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.slug) })),
     { label: localized(product, 'name', lang) },
   ]
 
@@ -117,7 +114,8 @@ const ProductPage = observer(() => {
         </Box>
       </Grid>
 
-      <ProductShelf title={t('products.similar')} products={similar} to={paths.category(product.categories_id)} />
+      {/* Live shows "Рекомендуем" under the product (wiring: useRecommendations) */}
+      <ProductShelf title={t('recommended_products')} products={shelves.recommended} to={paths.products} />
 
       {/* Phone: price + add, always in reach (sits above the tab bar) */}
       <Flex

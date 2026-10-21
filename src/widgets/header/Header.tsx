@@ -51,7 +51,7 @@ export const Header = observer(() => {
   const lang = useLang()
   const shortcuts = [
     ...categories.slice(0, 3).map((c, i) => ({
-      to: paths.category(c.guid),
+      to: paths.category(c.slug),
       icon: [FileText, PackageOpen, FolderOpen][i],
       label: localized(c, 'name', lang),
     })),

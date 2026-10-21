@@ -9,7 +9,7 @@ import { FilterPanel } from '@/features/product-filters/FilterPanel'
 import { MobileFilters } from '@/features/product-filters/MobileFilters'
 import { activeFilterCount, useListParams } from '@/features/product-filters/params'
 import { useProductList } from '@/features/product-filters/queries'
-import { byId } from '@/mocks/catalog'
+import { byId, bySlug } from '@/mocks/catalog'
 import { topCategories, type ProductSort } from '@/mocks/products'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
@@ -36,7 +36,8 @@ export default function ProductsPage() {
   const { t } = useTranslation()
   const lang = useLang()
   const { id } = useParams()
-  const hit = id ? byId.get(id) : undefined
+  // Live URLs use the slug; accept a guid too for old links
+  const hit = id ? (bySlug.get(id) ?? byId.get(id)) : undefined
   const category = hit?.category
   const path = hit?.path ?? []
   const isAll = !id
@@ -53,7 +54,7 @@ export default function ProductsPage() {
   }
 
   const { data, isPending, isPlaceholderData } = useProductList({
-    categoryId: id ?? null,
+    categoryId: category?.guid ?? null,
     ...filters,
     categoryIds: isAll ? filters.categoryIds : [],
     sort,
@@ -73,7 +74,7 @@ export default function ProductsPage() {
   const title = category ? localized(category, 'name', lang) : t('products.title')
   const crumbs = [
     { label: t('favourites.breadcrumb.home'), to: paths.home },
-    ...(isAll ? [] : path.slice(0, -1).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.guid) }))),
+    ...(isAll ? [] : path.slice(0, -1).map((c) => ({ label: localized(c, 'name', lang), to: paths.category(c.slug) }))),
     { label: title },
   ]
 
@@ -120,8 +121,8 @@ export default function ProductsPage() {
       {navSorted.length > 0 && (
         <Flex gap="2" overflowX="auto" mx={{ base: -4, md: 0 }} px={{ base: 4, md: 0 }} wrap={{ base: 'nowrap', md: 'wrap' }} css={{ scrollbarWidth: 'none' }}>
           {navSorted.map((c) => (
-            <Button key={c.guid} asChild {...chip(c.guid === id)}>
-              <RouterLink to={paths.category(c.guid)}>{localized(c, 'name', lang)}</RouterLink>
+            <Button key={c.guid} asChild {...chip(c.guid === category?.guid)}>
+              <RouterLink to={paths.category(c.slug)}>{localized(c, 'name', lang)}</RouterLink>
             </Button>
           ))}
         </Flex>

@@ -57,7 +57,7 @@ export const useSearchPanel = (query: string, actions: SearchActions) => {
       state = { kind: 'empty', history, popular, categories }
       history.forEach((h) => items.push({ key: `h:${h}`, run: () => actions.search(h) }))
       popular.forEach((p) => items.push({ key: `p:${p}`, run: () => actions.search(p) }))
-      categories.forEach((c) => items.push({ key: `c:${c.guid}`, run: () => actions.open(paths.category(c.guid)) }))
+      categories.forEach((c) => items.push({ key: `c:${c.guid}`, run: () => actions.open(paths.category(c.slug)) }))
     } else if (!preview.data) {
       state = { kind: 'loading' }
     } else if (preview.data.count === 0 && preview.data.categories.length === 0) {
@@ -68,7 +68,7 @@ export const useSearchPanel = (query: string, actions: SearchActions) => {
       state = { kind: 'results', query: debounced, ...d }
       d.suggestions.forEach((s) => items.push({ key: `s:${s}`, run: () => actions.search(s) }))
       d.categories.forEach((h) =>
-        items.push({ key: `c:${h.category.guid}`, run: () => actions.open(paths.category(h.category.guid)) }),
+        items.push({ key: `c:${h.category.guid}`, run: () => actions.open(paths.category(h.category.slug)) }),
       )
       d.products.forEach((p) => items.push({ key: `pr:${p.guid}`, run: () => actions.open(paths.product(p.guid)) }))
       items.push({ key: 'all', run: () => actions.search(debounced) })

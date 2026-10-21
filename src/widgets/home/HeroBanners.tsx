@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css/pagination'
 import { paths } from '@/app/router/paths'
+import { slugOf } from '@/mocks/catalog'
 import { useLang } from '@/shared/hooks/useLang'
 import type { Banner } from '@/entities/main-page/types'
 
@@ -46,7 +47,7 @@ export const HeroBanners = ({ banners }: { banners: Banner[] }) => {
           )
           return (
             <SwiperSlide key={b.guid}>
-              {b.categories_id ? <RouterLink to={paths.category(b.categories_id)}>{img}</RouterLink> : img}
+              {b.categories_id ? <RouterLink to={paths.category(slugOf(b.categories_id))}>{img}</RouterLink> : img}
             </SwiperSlide>
           )
         })}

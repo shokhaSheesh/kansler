@@ -31,13 +31,6 @@ export const mockProductDetails = async (id: string): Promise<ProductDetails | n
   return p ? fromListItem(p) : null
 }
 
-/** "Похожие товары": same category first, then same top-level category. */
-export const mockSimilar = async (product: ProductDetails, limit = 12): Promise<Product[]> => {
-  const catalog = await loadCatalog()
-  const same = catalog.filter((p) => p.guid !== product.guid && p.category_id === product.categories_id)
-  return same.slice(0, limit)
-}
-
 export interface Faq {
   guid: string
   question_ru: string

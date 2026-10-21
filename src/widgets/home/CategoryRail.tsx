@@ -12,7 +12,7 @@ export const CategoryRail = ({ categories }: { categories: Category[] }) => {
   return (
     <ScrollRow itemWidth={{ base: 124, md: 184 }}>
       {categories.map((c) => (
-        <RouterLink key={c.guid} to={paths.category(c.guid)} draggable={false}>
+        <RouterLink key={c.guid} to={paths.category(c.slug)} draggable={false}>
           <Box
             role="group"
             pos="relative"

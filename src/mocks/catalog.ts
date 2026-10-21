@@ -45,4 +45,7 @@ const walk = (list: Category[], parents: Category[]) =>
 walk(categories, [])
 export const byId = new Map(flat.map((h) => [h.category.guid, h]))
 export const categoryPath = (id: string) => byId.get(id)?.path ?? []
+/** Live category URLs use the slug: /categories/ofis-qogozi */
+export const bySlug = new Map(flat.map((h) => [h.category.slug, h]))
+export const slugOf = (id: string) => byId.get(id)?.category.slug ?? id
 

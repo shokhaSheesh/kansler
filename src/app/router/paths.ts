@@ -7,7 +7,8 @@ export const paths = {
   root: '/',
   home: '/home',
   catalog: '/categories',
-  category: (id = ':id') => `/categories/${id}`,
+  /** Uses the category slug, like the live site (/categories/ofis-qogozi). */
+  category: (slug = ':id') => `/categories/${slug}`,
   products: '/products',
   product: (id = ':id') => `/products/${id}`,
   search: (query = ':query') => `/search/${query}`,

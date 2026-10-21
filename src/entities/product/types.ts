@@ -79,6 +79,8 @@ export interface ProductDetails extends Omit<Product, 'variations'> {
   categories_id: string
   category: Localized<'name'> & { guid: string }
   attributes: ProductAttribute[]
+  /** Shown in the live "Бренд" card */
+  brand?: (Localized<'name'> & Localized<'value'>) | null
   delivery_cost: number
   free_delivery_min_sum: number
   variations: VariationDetails[]

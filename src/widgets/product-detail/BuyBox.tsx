@@ -1,5 +1,5 @@
 import { Badge, Box, Button, Flex, Grid, HStack, IconButton, Image, Link, Stack, Text } from '@chakra-ui/react'
-import { Check, MessageCircle, Package, Share2, ShoppingCart } from 'lucide-react'
+import { Check, ChevronRight, MessageCircle, Package, Share2, ShoppingCart, Tag, Truck } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -8,13 +8,16 @@ import { paths } from '@/app/router/paths'
 import { unitPrice, useCartLine } from '@/features/add-to-cart/useCartLine'
 import type { ProductDetails, VariationDetails } from '@/entities/product/types'
 import { FavouriteButton } from '@/entities/product/ui/FavouriteButton'
-import { contacts } from '@/mocks'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice, localized } from '@/shared/lib/format'
+import { InfoRow } from '@/shared/ui/InfoRow'
 import { Price } from '@/shared/ui/Price'
-import { DeliveryPayment } from './DeliveryPayment'
 import { QuantityStepper } from '@/shared/ui/QuantityStepper'
 import { toaster } from '@/shared/ui/toaster'
+
+const ASK_URL = 'https://t.me/Kansler_CustomerCare_bot'
+
+const card = { p: '4', bg: 'bg.surface', borderRadius: 'card', borderWidth: '1px', borderColor: 'border.subtle' } as const
 
 interface BuyBoxProps {
   product: ProductDetails
@@ -31,7 +34,7 @@ export const CartActions = observer(({ variation, name, compact }: { variation: 
 
   if (variation.in_stock <= 0) {
     return (
-      <Button h={h} w="full" disabled variant="subtle" borderRadius="control" title={t('product_detail.out_of_stock_tooltip')}>
+      <Button h={h} w="full" disabled variant="subtle" borderRadius="control">
         {t('product_detail.out_of_stock')}
       </Button>
     )
@@ -67,7 +70,7 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
   const lang = useLang()
   const name = localized(variation, 'name', lang) || localized(product, 'name', lang)
   const discount = variation.discount_percent ?? 0
-  const brand = product.attributes.find((a) => /бренд|brand/i.test(a.name_ru))
+  const brand = product.brand ? localized(product.brand, 'value', lang) : ''
 
   const share = async () => {
     const url = window.location.href
@@ -85,11 +88,6 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
   return (
     <Stack gap="5">
       <Stack gap="2">
-        {brand && (
-          <Text fontSize="sm" color="fg.muted">
-            {t('product_detail.brand')}: {localized(brand, 'value', lang)}
-          </Text>
-        )}
         <Flex gap="2" align="flex-start">
           <Text as="h1" flex="1" fontSize={{ base: 'xl', md: '2xl' }} fontWeight="700" color="fg.default" lineHeight="1.25">
             {name}
@@ -101,15 +99,10 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
             <FavouriteButton product={product} variant="plain" />
           </HStack>
         </Flex>
-        {(variation.sku_code || (product.sold_count ?? 0) > 0) && (
-          <HStack gap="3" color="fg.muted" fontSize="sm" wrap="wrap">
-            {variation.sku_code && <Text>SKU {variation.sku_code}</Text>}
-            {(product.sold_count ?? 0) > 0 && (
-              <Text>
-                {product.sold_count} {t('product_detail.bought_count')}
-              </Text>
-            )}
-          </HStack>
+        {(product.sold_count ?? 0) > 0 && (
+          <Text color="fg.muted" fontSize="sm">
+            {product.sold_count} {t('product_detail.bought_count')}
+          </Text>
         )}
       </Stack>
 
@@ -176,14 +169,51 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
         <CartActions variation={variation} name={name} />
       </Box>
 
-      {contacts.telegram && (
-        <Link href={contacts.telegram} target="_blank" rel="noreferrer" fontSize="sm" color="fg.link" gap="2" w="fit-content">
-          <MessageCircle size={16} />
-          {t('product_detail.ask_question')}
-        </Link>
-      )}
+      {/* Live: links to Telegram support bot */}
+      <Link href={ASK_URL} target="_blank" rel="noreferrer" fontSize="sm" color="fg.link" gap="2" w="fit-content">
+        <MessageCircle size={16} />
+        {t('product_detail.ask_question')}
+      </Link>
 
-      <DeliveryPayment product={product} />
+      {/* Live: "Часто задаваемые вопросы" with two links to the info page */}
+      <Stack {...card} gap="1">
+        <Text fontWeight="600" fontSize="sm" mb="1">
+          {t('product_detail.faq_title')}
+        </Text>
+        {(['delivery_terms', 'payment_terms'] as const).map((k) => (
+          <Link key={k} asChild fontSize="sm" color="fg.body" justifyContent="space-between" py="1.5" _hover={{ color: 'fg.default' }}>
+            <RouterLink to={paths.profile.info} target="_blank">
+              {t(`product_detail.${k}`)}
+              <ChevronRight size={16} />
+            </RouterLink>
+          </Link>
+        ))}
+      </Stack>
+
+      {/* Live "Доставка" card: courier, free. (The live page also shows the buyer's selected address when logged in.) */}
+      <Stack {...card} gap="3">
+        <Text fontWeight="600" fontSize="sm">
+          {t('product_detail.delivery')}
+        </Text>
+        <InfoRow
+          icon={<Truck size={18} />}
+          title={
+            <Flex justify="space-between" gap="2">
+              <span>{t('product_detail.courier')}</span>
+              <span>{t('product_detail.free')}</span>
+            </Flex>
+          }
+        />
+      </Stack>
+
+      {brand && (
+        <Stack {...card} gap="3">
+          <Text fontWeight="600" fontSize="sm">
+            {t('product_detail.brand')}
+          </Text>
+          <InfoRow icon={<Tag size={18} />} title={brand} />
+        </Stack>
+      )}
     </Stack>
   )
 })

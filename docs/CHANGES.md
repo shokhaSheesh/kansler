@@ -7,7 +7,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
 - All texts in Russian and Uzbek: copied from the current site. The few new texts are listed below.
 - Business logic, backend and API: unchanged. Nothing was added that the backend doesn't support.
-- Page addresses (URLs): unchanged.
+- Page addresses (URLs): unchanged. Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
 
 **What changes:** layout, visual design, interaction and mobile experience.
 
@@ -160,33 +160,29 @@ Applies to category pages (`/categories/…`) and the all-products page (`/produ
 
 ## 9. Product page
 
-**Layout**
-- **Computer:** photos on the left; the **buy box stays visible on the right** while you scroll down through the details.
-- **Phone:** photos, then the buy box, then the details. A **price + "Добавить в корзину" bar stays pinned** above the bottom tab bar.
+**Same content as the current product page:**
+- Photos and variant thumbnails.
+- Name, price, "Добавить в корзину" and ♡; "Поделиться"; "Задать вопрос" (opens the @Kansler_CustomerCare_bot Telegram bot).
+- **Часто задаваемые вопросы,** with the links "Условия доставки" and "Условия оплаты" to the info page.
+- The **Доставка** card ("Курьером — Бесплатно"), and the **Бренд** card when the product has a brand.
+- **О товаре** (characteristics), **Описание товара** with show more / less, and the **Рекомендуем** row below.
 
-**Photos**
-- **Computer:** a row of thumbnails, plus arrows when you hover over the photo.
-- **Phone:** swipe, with dots showing the position.
-- **Variants:** choosing a different variant shows that variant's photos.
+Nothing was added to the content. What changed is the layout and interaction:
 
-**Buy box**
-- **Name, share and favourite.** **Поделиться** opens the phone's share menu, or copies the link on a computer ("Адрес товара сохранен успешно").
-- **SKU code** when the product has one.
-- **Price,** with the old price crossed out and a −% badge; the unit ("/ шт."); and "N шт в коробке" when the product has a box quantity.
-- **Variant picker ("Вариант 2 / 3"):** each variant shows its photo and price. The chosen variant is kept in the page address, so a shared link opens exactly that variant.
-- **Choose the quantity first, then "Добавить в корзину".** Business buyers often order 10 or 50 at once. After adding, it shows the quantity control plus a **"В корзине"** button that opens the cart.
-- **"Задать вопрос":** opens the Kansler Telegram support chat.
+| Before | After |
+|---|---|
+| Photos, details and the price block side by side in three columns | Photos on the left; the **price block stays visible on the right** while you scroll the details. On phones: photos, price block, details. |
+| On phones the add button scrolls away | A **price + "Добавить в корзину" bar stays pinned** above the bottom tab bar |
+| Small variant thumbnails | Larger variant tiles with **each variant's price**. The chosen variant is kept in the page address, so a shared link opens that exact variant. |
+| One add button | **Choose the quantity first** (business buyers often order 10–50 at once), then add. After adding: the quantity control plus **"В корзине"**, which opens the cart. |
+| Characteristics repeated per value ("Грамаж 240 / Грамаж 280 / …") | Repeated characteristics merged into one row: "Грамаж: 240, 280, 380 г/кв.м" |
+| "купили" shown even when there is no number | Shown only when the product has a sales number |
+| — | Breadcrumbs show the product's category (Главная › Хоз товары › Газовая зажигалка) |
+| "Поделиться" | On phones it opens the phone's share menu; on computers it copies the link ("Адрес товара сохранен успешно") |
 
-**Delivery and payment** (from the product data and the existing texts)
-- **Delivery by courier:** the fee is shown, plus a **progress bar to free delivery**, e.g. "120 000 сум до бесплатной доставки". It's worked out from what's already in the cart, and turns green with "Бесплатная доставка" once the order passes 500 000 сум.
-- Warehouse address, and the note that delivery cost can change with the address.
-- **Payment options:** Корпоративная карта, Перечисление.
-
-**Details below**
-- **О товаре:** a clean table of characteristics. Repeated values are merged, e.g. "Грамаж: 240, 280, 380 г/кв.м".
-- **Описание товара:** long descriptions are shortened, with "Читать подробное описание" to expand.
-- **Часто задаваемые вопросы:** the existing FAQ, as expandable questions.
-- **Похожие товары:** a swipeable row of products from the same category.
+To confirm with the client:
+- The product data includes a **delivery cost of 25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the current product page always shows "Курьером — Бесплатно". We kept the current behaviour. If the 25 000 / 500 000 rule is real, the page could show it, with a progress bar to free delivery.
+- When a buyer is logged in, the current Доставка card also shows their selected delivery address. That will be designed together with addresses (step 11).
 
 ## 10. Favourites
 
@@ -236,7 +232,7 @@ For the Kansler content team. These affect any design, old or new.
 - **Some discount prices have kopecks** (e.g. 1 764,97 сум). The new design rounds them, but the data should be whole sums.
 - **Colours are free text.** Values like "5 цветов" or "Plastic World" can't show a colour dot. A short fixed list of colours would make the colour filter cleaner.
 - **Variants of a product can't be told apart by name.** All variants share one name, and characteristics like size or density are listed for the whole product, not linked to a variant. For example, a canvas has "Грамаж: 240 / 280 / 380 г/кв.м", but nothing says which of its 3 variants is which. The new design tells variants apart by photo and price. Linking characteristics to each variant would let the picker say "380 г/кв.м" directly.
-- **The "Категория" characteristic holds promo labels** like "35 %". It's hidden on the product page, because the breadcrumbs already show the category.
+- **The "Категория" characteristic sometimes holds promo labels** like "35 %" instead of a real category. It's shown as is, like on the current site.
 - **Many Uzbek descriptions are empty.** The Russian description is shown instead.
 - **Some names are all capitals or end with extra spaces** ("УТЕНОК", "Ручка Deli ").
 

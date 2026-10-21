@@ -10,7 +10,8 @@ export interface Variation extends Localized<'name'> {
   in_stock: number
   cart_quantity: number
   image: string[]
-  color: string | null
+  /** Free-text colour name from /content/colors/list ("Синий", "Ассорти", "5 цветов"…), no hex. */
+  color: Localized<'name'> | null
   sku_code: string | null
   unit: string // "шт.", "пачка" ...
   is_active: boolean

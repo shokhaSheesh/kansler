@@ -56,7 +56,7 @@ export const Header = observer(() => {
       icon: [FileText, PackageOpen, FolderOpen][i],
       label: localized(c, 'name', lang),
     })),
-    { to: paths.products, icon: BadgePercent, label: t('footer.promotions') },
+    { to: `${paths.products}?type=super_discount`, icon: BadgePercent, label: t('footer.promotions') },
   ]
 
   return (

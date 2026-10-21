@@ -830,7 +830,8 @@
       "popular": "Ommabop",
       "price_desc": "Avval qimmat",
       "price_asc": "Avval arzon"
-    }
+    },
+    "clear_all": "Hammasini tozalash"
   },
   "cart": {
     "title": "Savat",

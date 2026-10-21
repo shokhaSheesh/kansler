@@ -130,3 +130,19 @@ Shared pieces every page uses. Designed first so later pages compose from them.
 **Now:** FAQ, help-center sections (my order, returns, delivery, payment, products, security, support), branch contacts with map link, terms of use, privacy policy.
 **Redesign:** a topic list plus an accordion FAQ, and contacts as cards.
 **Mobbin:** [Slack: FAQ accordion](https://mobbin.com/screens/82fbb1d6-09d3-442d-badb-6309271b7549) · [Airtasker: FAQ](https://mobbin.com/screens/757cbfd3-4573-4261-8681-f8fbfa25c583)
+
+## Notes for the wiring phase (found while designing)
+
+### Product list (step 4)
+- **Faceted counts.** The redesign shows per-option counts that apply all *other* active filters, and disables options with 0 results. The backend needs to return these counts (categories, colours, price range) for the current filter set, or the UI falls back to plain lists without counts.
+- **Matching variant first.** When a colour filter is active, cards show `variations[0]`. The API should put the matching variation first (the mock does this).
+- **"Самые продаваемые" / "Хит продаж".** `sold_count` is `0` / `null` for every product in the live data, so these types can't work truthfully yet. The mock flags a pseudo-random subset for design review.
+- **Colours are free text.** `/content/colors/list` returns names only ("Синий", "Ассорти", "5 цветов", "Plastic World"). Swatches are drawn from a name→colour map (`features/product-filters/colorSwatch.ts`); unknown names show without a swatch.
+
+### Content issues to raise with the client
+- Promo items are filed in pseudo-categories, e.g. *Офисная мебель › Мебель › 35 %* (a Deli marker) and *Готовые наборы › Базовый* (a Luxor pen). They then appear under the wrong categories in any design.
+- Discount prices can be fractional (e.g. `1764.97`). The UI rounds them, but the data should be whole sums.
+- Some product names are all caps or carry trailing spaces ("УТЕНОК", "Ручка Deli "). The UI tidies the popular-search chips only.
+
+### Search (step 2)
+- Worth raising with the backend team (new backend work, not built): typo tolerance ("ручкп" → "ручка"), and wrong keyboard layout ("hexrf" → "ручка").

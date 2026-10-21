@@ -19,7 +19,7 @@ export default function HomePage() {
       </Stack>
       <ProductShelf title={t('new_collection')} to={paths.products} products={shelves.newCollection} />
       <ProductShelf title={t('recommended_products')} to={paths.products} products={shelves.recommended} />
-      <ProductShelf title={t('discounted')} to={paths.products} products={shelves.discounted} />
+      <ProductShelf title={t('discounted')} to={`${paths.products}?type=super_discount`} products={shelves.discounted} />
       <PartnersStrip partners={partners} />
       <TelegramButton href={contacts.telegram} />
     </Stack>

@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/react'
-import { SearchX } from 'lucide-react'
+import { Flex, Heading, Stack, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { paths } from '@/app/router/paths'
 import { topCategories } from '@/mocks/products'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { ProductListView } from '@/widgets/product-list/ProductListView'
 
 /** /search/:query — like live: title, count, the same filter sidebar (Категории · Цена · Цвет), price toggle, products. */
@@ -33,16 +33,7 @@ export default function SearchPage() {
           </Flex>
         </Stack>
       )}
-      empty={
-        <Flex direction="column" align="center" textAlign="center" gap="3" py="16" bg="bg.surface" borderRadius="card">
-          <Box boxSize="64px" display="flex" alignItems="center" justifyContent="center" borderRadius="full" bg="bg.muted" color="fg.muted">
-            <SearchX size={30} />
-          </Box>
-          <Text fontWeight="700" fontSize="lg" color="fg.default">
-            {t('products.not_found')}
-          </Text>
-        </Flex>
-      }
+      empty={<EmptyState title={t('products.not_found')} />}
     />
   )
 }

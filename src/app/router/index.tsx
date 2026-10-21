@@ -76,7 +76,8 @@ const routes: RouteObject[] = [
         element: <RequireAuth />,
         children: [
           { path: paths.favourites, element: page(P.Favourites) },
-          { path: paths.checkout, element: page(P.Checkout) },
+          { path: paths.checkout(), element: page(P.Checkout) },
+          { path: '/checkout', element: <Navigate to={paths.cart} replace /> },
           // Order details and the map are full pages under /profile (outside the profile side nav), like live
           { path: paths.order(), element: page(P.Order) },
           { path: paths.map, element: page(P.Map) },

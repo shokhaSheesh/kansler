@@ -1,15 +1,16 @@
 import { Box, Button, Checkbox, Flex, Grid, Heading, Separator, Stack, Text } from '@chakra-ui/react'
-import { ShoppingCart } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link as RouterLink } from 'react-router'
+import { Link as RouterLink, useNavigate } from 'react-router'
 import { paths } from '@/app/router/paths'
 import { shelves } from '@/mocks'
 import { mockCart } from '@/mocks/cart.store'
+import { mockCheckout } from '@/mocks/checkout.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { CartLineItem } from '@/widgets/cart/CartLineItem'
 import { CartSummary } from '@/widgets/cart/CartSummary'
 import { ProductShelf } from '@/widgets/home/ProductShelf'
@@ -36,6 +37,12 @@ const CartPage = observer(() => {
       else n.add(id)
       return n
     })
+  // Live: "Перейти к оформлению" creates the order from the selected lines, then opens /checkout/:orderId
+  const navigate = useNavigate()
+  const checkout = () => {
+    if (!selected.length) return
+    navigate(paths.checkout(mockCheckout.start(selected)))
+  }
   const toggleAll = () => setUnselected(allOn ? new Set(lines.map((l) => l.variation.guid)) : new Set())
 
   return (
@@ -55,20 +62,15 @@ const CartPage = observer(() => {
       </Stack>
 
       {lines.length === 0 ? (
-        <Flex direction="column" align="center" textAlign="center" gap="2" py={{ base: 12, md: 16 }} px="6" bg="bg.surface" borderRadius="modal">
-          <Flex boxSize="80px" align="center" justify="center" borderRadius="full" bg="bg.muted" mb="4">
-            <ShoppingCart size={32} />
-          </Flex>
-          <Text fontSize="lg" fontWeight="600" color="fg.default">
-            {t('cart.empty_title')}
-          </Text>
-          <Text fontSize="sm" color="fg.muted" maxW="360px" mb="4">
-            {t('cart.empty_description')}
-          </Text>
-          <Button asChild colorPalette="brand" borderRadius="control" h="48px" px="6">
-            <RouterLink to={paths.home}>{t('cart.start_shopping')}</RouterLink>
-          </Button>
-        </Flex>
+        <EmptyState
+          title={t('cart.empty_title')}
+          description={t('cart.empty_description')}
+          action={
+            <Button asChild colorPalette="brand" borderRadius="control" h="48px" px="6">
+              <RouterLink to={paths.home}>{t('cart.start_shopping')}</RouterLink>
+            </Button>
+          }
+        />
       ) : (
         <Grid templateColumns={{ base: 'minmax(0, 1fr)', lg: 'minmax(0, 1fr) 380px' }} gap="6" alignItems="start">
           <Box bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle" px={{ base: 4, md: 6 }} py="2">
@@ -94,7 +96,7 @@ const CartPage = observer(() => {
           </Box>
 
           <Box pos={{ lg: 'sticky' }} top={{ lg: '128px' }}>
-            <CartSummary count={selected.length} total={total} freeFrom={mockCart.delivery.free_from} />
+            <CartSummary count={selected.length} total={total} freeFrom={mockCart.delivery.free_from} onCheckout={checkout} />
           </Box>
         </Grid>
       )}
@@ -112,8 +114,8 @@ const CartPage = observer(() => {
               {formatPrice(total, lang)}
             </Text>
           </Box>
-          <Button asChild flex="1" h="48px" colorPalette="brand" borderRadius="control" pointerEvents={selected.length ? undefined : 'none'} opacity={selected.length ? 1 : 0.5}>
-            <RouterLink to={paths.checkout}>{t('cart.proceed_to_checkout')}</RouterLink>
+          <Button flex="1" h="48px" colorPalette="brand" borderRadius="control" disabled={!selected.length} onClick={checkout}>
+            {t('cart.proceed_to_checkout')}
           </Button>
         </Flex>
       )}

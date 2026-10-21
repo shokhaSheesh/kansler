@@ -14,7 +14,8 @@ export const paths = {
   search: (query = ':query') => `/search/${query}`,
   favourites: '/favourites',
   cart: '/cart',
-  checkout: '/checkout',
+  /** Live: the cart creates the order, then opens /checkout/:orderId */
+  checkout: (orderId = ':id') => `/checkout/${orderId}`,
   /** Live URLs: orders, notifications and the address map live under /profile */
   orders: '/profile/orders',
   order: (id = ':id') => `/profile/orders/${id}`,

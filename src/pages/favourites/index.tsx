@@ -1,5 +1,4 @@
 import { Button, Flex, Heading, Stack, Text } from '@chakra-ui/react'
-import { Heart } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -10,6 +9,7 @@ import { shelves } from '@/mocks'
 import { mockFavourites } from '@/mocks/favourites.store'
 import { topCategories } from '@/mocks/products'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { ProductShelf } from '@/widgets/home/ProductShelf'
 import { ProductListView } from '@/widgets/product-list/ProductListView'
 
@@ -24,20 +24,15 @@ const FavouritesPage = observer(() => {
   const crumbs = <Breadcrumbs items={[{ label: t('favourites.breadcrumb.home'), to: paths.home }, { label: t('favourites.title') }]} />
 
   const empty = (
-    <Flex direction="column" align="center" textAlign="center" gap="3" py={{ base: 12, md: 16 }} px="6" bg="bg.surface" borderRadius="card" borderWidth="1px" borderColor="border.subtle">
-      <Flex boxSize="72px" align="center" justify="center" borderRadius="full" bg="primary.50" color="primary.main">
-        <Heart size={32} />
-      </Flex>
-      <Text fontWeight="700" fontSize="xl" color="fg.default">
-        {t('favourites.empty.title')}
-      </Text>
-      <Text color="fg.muted" maxW="320px">
-        {t('favourites.empty.description')}
-      </Text>
-      <Button asChild colorPalette="brand" borderRadius="control" h="48px" px="8" mt="2">
-        <RouterLink to={paths.home}>{t('favourites.empty.start_shopping')}</RouterLink>
-      </Button>
-    </Flex>
+    <EmptyState
+      title={t('favourites.empty.title')}
+      description={t('favourites.empty.description')}
+      action={
+        <Button asChild colorPalette="brand" borderRadius="control" h="48px" px="8">
+          <RouterLink to={paths.home}>{t('favourites.empty.start_shopping')}</RouterLink>
+        </Button>
+      }
+    />
   )
 
   return (

@@ -1,11 +1,12 @@
 import { Badge, Box, Button, Flex, Grid, Highlight, IconButton, Image, Skeleton, Stack, Text } from '@chakra-ui/react'
-import { ArrowRight, ArrowUpLeft, Clock, Folder, Search, SearchX, TrendingUp, X } from 'lucide-react'
+import { ArrowRight, ArrowUpLeft, Clock, Folder, Search, TrendingUp, X } from 'lucide-react'
 import { createContext, useContext, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AddToCartControl } from '@/features/add-to-cart/AddToCartControl'
 import type { Product } from '@/entities/product/types'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { Price } from '@/shared/ui/Price'
 import { searchHistory } from '@/stores/search-history.store'
 import type { NavItem, PanelState, SearchActions } from './model'
@@ -248,17 +249,7 @@ const PanelBody = ({ state, items, active, onHover, actions, variant }: SearchPa
   if (state.kind === 'none') {
     return (
       <Stack gap="6" p={mobile ? 0 : 5}>
-        <Flex direction="column" align="center" textAlign="center" gap="3" py="6">
-          <Flex boxSize="56px" align="center" justify="center" borderRadius="full" bg="bg.muted" color="fg.muted">
-            <SearchX size={26} />
-          </Flex>
-          <Text fontWeight="600" color="fg.default">
-            {t('products.not_found')}
-          </Text>
-          <Text fontSize="sm" color="fg.muted">
-            «{state.query}»
-          </Text>
-        </Flex>
+        <EmptyState size="sm" title={t('products.not_found')} description={`«${state.query}»`} />
         <PopularChips popular={state.popular} />
       </Stack>
     )

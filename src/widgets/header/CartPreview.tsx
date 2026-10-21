@@ -1,11 +1,11 @@
 import { Box, Flex, HoverCard, Image, Portal, Separator, Stack, Text } from '@chakra-ui/react'
-import { ShoppingCart } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { mockCart } from '@/mocks/cart.store'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
+import { EmptyState } from '@/shared/ui/EmptyState'
 
 /**
  * Live header cart preview on hover ("Моя корзина"): count, lines (photo, "name (Nx)", price + old price),
@@ -37,15 +37,7 @@ export const CartPreview = observer(({ children }: { children: ReactNode }) => {
               </Box>
               <Separator borderColor="border.subtle" />
               {lines.length === 0 ? (
-                <Flex direction="column" align="center" textAlign="center" gap="1.5" py="8" px="6">
-                  <Flex boxSize="48px" align="center" justify="center" borderRadius="full" bg="bg.muted" mb="2">
-                    <ShoppingCart size={22} />
-                  </Flex>
-                  <Text fontWeight="600">{t('cart.empty_title')}</Text>
-                  <Text fontSize="xs" color="fg.muted">
-                    {t('cart.empty_description')}
-                  </Text>
-                </Flex>
+                <EmptyState size="sm" title={t('cart.empty_title')} description={t('cart.empty_description')} />
               ) : (
                 <>
                   <Stack gap="0" overflowY="auto" px="5" separator={<Separator borderColor="border.subtle" />}>

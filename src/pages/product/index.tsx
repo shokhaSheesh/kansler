@@ -1,6 +1,5 @@
-import { Badge, Box, Button, Flex, Grid, Skeleton, Stack, Text } from '@chakra-ui/react'
+import { Badge, Box, Button, Flex, Grid, Skeleton, Stack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
-import { SearchX } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useParams, useSearchParams } from 'react-router'
@@ -12,6 +11,7 @@ import { mockProductDetails } from '@/mocks/product-details'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { Price } from '@/shared/ui/Price'
 import { ProductShelf } from '@/widgets/home/ProductShelf'
 import { BuyBox, CartActions } from '@/widgets/product-detail/BuyBox'
@@ -51,13 +51,14 @@ const ProductPage = observer(() => {
 
   if (!product) {
     return (
-      <Stack align="center" py="16" gap="3" textAlign="center">
-        <SearchX size={32} />
-        <Text fontWeight="600">{t('products.not_found')}</Text>
-        <Button asChild variant="outline" borderRadius="primary">
-          <RouterLink to={paths.catalog}>{t('categories.title')}</RouterLink>
-        </Button>
-      </Stack>
+      <EmptyState
+        title={t('products.not_found')}
+        action={
+          <Button asChild variant="outline" borderRadius="primary">
+            <RouterLink to={paths.catalog}>{t('categories.title')}</RouterLink>
+          </Button>
+        }
+      />
     )
   }
 

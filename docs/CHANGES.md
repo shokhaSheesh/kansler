@@ -5,7 +5,7 @@ This document lists every change in the new Kansler web design, screen by screen
 **What stays the same**
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 12](#12-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 13](#13-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -33,10 +33,11 @@ This document lists every change in the new Kansler web design, screen by screen
 9. [Product page](#9-product-page)
 10. [Favourites](#10-favourites)
 11. [Cart](#11-cart)
-12. [New texts](#12-new-texts)
-13. [Not included, and why](#13-not-included-and-why)
-14. [Questions for the client, and data issues](#14-questions-for-the-client-and-data-issues)
-15. [Status](#15-status)
+12. [Checkout](#12-checkout)
+13. [New texts](#13-new-texts)
+14. [Not included, and why](#14-not-included-and-why)
+15. [Questions for the client, and data issues](#15-questions-for-the-client-and-data-issues)
+16. [Status](#16-status)
 
 ---
 
@@ -48,6 +49,7 @@ This document lists every change in the new Kansler web design, screen by screen
 | Sections stay blank while data loads; a splash screen can show for up to 10 seconds | Grey placeholder shapes show where content will appear |
 | The whole site downloads up front (1.6 MB of code) | Each page loads only what it needs |
 | Footer: light grey block | Footer: navy block with the same links and address |
+| Empty pages use different icons | **One illustration for every empty state** (empty cart, favourites, no search results, nothing found, cart preview): an open box in the brand colours, with the page's existing title, text and button |
 
 ## 2. Header and navigation
 
@@ -205,7 +207,35 @@ The current site shows the **same filter sidebar** on category pages, search res
 - **Phone:** a **"Итого (N) · Перейти к оформлению" bar stays pinned** above the bottom tab bar.
 - **Phone:** the header cart icon shows the counter.
 
-## 12. New texts
+## 12. Checkout
+
+**Same as now**
+- **Flow:** "Перейти к оформлению" creates the order and opens `/checkout/<order number>`.
+- **Header:** title **"Оформление заказа"**, the **ID заказа**, and **"Скачать КП"** (commercial offer PDF).
+- **"Информация о доставке":** **"Доставить в"** (choose from "Ваши адреса", or "Добавить адрес") and **"Информация о получателе"** (choose from "Получатели", or "Добавить получателя").
+- **"Тип оплаты":**
+  - **Корпоративная карта:** your saved cards plus "Добавить карту" (card number + ММ/ГГ, confirmed by SMS code).
+  - **Перечисление:** "Посмотреть договор / Перейти в Didox".
+- **"Ваш заказ":** the products, expandable.
+- **Summary:**
+  - Товары (N), Доставка (amount or "Бесплатно"), Промокод (removable), Скидка, **Итого**.
+  - **"Оплатить N сум"** (card) or **"Оформить заказ"** (transfer).
+  - The consent text with links, and "Соединение защищено".
+- **Promo code:** "Добавить промокод" → enter → "Применить", with the existing errors (invalid, expired, minimum order sum).
+- **Card payment:** confirmed with the **6-digit SMS code** ("Введите код… Мы отправили 6-значный код на номер"), then "Заказ успешно оформлен" and the orders page.
+
+**Changed**
+- **Computer:** two columns, with the **summary and pay button staying visible** while scrolling.
+- **Phone:** **"Итого · Оплатить"** pinned above the tab bar.
+- **Address and recipient pickers** are proper choice lists (computer: centred window; phone: panel from the bottom).
+- **Missing details:** paying without an address or recipient opens the right picker and points out what's missing, instead of only showing an error.
+- **Cards** are shown as card tiles (UZCARD / HUMO, last 4 digits), with the selected one in navy.
+- **SMS code:** 6 boxes, fills in automatically from the SMS on phones, confirms on the last digit, and resend becomes available after a countdown.
+- **"Скидка"** is hidden when there is no discount (currently it shows "−0 сум").
+
+**Design-phase note:** delivery addresses, recipients, saved cards and promo codes belong to the logged-in company account, so the design uses **sample entries**. Real ones come from the account after the API is connected.
+
+## 13. New texts
 
 Everything else reuses the current site's texts.
 
@@ -215,7 +245,7 @@ Everything else reuses the current site's texts.
 | Button in that bar and in the variant window | Перейти в корзину | Savatga o'tish |
 | Number of variants (card, variant window) | 1 вариант · 2 варианта · 5 вариантов | 1 ta variant |
 
-## 13. Not included, and why
+## 14. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -235,7 +265,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 14. Questions for the client, and data issues
+## 15. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -243,6 +273,13 @@ To check with a logged-in account before designing them:
 - **Brand and description on cards** need the backend change described in section 6.
 
 **Data issues** (for the Kansler content team; these affect any design)
+- **A text bug on the current checkout.** The recipient placeholder asks for a text that is actually a group of texts, so the current site likely shows a technical message ("…returned an object instead of string") instead of "Выберите получателя". The new design shows "Выберите получателя".
+- **Not used on the current checkout,** and so not designed:
+  - an order comment field;
+  - pickup from a branch;
+  - the "Минимальная сумма заказа 50 000 сум" note;
+  - separate "category" and "product" discount lines;
+  - a separate "Оплата прошла успешно" success page.
 - **Wrong description on a product.** "Нить" (thread) has the description of a soap ("Туалетное мыло BS «Зелёный чай и огурец»…"). That's in the current data.
 - **Promo items filed as categories.** For example, a Deli marker sits under *Офисная мебель › Мебель › 35 %*, and a Luxor pen under *Готовые наборы › Базовый*.
 - **Variants can't be told apart by name.** All variants share one name. Characteristics like size or density are listed for the whole product, not linked to a variant, so the design tells variants apart by photo and price.
@@ -257,7 +294,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 15. Status
+## 16. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -269,8 +306,8 @@ To check with a logged-in account before designing them:
 | 5 | Product page | ✅ Done (checked against the current site) |
 | 6 | Favourites | ✅ Done (checked against the current site) |
 | 7 | Cart | ✅ Done (checked against the current site) |
-| 8 | Checkout and payment | ⏳ Next |
-| 9 | Orders list | ⏳ |
+| 8 | Checkout and payment | ✅ Done (checked against the current site) |
+| 9 | Orders list | ⏳ Next |
 | 10 | Order details | ⏳ |
 | 11 | Profile and company account | ⏳ |
 | 12 | Notifications | ⏳ |

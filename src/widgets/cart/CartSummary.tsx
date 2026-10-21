@@ -1,8 +1,6 @@
 import { Box, Button, Flex, Link, Progress, Separator, Stack, Text } from '@chakra-ui/react'
 import { Truck } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Link as RouterLink } from 'react-router'
-import { paths } from '@/app/router/paths'
 import { useLang } from '@/shared/hooks/useLang'
 import { formatPrice } from '@/shared/lib/format'
 
@@ -40,7 +38,7 @@ export const FreeDeliveryProgress = ({ total, freeFrom }: { total: number; freeF
 }
 
 /** Live "Ваш заказ" card: free-delivery progress, Товары (N), Итого, "Перейти к оформлению", support bot link. */
-export const CartSummary = ({ count, total, freeFrom }: { count: number; total: number; freeFrom: number }) => {
+export const CartSummary = ({ count, total, freeFrom, onCheckout }: { count: number; total: number; freeFrom: number; onCheckout: () => void }) => {
   const { t } = useTranslation()
   const lang = useLang()
   return (
@@ -69,10 +67,8 @@ export const CartSummary = ({ count, total, freeFrom }: { count: number; total: 
         </Text>
       </Flex>
       <Box hideBelow="md">
-        <Button asChild w="full" h="54px" colorPalette="brand" borderRadius="control" fontSize="md" disabled={count === 0} pointerEvents={count === 0 ? 'none' : undefined}>
-          <RouterLink to={paths.checkout} aria-disabled={count === 0}>
-            {t('cart.proceed_to_checkout')}
-          </RouterLink>
+        <Button w="full" h="54px" colorPalette="brand" borderRadius="control" fontSize="md" disabled={count === 0} onClick={onCheckout}>
+          {t('cart.proceed_to_checkout')}
         </Button>
       </Box>
       <Link href={SUPPORT_BOT} target="_blank" rel="noreferrer" fontSize="sm" color="fg.muted" mt="-2" _hover={{ color: 'fg.link' }}>

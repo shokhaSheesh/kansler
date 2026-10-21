@@ -1,5 +1,4 @@
 import { Button, Flex, Heading, Stack, Text } from '@chakra-ui/react'
-import { SearchX } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useParams } from 'react-router'
 import { paths } from '@/app/router/paths'
@@ -8,21 +7,8 @@ import { topCategories } from '@/mocks/products'
 import { useLang } from '@/shared/hooks/useLang'
 import { localized } from '@/shared/lib/format'
 import { Breadcrumbs } from '@/shared/ui/Breadcrumbs'
+import { EmptyState } from '@/shared/ui/EmptyState'
 import { ProductListView } from '@/widgets/product-list/ProductListView'
-
-const EmptyState = () => {
-  const { t } = useTranslation()
-  return (
-    <Flex direction="column" align="center" textAlign="center" gap="3" py="16" bg="bg.surface" borderRadius="card">
-      <Flex boxSize="64px" align="center" justify="center" borderRadius="full" bg="bg.muted" color="fg.muted">
-        <SearchX size={30} />
-      </Flex>
-      <Text fontWeight="700" fontSize="lg" color="fg.default">
-        {t('products.not_found')}
-      </Text>
-    </Flex>
-  )
-}
 
 /**
  * /categories/:slug and /products — same content as live: breadcrumbs, title + count, sub-category chips,
@@ -39,13 +25,14 @@ export default function ProductsPage() {
 
   if (id && !category) {
     return (
-      <Stack align="center" py="16" gap="3">
-        <SearchX size={32} />
-        <Text fontWeight="600">{t('products.not_found')}</Text>
-        <Button asChild variant="outline" borderRadius="primary">
-          <RouterLink to={paths.catalog}>{t('categories.title')}</RouterLink>
-        </Button>
-      </Stack>
+      <EmptyState
+        title={t('products.not_found')}
+        action={
+          <Button asChild variant="outline" borderRadius="primary">
+            <RouterLink to={paths.catalog}>{t('categories.title')}</RouterLink>
+          </Button>
+        }
+      />
     )
   }
 
@@ -107,7 +94,7 @@ export default function ProductsPage() {
           </Flex>
         )
       }
-      empty={<EmptyState />}
+      empty={<EmptyState title={t('products.not_found')} />}
     />
   )
 }

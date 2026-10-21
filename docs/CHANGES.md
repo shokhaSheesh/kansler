@@ -6,7 +6,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
   - One exception, on your request: the page background is now **white** instead of light grey (see section 1).
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 15](#15-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 16](#16-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -37,10 +37,11 @@ This document lists every change in the new Kansler web design, screen by screen
 12. [Checkout](#12-checkout)
 13. [Orders](#13-orders)
 14. [Profile and company account](#14-profile-and-company-account)
-15. [New texts](#15-new-texts)
-16. [Not included, and why](#16-not-included-and-why)
-17. [Questions for the client, and data issues](#17-questions-for-the-client-and-data-issues)
-18. [Status](#18-status)
+15. [Login and registration](#15-login-and-registration)
+16. [New texts](#16-new-texts)
+17. [Not included, and why](#17-not-included-and-why)
+18. [Questions for the client, and data issues](#18-questions-for-the-client-and-data-issues)
+19. [Status](#19-status)
 
 ---
 
@@ -422,7 +423,54 @@ Pages under `/profile/…`, with the side menu on computers and a sideways-scrol
 
 **Design-phase note:** the user, company, addresses, recipients, cards and accounts are **samples**, the same ones checkout uses. Changes made on these pages show up in checkout.
 
-## 15. New texts
+## 15. Login and registration
+
+Pages under `/auth/…`, with the same addresses as now.
+
+**Layout, same as now:** the form on the left, with the Kansler logo and the language switch above it, and the current **warehouse picture with the Kansler wordmark** on the right (computers only). The picture now has rounded corners and stays in place while the form scrolls.
+
+**Вход** (`/auth/login`)
+- **Same as now:** "Войти в систему", phone, password (at least 4 characters), "Забыли пароль?", **"Войти"**, "Регистрация", and the "wrong phone or password" error.
+- **Changed:**
+  - fields have their labels above them;
+  - the phone field has a fixed +998;
+  - the password has a show/hide eye;
+  - "Забыли пароль?" sits next to the password label;
+  - the error appears under the password instead of as a pop-up.
+
+**Регистрация.** The steps are the same as now, with a **thin 4-part progress bar** at the top (company → contact → code → password). It has no text.
+1. **Поиск** (`/auth/register/check`): **Юр Лицо / ИП** tabs, **ИНН (9 digits) or ПИНФЛ (14 digits)** with a digit counter, the agreement line, **"Поиск"** and **"Ввести вручную"**.
+   - **Not found:** "Ничего не нашлось(" and **"Ввести в ручную"**, with the common illustration.
+2. **Результат** (`/auth/register/check-result`): what the tax service returned.
+   - **Company:** ИНН, address, registration date, ОПФ, ОКЭД, bank code, account (only the first and last 4 digits, as now), VAT status, VAT code, director.
+   - **Sole trader:** ПИНФЛ, ФИО and the rest of its fields.
+   - The company name heads the card. Then **"Продолжить"**.
+   - **Manual entry** (`/auth/register/company-form`), same fields and rules as now:
+     - **Company:** name, ИНН (9), legal form (ООО, АО, ИП, хоз. товарищества, кооперативы), address (with "where to deliver" note), director, registration date, ОКЭД (5), account (20), bank code (5), and "Является плательщиком НДС?", which shows Код НДС (12) when on.
+     - **Sole trader:** ПИНФЛ (14), ФИО, address, status (Активный / Ликвидирована), date, bank code, account.
+     - Short fields sit two per row on computers.
+3. **Регистрация** (`/auth/register/form`): phone, **role in the company** (Отдел закупа / Бухгалтерия / Владелец / Другое), ФИО (5–150 letters), the agreement line, and **"Регистрация"**. Then "Код отправлен, проверьте".
+4. **SMS code** (`/auth/register/verify-otp`):
+   - the phone the code went to, with a ✎ to change it;
+   - **6 boxes**, confirmed on the last digit;
+   - **"Отправить код снова" after a 2:00 countdown**;
+   - "Подтвердить" and the wrong-code message.
+5. **Установка пароля** (`/auth/register/password`):
+   - new password with show/hide;
+   - the checklist **"Пароль должен содержать:"** (6+ characters, a capital letter, a small letter, a digit, a special character), ticking green as you type;
+   - the repeat field with "Пароли не совпадают";
+   - "Продолжить" → "Регистрация прошла успешно".
+
+**Пользовательское соглашение:** the link in the agreement line opens the current agreement text (Russian or Uzbek, word for word) in a window.
+
+**Сброс пароля** (`/auth/reset-password`): phone → **"Подтвердить"** → the same SMS-code step → **"Сброс пароля"** with the same checklist → "Пароль успешно изменен" → login. An unknown number shows "Пользователь не найден".
+
+**Design-phase demo** (no backend):
+- **Sign-up:** any ИНН or ПИНФЛ is found except all zeros, which shows "Ничего не нашлось(". The number +998 90 123 45 67 shows "user already exists".
+- **Reset:** the number +998 99 999 99 99 shows "user not found".
+- **Codes and passwords:** SMS code 000000 is wrong; login password 0000 is wrong.
+
+## 16. New texts
 
 Everything else reuses the current site's texts.
 
@@ -434,7 +482,7 @@ Everything else reuses the current site's texts.
 | Back button | Назад | Orqaga |
 | Products in an order: correct Russian endings (the current text always says "товаров", e.g. "1 товаров") | 1 товар · 3 товара · 5 товаров | (unchanged) |
 
-## 16. Not included, and why
+## 17. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -453,7 +501,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 17. Questions for the client, and data issues
+## 18. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -477,6 +525,9 @@ To check with a logged-in account before designing them:
   - **Настройки are not saved.** The current switches aren't sent to the backend, so they reset on reload. The backend needs a place to keep them before they can work.
   - **Settings page title.** On computers the current settings page is titled "Уведомления", the same as the notifications page. The design uses "Настройки", like the menu.
   - **"У вас 4 новых уведомлений"** has no Russian plural forms ("4 новых уведомления" would be correct).
+  - **Manual company form has no heading** on the current site. The design uses "Регистрация компании", the site's own text for this form.
+  - **"Мы отпавили код…"**: a typo in the current text ("отправили"). It is kept as is for now.
+  - **"Ввести в ручную"** (not found page) is a typo for "вручную"; the "Поиск" step spells it right. Kept as is for now.
   - **Addresses are deleted without asking** on the current site. The design asks first, with the same confirmation as recipients.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
@@ -498,7 +549,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 18. Status
+## 19. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -516,7 +567,7 @@ To check with a logged-in account before designing them:
 | 11 | Profile and company account | ✅ Done (checked against the current site) |
 | 11b | Profile: Отзывы (reviews) and Настройки (settings) | ✅ Done (checked against the current site) |
 | 12 | Notifications | ✅ Done (checked against the current site) |
-| 13 | Login and registration | ⏳ Next |
-| 14 | Help centre and info pages | ⏳ |
+| 13 | Login and registration | ✅ Done (checked against the current site) |
+| 14 | Help centre and info pages | ⏳ Next |
 
 Design references for each screen (Mobbin) are listed in [REDESIGN.md](REDESIGN.md).

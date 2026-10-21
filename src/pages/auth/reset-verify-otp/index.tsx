@@ -1,6 +1,5 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { OtpStep } from '@/features/auth/OtpStep'
 
-/** TODO(redesign): OTP */
-export default function ResetVerifyOtpPage() {
-  return <PagePlaceholder title="Подтверждение" note="OTP" />
+export default function Page() {
+  return <OtpStep mode="reset" />
 }

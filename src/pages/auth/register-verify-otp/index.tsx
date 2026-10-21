@@ -1,6 +1,5 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { OtpStep } from '@/features/auth/OtpStep'
 
-/** TODO(redesign): Step 2: OTP */
-export default function RegisterVerifyOtpPage() {
-  return <PagePlaceholder title="Подтверждение" note="Step 2: OTP" />
+export default function Page() {
+  return <OtpStep mode="register" />
 }

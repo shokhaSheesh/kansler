@@ -1,6 +1,5 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { PasswordStep } from '@/features/auth/PasswordStep'
 
-/** TODO(redesign): Set new password */
-export default function ResetNewPasswordPage() {
-  return <PagePlaceholder title="Новый пароль" note="Set new password" />
+export default function Page() {
+  return <PasswordStep mode="reset" />
 }

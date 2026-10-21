@@ -70,7 +70,6 @@ const routes: RouteObject[] = [
       { path: paths.products, element: page(P.Products) },
       { path: paths.product(), element: page(P.Product) },
       { path: paths.search(), element: page(P.Search) },
-      { path: paths.helpCenter, element: page(P.HelpCenter) },
       { path: paths.cart, element: page(P.Cart) }, // guest cart view prompts login on checkout
       {
         element: <RequireAuth />,

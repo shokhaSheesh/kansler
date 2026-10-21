@@ -176,14 +176,14 @@ export const BuyBox = observer(({ product, variation, onVariation }: BuyBoxProps
         {t('product_detail.ask_question')}
       </Link>
 
-      {/* Live: "Часто задаваемые вопросы" with two links to the info page */}
+      {/* Live: "Часто задаваемые вопросы" with two links to the help centre; both open "Условия доставки, оплаты и возврата" */}
       <Stack {...card} gap="1">
         <Text fontWeight="600" fontSize="sm" mb="1">
           {t('product_detail.faq_title')}
         </Text>
         {(['delivery_terms', 'payment_terms'] as const).map((k) => (
           <Link key={k} asChild fontSize="sm" color="fg.body" justifyContent="space-between" py="1.5" _hover={{ color: 'fg.default' }}>
-            <RouterLink to={paths.profile.info} target="_blank">
+            <RouterLink to={`${paths.profile.info}?infoIndex=3`} target="_blank">
               {t(`product_detail.${k}`)}
               <ChevronRight size={16} />
             </RouterLink>

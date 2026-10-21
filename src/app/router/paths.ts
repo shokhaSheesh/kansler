@@ -20,7 +20,6 @@ export const paths = {
   orders: '/profile/orders',
   order: (id = ':id') => `/profile/orders/${id}`,
   notifications: '/profile/notifications',
-  helpCenter: '/help-center',
   map: '/profile/map',
 
   profile: {

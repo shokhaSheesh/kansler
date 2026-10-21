@@ -1,6 +1,10 @@
-import { PagePlaceholder } from '@/shared/ui/PagePlaceholder'
+import { Navigate } from 'react-router'
+import { paths } from '@/app/router/paths'
 
-/** TODO(redesign): Available promo codes */
+/**
+ * Live phone-only page for typing a promo code during checkout. In the redesign the promo code is entered
+ * right in the checkout summary, so this address returns to the cart.
+ */
 export default function PromocodePage() {
-  return <PagePlaceholder title="Промокоды" note="Available promo codes" />
+  return <Navigate to={paths.cart} replace />
 }

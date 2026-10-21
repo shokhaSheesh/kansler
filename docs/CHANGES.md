@@ -6,7 +6,7 @@ This document lists every change in the new Kansler web design, screen by screen
 - Fonts: Inter.
 - Brand colours: navy, the green accent from the logo, the red used for discounts, and the grey scale.
   - One exception, on your request: the page background is now **white** instead of light grey (see section 1).
-- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 16](#16-new-texts).
+- All texts in Russian and Uzbek: copied from the current site. The few new texts are listed in [section 17](#17-new-texts).
 - Business logic, backend and API: unchanged.
 - Page addresses (URLs): unchanged.
   - Category pages use the same short names as now, e.g. `/categories/ofis-qogozi`.
@@ -38,10 +38,11 @@ This document lists every change in the new Kansler web design, screen by screen
 13. [Orders](#13-orders)
 14. [Profile and company account](#14-profile-and-company-account)
 15. [Login and registration](#15-login-and-registration)
-16. [New texts](#16-new-texts)
-17. [Not included, and why](#17-not-included-and-why)
-18. [Questions for the client, and data issues](#18-questions-for-the-client-and-data-issues)
-19. [Status](#19-status)
+16. [Help centre, footer and other pages](#16-help-centre-footer-and-other-pages)
+17. [New texts](#17-new-texts)
+18. [Not included, and why](#18-not-included-and-why)
+19. [Questions for the client, and data issues](#19-questions-for-the-client-and-data-issues)
+20. [Status](#20-status)
 
 ---
 
@@ -52,7 +53,7 @@ This document lists every change in the new Kansler web design, screen by screen
 | Separate pages for phones (`/mobile`, `/mobile-filter`, `/categories-mobile`, `/otp-mobile`) | One site that adapts to any screen. On phones a bottom tab bar holds Главная · Каталог · Корзина · Избранное · Профиль. |
 | Sections stay blank while data loads; a splash screen can show for up to 10 seconds | Grey placeholder shapes show where content will appear |
 | The whole site downloads up front (1.6 MB of code) | Each page loads only what it needs |
-| Footer: light grey block | Footer: navy block with the same links and address |
+| Footer: light grey block | Footer: navy block with the same content: address, Telegram / Instagram / Facebook / LinkedIn links (each shown only when filled in the admin panel), copyright and the five info links (see section 16) |
 | Light grey page background, white blocks on top (on request: looked plain and dated) | **White page background.** So products and sections still stand out:<br>• **Products:** photos sit on soft grey tiles, with no frame around the card<br>• **Category tiles and partner logos:** grey tiles<br>• **Order summaries, filters and the profile menu:** a light grey panel<br>• **Forms and lists:** white blocks with a thin border<br>• **Home page:** the "Скидки" row sits on a grey band, to break up the page<br>All greys are from the existing brand grey scale. |
 | No back button; only the browser's | **"Назад"** button on the product page, category pages, search results and checkout. On computers it sits before the breadcrumbs; on phones it replaces them. It returns to the previous page. If the page was opened from a link, it goes one level up (product → its category, category → parent category or Каталог, checkout → cart) instead of leaving the site. |
 | Empty pages use different icons | **One illustration for every empty state** (empty cart, favourites, no search results, nothing found, cart preview): an open box in the brand colours, with the page's existing title, text and button |
@@ -470,7 +471,38 @@ Pages under `/auth/…`, with the same addresses as now.
 - **Reset:** the number +998 99 999 99 99 shows "user not found".
 - **Codes and passwords:** SMS code 000000 is wrong; login password 0000 is wrong.
 
-## 16. New texts
+## 16. Help centre, footer and other pages
+
+**Справочный центр** (`/profile/info`, in the profile menu)
+- **Same as now:**
+  - the pages written in the admin panel: **Главная, О компании, Условия доставки, оплаты и возврата, Политика конфиденциальности, Контакты**. The design shows the current text and pictures as they are;
+  - **"Вопросы – ответы"**, the FAQ;
+  - **"Поддержка"**, which opens the support bot in Telegram;
+  - `?infoIndex=N` opens a page directly.
+- **Changed:**
+  - **Computers:** the page list on the left (the current one is marked) and the page on the right, with readable spacing for headings, lists, links and pictures.
+  - **Phones:** the pages are a sideways row of chips instead of a side panel.
+  - The FAQ is an accordion.
+
+**Footer links**, same targets as now:
+
+| Link | Opens |
+|---|---|
+| О нас | О компании |
+| Контакты | Контакты |
+| Как сделать заказ | Условия доставки, оплаты и возврата |
+| Условия оплаты и доставки | Условия доставки, оплаты и возврата |
+| Политика конфиденциальности | Политика конфиденциальности |
+
+Our earlier draft sent all five to a made-up `/help-center` page, and it showed "(БЦ OASIS)" after the address, which the current footer doesn't. Both are fixed.
+
+**Product page:** "Условия доставки" and "Условия оплаты" under "Часто задаваемые вопросы" both open "Условия доставки, оплаты и возврата". On the current site one of them opens the help centre's front page.
+
+**Unknown address (404):** the current site shows an empty screen. The design shows the common illustration, "Ничего не нашлось(" and **"На главную"**, all existing texts.
+
+**`/profile/promocode`:** the current phone-only page for entering a promo code during checkout. In the design the promo code is entered in the checkout summary, so this address returns to the cart.
+
+## 17. New texts
 
 Everything else reuses the current site's texts.
 
@@ -482,7 +514,7 @@ Everything else reuses the current site's texts.
 | Back button | Назад | Orqaga |
 | Products in an order: correct Russian endings (the current text always says "товаров", e.g. "1 товаров") | 1 товар · 3 товара · 5 товаров | (unchanged) |
 
-## 17. Not included, and why
+## 18. Not included, and why
 
 These texts exist in the current site's files, but **no page of the current site uses them**, or the backend has nothing behind them. We did not design them:
 
@@ -501,7 +533,7 @@ To check with a logged-in account before designing them:
 - The "Отменить заказ" button.
 - What the profile "Settings" page contains.
 
-## 18. Questions for the client, and data issues
+## 19. Questions for the client, and data issues
 
 **Questions**
 - **Delivery price.** The product data includes a delivery cost of **25 000 сум, free from 500 000 сум**, and a home banner says "Бесплатная доставка по Ташкенту от 500 000 сум". But the product page always says "Курьером — Бесплатно". Which is right? If the 25 000 / 500 000 rule is real, the product page and cart could show it.
@@ -528,6 +560,7 @@ To check with a logged-in account before designing them:
   - **Manual company form has no heading** on the current site. The design uses "Регистрация компании", the site's own text for this form.
   - **"Мы отпавили код…"**: a typo in the current text ("отправили"). It is kept as is for now.
   - **"Ввести в ручную"** (not found page) is a typo for "вручную"; the "Поиск" step spells it right. Kept as is for now.
+  - **Help-centre page title typo:** "Политика конфедициальности" (in the admin panel, "конфиденциальности"). The footer link spells it right.
   - **Addresses are deleted without asking** on the current site. The design asks first, with the same confirmation as recipients.
 - **Not used on the current checkout,** and so not designed:
   - an order comment field;
@@ -549,7 +582,7 @@ To check with a logged-in account before designing them:
 - **Typo tolerance** in search ("ручкп" → "ручка").
 - **Wrong keyboard layout fix** ("hexrf" → "ручка").
 
-## 19. Status
+## 20. Status
 
 | Step | Screen | Status |
 |---|---|---|
@@ -568,6 +601,6 @@ To check with a logged-in account before designing them:
 | 11b | Profile: Отзывы (reviews) and Настройки (settings) | ✅ Done (checked against the current site) |
 | 12 | Notifications | ✅ Done (checked against the current site) |
 | 13 | Login and registration | ✅ Done (checked against the current site) |
-| 14 | Help centre and info pages | ⏳ Next |
+| 14 | Help centre and info pages | ✅ Done (checked against the current site) |
 
 Design references for each screen (Mobbin) are listed in [REDESIGN.md](REDESIGN.md).
